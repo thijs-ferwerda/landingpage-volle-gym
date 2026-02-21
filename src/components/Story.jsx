@@ -72,7 +72,7 @@ const Story = () => {
                             clipPath: 'polygon(0% 10%, 10% 0%, 20% 15%, 30% 0%, 40% 15%, 50% 0%, 60% 15%, 70% 0%, 80% 15%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 80% 85%, 70% 100%, 60% 85%, 50% 100%, 40% 85%, 30% 100%, 20% 85%, 10% 100%, 0% 90%)'
                         }}></div>
 
-                        <div className="bg-[#fdfbf7] rounded-sm p-8 md:p-14 shadow-[2px_15px_40px_rgba(0,0,0,0.08)] border border-[#e8E5df] relative overflow-hidden transform rotate-[1.5deg] transition-transform hover:rotate-0 duration-500 ease-out z-20">
+                        <div className="group bg-[#fdfbf7] rounded-sm p-8 md:p-14 shadow-[2px_15px_40px_rgba(0,0,0,0.08)] border border-[#e8E5df] relative overflow-hidden transform rotate-[1.5deg] transition-all hover:rotate-0 duration-500 ease-out z-20 cursor-default">
 
                             {/* Subtle Paper Texture Overlay using a CSS radial gradient pattern */}
                             <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '12px 12px' }}></div>
@@ -86,7 +86,19 @@ const Story = () => {
 
                             {/* Content wrapper with actual fineliner font and dark blue grey 'ink' color */}
                             <div className="relative z-10 text-[#1e293b]" style={{ fontFamily: "'Caveat', cursive", fontSize: '110%' }}>
-                                <p className="leading-relaxed text-2xl md:text-3xl mb-8 transform rotate-[-1deg] opacity-90">
+
+                                {/* Hidden Interactive "Scribbles" & Emojis that reveal on hover */}
+                                <div className="absolute top-2 -right-4 md:right-4 text-red-600/80 text-2xl md:text-3xl transform rotate-[15deg] opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 pointer-events-none z-0">
+                                    Pijnlijk herkenbaar... 🤦‍♂️
+                                </div>
+                                <div className="absolute top-[40%] -right-6 md:right-2 text-4xl transform rotate-[-10deg] opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 pointer-events-none scale-75 group-hover:scale-100 z-0">
+                                    🤯💸
+                                </div>
+                                <div className="absolute bottom-28 -right-2 md:right-8 text-[#1e293b]/70 text-xl md:text-2xl transform rotate-[5deg] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-500 pointer-events-none z-0">
+                                    Dit stoppen we. 👇
+                                </div>
+
+                                <p className="leading-relaxed text-2xl md:text-3xl mb-8 transform rotate-[-1deg] opacity-90 relative z-10">
                                     Je bent jouw club gestart met een duidelijke missie: mensen helpen en vrijheid voor jezelf creëren. En dat doe je fantastisch. Jouw leden zijn blij, ze halen resultaat en er hangt een onverslaanbare sfeer.
                                 </p>
                                 <p className="leading-relaxed text-2xl md:text-3xl mb-10 transform rotate-[0.5deg] opacity-90">

@@ -28,13 +28,13 @@ const CTA = () => {
                         Plan direct je intake in. Geen softe beloftes of vage overtuigingstactieken. Gewoon ontdekken of we jou <strong className="text-white font-bold">binnen 90 dagen aan 45 nieuwe, ideale PT-leden</strong> kunnen helpen.
                     </p>
 
-                    <div className="relative inline-block mt-4">
-                        {/* Floating handwritten note just like ignitingtribes.co */}
-                        <div className="absolute -top-16 -left-20 md:-left-40 transform rotate-[-12deg] text-white/60 text-3xl md:text-4xl pointer-events-none hidden md:block" style={{ fontFamily: "'Caveat', cursive" }}>
+                    <div className="relative inline-flex items-center justify-center mt-4 w-full md:w-auto">
+                        {/* Floating handwritten note just like ignitingtribes.co, adjusted position to left side */}
+                        <div className="absolute top-1/2 -translate-y-1/2 -left-16 md:-left-64 transform rotate-[-8deg] text-white/70 text-2xl md:text-4xl pointer-events-none hidden md:block w-48 text-right z-20" style={{ fontFamily: "'Caveat', cursive" }}>
                             Tijd om te schalen?
-                            {/* Curved arrow pointing to the button */}
-                            <svg className="absolute -bottom-10 right-0 w-12 h-12 text-white/40 transform rotate-[80deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinelinejoin="round" strokeWidth="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            {/* Curved arrow pointing rightwards to the button */}
+                            <svg className="absolute top-1/2 -translate-y-1/2 -right-8 md:-right-12 w-8 h-8 md:w-10 md:h-10 text-white/50 transform rotate-[140deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </div>
 
@@ -44,7 +44,7 @@ const CTA = () => {
                             `}
                         </style>
 
-                        <Link to="/intake" className="magnetic-btn bg-accent text-primary px-12 py-6 rounded-full text-lg md:text-xl font-bold tracking-widest uppercase group inline-flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(255,53,0,0.25)] hover:shadow-[0_20px_60px_rgba(255,53,0,0.5)]">
+                        <Link to="/intake" className="magnetic-btn bg-accent text-primary px-12 py-6 rounded-full text-lg md:text-xl font-bold tracking-widest uppercase group inline-flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(255,53,0,0.25)] hover:shadow-[0_20px_60px_rgba(255,53,0,0.5)] z-10 relative">
                             <span className="magnetic-btn-content">Plan de intake</span>
                             <svg
                                 className="w-8 h-8 magnetic-btn-content group-hover:translate-x-2 transition-transform duration-300"
