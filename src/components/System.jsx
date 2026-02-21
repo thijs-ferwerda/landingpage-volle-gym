@@ -92,7 +92,7 @@ const System = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={pillar.icon} />
                                     </svg>
                                 </div>
-                                <span className="font-heading text-accent/20 text-6xl md:text-8xl font-black absolute top-[-10px] right-[-10px] group-hover:text-accent/30 group-hover:scale-110 transition-all duration-500 ease-out origin-top-right select-none">{pillar.num}</span>
+                                <span className="font-heading text-accent/40 text-6xl md:text-8xl font-black absolute top-[-10px] right-[-10px] group-hover:text-accent/60 group-hover:scale-125 transition-all duration-500 ease-out origin-top-right select-none">{pillar.num}</span>
                             </div>
 
                             <div className="mt-auto relative z-10 border-t border-primary/10 pt-8">
