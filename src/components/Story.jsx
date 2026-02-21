@@ -56,33 +56,60 @@ const Story = () => {
                 </h2>
 
                 <div className="flex flex-col gap-10 text-left relative max-w-3xl w-full">
-                    <div ref={addToTextRefs} className="bg-background rounded-3xl p-8 md:p-12 border border-primary/5 shadow-sm">
-                        <p className="font-sans text-primary/80 leading-relaxed text-lg mb-6">
-                            Je bent jouw club gestart met een duidelijke missie: mensen helpen en vrijheid voor jezelf creëren. En dat doe je fantastisch. Jouw leden zijn blij, ze halen resultaat en er hangt een onverslaanbare sfeer.
-                        </p>
-                        <p className="font-sans text-primary/80 leading-relaxed text-lg mb-6">
-                            <strong>Maar als je écht eerlijk bent</strong>... is die vrijheid er nog steeds niet. In plaats van werken <span className="italic">aan</span> je bedrijf, werk je je kapot <span className="italic">in</span> je bedrijf.
-                        </p>
-                        <ul className="space-y-4 font-sans text-primary/70 text-lg mb-6 ml-4">
-                            <li className="flex items-start gap-3">
-                                <span className="text-accent mt-1">✗</span>
-                                <span>Je bent afhankelijk van hoop en mond-tot-mondreclame.</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-accent mt-1">✗</span>
-                                <span>Je hebt bureaus en campagnes geprobeerd, maar leads namen de telefoon niet op.</span>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-accent mt-1">✗</span>
-                                <span>Elke maand voelt de omzet en ledeninstroom weer als een verrassing.</span>
-                            </li>
-                        </ul>
-                        <div className="mt-8 pt-8 border-t border-primary/10">
-                            <h3 className="font-heading font-bold text-xl text-primary mb-3">Onze missie is die chaos wegnemen.</h3>
-                            <p className="font-sans text-primary/80 leading-relaxed text-lg">
-                                Zodat jij niet meer hoeft te hopen op groei, maar kan vertrouwen op een systeem. Wij geven je de rust en de leads, zodat jij weer de coach en ondernemer kan zijn die jouw leden—en jijzelf—zo hard nodig hebben.
-                            </p>
+
+                    {/* The "Paper" Card */}
+                    <div ref={addToTextRefs} className="relative mt-4">
+
+                        {/* Subtle Tape Effect (Top Center) */}
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdrop-blur-sm border border-black/5 rotate-[-2deg] shadow-sm z-30"></div>
+
+                        <div className="bg-[#fdfbf7] rounded-sm p-8 md:p-14 shadow-[2px_10px_30px_rgba(0,0,0,0.06)] border border-[#e8E5df] relative overflow-hidden transform rotate-[1deg] transition-transform hover:rotate-0 duration-500 ease-out z-20">
+
+                            {/* Subtle Paper Texture Overlay using a CSS radial gradient pattern */}
+                            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
+
+                            {/* Content wrapper with a slightly different, more organic serif-like feel for the note */}
+                            <div className="relative z-10 font-serif">
+                                <p className="text-[#3a3a3a] leading-relaxed text-xl mb-8">
+                                    Je bent jouw club gestart met een duidelijke missie: mensen helpen en vrijheid voor jezelf creëren. En dat doe je fantastisch. Jouw leden zijn blij, ze halen resultaat en er hangt een onverslaanbare sfeer.
+                                </p>
+                                <p className="text-[#3a3a3a] leading-relaxed text-xl mb-8">
+                                    <strong className="font-bold text-[#1a1a1a]">Maar als je écht eerlijk bent</strong>... is die vrijheid er nog steeds niet. In plaats van werken <span className="italic">aan</span> je bedrijf, werk je je kapot <span className="italic">in</span> je bedrijf.
+                                </p>
+
+                                {/* Checkmarks changed to handwritten style Xs */}
+                                <ul className="space-y-5 text-[#4a4a4a] text-lg mb-10 ml-2">
+                                    <li className="flex items-start gap-4">
+                                        <span className="text-accent mt-0.5 font-drama text-2xl font-bold leading-none">x</span>
+                                        <span>Je bent afhankelijk van hoop en mond-tot-mondreclame.</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <span className="text-accent mt-0.5 font-drama text-2xl font-bold leading-none">x</span>
+                                        <span>Je hebt bureaus en campagnes geprobeerd, maar leads namen de telefoon niet op.</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <span className="text-accent mt-0.5 font-drama text-2xl font-bold leading-none">x</span>
+                                        <span>Elke maand voelt de omzet en ledeninstroom weer als een verrassing.</span>
+                                    </li>
+                                </ul>
+
+                                {/* "Handwritten" Signature / Conclusion area */}
+                                <div className="mt-10 pt-10 relative">
+                                    {/* Squiggly line separator */}
+                                    <svg className="absolute top-0 left-0 w-full h-4 text-black/10" preserveAspectRatio="none" viewBox="0 0 100 10" fill="none" stroke="currentColor" strokeWidth="1">
+                                        <path d="M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5"></path>
+                                    </svg>
+
+                                    <h3 className="font-heading font-bold text-2xl text-[#1a1a1a] mb-5 tracking-wide mt-4">Onze missie is die chaos wegnemen.</h3>
+                                    <p className="text-[#3a3a3a] leading-relaxed text-xl">
+                                        Zodat jij niet meer hoeft te hopen op groei, maar kan vertrouwen op een systeem. Wij geven je de rust en de leads, zodat jij weer de coach en ondernemer kan zijn die jouw leden—en jijzelf—zo hard nodig hebben.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
+                        {/* Background drop shadow layer for realistic paper depth */}
+                        <div className="absolute inset-0 bg-black/5 rounded-sm transform rotate-[-1deg] translate-y-2 translate-x-1 z-10 blur-[2px]"></div>
                     </div>
                 </div>
 
