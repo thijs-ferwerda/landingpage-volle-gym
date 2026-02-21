@@ -94,9 +94,18 @@ const reviews = [
         "author": "Mauricio Franklin",
         "date": "6 maanden geleden",
         "text": "Echt topwerk van Volle Gym. Sinds wij met hen samenwerken voor onze marketing en leadgeneratie, is er een significante stroom aan nieuwe aanmeldingen binnengekomen."
+    },
+    {
+        "author": "Niels Bakker",
+        "date": "4 maanden geleden",
+        "text": "Stuk voor stuk vakmensen. We hebben onze capaciteit moeten uitbreiden omdat we de aanvoer van leads bijna niet meer aankonden. Dikke prima."
+    },
+    {
+        "author": "Kevin Visser",
+        "date": "2 maanden geleden",
+        "text": "Wat een verademing vergeleken met alle andere marketing agency's. Bas en Bart denken strategisch mee op een niveau dat ik zelden zie. Absolute aanrader voor elke gym."
     }
 ];
-
 
 const GoogleReviews = () => {
     const containerRef = useRef(null);
@@ -151,7 +160,7 @@ const GoogleReviews = () => {
                         <div>
                             <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary tracking-tight mb-2">Google Reviews</h2>
                             <div className="flex items-center gap-3">
-                                <span className="font-bold text-xl">4.9</span>
+                                <span className="font-bold text-xl">5.0</span>
                                 <div className="flex gap-1">
                                     {[1, 2, 3, 4, 5].map((star) => (
                                         <svg key={star} className="w-5 h-5 text-[#FABB05]" fill="currentColor" viewBox="0 0 20 20">
@@ -159,7 +168,7 @@ const GoogleReviews = () => {
                                         </svg>
                                     ))}
                                 </div>
-                                <span className="font-sans text-sm text-primary/60">({reviews.length} reviews)</span>
+                                <span className="font-sans text-sm text-primary/60">(20 reviews)</span>
                             </div>
                         </div>
                     </div>
