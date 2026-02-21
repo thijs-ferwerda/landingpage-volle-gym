@@ -12,10 +12,10 @@ const CTA = () => {
             <div className="w-full bg-black py-20 px-6 md:px-12 relative flex items-center justify-center">
 
                 {/* Cinematic Background Glows */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/15 rounded-full blur-[120px] pointer-events-none z-0"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
-                {/* The Card - Increased contrast (lighter gradient, stronger border, stronger glow) */}
-                <div className="relative z-10 w-full max-w-5xl mx-auto bg-gradient-to-b from-[#151515] to-[#0a0a0a] rounded-[3rem] p-12 md:p-24 text-center shadow-[0_0_120px_rgba(255,53,0,0.08)] border border-white/10 flex flex-col items-center backdrop-blur-sm">
+                {/* The Card - Increased contrast significantly to pop against pitch black */}
+                <div className="relative z-10 w-full max-w-5xl mx-auto bg-gradient-to-b from-[#252525] to-[#111111] rounded-[3rem] p-12 md:p-24 text-center shadow-[0_0_150px_rgba(255,53,0,0.15)] border border-white/20 flex flex-col items-center backdrop-blur-md">
 
                     <span className="font-data text-accent text-sm md:text-base mb-6 uppercase tracking-widest flex items-center gap-3">
                         <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
