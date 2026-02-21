@@ -35,28 +35,28 @@ const Story = () => {
     }, []);
 
     return (
-        <section ref={containerRef} id="visie" className="py-24 md:py-32 px-6 md:px-12 bg-background relative z-10 border-t border-white/5 overflow-hidden">
+        <section ref={containerRef} id="visie" className="py-24 md:py-32 px-6 md:px-12 bg-white relative z-10 border-b border-primary/5 overflow-hidden">
             {/* Ambient Background Elements */}
-            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[150px] pointer-events-none" />
-            <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="max-w-4xl mx-auto flex flex-col items-center relative z-20">
 
                 <div ref={addToTextRefs} className="flex items-center gap-3 mb-8">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-                    <p className="text-white/50 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
+                    <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
                         Klinkt dit herkenbaar?
                     </p>
                     <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                 </div>
 
-                <h2 ref={addToTextRefs} className="font-heading font-bold text-3xl md:text-5xl lg:text-5xl text-white leading-tight tracking-tight mb-16 text-center">
+                <h2 ref={addToTextRefs} className="font-heading font-bold text-3xl md:text-5xl lg:text-5xl text-primary leading-tight tracking-tight mb-16 text-center">
                     Je bent je gym of PT-studio niet gestart <br className="hidden md:block" />
-                    <span className="font-drama italic text-accent/90 font-medium">om de hele dag acquisitie te doen.</span>
+                    <span className="font-drama italic text-primary/60">om de hele dag acquisitie te doen.</span>
                 </h2>
 
                 <div className="flex flex-col gap-10 text-left relative max-w-3xl w-full">
-                    <div ref={addToTextRefs} className="bg-[#0f0f0f] rounded-[2.5rem] p-8 md:p-12 md:px-16 border border-white/10 shadow-[0_0_50px_rgba(255,53,0,0.03)] relative overflow-hidden">
+                    <div ref={addToTextRefs} className="bg-[#0f0f0f] rounded-[2.5rem] p-8 md:p-12 md:px-16 border border-white/10 shadow-2xl relative overflow-hidden">
 
                         {/* Subtle inner flare */}
                         <div className="absolute -top-32 -right-32 w-64 h-64 bg-accent/10 rounded-full blur-[60px] pointer-events-none"></div>
