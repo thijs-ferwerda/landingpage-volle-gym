@@ -8,14 +8,14 @@ const CTA = () => {
             {/* Smooth transition gradient from white (previous section) to black */}
             <div className="w-full h-32 md:h-48 bg-gradient-to-b from-white to-black"></div>
 
-            {/* Main CTA Content Area */}
-            <div className="w-full bg-black py-20 px-6 md:px-12 relative flex items-center justify-center">
+            {/* Main CTA Content Area - Increased padding for footer spacing */}
+            <div className="w-full bg-black pt-20 pb-40 md:pb-56 px-6 md:px-12 relative flex items-center justify-center">
 
                 {/* Cinematic Background Glows */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
-                {/* The Card - Increased contrast significantly to pop against pitch black */}
-                <div className="relative z-10 w-full max-w-5xl mx-auto bg-gradient-to-b from-[#252525] to-[#111111] rounded-[3rem] p-12 md:p-24 text-center shadow-[0_0_150px_rgba(255,53,0,0.15)] border border-white/20 flex flex-col items-center backdrop-blur-md">
+                {/* The Card - Maximized contrast (much lighter gray, very strong border, intense glow) */}
+                <div className="relative z-10 w-full max-w-5xl mx-auto bg-gradient-to-b from-[#333333] to-[#1a1a1a] rounded-[3rem] p-12 md:p-24 text-center shadow-[0_0_200px_rgba(255,53,0,0.2)] border border-white/30 flex flex-col items-center backdrop-blur-md">
 
                     <span className="font-data text-accent text-sm md:text-base mb-6 uppercase tracking-widest flex items-center gap-3">
                         <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
@@ -27,11 +27,11 @@ const CTA = () => {
                     </h2>
 
                     {/* Fixed Text Visibility: Ensuring it's bright enough against the dark background */}
-                    <p className="font-sans text-white/80 mb-14 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+                    <p className="font-sans text-white/90 mb-14 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
                         Plan direct je intake in. Geen softe beloftes of vage overtuigingstactieken. Gewoon ontdekken of we jou <strong className="text-white font-bold">binnen 90 dagen aan 45 nieuwe, ideale PT-leden</strong> kunnen helpen.
                     </p>
 
-                    <Link to="/intake" className="magnetic-btn bg-accent text-primary px-12 py-6 rounded-full text-lg md:text-xl font-bold tracking-widest uppercase group inline-flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(255,53,0,0.25)] hover:shadow-[0_20px_60px_rgba(255,53,0,0.4)]">
+                    <Link to="/intake" className="magnetic-btn bg-accent text-primary px-12 py-6 rounded-full text-lg md:text-xl font-bold tracking-widest uppercase group inline-flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(255,53,0,0.25)] hover:shadow-[0_20px_60px_rgba(255,53,0,0.5)]">
                         <span className="magnetic-btn-content">Plan de intake</span>
                         <svg
                             className="w-8 h-8 magnetic-btn-content group-hover:translate-x-2 transition-transform duration-300"

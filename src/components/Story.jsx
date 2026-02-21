@@ -60,48 +60,59 @@ const Story = () => {
                     {/* The "Paper" Card */}
                     <div ref={addToTextRefs} className="relative mt-4">
 
-                        {/* Subtle Tape Effect (Top Center) */}
-                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdrop-blur-sm border border-black/5 rotate-[-2deg] shadow-sm z-30"></div>
+                        {/* Torn Tape Effect (Top Center) */}
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-10 bg-white/30 backdrop-blur-sm border-t border-b border-white/40 shadow-sm rotate-[-3deg] z-30" style={{
+                            clipPath: 'polygon(0% 10%, 5% 0%, 15% 15%, 25% 0%, 35% 15%, 45% 0%, 55% 15%, 65% 0%, 75% 15%, 85% 0%, 95% 15%, 100% 5%, 100% 90%, 95% 100%, 85% 85%, 75% 100%, 65% 85%, 55% 100%, 45% 85%, 35% 100%, 25% 85%, 15% 100%, 5% 85%, 0% 95%)'
+                        }}>
+                            <div className="w-full h-full opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIi8+CjxwYXRoIGQ9Ik0wIDRMMCAwTDAgNEwiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjMiLz4KPC9zdmc+')]"></div>
+                        </div>
 
-                        <div className="bg-[#fdfbf7] rounded-sm p-8 md:p-14 shadow-[2px_10px_30px_rgba(0,0,0,0.06)] border border-[#e8E5df] relative overflow-hidden transform rotate-[1deg] transition-transform hover:rotate-0 duration-500 ease-out z-20">
+                        {/* Second torn tape (Top Right) */}
+                        <div className="absolute top-6 -right-6 w-20 h-8 bg-white/30 backdrop-blur-sm border-t border-b border-white/40 shadow-sm rotate-[45deg] z-30 hidden md:block" style={{
+                            clipPath: 'polygon(0% 10%, 10% 0%, 20% 15%, 30% 0%, 40% 15%, 50% 0%, 60% 15%, 70% 0%, 80% 15%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 80% 85%, 70% 100%, 60% 85%, 50% 100%, 40% 85%, 30% 100%, 20% 85%, 10% 100%, 0% 90%)'
+                        }}></div>
+
+                        <div className="bg-[#fdfbf7] rounded-sm p-8 md:p-14 shadow-[2px_15px_40px_rgba(0,0,0,0.08)] border border-[#e8E5df] relative overflow-hidden transform rotate-[1.5deg] transition-transform hover:rotate-0 duration-500 ease-out z-20">
 
                             {/* Subtle Paper Texture Overlay using a CSS radial gradient pattern */}
-                            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '16px 16px' }}></div>
+                            <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '12px 12px' }}></div>
 
-                            {/* Content wrapper with a slightly different, more organic serif-like feel for the note */}
-                            <div className="relative z-10 font-serif">
-                                <p className="text-[#3a3a3a] leading-relaxed text-xl mb-8">
+                            {/* Inject Authentic Ink Pen Font (Kalam) */}
+                            <style>
+                                {`
+                                    @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+                                `}
+                            </style>
+
+                            {/* Content wrapper with actual ink pen font and dark blue 'ink' color */}
+                            <div className="relative z-10 text-[#0f172a]" style={{ fontFamily: "'Kalam', cursive" }}>
+                                <p className="leading-relaxed text-2xl md:text-3xl mb-8 transform rotate-[-1deg] opacity-90">
                                     Je bent jouw club gestart met een duidelijke missie: mensen helpen en vrijheid voor jezelf creëren. En dat doe je fantastisch. Jouw leden zijn blij, ze halen resultaat en er hangt een onverslaanbare sfeer.
                                 </p>
-                                <p className="text-[#3a3a3a] leading-relaxed text-xl mb-8">
-                                    <strong className="font-bold text-[#1a1a1a]">Maar als je écht eerlijk bent</strong>... is die vrijheid er nog steeds niet. In plaats van werken <span className="italic">aan</span> je bedrijf, werk je je kapot <span className="italic">in</span> je bedrijf.
+                                <p className="leading-relaxed text-2xl md:text-3xl mb-10 transform rotate-[0.5deg] opacity-90">
+                                    <strong className="font-bold border-b-[2px] border-[#0f172a]/20 pb-1">Maar als je écht eerlijk bent</strong>... is die vrijheid er nog steeds niet. In plaats van werken aan je bedrijf, werk je je kapot in je bedrijf.
                                 </p>
 
                                 {/* Checkmarks changed to handwritten style Xs */}
-                                <ul className="space-y-5 text-[#4a4a4a] text-lg mb-10 ml-2">
+                                <ul className="space-y-6 text-2xl md:text-3xl mb-12 ml-2 transform rotate-[-0.5deg] opacity-90">
                                     <li className="flex items-start gap-4">
-                                        <span className="text-accent mt-0.5 font-drama text-2xl font-bold leading-none">x</span>
+                                        <span className="text-red-700 font-bold leading-none mt-1">x</span>
                                         <span>Je bent afhankelijk van hoop en mond-tot-mondreclame.</span>
                                     </li>
                                     <li className="flex items-start gap-4">
-                                        <span className="text-accent mt-0.5 font-drama text-2xl font-bold leading-none">x</span>
+                                        <span className="text-red-700 font-bold leading-none mt-1">x</span>
                                         <span>Je hebt bureaus en campagnes geprobeerd, maar leads namen de telefoon niet op.</span>
                                     </li>
                                     <li className="flex items-start gap-4">
-                                        <span className="text-accent mt-0.5 font-drama text-2xl font-bold leading-none">x</span>
+                                        <span className="text-red-700 font-bold leading-none mt-1">x</span>
                                         <span>Elke maand voelt de omzet en ledeninstroom weer als een verrassing.</span>
                                     </li>
                                 </ul>
 
                                 {/* "Handwritten" Signature / Conclusion area */}
-                                <div className="mt-10 pt-10 relative">
-                                    {/* Squiggly line separator */}
-                                    <svg className="absolute top-0 left-0 w-full h-4 text-black/10" preserveAspectRatio="none" viewBox="0 0 100 10" fill="none" stroke="currentColor" strokeWidth="1">
-                                        <path d="M0 5 Q 10 0, 20 5 T 40 5 T 60 5 T 80 5 T 100 5"></path>
-                                    </svg>
-
-                                    <h3 className="font-heading font-bold text-2xl text-[#1a1a1a] mb-5 tracking-wide mt-4">Onze missie is die chaos wegnemen.</h3>
-                                    <p className="text-[#3a3a3a] leading-relaxed text-xl">
+                                <div className="mt-12 pt-8 relative border-t-[3px] border-dashed border-[#0f172a]/20 transform rotate-[1deg]">
+                                    <h3 className="font-bold text-3xl md:text-4xl mb-4 tracking-wide mt-2 opacity-100">Onze missie is die chaos wegnemen.</h3>
+                                    <p className="leading-relaxed text-2xl md:text-3xl opacity-90">
                                         Zodat jij niet meer hoeft te hopen op groei, maar kan vertrouwen op een systeem. Wij geven je de rust en de leads, zodat jij weer de coach en ondernemer kan zijn die jouw leden—en jijzelf—zo hard nodig hebben.
                                     </p>
                                 </div>
@@ -109,7 +120,7 @@ const Story = () => {
                         </div>
 
                         {/* Background drop shadow layer for realistic paper depth */}
-                        <div className="absolute inset-0 bg-black/5 rounded-sm transform rotate-[-1deg] translate-y-2 translate-x-1 z-10 blur-[2px]"></div>
+                        <div className="absolute inset-0 bg-black/10 rounded-sm transform rotate-[-1.5deg] translate-y-3 translate-x-2 z-10 blur-[4px]"></div>
                     </div>
                 </div>
 
