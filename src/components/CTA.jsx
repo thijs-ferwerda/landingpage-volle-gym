@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CTA = () => {
     return (
-        <section id="inzicht" className="py-32 md:py-48 px-6 md:px-12 bg-background relative overflow-hidden flex items-center justify-center">
+        <section id="inzicht" className="py-32 md:py-48 px-6 md:px-12 bg-black relative overflow-hidden flex items-center justify-center">
 
             {/* Cinematic Background Glows */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
