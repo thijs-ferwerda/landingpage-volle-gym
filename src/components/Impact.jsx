@@ -68,7 +68,7 @@ const Impact = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-24 md:py-32 bg-primary text-white relative overflow-hidden border-y border-white/10">
+        <section id="impact" ref={sectionRef} className="py-24 md:py-32 bg-primary text-white relative overflow-hidden border-y border-white/10">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/5 to-transparent pointer-events-none" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-primary to-primary opacity-50 pointer-events-none" />
