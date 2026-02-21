@@ -111,6 +111,52 @@ const GoogleReviews = () => {
     const containerRef = useRef(null);
     const reviewsRef = useRef([]);
     const [visibleCount, setVisibleCount] = useState(6);
+    const [displayReviews, setDisplayReviews] = useState(reviews);
+    const [stats, setStats] = useState({ rating: 5.0, count: 20 });
+
+    useEffect(() => {
+        const fetchLiveReviews = async () => {
+            try {
+                const response = await fetch('/api/reviews');
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data && data.result) {
+                        setStats({
+                            rating: data.result.rating || 5.0,
+                            count: data.result.user_ratings_total || 20
+                        });
+
+                        if (data.result.reviews && data.result.reviews.length > 0) {
+                            // Map live reviews to our format
+                            const liveReviews = data.result.reviews.map(r => ({
+                                author: r.author_name,
+                                date: r.relative_time_description,
+                                text: r.text,
+                                profile_photo: r.profile_photo_url,
+                                rating: r.rating
+                            })).filter(r => r.text); // Only keep reviews with text
+
+                            // Combine live reviews (prioritized) with static reviews for volume
+                            const combined = [...liveReviews];
+
+                            // Fill the rest with static reviews, filtering out duplicates by name
+                            const liveAuthorNames = liveReviews.map(r => r.author);
+                            reviews.forEach(staticReview => {
+                                if (!liveAuthorNames.includes(staticReview.author) && combined.length < reviews.length) {
+                                    combined.push(staticReview);
+                                }
+                            });
+
+                            setDisplayReviews(combined);
+                        }
+                    }
+                }
+            } catch (error) {
+                console.error("Failed to load live reviews", error);
+            }
+        };
+        fetchLiveReviews();
+    }, []);
 
     const addToRefs = (el) => {
         if (el && !reviewsRef.current.includes(el)) {
@@ -135,12 +181,12 @@ const GoogleReviews = () => {
                     }
                 }
             );
-        }, [visibleCount]);
+        }, [visibleCount, displayReviews]);
         return () => ctx.revert();
-    }, [visibleCount]);
+    }, [visibleCount, displayReviews]);
 
     const handleLoadMore = () => {
-        setVisibleCount(prev => Math.min(prev + 6, reviews.length));
+        setVisibleCount(prev => Math.min(prev + 6, displayReviews.length));
     };
 
     return (
@@ -160,7 +206,7 @@ const GoogleReviews = () => {
                         <div>
                             <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary tracking-tight mb-2">Google Reviews</h2>
                             <div className="flex items-center gap-3">
-                                <span className="font-bold text-xl">5.0</span>
+                                <span className="font-bold text-xl">{stats.rating.toFixed(1)}</span>
                                 <div className="flex gap-1">
                                     {[1, 2, 3, 4, 5].map((star) => (
                                         <svg key={star} className="w-5 h-5 text-[#FABB05]" fill="currentColor" viewBox="0 0 20 20">
@@ -168,20 +214,24 @@ const GoogleReviews = () => {
                                         </svg>
                                     ))}
                                 </div>
-                                <span className="font-sans text-sm text-primary/60">(20 reviews)</span>
+                                <span className="font-sans text-sm text-primary/60">({stats.count} reviews)</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    {reviews.slice(0, visibleCount).map((review, idx) => (
+                    {displayReviews.slice(0, visibleCount).map((review, idx) => (
                         <div ref={addToRefs} key={idx} className="bg-background border border-primary/5 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
                             <div className="flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
-                                        {review.author.charAt(0)}
-                                    </div>
+                                    {review.profile_photo ? (
+                                        <img src={review.profile_photo} alt={review.author} className="w-10 h-10 rounded-full object-cover shadow-sm bg-primary/5" referrerPolicy="no-referrer" />
+                                    ) : (
+                                        <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                                            {review.author.charAt(0)}
+                                        </div>
+                                    )}
                                     <div>
                                         <p className="font-heading font-semibold text-primary">{review.author}</p>
                                         <p className="font-sans text-xs text-primary/50">{review.date}</p>
@@ -191,19 +241,19 @@ const GoogleReviews = () => {
                             </div>
                             <div className="flex gap-1 mb-4">
                                 {[1, 2, 3, 4, 5].map((star) => (
-                                    <svg key={star} className="w-4 h-4 text-[#FABB05]" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg key={star} className={`w-4 h-4 ${star <= (review.rating || 5) ? 'text-[#FABB05]' : 'text-primary/20'}`} fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                     </svg>
                                 ))}
                             </div>
-                            <p className="font-sans text-primary/70 leading-relaxed text-sm mt-auto">
+                            <p className="font-sans text-primary/70 leading-relaxed text-sm mt-auto break-words">
                                 "{review.text}"
                             </p>
                         </div>
                     ))}
                 </div>
 
-                {visibleCount < reviews.length && (
+                {visibleCount < displayReviews.length && (
                     <div className="flex justify-center">
                         <button
                             onClick={handleLoadMore}
