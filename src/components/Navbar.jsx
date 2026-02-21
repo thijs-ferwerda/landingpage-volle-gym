@@ -25,7 +25,7 @@ const Navbar = () => {
                 <Link
                     to="/"
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className="text-xl font-bold tracking-tight uppercase flex items-center gap-2"
+                    className={`text-xl font-bold tracking-tight uppercase flex items-center gap-2 ${scrolled ? '' : 'mx-auto md:mx-0'}`}
                 >
                     <svg className={`w-6 h-6 ${scrolled ? 'text-accent' : 'text-primary'} transition-colors duration-300`} viewBox="0 0 24 24" fill="currentColor">
                         <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
@@ -41,7 +41,7 @@ const Navbar = () => {
                             <a href="/#resultaten" className="hover:-translate-y-[1px] transition-transform">Resultaten</a>
                         </div>
 
-                        <Link to="/intake" className="magnetic-btn bg-accent text-primary px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group inline-block">
+                        <Link to="/intake" className={`magnetic-btn bg-accent text-primary px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled ? 'inline-block' : 'hidden md:inline-block'}`}>
                             <span className="magnetic-btn-content">Doe de intake</span>
                         </Link>
                     </>

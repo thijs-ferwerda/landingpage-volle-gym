@@ -95,16 +95,16 @@ const Impact = () => {
                 {/* Numbers Side - Stacked Vertically */}
                 <div className="w-full md:w-5/12 flex flex-col gap-10 md:gap-14 pt-8 md:pt-0">
                     {metrics.map((metric, i) => (
-                        <div key={metric.id} className="impact-fade flex flex-col md:flex-row md:items-center justify-between gap-4 relative group border-t border-white/10 pt-8 first:border-0 first:pt-0">
+                        <div key={metric.id} className="impact-fade flex flex-col md:flex-row items-center md:items-center justify-between gap-4 md:gap-4 relative group border-t border-white/10 pt-8 first:border-0 first:pt-0 text-center md:text-left">
 
-                            <div className="flex flex-col">
+                            <div className="flex flex-col items-center md:items-start w-full md:w-auto">
                                 <span className="font-data text-accent text-sm md:text-xs mb-1 uppercase tracking-wide opacity-80 group-hover:opacity-100 transition-opacity">
                                     // 0{i + 1}
                                 </span>
                                 <p className="font-sans font-medium text-white/80 text-lg md:text-xl">{metric.label}</p>
                             </div>
 
-                            <div className="font-heading font-bold text-5xl md:text-6xl tracking-tighter text-white flex items-baseline gap-1">
+                            <div className="font-heading font-bold text-5xl md:text-6xl tracking-tighter text-white flex items-baseline justify-center md:justify-end gap-1 w-full md:w-auto mt-2 md:mt-0">
                                 <span ref={addToRefs}>0</span>
                                 <span className="text-accent text-3xl md:text-4xl">+</span>
                             </div>

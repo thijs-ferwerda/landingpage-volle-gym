@@ -36,7 +36,8 @@ const VolleGymBar = () => {
                     Live Data
                 </div>
                 <p className="font-heading font-medium text-sm md:text-base">
-                    Op dit moment starten er elke week gemiddeld twee nieuwe PT-studio's of gyms. <a href="#impact" onClick={(e) => { e.preventDefault(); document.getElementById('impact').scrollIntoView({ behavior: 'smooth' }); }} className="underline decoration-2 underline-offset-4 hover:text-white transition-colors cursor-pointer">Zie hier hun resultaten.</a>
+                    Op dit moment starten er elke week gemiddeld 2 nieuwe PT-studio's of gyms. <br className="sm:hidden" />
+                    <a href="#impact" onClick={(e) => { e.preventDefault(); document.getElementById('impact').scrollIntoView({ behavior: 'smooth' }); }} className="underline decoration-2 underline-offset-4 hover:text-white transition-colors cursor-pointer sm:ml-2">Zie hier hun resultaten.</a>
                 </p>
             </div>
         </div>
