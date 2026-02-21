@@ -77,15 +77,15 @@ const Story = () => {
                             {/* Subtle Paper Texture Overlay using a CSS radial gradient pattern */}
                             <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '12px 12px' }}></div>
 
-                            {/* Inject Authentic Ink Pen Font (Kalam) */}
+                            {/* Inject Authentic Fineliner Pen Font (Caveat is very realistic for notes) */}
                             <style>
                                 {`
-                                    @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+                                    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap');
                                 `}
                             </style>
 
-                            {/* Content wrapper with actual ink pen font and dark blue 'ink' color */}
-                            <div className="relative z-10 text-[#0f172a]" style={{ fontFamily: "'Kalam', cursive" }}>
+                            {/* Content wrapper with actual fineliner font and dark blue grey 'ink' color */}
+                            <div className="relative z-10 text-[#1e293b]" style={{ fontFamily: "'Caveat', cursive", fontSize: '110%' }}>
                                 <p className="leading-relaxed text-2xl md:text-3xl mb-8 transform rotate-[-1deg] opacity-90">
                                     Je bent jouw club gestart met een duidelijke missie: mensen helpen en vrijheid voor jezelf creëren. En dat doe je fantastisch. Jouw leden zijn blij, ze halen resultaat en er hangt een onverslaanbare sfeer.
                                 </p>
@@ -109,8 +109,8 @@ const Story = () => {
                                     </li>
                                 </ul>
 
-                                {/* "Handwritten" Signature / Conclusion area */}
-                                <div className="mt-12 pt-8 relative border-t-[3px] border-dashed border-[#0f172a]/20 transform rotate-[1deg]">
+                                {/* "Handwritten" Signature / Conclusion area (Divider removed) */}
+                                <div className="mt-8 pt-4 relative transform rotate-[1deg]">
                                     <h3 className="font-bold text-3xl md:text-4xl mb-4 tracking-wide mt-2 opacity-100">Onze missie is die chaos wegnemen.</h3>
                                     <p className="leading-relaxed text-2xl md:text-3xl opacity-90">
                                         Zodat jij niet meer hoeft te hopen op groei, maar kan vertrouwen op een systeem. Wij geven je de rust en de leads, zodat jij weer de coach en ondernemer kan zijn die jouw leden—en jijzelf—zo hard nodig hebben.
