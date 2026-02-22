@@ -31,7 +31,7 @@ const Sorry = () => {
             {/* Embedded "Frame" Container for text */}
             <div className="w-full max-w-4xl mx-auto px-8 md:px-20 py-16 bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden relative z-20 text-center">
                 <h2 className="font-heading font-bold text-2xl md:text-3xl text-primary mb-6">Waarom we je aanvraag niet doorzetten</h2>
-                
+
                 <div className="space-y-6 font-sans text-primary/80 text-lg leading-relaxed max-w-2xl mx-auto">
                     <p>
                         Wij hebben onze systemen zodanig aangescherpt, dat we keiharde garanties durven te geven. Maar die garanties kunnen we alleen waarmaken als elke factor in onze samenwerking klopt.
@@ -49,12 +49,6 @@ const Sorry = () => {
                         Heel veel succes verder met je business.
                     </p>
                 </div>
-            </div>
-
-            <div className="w-full text-center mt-12 relative z-20 opacity-60">
-                <p className="text-primary text-sm font-sans font-medium">
-                    &copy; {new Date().getFullYear()} Volle Gym Consulting.
-                </p>
             </div>
         </section>
     );
