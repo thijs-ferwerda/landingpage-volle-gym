@@ -60,16 +60,7 @@ const Story = () => {
                     {/* The "Paper" Card & Surrounding Elements wrapper (group for hover) */}
                     <div ref={addToTextRefs} className="group relative mt-4 cursor-default w-full">
 
-                        {/* Hidden Interactive "Scribbles" & Emojis that reveal on hover OUTSIDE the paper */}
-                        <div className="absolute -top-12 -right-5 md:-right-20 text-red-600/80 text-xl md:text-2xl transform rotate-[15deg] opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 pointer-events-none z-10" style={{ fontFamily: "'Caveat', cursive" }}>
-                            Pijnlijk herkenbaar... 🤦‍♂️
-                        </div>
-                        <div className="absolute top-[40%] -left-10 md:-left-24 text-4xl transform rotate-[-15deg] opacity-0 group-hover:opacity-100 transition-all duration-700 delay-300 pointer-events-none scale-75 group-hover:scale-100 z-10">
-                            🤯💸
-                        </div>
-                        <div className="absolute -bottom-8 -right-8 md:-right-16 text-primary/70 text-lg md:text-xl transform rotate-[-5deg] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-500 pointer-events-none z-10" style={{ fontFamily: "'Caveat', cursive" }}>
-                            Dit stoppen we. 👇
-                        </div>
+                        {/* Removed Hidden Interactive Scribbles */}
 
                         {/* Torn Tape Effect (Top Center) */}
                         <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-10 bg-white/30 backdrop-blur-sm border-t border-b border-white/40 shadow-sm rotate-[-3deg] z-30" style={{

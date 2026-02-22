@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const API_KEY = 'AIzaSyDb9FMqYFQhvBhAJ2R7DmPdBZGh4-Ww0Sc';
 
     try {
-        const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,reviews,user_ratings_total&language=nl&reviews_sort=newest&key=${API_KEY}`);
+        const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&language=nl&reviews_sort=newest&key=${API_KEY}`);
 
         if (!response.ok) {
             throw new Error(`Google API responded with status ${response.status}`);

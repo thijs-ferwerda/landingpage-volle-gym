@@ -50,35 +50,7 @@ const Hero = () => {
             {/* Content Container - Centered */}
             <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center shrink-0 mt-8 md:mt-12">
 
-                {/* Mobile Trust Indicators (Top of Hero) - HIDE ON DESKTOP */}
-                <div ref={addToRefs} className="flex md:hidden flex-col items-center justify-center gap-4 mb-6 w-full mt-2">
-                    {/* Google Reviews Summary for Mobile */}
-                    <a href="#ervaringen" className="flex items-center justify-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
-                        <div className="flex gap-0.5 bg-white px-3 py-1.5 rounded-full border border-primary/10 shadow-sm">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                                <svg key={star} className="w-3.5 h-3.5 text-[#FABB05]" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                            ))}
-                        </div>
-                        <span className="text-primary/70 text-xs font-sans font-bold">Tientallen 5⭐ reviews</span>
-                    </a>
 
-                    {/* Gym Partners for Mobile */}
-                    <a href="#resultaten" className="flex items-center justify-center gap-3 text-primary/70 text-sm font-sans cursor-pointer hover:opacity-80 transition-opacity">
-                        <div className="flex -space-x-3">
-                            {['_ERwMRB4pgE', 'KxT9StIlyeg', 'Qjc8I01bZE8'].map((videoId, i) => (
-                                <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-white overflow-hidden shrink-0 shadow-sm relative" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt="Succesverhaal" className="w-full h-full object-cover scale-[1.35] object-[center_20%]" />
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex flex-col text-left">
-                            <span className="text-primary font-bold text-xs">40+ succesvolle gyms</span>
-                            <span className="text-[10px] font-medium text-primary/60">Bekijk resultaten</span>
-                        </div>
-                    </a>
-                </div>
 
                 {/* Intro Tag */}
                 <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8">

@@ -226,7 +226,7 @@ const GoogleReviews = () => {
                             <div className="flex items-center justify-between mb-4">
                                 <div className="flex items-center gap-3">
                                     {review.profile_photo ? (
-                                        <img src={review.profile_photo} alt={review.author} className="w-10 h-10 rounded-full object-cover shadow-sm bg-primary/5" referrerPolicy="no-referrer" />
+                                        <img src={review.profile_photo} alt={review.author} className="w-10 h-10 rounded-full object-cover shadow-sm bg-primary/5" loading="lazy" />
                                     ) : (
                                         <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg shadow-sm">
                                             {review.author.charAt(0)}
