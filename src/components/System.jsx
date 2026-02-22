@@ -67,9 +67,9 @@ const System = () => {
                         <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                         Het Volle Gym Systeem
                     </p>
-                    <h2 className="font-heading font-medium text-4xl md:text-5xl lg:text-6xl text-primary leading-tight tracking-tight mb-6">
+                    <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-primary leading-tight tracking-tight mb-6">
                         Drie fundamentele pilaren <br className="hidden md:block" />
-                        <span className="font-drama italic text-primary/60">voor ongekende schaalbaarheid.</span>
+                        <span className="font-drama italic text-primary/60 font-medium">voor ongekende schaalbaarheid.</span>
                     </h2>
                     <p className="font-sans text-primary/70 text-lg md:text-xl leading-relaxed">
                         Geen losse trucjes of tijdelijke hypes. Wij implementeren een fundament dat jouw bedrijf onafhankelijk maakt van jouw uren, en afhankelijk maakt van ijzersterke systemen.
