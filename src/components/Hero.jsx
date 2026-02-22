@@ -56,9 +56,13 @@ const Hero = () => {
                 <div ref={addToRefs} className="flex md:hidden flex-col items-center justify-center gap-4 mb-6 w-full mt-2">
                     <a href="#resultaten" className="flex items-center justify-center gap-3 text-primary/70 text-sm font-sans cursor-pointer hover:opacity-80 transition-opacity">
                         <div className="flex -space-x-3">
-                            {['_ERwMRB4pgE', 'KxT9StIlyeg', 'Qjc8I01bZE8'].map((videoId, i) => (
-                                <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-white overflow-hidden shrink-0 shadow-sm relative" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt="Succesverhaal" className="w-full h-full object-cover scale-[1.35] object-[center_20%]" />
+                            {[
+                                'https://lh3.googleusercontent.com/a/ACg8ocJjKWaL2P-xrq_ikQURMk9G6RbuOkq8QqTGsI2NlR01GZSGSg=s128-c0x00000000-cc-rp-mo',
+                                'https://lh3.googleusercontent.com/a/ACg8ocIVsF0ZsNDuLW-E5FdeqHt-TqLzOJYj4WfDvxg1Crh1GjgaPG0=s128-c0x00000000-cc-rp-mo',
+                                'https://lh3.googleusercontent.com/a/ACg8ocKLwOvGQO2I61CPMvGnbVXjvZFzEQf9R6xt-GMksFx8RWzHz-E=s128-c0x00000000-cc-rp-mo-ba2'
+                            ].map((photoUrl, i) => (
+                                <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-primary/5 overflow-hidden shrink-0 shadow-sm relative" style={{ transitionDelay: `${i * 50}ms` }}>
+                                    <img src={photoUrl} alt="Gym Eigenaar" className="w-full h-full object-cover scale-100 object-center" referrerPolicy="no-referrer" />
                                 </div>
                             ))}
                         </div>
