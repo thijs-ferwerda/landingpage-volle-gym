@@ -33,7 +33,7 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full min-h-[100dvh] flex flex-col items-center pt-24 bg-background overflow-hidden"
+            className="relative w-full min-h-[90vh] flex flex-col justify-center items-center pt-24 pb-12 bg-background overflow-hidden"
         >
             {/* Lighter, premium background image of people training/coaching */}
             <div
@@ -47,11 +47,8 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent opacity-60" />
 
-            {/* Top Spacer to keep content centered */}
-            <div className="flex-1"></div>
-
             {/* Content Container - Centered */}
-            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center shrink-0">
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center shrink-0 mt-8 md:mt-12">
 
                 {/* Intro Tag */}
                 <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8">
@@ -107,11 +104,8 @@ const Hero = () => {
                     </a>
                 </div>
             </div>
-            {/* Bottom Spacer */}
-            <div className="flex-1"></div>
-
-            {/* Trust Indicators (Google/Gyms) - Pinned to bottom of the Hero view */}
-            <div className="relative z-10 w-full pb-8 md:pb-12 pt-8 border-t border-primary/10 mt-auto shrink-0">
+            {/* Trust Indicators (Google/Gyms) - Kept closer below content */}
+            <div className="relative z-10 w-full pb-8 md:pb-6 pt-10 md:pt-14 mt-8 md:mt-12 border-t border-primary/10 shrink-0">
                 <div ref={addToRefs} className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-16 max-w-4xl mx-auto w-full">
                     <a href="#resultaten" className="flex items-center justify-center gap-4 text-primary/70 text-sm font-sans flex-1 group cursor-pointer hover:opacity-80 transition-opacity">
                         <div className="flex -space-x-3">
