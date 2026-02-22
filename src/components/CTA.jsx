@@ -31,9 +31,9 @@ const CTA = () => {
                     <div className="relative inline-flex items-center justify-center mt-4 w-full md:w-auto">
                         <div className="absolute top-1/2 -translate-y-1/2 -left-20 md:-left-64 transform rotate-[-8deg] text-white/70 text-2xl md:text-3xl pointer-events-none hidden md:block w-56 text-right z-20" style={{ fontFamily: "'Caveat', cursive" }}>
                             Tijd om te schalen?
-                            {/* Curved arrow pointing rightwards to the button (fixed precisely 24deg) */}
-                            <svg className="absolute top-1/2 -translate-y-1/2 -right-10 md:-right-14 w-8 h-8 md:w-10 md:h-10 text-white/50 transform rotate-[24deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            {/* Hand-drawn curved arrow pointing rightwards to the button's vertical center */}
+                            <svg className="absolute top-[65%] -translate-y-1/2 -right-10 md:-right-14 w-8 h-8 md:w-10 md:h-10 text-white/50 transform rotate-[15deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12c4-2 8-2 13 0M12 6c2 1.5 4 4 4 6-2 2-4 4-5 5" />
                             </svg>
                         </div>
 
