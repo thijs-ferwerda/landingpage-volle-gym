@@ -11,9 +11,11 @@ const Footer = () => {
             {!isIntakePage && (
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20 border-b border-primary/10 pb-20">
                     <div className="md:col-span-2">
-                        <div className="text-3xl font-bold tracking-tight flex items-center gap-3 mb-6">
-                            <div className="w-4 h-4 rounded-full bg-accent"></div>
-                            Volle Gym
+                        <div className="flex items-center gap-3 mb-6">
+                            <svg className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
+                            </svg>
+                            <span className="font-heading font-black text-2xl tracking-tighter uppercase text-primary">Volle Gym</span>
                         </div>
                         <p className="font-sans text-primary/60 max-w-sm leading-relaxed mb-8">
                             De helpende hand van gezond Nederland. Wij bouwen voorspelbare systemen voor PT studio's en small group gyms. Resultaat &gt; Meningen.
