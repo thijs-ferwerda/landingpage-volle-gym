@@ -42,7 +42,7 @@ const IntakeQualified = () => {
             </div>
 
             {/* Embedded Calendar Container */}
-            <div className="w-full max-w-6xl mx-auto bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden relative z-20">
+            <div className="w-full max-w-6xl mx-auto p-4 bg-white rounded-3xl shadow-xl border border-primary/10 relative z-20">
                 <iframe
                     src="https://api.leadconnectorhq.com/widget/booking/VJNpnvcHICgLsY8NxG8r"
                     style={{ width: '100%', border: 'none', overflow: 'hidden' }}
