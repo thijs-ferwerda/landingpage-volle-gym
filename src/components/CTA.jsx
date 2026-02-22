@@ -43,7 +43,7 @@ const CTA = () => {
                             `}
                         </style>
 
-                        <Link to="/intake" className="magnetic-btn bg-accent text-primary px-12 py-6 rounded-full text-lg md:text-xl font-bold tracking-widest uppercase group inline-flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(255,53,0,0.25)] hover:shadow-[0_20px_60px_rgba(255,53,0,0.5)] z-10 relative">
+                        <Link to="/intake" className="magnetic-btn bg-accent text-white px-12 py-6 rounded-full text-lg md:text-xl font-bold tracking-widest uppercase group inline-flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(255,53,0,0.25)] hover:shadow-[0_20px_60px_rgba(255,53,0,0.5)] z-10 relative">
                             <span className="magnetic-btn-content">Plan de intake</span>
                             <svg
                                 className="w-8 h-8 magnetic-btn-content group-hover:translate-x-2 transition-transform duration-300"
