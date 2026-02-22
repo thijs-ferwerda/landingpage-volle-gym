@@ -52,6 +52,23 @@ const Hero = () => {
 
 
 
+                {/* Mobile Gym Partners (Top of Hero) - HIDE ON DESKTOP */}
+                <div ref={addToRefs} className="flex md:hidden flex-col items-center justify-center gap-4 mb-6 w-full mt-2">
+                    <a href="#resultaten" className="flex items-center justify-center gap-3 text-primary/70 text-sm font-sans cursor-pointer hover:opacity-80 transition-opacity">
+                        <div className="flex -space-x-3">
+                            {['_ERwMRB4pgE', 'KxT9StIlyeg', 'Qjc8I01bZE8'].map((videoId, i) => (
+                                <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-white overflow-hidden shrink-0 shadow-sm relative" style={{ transitionDelay: `${i * 50}ms` }}>
+                                    <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt="Succesverhaal" className="w-full h-full object-cover scale-[1.35] object-[center_20%]" />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <span className="text-primary font-bold text-xs">40+ succesvolle gyms</span>
+                            <span className="text-[10px] font-medium text-primary/60">Bekijk resultaten</span>
+                        </div>
+                    </a>
+                </div>
+
                 {/* Intro Tag */}
                 <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8">
                     <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
