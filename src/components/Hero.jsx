@@ -58,8 +58,8 @@ const Hero = () => {
                         <div className="flex -space-x-3">
                             {[
                                 'https://lh3.googleusercontent.com/a-/ALV-UjU2zXgmMVuNbQaNLlkGAqRqYM4rQeFsHsvqko3RXwM6O4CAB8GB=s128-c0x00000000-cc-rp-mo',
-                                'https://lh3.googleusercontent.com/a-/ALV-UjVlC4eD6B1LtvIJnqIqyRj5zLif8Lv7SdstA1u6fsSfZZTzwV7D=s128-c0x00000000-cc-rp-mo',
-                                'https://lh3.googleusercontent.com/a-/ALV-UjVFBc8JhkpUUEFxEuiSvv-1xvFtyz-sRWsHFfS7KTJnyPZuOZSD=s128-c0x00000000-cc-rp-mo'
+                                'https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c0x00000000-cc-rp-mo',
+                                'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=128&h=128&fit=crop'
                             ].map((photoUrl, i) => (
                                 <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-primary/5 overflow-hidden shrink-0 shadow-sm relative" style={{ transitionDelay: `${i * 50}ms` }}>
                                     <img src={photoUrl} alt="Gym Eigenaar" className="w-full h-full object-cover scale-100 object-center" referrerPolicy="no-referrer" />

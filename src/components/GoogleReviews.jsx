@@ -78,17 +78,20 @@ const reviews = [
     {
         "author": "Tommy Eichelsheim",
         "date": "1 dag geleden",
-        "text": "Top begeleiding en resultaten behaald. De heren van Volle Gym hebben mij goed geholpen."
+        "text": "Top begeleiding en resultaten behaald. De heren van Volle Gym hebben mij goed geholpen.",
+        "profile_photo": "https://lh3.googleusercontent.com/a/ACg8ocJjKWaL2P-xrq_ikQURMk9G6RbuOkq8QqTGsI2NlR01GZSGSg=s128-c0x00000000-cc-rp-mo"
     },
     {
         "author": "Circles Waalre",
         "date": "11 maanden geleden",
-        "text": "Opzoek naar een fitness marketing bureau? Dan ben je op de juiste adres bij Volle Gym, binnen een paar maanden hebben wij onze doel behaald! Hartelijk bedankt voor de samenwerking jongens van de Volle Gym!"
+        "text": "Opzoek naar een fitness marketing bureau? Dan ben je op de juiste adres bij Volle Gym, binnen een paar maanden hebben wij onze doel behaald! Hartelijk bedankt voor de samenwerking jongens van de Volle Gym!",
+        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c0x00000000-cc-rp-mo"
     },
     {
         "author": "Max Van der Meer",
         "date": "2 maanden geleden",
-        "text": "Hele fijne samenwerking met Volle Gym. Heb met verschillende ''lead-partijen'' samengewerkt. Maar met Volle Gym merk ik pas écht verschil. Heel professioneel, fijne systemen, goede begeleiding en helpende coaching wat het verschil maakt. Een echte aanrader als je de volgende stap wilt zetten met je Gym!"
+        "text": "Hele fijne samenwerking met Volle Gym. Heb met verschillende ''lead-partijen'' samengewerkt. Maar met Volle Gym merk ik pas écht verschil. Heel professioneel, fijne systemen, goede begeleiding en helpende coaching wat het verschil maakt. Een echte aanrader als je de volgende stap wilt zetten met je Gym!",
+        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjU2zXgmMVuNbQaNLlkGAqRqYM4rQeFsHsvqko3RXwM6O4CAB8GB=s128-c0x00000000-cc-rp-mo"
     },
     {
         "author": "Mauricio Franklin",
