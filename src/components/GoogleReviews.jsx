@@ -131,13 +131,19 @@ const GoogleReviews = () => {
 
                         if (data.result.reviews && data.result.reviews.length > 0) {
                             // Map live reviews to our format
-                            const liveReviews = data.result.reviews.map(r => ({
-                                author: r.author_name,
-                                date: r.relative_time_description,
-                                text: r.text,
-                                profile_photo: r.profile_photo_url,
-                                rating: r.rating
-                            })).filter(r => r.text); // Only keep reviews with text
+                            const liveReviews = data.result.reviews.map(r => {
+                                // Prefer our hardcoded static profile photo if the API returns a generic letter avatar
+                                const staticMatch = reviews.find(sr => sr.author === r.author_name);
+                                const photoToUse = (staticMatch && staticMatch.profile_photo) ? staticMatch.profile_photo : r.profile_photo_url;
+
+                                return {
+                                    author: r.author_name,
+                                    date: r.relative_time_description,
+                                    text: r.text,
+                                    profile_photo: photoToUse,
+                                    rating: r.rating
+                                };
+                            }).filter(r => r.text); // Only keep reviews with text
 
                             // Combine live reviews (prioritized) with static reviews for volume
                             const combined = [...liveReviews];
