@@ -33,7 +33,7 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full min-h-[90vh] flex flex-col justify-center items-center pt-24 pb-12 bg-background overflow-hidden"
+            className="relative w-full flex flex-col items-center pt-32 md:pt-40 pb-8 bg-background overflow-hidden"
         >
             {/* Lighter, premium background image of people training/coaching */}
             <div
