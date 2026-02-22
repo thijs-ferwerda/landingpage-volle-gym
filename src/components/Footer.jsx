@@ -40,8 +40,9 @@ const Footer = () => {
                         <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Connect</h4>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
                             <li><Link to="/intake" className="hover:text-accent transition-colors">Intake plannen</Link></li>
-                            <li><a href="#" className="hover:text-accent transition-colors">LinkedIn</a></li>
-                            <li><a href="#" className="hover:text-accent transition-colors">Instagram</a></li>
+                            <li><a href="https://www.linkedin.com/in/basnagelnl/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/vollegym/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/@vollegym" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">YouTube</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,8 +51,8 @@ const Footer = () => {
             <div className={`max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-data text-primary/40 ${isIntakePage ? 'border-t border-primary/10 pt-4' : ''}`}>
                 <p>&copy; {new Date().getFullYear()} Volle Gym. All systems go.</p>
                 <div className="flex gap-6">
-                    <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-                    <a href="#" className="hover:text-primary transition-colors">Voorwaarden</a>
+                    <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
+                    <Link to="/voorwaarden" className="hover:text-primary transition-colors">Voorwaarden</Link>
                 </div>
             </div>
         </footer>
