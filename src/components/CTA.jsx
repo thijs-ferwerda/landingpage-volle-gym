@@ -14,10 +14,10 @@ const CTA = () => {
                 {/* The Card - Maximized contrast (much lighter gray, very strong border, intense glow) */}
                 <div className="relative z-10 w-full max-w-5xl mx-auto bg-gradient-to-b from-[#333333] to-[#1a1a1a] rounded-[3rem] p-12 md:p-24 text-center shadow-[0_0_200px_rgba(255,53,0,0.2)] border border-white/30 flex flex-col items-center backdrop-blur-md">
 
-                    <span className="font-data text-accent text-sm md:text-base mb-6 uppercase tracking-widest flex items-center gap-3">
-                        <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                        Klaar voor schaalbaarheid?
-                    </span>
+                    <div className="inline-flex items-center gap-3 px-4 py-2 border border-white/10 rounded-full bg-white/5 mb-6">
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-pulse"></div>
+                        <span className="font-data text-xs tracking-widest text-white/80 uppercase">Klaar voor schaalbaarheid?</span>
+                    </div>
 
                     <h2 className="font-heading font-black text-6xl md:text-8xl mb-8 tracking-tighter leading-[1] text-white">
                         Claim je <span className="font-drama italic text-accent font-medium">garantie.</span>

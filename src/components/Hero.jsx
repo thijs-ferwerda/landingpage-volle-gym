@@ -50,21 +50,8 @@ const Hero = () => {
             {/* Content Container - Centered */}
             <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center shrink-0 mt-8 md:mt-12">
 
-                {/* Intro Tag */}
-                <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8">
-                    <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
-                    </svg>
-                    <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
-                        De helpende hand van gezond Nederland
-                    </p>
-                    <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
-                    </svg>
-                </div>
-
-                {/* Mobile Trust Indicators (Above Headline) - HIDE ON DESKTOP */}
-                <div ref={addToRefs} className="flex md:hidden flex-col items-center justify-center gap-4 mb-8 w-full">
+                {/* Mobile Trust Indicators (Top of Hero) - HIDE ON DESKTOP */}
+                <div ref={addToRefs} className="flex md:hidden flex-col items-center justify-center gap-4 mb-6 w-full mt-2">
                     {/* Google Reviews Summary for Mobile */}
                     <a href="#ervaringen" className="flex items-center justify-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
                         <div className="flex gap-0.5 bg-white px-3 py-1.5 rounded-full border border-primary/10 shadow-sm">
@@ -92,6 +79,21 @@ const Hero = () => {
                         </div>
                     </a>
                 </div>
+
+                {/* Intro Tag */}
+                <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8">
+                    <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
+                    </svg>
+                    <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
+                        De helpende hand van gezond Nederland
+                    </p>
+                    <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
+                    </svg>
+                </div>
+
+
 
                 {/* Narrative Headline */}
                 <h1 className="max-w-4xl flex flex-col gap-2 mb-8">
