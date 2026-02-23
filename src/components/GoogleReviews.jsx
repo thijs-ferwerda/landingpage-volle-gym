@@ -154,13 +154,20 @@ const GoogleReviews = () => {
                                 };
                             }).filter(r => r.text); // Only keep reviews with text
 
-                            // Combine live reviews (prioritized) with static reviews for volume
-                            const combined = [...liveReviews];
+                            // Keep the first 6 handpicked static reviews fully locked at the top
+                            const top6Static = reviews.slice(0, 6);
+                            const top6Names = top6Static.map(r => r.author);
 
-                            // Fill the rest with static reviews, filtering out duplicates by name
-                            const liveAuthorNames = liveReviews.map(r => r.author);
-                            reviews.forEach(staticReview => {
-                                if (!liveAuthorNames.includes(staticReview.author) && combined.length < reviews.length) {
+                            // The live reviews that are NOT already in the top 6
+                            const liveExclusive = liveReviews.filter(r => !top6Names.includes(r.author));
+
+                            // Start by placing the Top 6 at the very front
+                            const combined = [...top6Static, ...liveExclusive];
+
+                            // Fill the rest with the remaining static reviews, filtering out duplicates
+                            const combinedAuthorNames = combined.map(r => r.author);
+                            reviews.slice(6).forEach(staticReview => {
+                                if (!combinedAuthorNames.includes(staticReview.author) && combined.length < reviews.length) {
                                     combined.push(staticReview);
                                 }
                             });
