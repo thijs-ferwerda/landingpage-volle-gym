@@ -115,7 +115,7 @@ const VSL = () => {
                         <span className="font-drama italic text-accent pr-2 shadow-sm">accountability partner?</span>
                     </h2>
                     <p ref={addToTextRefs} className="font-sans text-primary/70 text-lg md:text-xl mb-8 leading-relaxed">
-                        Jij houdt je klanten keihard verantwoordelijk voor hun resultaat. Maar wie doet dat voor jou? Wij zijn gespecialiseerd in het behalen van jouw groeidoelen, doordat we niet alleen de kraan openzetten, maar jou ook verantwoordelijk houden voor de opvolging.
+                        Jij houdt jouw klanten soepel verantwoordelijk voor hun resultaten, maar wie doet dat voor jou? Wij hebben ons hele systeem zo ingericht dat wij díe partij voor je zijn. Oprecht meedenken, een keiharde stok achter de deur, en de garantie dat je jouw vastgestelde groeidoelen gaat aantikken.
                     </p>
                     <div ref={addToTextRefs} className="flex flex-col sm:flex-row gap-4 mt-6">
                         <button

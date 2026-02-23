@@ -3,20 +3,20 @@ import React, { useRef } from 'react';
 // You can easily replace the 'videoId' with the actual YouTube video ID from Volle Gym
 // Example: If link is https://www.youtube.com/watch?v=dQw4w9WgXcQ, the ID is dQw4w9WgXcQ
 const youtubeData = [
-    { name: 'Murat Son', result: '72 leden in 3 maanden tijd', objection: '"Waar ik eerder vastliep, hebben zij een heldere structuur die precies aansluit bij wie ik ben."', videoId: 'KxT9StIlyeg' },
-    { name: 'Hugo Le Jollec', result: '35 Leden in 2 maanden tijd', objection: '"Na meerdere slechte ervaringen met marketingbureaus was ik sceptisch. Mooie beloftes, weinig resultaat."', videoId: 'b4-jNpoxvwc' },
-    { name: 'Sanne Hendriks', result: '20 leden in 1 week tijd', objection: '"Er kwamen veel leads binnen, maar dat waren vooral loze leads. Je houdt er dan maar een klein aantal over."', videoId: '_ERwMRB4pgE' },
-    { name: 'Michel Dekker', result: '45 leden in 3 maanden tijd', objection: '"De leads die ik uithaalde vond ik niet genoeg. En de accountmanager wijzigde telkens."', videoId: 'hAj5OnZTSo4' },
-    { name: 'Casper Hazeveld', result: '35 leden in 1 maand tijd', objection: '"Voorheen hebben we van alles geprobeerd, maar zonder de gewenste call-to-action."', videoId: 'xnhQBTBJPek' },
-    { name: 'Benjamin van Keulen', result: '28 leden in 1 maand tijd', objection: '"Je stopt er €1000 in en er komt nog niet €1000 uit. Dan was ik wel klaar met marketinglui."', videoId: 'Qjc8I01bZE8' },
-    { name: 'Radjin Pitai', result: '25 leden in 1 maand tijd', objection: '"In het verleden zijn je al gouden bergen beloofd, wat niks opleverde. Ik wilde bijna weer voor een baas werken."', videoId: 'O_OFRYE3omQ' },
-    { name: 'Mauricio Franklin', result: '20 leden in 1 maand tijd', objection: '"In het verleden kreeg je altijd koude leads en moest je zelf maar uitzoeken hoe je die moest converteren."', videoId: 'SpJ5KgQa9Ww' },
-    { name: 'Melissa Pach', result: '20 leden in 1 maand tijd', objection: '"Ik zat financieel echt in de problemen en draaide verlies. Dat was geen fijn gevoel."', videoId: 'QIEOwUDPo5E' },
-    { name: 'Ulrich Heidstra', result: '15 leden in 1 maand tijd', objection: '"Ik was in het begin heel sceptisch omdat je zoveel partijen voorbijkomen met mooie beloftes."', videoId: 'Lf0IVAiILrk' },
-    { name: 'Mike Bosselaar', result: '25 leden in 5 weken tijd', objection: '"Andere partijen boden wel leads, maar er was helemaal geen plan. Daardoor lekte er veel budget weg."', videoId: 'PcUTF1gOYNs' },
-    { name: 'Daniëlle Sabajo', result: '20 leden in 6 weken tijd', objection: '"Jullie verzekerden me van volle lessen. Ik heb het aan jullie overgelaten en dat is gelukt."', videoId: '38VjOUsOhz4' },
-    { name: 'Emmy van Erp', result: '35 leden in 2 maanden tijd', objection: '"We hadden zelf weinig tijd om de nieuwe leden te werven. Jullie hebben ons daar goed bij geholpen."', videoId: 'EsqOf51DvJ0' },
-    { name: 'Jan Donker', result: '30 leden in 2 maanden tijd', objection: '"Jullie zijn de enige partij die mij 100% no-cure-no-pay heeft aangeboden. Daar had ik volle vertrouwen in."', videoId: 'BbCw16hxhbo' }
+    { name: 'Melissa Pach', result: '18 leden in 1 maand tijd', objection: 'Draaide verlies en vocht puur om te overleven met haar vaste ledenbestand. Startte de samenwerking en verkocht vrijwel direct 18 nieuwe trajecten vol energie.', videoId: 'QIEOwUDPo5E' },
+    { name: 'Radjin Pitai', result: '34 leden in 5 weken tijd', objection: 'Kreeg telkens gouden bergen beloofd door bureaus zonder resultaat. Stond op 9 leden en dacht eraan te stoppen, maar groeide met Volle Gym in 5 weken door naar 34 leden.', videoId: 'O_OFRYE3omQ' },
+    { name: 'Hugo Le Jollec', result: '35 leden in 2 maanden tijd', objection: 'Werkte zich kapot vóór de schermen zonder aan zijn bedrijf te bouwen. Was sceptisch door eerdere bureaus, maar bouwde nu succesvol een schaalbaar systeem.', videoId: 'b4-jNpoxvwc' },
+    { name: 'Sanne Hendriks', result: '20 leden in 1 week tijd', objection: 'Ontving eerder alleen loze aanmeldingen waarmee ze haar business niet kon bouwen. Bij Volle Gym stroomden in de eerste week direct 20 serieuze, betalende leden binnen.', videoId: '_ERwMRB4pgE' },
+    { name: 'Benjamin van Keulen', result: '28 leden in 1 maand tijd', objection: 'Had een diepe afkeer gekregen van marketingbureaus wegens het gebrek aan rendement. Gaf het nog één kans en mocht direct 28 nieuwe leden verwelkomen.', videoId: 'Qjc8I01bZE8' },
+    { name: 'Mike Bosselaar', result: '25 leden in 5 weken tijd', objection: 'Kreeg bij zijn vorige partij wel kliks, maar totaal geen plan of strategie waardoor budget weglekte. Met de nieuwe structuur tekende hij 25 nieuwe starters op.', videoId: 'PcUTF1gOYNs' },
+    { name: 'Casper Hazeveld', result: '30 leden in 1 maand tijd', objection: 'Hing volledig af van langzaam opdrogende mond-tot-mondreclame. Ontdekte hoe je met een gerichte call-to-action snel 30 extra leden binenhaalt.', videoId: 'xnhQBTBJPek' },
+    { name: 'Mauricio Franklin', result: '20 leden in 1 maand tijd', objection: 'Was te veel coach en te weinig schaalbare ondernemer doordat hij koude online leads zelf moest uitzoeken. Met de juiste begeleiding scoorde hij direct 20 leden in zijn eerste maand.', videoId: 'SpJ5KgQa9Ww' },
+    { name: 'Michel Dekker', result: '35 leden in 3 maanden tijd', objection: 'Kampte met stagnerende conversie door "gratis proefles"-zoekers via standaard internet bureau\'s. Bouwde een premium flow en haalde 35 hoogwaardige leden binnen.', videoId: 'hAj5OnZTSo4' },
+    { name: 'Ulrich Heidstra', result: '15 leden in 1 maand tijd', objection: 'Was sceptisch geworden door valse beloftes en had keiharde verantwoordelijkheid nodig voor de cijfers. De stok achter de deur resulteerde direct in een volle agenda en 15 startende leden.', videoId: 'Lf0IVAiILrk' },
+    { name: 'Murat Son', result: '72 leden in 3 maanden tijd', objection: 'Liep met zijn club compleet vast na drie falende eerdere trajecten. Kreeg dankzij de 90-dagen pijlers zijn focus terug en groeide explosief met 72 nieuwe inschrijvingen.', videoId: 'KxT9StIlyeg' },
+    { name: 'Daniëlle Sabajo', result: '35 leden in 2 maanden tijd', objection: 'Had passie voor haar vak, maar worstelde met administratie en chaos in de leadopvolging. Besloot het uit handen te geven en zag direct 35 leden starten.', videoId: '38VjOUsOhz4' },
+    { name: 'Jan Donker', result: '30 leden in 2 maanden tijd', objection: 'Werd gek van papieren chaos rondom nieuwe leads. Durfde uitsluitend te starten op de no-cure-no-pay garantie en haalde 10x zijn complete investering terug aan nieuwe leden.', videoId: 'BbCw16hxhbo' },
+    { name: 'Emmy van Erp', result: '15 leden in 1 maand tijd', objection: 'Hadden een prachtig concept in de markt staan, maar geen vaardigheid om de constante ledenstroom zelf op te vangen. Met de nieuwe systemen converteerden ze in de eerste maand direct 15 leden.', videoId: 'EsqOf51DvJ0' }
 ];
 
 const SocialProof = () => {
@@ -84,11 +84,11 @@ const SocialProof = () => {
                         </div>
 
                         {/* Content below video */}
-                        <div className="p-6">
+                        <div className="p-6 bg-white h-full">
                             <p className="font-heading font-semibold text-accent text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
                             <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest mb-3">{item.name}</p>
                             <div className="h-px w-full bg-primary/10 mb-3"></div>
-                            <p className="font-sans text-sm text-primary/60 italic leading-relaxed">
+                            <p className="font-sans text-sm text-primary/70 italic leading-relaxed">
                                 {item.objection}
                             </p>
                         </div>

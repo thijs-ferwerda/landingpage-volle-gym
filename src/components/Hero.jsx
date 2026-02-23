@@ -153,7 +153,14 @@ const Hero = () => {
                     <div className="hidden md:block w-px h-12 bg-primary/10"></div>
 
                     {/* Verwijs naar de specifieke ID van de Google Reviews sectie - HIDE ON MOBILE TO REDUCE CLUTTER */}
-                    <a href="#ervaringen" className="hidden md:flex items-center justify-center gap-3 shrink-0 flex-1 group cursor-pointer hover:opacity-80 transition-opacity">
+                    <a
+                        href="#ervaringen"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            document.getElementById('ervaringen')?.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className="hidden md:flex items-center justify-center gap-3 shrink-0 flex-1 group cursor-pointer hover:opacity-80 transition-opacity"
+                    >
                         <div className="flex gap-1 bg-white px-4 py-2 rounded-full border border-primary/10 shadow-sm group-hover:border-accent/30 transition-colors">
                             {[1, 2, 3, 4, 5].map((star) => (
                                 <svg key={star} className="w-4 h-4 text-[#FABB05]" fill="currentColor" viewBox="0 0 20 20">

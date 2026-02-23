@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
 import Intake from './pages/Intake/Intake';
@@ -13,9 +13,28 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 // Use a smooth scrolling setup for lenis-like feel or just native CSS scroll.
 // Global noise overlay is handled in index.css
 
+const ScrollToHash = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [hash]);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
+      <ScrollToHash />
       <div className="noise-overlay"></div>
       <Navbar />
       <Routes>
