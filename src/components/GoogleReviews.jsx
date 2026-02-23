@@ -7,6 +7,39 @@ gsap.registerPlugin(ScrollTrigger);
 const reviews = [
     // --- TOP 6 HANDPICKED ---
     {
+        "author": "Dominique van Do's Gym",
+        "date": "3 weken geleden",
+        "text": "VolleGym is een top partij. Het 3 maanden Gym Leaders Programma was helder opgebouwd, met goede tools en begeleiding die je direct kunt toepassen in je gym. Communicatie was snel en prettig. Wij zijn zeer tevreden."
+    },
+    {
+        "author": "Mike",
+        "date": "2 maanden geleden",
+        "text": "Je betaald bij volle gym niet voor het verzamelen van Leads. Je wordt uitgebreid begeleid om er voor te zorgen dat deze mensen ook daadwerkelijk bij jou van start gaan en langdurig lid blijven. Dit heeft mijn bedrijf een goede boost gegeven."
+    },
+    {
+        "author": "Kelt Jager",
+        "date": "5 maanden geleden",
+        "text": "Veel marketing agency's versleten de afgelopen tijd. Volle gym is tot nu toe met afstand de beste! De manier van werken en de systemen die ze hebben gebouwd zijn top! Zeker een aanrader",
+        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjVbt_MWCcpdUDOPjyBv8O1poTQgal9Ep7-FBtw9osaftSVFE05J=w144-h144-p-rp-mo-br100"
+    },
+    {
+        "author": "Sanne Hendriks",
+        "date": "5 maanden geleden",
+        "text": "Super goed geholpen door Bas en Bart! Deze jongens weten precies wat ze doen. Mijn gestelde doel binnen een maand behaald terwijl er 3 maanden voor stond. Bas en Bart weten precies waar ze het over hebben, denken en kijken graag met je mee."
+    },
+    {
+        "author": "Danielle Sabajo",
+        "date": "6 maanden geleden",
+        "text": "Super tevreden hoe Bas en Bart heel professioneel te werk gaan. Door onze samenwerking hebben wij weer volle lessen. Werken met volle gym is echt een aanrader. Ze doen precies wat ze beloven. 💪 Enthusiaste groet, Danielle",
+        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjWslzeCT1gLSsrSTEwa1jq-NIDT67cu2NmkIJ4ynvWtIEB7_OI=w144-h144-p-rp-mo-br100"
+    },
+    {
+        "author": "Tim Hortensius",
+        "date": "11 maanden geleden",
+        "text": "Wij hebben met volle tevredenheid samengewerkt met Volle Gym. Als boutique gym, gespecialiseerd in kleine groepslessen, waren we op zoek naar effectieve manieren om onze zichtbaarheid te vergroten. Dankzij de marketingcampagnes van Volle Gym hebben we in slechts twee maanden maar liefst 20 nieuwe leden mogen verwelkomen. Kortom, een absolute aanrader!"
+    },
+    // --- CHRONOLOGICAL REST ---
+    {
         "author": "Hugo Le Jollec",
         "date": "2 maanden geleden",
         "text": "Ik werk inmiddels iets meer dan twee maanden samen met de mannen van Volle Gym, en ik kan oprecht zeggen dat dit één van de beste beslissingen is geweest voor mijn bedrijf. Na meerdere slechte ervaringen met marketingbureaus was ik eerlijk gezegd sceptisch. Mooie beloftes, weinig resultaat – ik had het allemaal al eens meegemaakt. Maar Bas en Bart van Volle Gym laten vanaf dag één zien dat zij het anders aanpakken. Ze leveren niet alleen leads, maar geven je ook de tools en het systeem om daar echt klanten van te maken. Ze leren je precies hoe je leads moet opvolgen, zodat je het maximale uit elke kans haalt."
@@ -18,27 +51,11 @@ const reviews = [
         "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjU2zXgmMVuNbQaNLlkGAqRqYM4rQeFsHsvqko3RXwM6O4CAB8GB=s128-c0x00000000-cc-rp-mo"
     },
     {
-        "author": "Mike",
-        "date": "2 maanden geleden",
-        "text": "Je betaald bij volle gym niet voor het verzamelen van Leads. Je wordt uitgebreid begeleid om er voor te zorgen dat deze mensen ook daadwerkelijk bij jou van start gaan en langdurig lid blijven. Dit heeft mijn bedrijf een goede boost gegeven."
-    },
-    {
-        "author": "Dominique van Do's Gym",
-        "date": "3 weken geleden",
-        "text": "VolleGym is een top partij. Het 3 maanden Gym Leaders Programma was helder opgebouwd, met goede tools en begeleiding die je direct kunt toepassen in je gym. Communicatie was snel en prettig. Wij zijn zeer tevreden."
-    },
-    {
-        "author": "Sanne Hendriks",
-        "date": "5 maanden geleden",
-        "text": "Super goed geholpen door Bas en Bart! Deze jongens weten precies wat ze doen. Mijn gestelde doel binnen een maand behaald terwijl er 3 maanden voor stond. Bas en Bart weten precies waar ze het over hebben, denken en kijken graag met je mee."
-    },
-    {
         "author": "Murat Son",
         "date": "10 maanden geleden",
         "text": "Sinds ik met Bart en Bas van Volle Gym samenwerk, is mijn club echt gaan groeiend. Waar ik eerder vastliep in het aantrekken van nieuwe klanten hebben zij mij geholpen om opnieuw en anders naar mijn bedrijf te kijken. Niet alleen met praktische strategieën, maar ook met een heldere structuur en begeleiding die precies aansluit bij wie ik ben en waar ik voor sta. Wat ik enorm waardeer, is dat hun werkwijze niet voelt als een standaard stappenplan. Ze kijken echt naar jou als persoon, staan voor je klaar, naar je bedrijf, je missie en je waarden. Ze stellen goede en kritische vragen en komen met een gerichte oplossing.",
         "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjX2-DTB_ey2gSX9evadOMIAWHl8XfFPjgjY3wo70FwlKlegYYmn=s128-c-rp-mo-ba2-br100"
     },
-    // --- CHRONOLOGICAL REST ---
     {
         "author": "Tommy Eichelsheim",
         "date": "1 dag geleden",
@@ -65,18 +82,6 @@ const reviews = [
         "text": "Stuk voor stuk vakmensen. We hebben onze capaciteit moeten uitbreiden omdat we de aanvoer van leads bijna niet meer aankonden. Dikke prima."
     },
     {
-        "author": "Kelt Jager",
-        "date": "5 maanden geleden",
-        "text": "Veel marketing agency's versleten de afgelopen tijd. Volle gym is tot nu toe met afstand de beste! De manier van werken en de systemen die ze hebben gebouwd zijn top! Zeker een aanrader",
-        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjVbt_MWCcpdUDOPjyBv8O1poTQgal9Ep7-FBtw9osaftSVFE05J=w144-h144-p-rp-mo-br100"
-    },
-    {
-        "author": "Danielle Sabajo",
-        "date": "6 maanden geleden",
-        "text": "Super tevreden hoe Bas en Bart heel professioneel te werk gaan. Door onze samenwerking hebben wij weer volle lessen. Werken met volle gym is echt een aanrader. Ze doen precies wat ze beloven. 💪 Enthusiaste groet, Danielle",
-        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjWslzeCT1gLSsrSTEwa1jq-NIDT67cu2NmkIJ4ynvWtIEB7_OI=w144-h144-p-rp-mo-br100"
-    },
-    {
         "author": "Michel Dekker",
         "date": "6 maanden geleden",
         "text": "Fijne en prettige samenwerking.",
@@ -99,11 +104,6 @@ const reviews = [
         "date": "9 maanden geleden",
         "text": "Hartelijk dank voor jullie hulp 😄 nieuwe leden na een kortlopende campagne. Goede communicatie en komen hun afspraken na . Dankjewel 🙏",
         "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjUtr9aBkNn4t7VGWL8Euk9916eoiGtScxy-gRd0cKEgM38fysUB=w144-h144-p-rp-mo-br100"
-    },
-    {
-        "author": "Tim Hortensius",
-        "date": "11 maanden geleden",
-        "text": "Wij hebben met volle tevredenheid samengewerkt met Volle Gym. Als boutique gym, gespecialiseerd in kleine groepslessen, waren we op zoek naar effectieve manieren om onze zichtbaarheid te vergroten. Dankzij de marketingcampagnes van Volle Gym hebben we in slechts twee maanden maar liefst 20 nieuwe leden mogen verwelkomen. Kortom, een absolute aanrader!"
     },
     {
         "author": "Lars Ubachs",
