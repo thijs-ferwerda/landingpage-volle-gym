@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
 import Intake from './pages/Intake/Intake';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/voorwaarden" element={<TermsOfService />} />
       </Routes>
       <Footer />
+      <SpeedInsights />
     </Router>
   );
 }
