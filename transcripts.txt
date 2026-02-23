@@ -1,0 +1,26 @@
+Defaulting to user installation because normal site-packages is not writeable
+Collecting youtube-transcript-api
+  Downloading youtube_transcript_api-1.2.4-py3-none-any.whl (485 kB)
+Collecting defusedxml<0.8.0,>=0.7.1
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Requirement already satisfied: requests in /Users/thijsferwerda/Library/Python/3.9/lib/python/site-packages (from youtube-transcript-api) (2.32.5)
+Requirement already satisfied: idna<4,>=2.5 in /Users/thijsferwerda/Library/Python/3.9/lib/python/site-packages (from requests->youtube-transcript-api) (3.11)
+Requirement already satisfied: charset_normalizer<4,>=2 in /Users/thijsferwerda/Library/Python/3.9/lib/python/site-packages (from requests->youtube-transcript-api) (3.4.4)
+Requirement already satisfied: certifi>=2017.4.17 in /Users/thijsferwerda/Library/Python/3.9/lib/python/site-packages (from requests->youtube-transcript-api) (2026.1.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /Users/thijsferwerda/Library/Python/3.9/lib/python/site-packages (from requests->youtube-transcript-api) (2.6.3)
+Installing collected packages: defusedxml, youtube-transcript-api
+Successfully installed defusedxml-0.7.1 youtube-transcript-api-1.2.4
+=== VIDEO: _ERwMRB4pgE ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: KxT9StIlyeg ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: xnhQBTBJPek ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: Qjc8I01bZE8 ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: O_OFRYE3omQ ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: SpJ5KgQa9Ww ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: QIEOwUDPo5E ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: Lf0IVAiILrk ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: PcUTF1gOYNs ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: 38VjOUsOhz4 ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: hAj5OnZTSo4 ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: b4-jNpoxvwc ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: EsqOf51DvJ0 ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===
+=== VIDEO: BbCw16hxhbo ERROR: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript' ===

@@ -111,11 +111,11 @@ const VSL = () => {
                         <span className="font-data text-primary/60 text-xs uppercase tracking-widest">Je bent niet alleen</span>
                     </div>
                     <h2 ref={addToTextRefs} className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-primary mb-6 leading-[1.1] tracking-tight">
-                        Ontmoet je nieuwe <br className="hidden md:block" />
-                        <span className="font-drama italic text-accent pr-2 shadow-sm">accountability partner.</span>
+                        Wie is jouw  <br className="hidden md:block" />
+                        <span className="font-drama italic text-accent pr-2 shadow-sm">accountability partner?</span>
                     </h2>
                     <p ref={addToTextRefs} className="font-sans text-primary/70 text-lg md:text-xl mb-8 leading-relaxed">
-                        Jij bent de stok achter de deur voor je klanten. Maar wie is die van jou? Ontmoet Bas, en ontdek waarom ons 90-dagen systeem is gebouwd op meer dan alleen marketing: een partnership.
+                        Jij houdt je klanten keihard verantwoordelijk voor hun resultaat. Maar wie doet dat voor jou? Wij zijn gespecialiseerd in het behalen van jouw groeidoelen, doordat we niet alleen de kraan openzetten, maar jou ook verantwoordelijk houden voor de opvolging.
                     </p>
                     <div ref={addToTextRefs} className="flex flex-col sm:flex-row gap-4 mt-6">
                         <button

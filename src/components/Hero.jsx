@@ -134,10 +134,13 @@ const Hero = () => {
                 <div ref={addToRefs} className="hidden md:flex flex-row items-center justify-center gap-16 max-w-4xl mx-auto w-full">
                     <a href="#resultaten" className="flex items-center justify-center gap-4 text-primary/70 text-sm font-sans flex-1 group cursor-pointer hover:opacity-80 transition-opacity">
                         <div className="flex -space-x-3">
-                            {['_ERwMRB4pgE', 'KxT9StIlyeg', 'Qjc8I01bZE8'].map((videoId, i) => (
+                            {[
+                                'https://lh3.googleusercontent.com/a-/ALV-UjU2zXgmMVuNbQaNLlkGAqRqYM4rQeFsHsvqko3RXwM6O4CAB8GB=s128-c0x00000000-cc-rp-mo',
+                                'https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c0x00000000-cc-rp-mo',
+                                'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=128&h=128&fit=crop'
+                            ].map((photoUrl, i) => (
                                 <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-white overflow-hidden shrink-0 shadow-sm relative group-hover:-translate-y-1 transition-transform" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    {/* scale-[1.35] zoomt in op de gezichten */}
-                                    <img src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} alt="Succesverhaal" className="w-full h-full object-cover scale-[1.35] object-[center_20%]" />
+                                    <img src={photoUrl} alt="Succesverhaal" className="w-full h-full object-cover scale-100 object-[center_20%]" referrerPolicy="no-referrer" />
                                 </div>
                             ))}
                         </div>

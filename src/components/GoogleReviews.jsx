@@ -44,14 +44,12 @@ const reviews = [
     {
         "author": "Hugo Le Jollec",
         "date": "9 maanden geleden",
-        "text": "Ik werk inmiddels iets meer dan twee maanden samen met de mannen van Volle Gym, en ik kan oprecht zeggen dat dit één van de beste beslissingen is geweest voor mijn bedrijf. Na meerdere slechte ervaringen met marketingbureaus was ik eerlijk gezegd sceptisch. Mooie beloftes, weinig resultaat – ik had het allemaal al eens meegemaakt. Maar Bas en Bart van Volle Gym laten vanaf dag één zien dat zij het anders aanpakken. Ze leveren niet alleen leads, maar geven je ook de tools en het systeem om daar echt klanten van te maken. Ze leren je precies hoe je leads moet opvolgen, zodat je het maximale uit elke kans haalt.",
-        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjWslzeCT1gLSsrSTEwa1jq-NIDT67cu2NmkIJ4ynvWtIEB7_OI=s128-c-rp-mo-br100"
+        "text": "Ik werk inmiddels iets meer dan twee maanden samen met de mannen van Volle Gym, en ik kan oprecht zeggen dat dit één van de beste beslissingen is geweest voor mijn bedrijf. Na meerdere slechte ervaringen met marketingbureaus was ik eerlijk gezegd sceptisch. Mooie beloftes, weinig resultaat – ik had het allemaal al eens meegemaakt. Maar Bas en Bart van Volle Gym laten vanaf dag één zien dat zij het anders aanpakken. Ze leveren niet alleen leads, maar geven je ook de tools en het systeem om daar echt klanten van te maken. Ze leren je precies hoe je leads moet opvolgen, zodat je het maximale uit elke kans haalt."
     },
     {
         "author": "Murat Son",
         "date": "10 maanden geleden",
-        "text": "Sinds ik met Bart en Bas van Volle Gym samenwerk, is mijn club echt gaan groeiend. Waar ik eerder vastliep in het aantrekken van nieuwe klanten hebben zij mij geholpen om opnieuw en anders naar mijn bedrijf te kijken. Niet alleen met praktische strategieën, maar ook met een heldere structuur en begeleiding die precies aansluit bij wie ik ben en waar ik voor sta. Wat ik enorm waardeer, is dat hun werkwijze niet voelt als een standaard stappenplan. Ze kijken echt naar jou als persoon, staan voor je klaar, naar je bedrijf, je missie en je waarden. Ze stellen goede en kritische vragen en komen met een gerichte oplossing.",
-        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c-rp-mo-br100"
+        "text": "Sinds ik met Bart en Bas van Volle Gym samenwerk, is mijn club echt gaan groeiend. Waar ik eerder vastliep in het aantrekken van nieuwe klanten hebben zij mij geholpen om opnieuw en anders naar mijn bedrijf te kijken. Niet alleen met praktische strategieën, maar ook met een heldere structuur en begeleiding die precies aansluit bij wie ik ben en waar ik voor sta. Wat ik enorm waardeer, is dat hun werkwijze niet voelt als een standaard stappenplan. Ze kijken echt naar jou als persoon, staan voor je klaar, naar je bedrijf, je missie en je waarden. Ze stellen goede en kritische vragen en komen met een gerichte oplossing."
     },
     {
         "author": "Radjin Pitai",
@@ -98,8 +96,7 @@ const reviews = [
     {
         "author": "Circles Waalre",
         "date": "11 maanden geleden",
-        "text": "Opzoek naar een fitness marketing bureau? Dan ben je op de juiste adres bij Volle Gym, binnen een paar maanden hebben wij onze doel behaald! Hartelijk bedankt voor de samenwerking jongens van de Volle Gym!",
-        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c0x00000000-cc-rp-mo"
+        "text": "Opzoek naar een fitness marketing bureau? Dan ben je op de juiste adres bij Volle Gym, binnen een paar maanden hebben wij onze doel behaald! Hartelijk bedankt voor de samenwerking jongens van de Volle Gym!"
     },
     {
         "author": "Max Van der Meer",
