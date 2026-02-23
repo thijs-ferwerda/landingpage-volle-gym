@@ -27,7 +27,7 @@ const IntakeQualified = () => {
                 <div className="inline-flex items-center gap-3 px-5 py-2.5 border border-primary/10 rounded-full bg-white shadow-sm mb-8">
                     <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
                     <p className="font-data text-primary text-xs md:text-sm uppercase tracking-widest font-bold">
-                        Stap 2 van 2: Plan je intake
+                        Stap 2 van 2: Plan je verdiepingsgesprek
                     </p>
                 </div>
 
