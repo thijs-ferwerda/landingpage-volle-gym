@@ -1,101 +1,96 @@
-/**
- * Google Search Console Indexing API Script
- * Submits alle SEO pagina's voor indexering na een deploy.
- *
- * Gebruik: node scripts/submit-indexing.js
- * Vereist: GOOGLE_SERVICE_ACCOUNT_KEY_PATH environment variable
- */
-
-/* global process */
-import { google } from 'googleapis';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { google } from 'googleapis';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+// Let op: Dit script vereist een Google Service Account JSON key.
+// Zorg dat deze is aangemaakt in Google Cloud Console en is toegevoegd aan Google Search Console
+// als 'Eigenaar' (verplicht voor de Indexing API).
 
-// Laad SEO pagina's uit het JSON bestand
-const seoPages = JSON.parse(
-    fs.readFileSync(path.join(__dirname, '../src/data/seo-pages.json'), 'utf8')
-);
+const SERVICE_ACCOUNT_KEY_PATH = path.resolve('service-account.json');
+const SEO_PAGES_PATH = path.resolve('src/data/seo-pages.json');
 
-// Vaste pagina's die ook geindexeerd moeten worden
-const staticPages = [
-    '/',
-    '/intake',
-    '/privacy',
-    '/voorwaarden'
-];
-
-const SITE_URL = 'https://www.vollegym.nl';
-
-async function submitSitemap(auth) {
-    try {
-        const client = await auth.getClient();
-        const searchconsole = google.searchconsole({ version: 'v1', auth: client });
-
-        await searchconsole.sitemaps.submit({
-            siteUrl: 'https://www.vollegym.nl',
-            feedpath: 'https://www.vollegym.nl/sitemap.xml'
-        });
-
-        console.log('Sitemap submitted!');
-    } catch (error) {
-        console.error(`Status sitemap submit: kon niet worden voltooid (${error.message})`);
-    }
-}
+const HOSTNAME = 'https://www.vollegym.nl';
 
 async function main() {
-    // Authenticatie via Service Account
-    const keyPath = process.env.GOOGLE_SERVICE_ACCOUNT_KEY_PATH;
-    if (!keyPath) {
-        console.error('Set GOOGLE_SERVICE_ACCOUNT_KEY_PATH environment variable');
+    if (!fs.existsSync(SERVICE_ACCOUNT_KEY_PATH)) {
+        console.error('❌ Service Account key niet gevonden!');
+        console.error(`Plaats je service account configuratie in: ${SERVICE_ACCOUNT_KEY_PATH}`);
+        console.error('Bekijk de documentatie van Google Indexing API voor het aanmaken van een service account.');
         process.exit(1);
     }
 
-    const authIndexing = new google.auth.GoogleAuth({
-        keyFile: keyPath,
-        scopes: ['https://www.googleapis.com/auth/indexing']
-    });
+    console.log('✅ Service Account key gevonden.');
 
-    const client = await authIndexing.getClient();
-    const indexing = google.indexing({ version: 'v3', auth: client });
+    const jwtClient = new google.auth.JWT(
+        require(SERVICE_ACCOUNT_KEY_PATH).client_email,
+        null,
+        require(SERVICE_ACCOUNT_KEY_PATH).private_key,
+        ['https://www.googleapis.com/auth/indexing'],
+        null
+    );
 
-    // Verzamel alle URL's
-    const allUrls = [
-        ...staticPages.map(p => `${SITE_URL}${p}`),
-        ...seoPages.map(p => `${SITE_URL}/${p.slug}`)
-    ];
-
-    console.log(`Submitting ${allUrls.length} URL's voor indexering...\n`);
-
-    // Submit elke URL
-    for (const url of allUrls) {
-        try {
-            const result = await indexing.urlNotifications.publish({
-                requestBody: {
-                    url: url,
-                    type: 'URL_UPDATED'
-                }
-            });
-            console.log(`[OK] ${url} — ${result.status}`);
-        } catch (error) {
-            console.error(`[FOUT] ${url} — ${error.message}`);
-        }
-
-        // Rate limiting: 200 requests per minuut max (wacht ~350ms)
-        await new Promise(resolve => setTimeout(resolve, 350));
+    try {
+        await jwtClient.authorize();
+        console.log('✅ Geautoriseerd bij Google API.');
+    } catch (err) {
+        console.error('❌ Fout bij autorisatie:', err.message);
+        process.exit(1);
     }
 
-    console.log('\nIndexering requests verstuurd!');
+    // Lees de pagina's
+    const seoPagesRaw = fs.readFileSync(SEO_PAGES_PATH, 'utf8');
+    const seoPages = JSON.parse(seoPagesRaw);
 
-    // Sitemap auth has different scopes
-    const authSearchConsole = new google.auth.GoogleAuth({
-        keyFile: keyPath,
-        scopes: ['https://www.googleapis.com/auth/webmasters']
-    });
+    const urlsToIndex = seoPages.map(page => `${HOSTNAME}/${page.slug}`);
 
-    await submitSitemap(authSearchConsole);
+    // Voeg home en intake ook toe indien gewenst
+    urlsToIndex.push(`${HOSTNAME}/`);
+    urlsToIndex.push(`${HOSTNAME}/intake`);
+
+    console.log(`🚀 Starten met het indienen van ${urlsToIndex.length} URL's bij de Indexing API...`);
+
+    let successCount = 0;
+    let failCount = 0;
+
+    // Google heeft strikte quota (rond de 100-200 per batch/dag per project), 
+    // en het is netjes om een kleine delay te gebruiken per request.
+    for (const url of urlsToIndex) {
+        try {
+            const body = JSON.stringify({
+                url: url,
+                type: 'URL_UPDATED' // 'URL_DELETED' can be used for removal
+            });
+
+            await jwtClient.request({
+                method: 'POST',
+                url: 'https://indexing.googleapis.com/v3/urlNotifications:publish',
+                data: body,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            console.log(`✅ Ingegeven: ${url}`);
+            successCount++;
+
+            // Wacht 200ms tussen requests om de rate limiter vriendelijk te behandelen
+            await new Promise(resolve => setTimeout(resolve, 200));
+        } catch (error) {
+            console.error(`❌ Gefaald voor: ${url}`, error.response?.data?.error?.message || error.message);
+            failCount++;
+        }
+    }
+
+    console.log('\n======================================');
+    console.log(`Klaar met bulk indexeren!`);
+    console.log(`Geslaagd: ${successCount}`);
+    console.log(`Mislukt:  ${failCount}`);
+    console.log('======================================');
+
+    if (failCount > 0) {
+        console.log('Let op: Google Indexing API is officieel bedoeld voor JobPostings en LiveStreams.');
+        console.log('Voor reguliere webpagina\'s kan Google GSC quota restricties opleggen.');
+    }
 }
 
 main().catch(console.error);

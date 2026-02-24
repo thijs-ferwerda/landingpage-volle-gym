@@ -9,10 +9,8 @@ const seoPages = JSON.parse(seoPagesRaw);
 const hostname = 'https://www.vollegym.nl';
 
 const staticRoutes = [
-    '/',
-    '/intake',
-    '/methode',
-    '/over-ons'
+  '/',
+  '/intake'
 ];
 
 const dynamicRoutes = seoPages.map(page => `/${page.slug}`);
