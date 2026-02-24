@@ -97,7 +97,7 @@ const Onboarding = () => {
                         {/* Subtiel decoratief achtergrond element */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
 
-                        <div className="mb-10 text-center max-w-2xl mx-auto">
+                        <div className="mb-4 text-center max-w-2xl mx-auto">
                             <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-3">
                                 Stap 1: <span className="text-accent">Het onboardingsformulier</span>
                             </h2>
