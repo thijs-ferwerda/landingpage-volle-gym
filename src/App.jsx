@@ -10,6 +10,7 @@ import TermsOfService from './pages/TermsOfService/TermsOfService';
 import SeoPageTemplate from './pages/SeoPageTemplate';
 import Footer from './components/Footer';
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 
 // Use a smooth scrolling setup for lenis-like feel or just native CSS scroll.
 // Global noise overlay is handled in index.css
@@ -62,6 +63,7 @@ function App() {
       </Routes>
       <Footer />
       <SpeedInsights />
+      <Analytics />
     </Router>
   );
 }
