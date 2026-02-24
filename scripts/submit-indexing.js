@@ -6,6 +6,7 @@
  * Vereist: GOOGLE_SERVICE_ACCOUNT_KEY_PATH environment variable
  */
 
+/* global process */
 import { google } from 'googleapis';
 import fs from 'fs';
 import path from 'path';

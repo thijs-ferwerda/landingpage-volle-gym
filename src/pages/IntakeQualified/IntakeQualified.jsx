@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react';
+/* eslint-disable react-hooks/purity */
+import React, { useEffect, useState } from 'react';
 
 const IntakeQualified = () => {
+    const [timestamp] = useState(Date.now());
+
     useEffect(() => {
         window.scrollTo(0, 0);
 
@@ -44,7 +47,7 @@ const IntakeQualified = () => {
             {/* Embedded Calendar Container */}
             <div className="w-full max-w-6xl mx-auto px-8 md:px-20 pb-10 pt-0 bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden relative z-20">
                 <iframe
-                    src={`https://api.leadconnectorhq.com/widget/booking/VJNpnvcHICgLsY8NxG8r?cb=${Date.now()}`}
+                    src={`https://api.leadconnectorhq.com/widget/booking/VJNpnvcHICgLsY8NxG8r?cb=${timestamp}`}
                     style={{ width: '100%', border: 'none', overflow: 'hidden' }}
                     scrolling="no"
                     id="VJNpnvcHICgLsY8NxG8r_1771696118701"

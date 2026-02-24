@@ -51,7 +51,6 @@ const DiagnosticShuffler = () => {
                 {items.map((item, index) => {
                     const isTop = index === 0;
                     const isMiddle = index === 1;
-                    const isBottom = index === 2;
 
                     return (
                         <div

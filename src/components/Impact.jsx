@@ -65,7 +65,7 @@ const Impact = () => {
         }, sectionRef);
 
         return () => ctx.revert();
-    }, []);
+    }, [metrics]);
 
     return (
         <section id="impact" ref={sectionRef} className="py-24 md:py-32 bg-primary text-white relative overflow-hidden border-y border-white/10">
