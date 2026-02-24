@@ -9,6 +9,9 @@ import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService/TermsOfService';
 import SeoPageTemplate from './pages/SeoPageTemplate';
 import Footer from './components/Footer';
+import NotFound from './pages/NotFound/NotFound';
+import Welcome from './pages/Welcome/Welcome';
+import ThankYou from './pages/ThankYou/ThankYou';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -60,6 +63,10 @@ function App() {
         <Route path="/sorry" element={<Sorry />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/voorwaarden" element={<TermsOfService />} />
+        <Route path="/welkom" element={<Welcome />} />
+        <Route path="/bedankt" element={<ThankYou />} />
+        {/* Catch-all 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <SpeedInsights />

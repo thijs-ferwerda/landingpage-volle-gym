@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import seoPages from '../data/seo-pages.json';
 
+import NotFound from './NotFound/NotFound';
+
 const SeoPageTemplate = () => {
     const { slug } = useParams();
 
@@ -43,9 +45,9 @@ const SeoPageTemplate = () => {
         return () => ctx.revert();
     }, [pageData]);
 
-    // Als de slug niet bestaat, verwijs terug naar home
+    // Als de slug niet bestaat, render de 404 pagina
     if (!pageData) {
-        return <Navigate to="/" replace />;
+        return <NotFound />;
     }
 
     return (
