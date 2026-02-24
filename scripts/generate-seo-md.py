@@ -21,7 +21,7 @@ if not api_key:
 
 genai.configure(api_key=api_key)
 # Gebruik het snelle en slimme model
-model = genai.GenerativeModel('gemini-1.5-flash-latest')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 # Lees basis data
 try:
