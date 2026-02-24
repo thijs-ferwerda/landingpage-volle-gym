@@ -93,7 +93,7 @@ const Onboarding = () => {
 
                 {/* Onboarding Formulier Sectie */}
                 <section className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 mb-20 md:mb-32">
-                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl p-4 md:p-8 overflow-hidden relative">
+                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl p-4 md:p-8 pt-10 md:pt-16 overflow-hidden relative">
                         {/* Subtiel decoratief achtergrond element */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
 
