@@ -1,16 +1,16 @@
 import React from 'react';
-import logo1 from '../assets/logos/logo1.webp';
-import logo2 from '../assets/logos/logo2.webp';
-import logo3 from '../assets/logos/logo3.webp';
-import logo4 from '../assets/logos/logo4.webp';
-import logo5 from '../assets/logos/logo5.webp';
-import logo6 from '../assets/logos/logo6.webp';
-import logo7 from '../assets/logos/logo7.webp';
-import logo8 from '../assets/logos/logo8.webp';
-import logo9 from '../assets/logos/logo9.webp';
-import logo10 from '../assets/logos/logo10.webp';
-import logo11 from '../assets/logos/logo11.webp';
-import logo12 from '../assets/logos/logo12.webp';
+import logo1 from '../assets/logos/logo1_transparent.webp';
+import logo2 from '../assets/logos/logo2_transparent.webp';
+import logo3 from '../assets/logos/logo3_transparent.webp';
+import logo4 from '../assets/logos/logo4_transparent.webp';
+import logo5 from '../assets/logos/logo5_transparent.webp';
+import logo6 from '../assets/logos/logo6_transparent.webp';
+import logo7 from '../assets/logos/logo7_transparent.webp';
+import logo8 from '../assets/logos/logo8_transparent.webp';
+import logo9 from '../assets/logos/logo9_transparent.webp';
+import logo10 from '../assets/logos/logo10_transparent.webp';
+import logo11 from '../assets/logos/logo11_transparent.webp';
+import logo12 from '../assets/logos/logo12_transparent.webp';
 
 const logos = [
     { id: 1, src: logo1 },
@@ -66,7 +66,7 @@ const LogoMarquee = () => {
                         <img
                             src={logo.src}
                             alt={`Partner Logo ${logo.id}`}
-                            className="max-h-24 md:max-h-32 w-auto object-contain mix-blend-multiply"
+                            className="max-h-24 md:max-h-32 w-auto object-contain"
                             loading="lazy"
                         />
                     </div>
