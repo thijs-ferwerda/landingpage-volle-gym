@@ -93,15 +93,15 @@ const Onboarding = () => {
 
                 {/* Onboarding Formulier Sectie */}
                 <section className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 mb-20 md:mb-32">
-                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl p-4 md:p-8 pt-10 md:pt-16 overflow-hidden relative">
+                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl p-4 md:p-8 pt-16 md:pt-24 overflow-hidden relative">
                         {/* Subtiel decoratief achtergrond element */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
 
-                        <div className="mb-16 text-center">
+                        <div className="mb-8 text-left max-w-3xl">
                             <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-3">
                                 Stap 1: <span className="text-accent">Het onboardingsformulier</span>
                             </h2>
-                            <p className="text-primary/70 text-sm max-w-2xl mx-auto leading-relaxed">
+                            <p className="text-primary/70 text-sm leading-relaxed">
                                 Tijd voor actie. Vul het onderstaande formulier (ca. 5 minuten) direct in. Zodra we jouw gegevens hebben, beginnen wij op de achtergrond direct met het inrichten van de systemen. Scroll na het invullen verder voor de resterende stappen.
                             </p>
                         </div>
