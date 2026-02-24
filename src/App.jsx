@@ -7,6 +7,7 @@ import IntakeQualified from './pages/IntakeQualified/IntakeQualified';
 import Sorry from './pages/Sorry/Sorry';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService/TermsOfService';
+import SeoPageTemplate from './pages/SeoPageTemplate';
 import Footer from './components/Footer';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
@@ -39,6 +40,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* Dynamische SEO Pagina's Route */}
+        <Route path="/:slug" element={<SeoPageTemplate />} />
         <Route path="/intake/gekwalificeerd" element={<IntakeQualified />} />
         <Route path="/intake" element={<Intake />} />
         <Route path="/sorry" element={<Sorry />} />

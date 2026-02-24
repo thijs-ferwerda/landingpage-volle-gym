@@ -1,8 +1,21 @@
-import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useRef, useState, useMemo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
+import { campaigns } from '../data/campaigns';
 
 const Hero = () => {
+    const location = useLocation();
+
+    // Parse the campaign from URL search params
+    const campaignKey = useMemo(() => {
+        const searchParams = new URLSearchParams(location.search);
+        // We support both ?campaign=x and ?c=x for shorter URLs
+        const c = searchParams.get('campaign') || searchParams.get('c');
+        return c && campaigns[c] ? c : 'default';
+    }, [location.search]);
+
+    const activeCampaign = campaigns[campaignKey];
+
     const containerRef = useRef(null);
     const textRefs = useRef([]);
     const addToRefs = (el) => {
@@ -79,7 +92,14 @@ const Hero = () => {
                         <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
                     </svg>
                     <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
-                        De helpende hand van gezond Nederland
+                        {activeCampaign.badge ? (
+                            <>
+                                {activeCampaign.badgeLabel && <span className="font-bold">{activeCampaign.badgeLabel} </span>}
+                                {activeCampaign.badge}
+                            </>
+                        ) : (
+                            activeCampaign.introTag || "De helpende hand van gezond Nederland"
+                        )}
                     </p>
                     <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
@@ -94,8 +114,8 @@ const Hero = () => {
                         ref={addToRefs}
                         className="text-primary font-heading font-bold text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.05]"
                     >
-                        Is jouw gym momenteel <br className="hidden md:block" />
-                        <span className="text-primary/30">leeg</span>, of <span className="font-drama italic text-primary">vol?</span>
+                        {activeCampaign.titleLine1 || activeCampaign.headlineStart} <br className="hidden md:block" />
+                        <span className="text-primary/30">{activeCampaign.titleLine2 || activeCampaign.headlineHighlight}</span>{activeCampaign.titleLine3 || activeCampaign.headlineEnd} <span className="font-drama italic text-primary">{activeCampaign.titleLine4 || ''}</span>
                     </span>
                 </h1>
 
@@ -104,13 +124,12 @@ const Hero = () => {
                     ref={addToRefs}
                     className="text-primary/70 font-sans text-base sm:text-lg md:text-xl max-w-2xl mb-10 md:mb-12 leading-relaxed"
                 >
-                    Zonder een voorspelbaar systeem blijf je afhankelijk van hoop en mond-tot-mondreclame.
-                    Wij vullen jouw PT-studio of Small Group gym systematisch met ideale leden. Gegarandeerd.
+                    {activeCampaign.subtitle}
                 </p>
 
                 <div ref={addToRefs} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 md:mb-16">
                     <Link to="/intake" className="magnetic-btn w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-full text-sm md:text-base font-bold tracking-wide uppercase group inline-flex items-center justify-center gap-3 shrink-0 shadow-[0_0_20px_rgba(255,53,0,0.3)] border border-accent/50 hover:border-accent">
-                        <span className="magnetic-btn-content">Doe de intake</span>
+                        <span className="magnetic-btn-content">{activeCampaign.ctaText || activeCampaign.ctaPrimary || "Doe de intake"}</span>
                         <svg
                             className="w-5 h-5 magnetic-btn-content group-hover:translate-x-1 transition-transform"
                             fill="none"
@@ -125,7 +144,7 @@ const Hero = () => {
                         <div className="w-12 h-12 rounded-full border border-primary/20 bg-white flex items-center justify-center group-hover:border-accent/40 shadow-sm transition-colors">
                             <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                         </div>
-                        <span className="font-sans text-sm font-semibold uppercase tracking-wider">Bekijk de methode</span>
+                        <span className="font-sans text-sm font-semibold uppercase tracking-wider">{activeCampaign.ctaSecondary || "Bekijk de methode"}</span>
                     </a>
                 </div>
             </div>

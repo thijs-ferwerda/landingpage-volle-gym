@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../../components/SEO';
 import Hero from '../../components/Hero';
 import VolleGymBar from '../../components/VolleGymBar';
 import LogoMarquee from '../../components/LogoMarquee';
@@ -13,6 +14,7 @@ import Impact from '../../components/Impact';
 const Home = () => {
     return (
         <main>
+            <SEO />
             <Hero />
             <VolleGymBar />
             <LogoMarquee />

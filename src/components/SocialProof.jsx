@@ -15,7 +15,7 @@ const youtubeData = [
     { name: 'Michel Dekker', result: '35 leden in 3 maanden tijd', objection: 'Kampte met stagnerende conversie door "gratis proefles"-zoekers via standaard internet bureau\'s. Bouwde een premium flow en haalde 35 hoogwaardige leden binnen.', videoId: 'hAj5OnZTSo4' },
     { name: 'Ulrich Heidstra', result: '15 leden in 1 maand tijd', objection: 'Was sceptisch geworden door valse beloftes en had keiharde verantwoordelijkheid nodig voor de cijfers. De stok achter de deur resulteerde direct in een volle agenda en 15 startende leden.', videoId: 'Lf0IVAiILrk' },
     { name: 'Daniëlle Sabajo', result: '35 leden in 2 maanden tijd', objection: 'Had passie voor haar vak, maar worstelde met administratie en chaos in de leadopvolging. Besloot het uit handen te geven en zag direct 35 leden starten.', videoId: '38VjOUsOhz4' },
-    { name: 'Jan Donker', result: '30 leden in 2 maanden tijd', objection: 'Werd gek van papieren chaos rondom nieuwe leads. Durfde uitsluitend te starten op de no-cure-no-pay garantie en haalde 10x zijn complete investering terug aan nieuwe leden.', videoId: 'BbCw16hxhbo' },
+    { name: 'Jan Donker', result: '30 leden in 2 maanden tijd', objection: 'Werd gek van papieren chaos rondom nieuwe leads. Durfde uitsluitend te starten op de nieuwe resultaatgarantie en haalde 10x zijn complete investering terug aan nieuwe leden.', videoId: 'BbCw16hxhbo' },
     { name: 'Emmy van Erp', result: '15 leden in 1 maand tijd', objection: 'Hadden een prachtig concept in de markt staan, maar geen vaardigheid om de constante ledenstroom zelf op te vangen. Met de nieuwe systemen converteerden ze in de eerste maand direct 15 leden.', videoId: 'EsqOf51DvJ0' }
 ];
 
@@ -80,6 +80,7 @@ const SocialProof = () => {
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
+                                loading="lazy"
                             ></iframe>
                         </div>
 

@@ -56,7 +56,7 @@ const LogoMarquee = () => {
             </div>
 
             {/* Scrolling Container */}
-            <div className="flex w-fit animate-infinite-scroll gap-16 md:gap-24 opacity-70 hover:opacity-100 transition-opacity duration-500 pl-16 mix-blend-multiply">
+            <div className="flex w-fit animate-infinite-scroll gap-16 md:gap-24 opacity-70 hover:opacity-100 transition-opacity duration-500 pl-16">
                 {/* Duplicated array for seamless loop (original + clone) */}
                 {[...logos, ...logos].map((logo, index) => (
                     <div
