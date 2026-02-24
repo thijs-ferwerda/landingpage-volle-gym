@@ -66,7 +66,7 @@ const Footer = () => {
             )}
 
             <div className={`max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-data text-primary/40 ${isIntakePage ? 'border-t border-primary/10 pt-4' : ''}`}>
-                <p>&copy; {new Date().getFullYear()} Volle Gym. All systems go.</p>
+                <p>&copy; {new Date().getFullYear()} Volle Gym Consulting B.V. All systems go.</p>
                 <div className="flex gap-6">
                     <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
                     <Link to="/voorwaarden" className="hover:text-primary transition-colors">Voorwaarden</Link>

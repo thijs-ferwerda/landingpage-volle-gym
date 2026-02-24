@@ -25,7 +25,7 @@ const MinimalLayout = ({ children }) => {
 
             {/* Minimal Footer */}
             <footer className="w-full py-8 text-center text-primary/40 text-xs mt-auto">
-                <p>&copy; {new Date().getFullYear()} Volle Gym. Alle rechten voorbehouden.</p>
+                <p>&copy; {new Date().getFullYear()} Volle Gym Consulting B.V. Alle rechten voorbehouden.</p>
             </footer>
         </div>
     );
