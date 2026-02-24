@@ -97,8 +97,8 @@ const Onboarding = () => {
                         {/* Subtiel decoratief achtergrond element */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
 
-                        <div className="mb-4 text-left max-w-2xl ml-4 md:ml-8">
-                            <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-2">
+                        <div className="mb-10 text-center max-w-2xl mx-auto">
+                            <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-3">
                                 Stap 1: <span className="text-accent">Het onboardingsformulier</span>
                             </h2>
                             <p className="text-primary/70 text-sm leading-relaxed">
@@ -209,7 +209,7 @@ const Onboarding = () => {
                                     Doorloop de "Start hier" module
                                 </h3>
                                 <p className="font-sans text-primary/80 leading-relaxed text-base">
-                                    Doorloop de module in de academie (binnen 48 uur). Dit is enorm belangrijk. Je komt hier natuurlijk voor resultaten 😉 dus geef ons zo snel mogelijk de input om daarmee aan de slag te kunnen gaan. Zelfs als dat betekent dat je nu direct even iets anders aan de kant moet schuiven: <strong>doe dit meteen.</strong>
+                                    Doorloop de module in de academie (binnen 48 uur). Dit is enorm belangrijk. Je komt hier natuurlijk voor resultaten 😉 dus geef ons zo snel mogelijk de input om daarmee aan de slag te kunnen gaan. We hebben ongeveer 30 minuten nodig om de systemen aan te maken, zodat je toegang hebt. Daarna kun je de module doorlopen en heb je dat lekker achter de rug 💪🏼
                                 </p>
                             </div>
                         </div>
