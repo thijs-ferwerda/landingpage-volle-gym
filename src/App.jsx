@@ -15,8 +15,20 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 // Global noise overlay is handled in index.css
 
 const ScrollToHash = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
+  // Scroll to top on route change
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant' // Instant feels better for route changes
+      });
+    }
+  }, [pathname, hash]);
+
+  // Handle hash links
   useEffect(() => {
     if (hash) {
       setTimeout(() => {
