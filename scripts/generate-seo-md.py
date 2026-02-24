@@ -1,7 +1,7 @@
 import os
 import sys
 import json
-from openai import OpenAI
+import anthropic
 from pathlib import Path
 
 # Configuratie
@@ -12,13 +12,13 @@ TRANSCRIPTS_FILE = "transcripts.txt"
 # Zorg dat dir bestaat
 Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
 
-api_key = os.environ.get("OPENAI_API_KEY")
+api_key = os.environ.get("ANTHROPIC_API_KEY")
 if not api_key:
-    print("❌ OPENAI_API_KEY environment variable is niet ingesteld.")
-    print("Voer uit: export OPENAI_API_KEY='jouw-key-hier'")
+    print("❌ ANTHROPIC_API_KEY environment variable is niet ingesteld.")
+    print("Voer uit: export ANTHROPIC_API_KEY='jouw-key-hier'")
     sys.exit(1)
 
-client = OpenAI(api_key=api_key)
+client = anthropic.Anthropic(api_key=api_key)
 
 # Lees basis data
 try:
@@ -48,7 +48,7 @@ BELANGRIJK VOOR DEVELOPMENT:
 Het resultaat moet PURE Markdown zijn. Retourneer GEEN markdown code blocks (```markdown). Geef direct de tekst terug. Plaats GEEN frontmatter (---) aan de bovenkant. Start direct met een H2 (##).
 """
 
-print(f"🚀 Start met genereren van {len(pages)} SEO pagina's via OpenAI...")
+print(f"🚀 Start met genereren van {len(pages)} SEO pagina's via Claude...")
 
 for page in pages:
     slug = page.get("slug")
@@ -78,19 +78,19 @@ for page in pages:
     """
     
     try:
-        response = client.chat.completions.create(
-            model="gpt-4o",
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT.strip()},
-                {"role": "user", "content": prompt.strip()}
-            ],
+        response = client.messages.create(
+            model="claude-3-5-sonnet-20241022",
+            max_tokens=4000,
             temperature=0.7,
-            max_tokens=2500
+            system=SYSTEM_PROMPT.strip(),
+            messages=[
+                {"role": "user", "content": prompt.strip()}
+            ]
         )
         
-        md_content = response.choices[0].message.content.strip()
+        md_content = response.content[0].text.strip()
         
-        # Strip eventuele markdown backticks mocht ChatGPT ongehoorzaam zijn
+        # Strip eventuele markdown backticks mocht Claude per ongeluk toch een block starten
         if md_content.startswith("```markdown"):
             md_content = md_content[11:]
         if md_content.startswith("```"):
