@@ -228,7 +228,7 @@ const OnboardingTemplate = ({ packageName }) => {
                             <img
                                 src="/teamfoto.jpeg"
                                 alt="Het Volle Gym Team"
-                                className="w-full h-full object-cover object-[center_65%] group-hover:scale-105 transition-transform duration-700"
+                                className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700"
                             />
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/60 to-transparent"></div>
