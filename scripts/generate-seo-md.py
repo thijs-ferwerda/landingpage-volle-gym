@@ -1,8 +1,9 @@
 import os
 import sys
 import json
-import anthropic
+import google.generativeai as genai
 from pathlib import Path
+import time
 
 # Configuratie
 SEO_DATA_FILE = "src/data/seo-pages.json" # Bestaande JSON met basis-data (slugs, titles, heroText)
@@ -12,13 +13,15 @@ TRANSCRIPTS_FILE = "transcripts.txt"
 # Zorg dat dir bestaat
 Path(OUTPUT_DIR).mkdir(parents=True, exist_ok=True)
 
-api_key = os.environ.get("ANTHROPIC_API_KEY")
+api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
-    print("❌ ANTHROPIC_API_KEY environment variable is niet ingesteld.")
-    print("Voer uit: export ANTHROPIC_API_KEY='jouw-key-hier'")
+    print("❌ GEMINI_API_KEY environment variable is niet ingesteld.")
+    print("Voer uit: export GEMINI_API_KEY='jouw-key-hier'")
     sys.exit(1)
 
-client = anthropic.Anthropic(api_key=api_key)
+genai.configure(api_key=api_key)
+# Gebruik het snelle en slimme model
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # Lees basis data
 try:
@@ -48,7 +51,7 @@ BELANGRIJK VOOR DEVELOPMENT:
 Het resultaat moet PURE Markdown zijn. Retourneer GEEN markdown code blocks (```markdown). Geef direct de tekst terug. Plaats GEEN frontmatter (---) aan de bovenkant. Start direct met een H2 (##).
 """
 
-print(f"🚀 Start met genereren van {len(pages)} SEO pagina's via Claude...")
+print(f"🚀 Start met genereren van {len(pages)} SEO pagina's via Google Gemini...")
 
 for page in pages:
     slug = page.get("slug")
@@ -56,15 +59,14 @@ for page in pages:
     desc = page.get("description")
     
     output_file = os.path.join(OUTPUT_DIR, f"{slug}.md")
-    
-    # Optioneel: check of bestand al bestaat om niet dubbel te genereren
-    # if os.path.exists(output_file):
-    #     print(f"⏩ {slug} bestaat al, sla over...")
-    #     continue
 
     print(f"⏳ Genereren voor: {slug} ...")
     
     prompt = f"""
+    {SYSTEM_PROMPT.strip()}
+    
+    ---
+    
     Schrijf de SEO content 'body' tekst voor de pagina met de slug: '{slug}'.
     De titel van de pagina is: '{title}'.
     De meta beschrijving is: '{desc}'.
@@ -78,19 +80,10 @@ for page in pages:
     """
     
     try:
-        response = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
-            max_tokens=4000,
-            temperature=0.7,
-            system=SYSTEM_PROMPT.strip(),
-            messages=[
-                {"role": "user", "content": prompt.strip()}
-            ]
-        )
+        response = model.generate_content(prompt)
+        md_content = response.text.strip()
         
-        md_content = response.content[0].text.strip()
-        
-        # Strip eventuele markdown backticks mocht Claude per ongeluk toch een block starten
+        # Strip eventuele markdown backticks 
         if md_content.startswith("```markdown"):
             md_content = md_content[11:]
         if md_content.startswith("```"):
@@ -107,5 +100,8 @@ for page in pages:
         
     except Exception as e:
         print(f"❌ Fout bij genereren van {slug}: {e}")
+        
+    # Rate limit delay for free tier
+    time.sleep(4)
 
 print("🎉 Klaar! Alle content is gegenereerd.")
