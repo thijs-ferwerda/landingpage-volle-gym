@@ -226,7 +226,7 @@ const OnboardingTemplate = ({ packageName }) => {
                         {/* Image Header */}
                         <div className="w-full h-64 md:h-80 relative overflow-hidden bg-dark">
                             <img
-                                src="/team-onboarding.jpg"
+                                src="/teamfoto.jpeg"
                                 alt="Het Volle Gym Team"
                                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                             />
