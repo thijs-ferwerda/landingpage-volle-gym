@@ -73,7 +73,11 @@ const OnboardingTemplate = ({ packageName }) => {
 
                         <div ref={addToRefs} className="text-primary/70 text-base md:text-lg max-w-3xl leading-relaxed space-y-4 mb-4">
                             <p>
-                                We waarderen je vertrouwen enorm en kijken ernaar uit om samen een mooie en succesvolle tijd tegemoet te gaan. Met ons vizier strak gericht op <strong>{packageName}</strong>.
+                                {packageName !== 'het traject' ? (
+                                    <>We waarderen je vertrouwen enorm en kijken ernaar uit om jouw gym samen te vullen met <strong>{packageName}</strong>.</>
+                                ) : (
+                                    <>We waarderen je vertrouwen enorm en kijken ernaar uit om samen een mooie en succesvolle tijd tegemoet te gaan.</>
+                                )}
                             </p>
                             <p>
                                 Om je goed op weg te helpen hebben we je direct een bevestigingsmail gestuurd waarin alle vervolgstappen overzichtelijk staan uitgelegd. Je vindt ze ook op deze pagina, dus neem ze direct even door.
@@ -222,9 +226,9 @@ const OnboardingTemplate = ({ packageName }) => {
                         {/* Image Header */}
                         <div className="w-full h-64 md:h-80 relative overflow-hidden bg-dark">
                             <img
-                                src="/team-vollegym-new-v2.jpg"
+                                src="/team-onboarding.jpg"
                                 alt="Het Volle Gym Team"
-                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                             />
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"></div>
