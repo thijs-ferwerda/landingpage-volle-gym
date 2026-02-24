@@ -92,17 +92,17 @@ const Onboarding = () => {
                 </section>
 
                 {/* Onboarding Formulier Sectie */}
-                <section className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 mb-20 md:mb-32">
-                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl p-4 md:p-8 pt-16 md:pt-24 overflow-hidden relative">
+                <section className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 mb-16 md:mb-24">
+                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl p-4 md:p-8 pt-12 md:pt-16 overflow-hidden relative">
                         {/* Subtiel decoratief achtergrond element */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
 
-                        <div className="mb-4 text-left max-w-3xl px-4 md:px-8">
-                            <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-3">
+                        <div className="mb-4 text-left max-w-2xl ml-4 md:ml-8">
+                            <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-2">
                                 Stap 1: <span className="text-accent">Het onboardingsformulier</span>
                             </h2>
                             <p className="text-primary/70 text-sm leading-relaxed">
-                                Tijd voor actie. Vul het onderstaande formulier (ca. 5 minuten) direct in. Zodra we jouw gegevens hebben, beginnen wij op de achtergrond direct met het inrichten van de systemen. Scroll na het invullen verder voor de resterende stappen.
+                                Tijd voor actie. Vul het formulier (ca. 5 minuten) in. Zodra we jouw gegevens hebben, beginnen wij direct op de achtergrond met het inrichten van je systemen.
                             </p>
                         </div>
 
@@ -209,8 +209,7 @@ const Onboarding = () => {
                                     Doorloop de "Start hier" module
                                 </h3>
                                 <p className="font-sans text-primary/80 leading-relaxed text-base">
-                                    Doorloop de "Start hier" module in de academie (binnen 48 uur). Dit is enorm belangrijk. Hier ben je ongeveer 1-2 uur mee bezig, afhankelijk van hoe snel je dit doorloopt en de focus die je hiervoor neemt. <br /><br />
-                                    <strong>Tip: Plan direct de komende dagen even twee uur hiervoor apart in je agenda, dan weet je zeker dat je met genoeg tijd kan knallen.</strong>
+                                    Doorloop de module in de academie (binnen 48 uur). Dit is enorm belangrijk. Je komt hier natuurlijk voor resultaten 😉 dus geef ons zo snel mogelijk de input om daarmee aan de slag te kunnen gaan. Zelfs als dat betekent dat je nu direct even iets anders aan de kant moet schuiven: <strong>doe dit meteen.</strong>
                                 </p>
                             </div>
                         </div>
