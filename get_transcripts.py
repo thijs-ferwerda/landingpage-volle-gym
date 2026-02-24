@@ -1,14 +1,5 @@
 import subprocess
-import sys
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-try:
-    from youtube_transcript_api import YouTubeTranscriptApi
-except ImportError:
-    install("youtube-transcript-api")
-    from youtube_transcript_api import YouTubeTranscriptApi
+import json
 
 video_ids = [
     '_ERwMRB4pgE', 'KxT9StIlyeg', 'xnhQBTBJPek', 'Qjc8I01bZE8', 
@@ -17,13 +8,25 @@ video_ids = [
     'EsqOf51DvJ0', 'BbCw16hxhbo'
 ]
 
-for vid in video_ids:
-    try:
-        # Try getting Dutch first
-        ts = YouTubeTranscriptApi.get_transcript(vid, languages=['nl', 'en'])
-        text = " ".join([x['text'] for x in ts])
-        print(f"=== VIDEO: {vid} ===")
-        print(text[:1500])
-        print("\n")
-    except Exception as e:
-        print(f"=== VIDEO: {vid} ERROR: {e} ===")
+with open('transcripts.txt', 'w') as f:
+    for vid in video_ids:
+        try:
+            # Try getting Dutch first
+            cmd = f"python3 -m youtube_transcript_api {vid} --languages nl en --format json"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if result.returncode == 0:
+                stdout_clean = result.stdout[result.stdout.find('['):]
+                ts = json.loads(stdout_clean)
+                if isinstance(ts, list) and len(ts) > 0 and isinstance(ts[0], list):
+                    # Sometimes it wraps in double list if multiple languages requested
+                    ts = ts[0]
+                text = " ".join([x['text'] for x in ts])
+                f.write(f"=== VIDEO: {vid} ===\n")
+                f.write(text + "\n\n")
+                print(f"Got {vid}")
+            else:
+                f.write(f"=== VIDEO: {vid} ERROR: {result.stderr} ===\n")
+                print(f"Error {vid}")
+        except Exception as e:
+            f.write(f"=== VIDEO: {vid} ERROR: {e} ===\n")
+            print(f"Exception {vid}")
