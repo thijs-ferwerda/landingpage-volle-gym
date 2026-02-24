@@ -99,7 +99,7 @@ const Onboarding = () => {
 
                         <div className="mb-16 text-center">
                             <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-3">
-                                Stap 1: <span className="text-accent">Het Onboardingsformulier</span>
+                                Stap 1: <span className="text-accent">Het onboardingsformulier</span>
                             </h2>
                             <p className="text-primary/70 text-sm max-w-2xl mx-auto leading-relaxed">
                                 Tijd voor actie. Vul het onderstaande formulier (ca. 5 minuten) direct in. Zodra we jouw gegevens hebben, beginnen wij op de achtergrond direct met het inrichten van de systemen. Scroll na het invullen verder voor de resterende stappen.
