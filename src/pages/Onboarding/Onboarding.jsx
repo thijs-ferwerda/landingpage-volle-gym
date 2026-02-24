@@ -216,6 +216,49 @@ const Onboarding = () => {
                     </div>
                 </section>
 
+                {/* Celebration Team Sectie */}
+                <section className="relative z-10 w-full max-w-4xl mx-auto px-6 md:px-12 mt-20 md:mt-32">
+                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl overflow-hidden relative group hover:border-accent/20 transition-all duration-500">
+                        {/* Image Header */}
+                        <div className="w-full h-64 md:h-80 relative overflow-hidden bg-dark">
+                            <img
+                                src="/team-vollegym-new-v2.jpg"
+                                alt="Het Volle Gym Team"
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                            />
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"></div>
+
+                            <div className="absolute bottom-6 left-6 md:left-8 right-6">
+                                <span className="inline-block px-3 py-1 bg-accent text-white text-xs font-bold uppercase tracking-widest rounded-full mb-3 shadow-lg">Let's go!</span>
+                                <h2 className="font-heading font-bold text-3xl md:text-4xl text-white tracking-tight">
+                                    Enorm veel zin in!
+                                </h2>
+                            </div>
+                        </div>
+
+                        {/* Content Body */}
+                        <div className="p-6 md:p-10 md:pt-8 bg-white relative">
+                            <p className="font-sans text-primary/80 leading-relaxed text-base md:text-lg">
+                                Namens het hele team van Volle Gym: tof dat je het vertrouwen in ons hebt uitgesproken! We kunnen écht niet wachten om samen met jou aan de slag te gaan en de reis te starten om jouw gym te vullen met nieuwe leden. We gaan knallen!
+                            </p>
+
+                            {/* Subtiele krabbel / groet */}
+                            <div className="mt-8 flex items-center justify-between border-t border-primary/10 pt-6">
+                                <div className="flex -space-x-3">
+                                    <div className="w-10 h-10 rounded-full border-2 border-white bg-accent/20 flex items-center justify-center text-accent font-bold text-xs uppercase shadow-sm">T</div>
+                                    <div className="w-10 h-10 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-primary font-bold text-xs uppercase shadow-sm">MB</div>
+                                    <div className="w-10 h-10 rounded-full border-2 border-white bg-dark/20 flex items-center justify-center text-dark font-bold text-xs uppercase shadow-sm">R</div>
+                                </div>
+                                <div className="text-right">
+                                    <p className="font-heading font-bold text-lg text-primary">Team Volle Gym</p>
+                                    <p className="text-xs text-primary/50 uppercase tracking-widest">We Got You</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Info Footer sectie */}
                 <section className="w-full max-w-4xl mx-auto px-6 mt-20 text-center">
                     <p ref={addToRefs} className="font-sans text-primary/50 text-sm">
