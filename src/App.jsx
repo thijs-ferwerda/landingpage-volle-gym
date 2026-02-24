@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Welcome from './pages/Welcome/Welcome';
 import ThankYou from './pages/ThankYou/ThankYou';
-import Onboarding from './pages/Onboarding/Onboarding';
+import OnboardingTemplate from './pages/Onboarding/OnboardingTemplate';
 import MinimalLayout from './components/MinimalLayout';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
@@ -63,7 +63,9 @@ function App() {
 
         {/* Minimal Routes */}
         <Route path="/intake/gekwalificeerd" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
-        <Route path="/onboarding" element={<MinimalLayout><Onboarding /></MinimalLayout>} />
+        <Route path="/onboarding" element={<MinimalLayout><OnboardingTemplate packageName="het traject" /></MinimalLayout>} />
+        <Route path="/onboarding/30-leden" element={<MinimalLayout><OnboardingTemplate packageName="30 leden in 90 dagen" /></MinimalLayout>} />
+        <Route path="/onboarding/45-leden" element={<MinimalLayout><OnboardingTemplate packageName="45 leden in 90 dagen" /></MinimalLayout>} />
         <Route path="/bedankt" element={<MinimalLayout><ThankYou /></MinimalLayout>} />
         <Route path="/welkom" element={<MinimalLayout><Welcome /></MinimalLayout>} />
 
