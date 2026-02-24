@@ -228,7 +228,7 @@ const OnboardingTemplate = ({ packageName }) => {
                             <img
                                 src="/teamfoto.jpeg"
                                 alt="Het Volle Gym Team"
-                                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                                className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700"
                             />
                             {/* Gradient Overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"></div>
@@ -250,9 +250,18 @@ const OnboardingTemplate = ({ packageName }) => {
                             {/* Subtiele krabbel / groet */}
                             <div className="mt-8 flex items-center justify-between border-t border-primary/10 pt-6">
                                 <div className="flex -space-x-3">
-                                    <div className="w-10 h-10 rounded-full border-2 border-white bg-accent/20 flex items-center justify-center text-accent font-bold text-xs uppercase shadow-sm">T</div>
-                                    <div className="w-10 h-10 rounded-full border-2 border-white bg-primary/20 flex items-center justify-center text-primary font-bold text-xs uppercase shadow-sm">MB</div>
-                                    <div className="w-10 h-10 rounded-full border-2 border-white bg-dark/20 flex items-center justify-center text-dark font-bold text-xs uppercase shadow-sm">R</div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-40">
+                                        <img src="/thijs-ferwerda.png" alt="Thijs" className="w-full h-full object-cover object-top" />
+                                    </div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-30">
+                                        <img src="/bas-nagel.jpeg" alt="Bas" className="w-full h-full object-cover object-top" />
+                                    </div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-20">
+                                        <img src="/Michelle-de-bruijn.png" alt="Michelle" className="w-full h-full object-cover object-top" />
+                                    </div>
+                                    <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-10">
+                                        <img src="/Stevan-terzic.png" alt="Stevan" className="w-full h-full object-cover object-top" />
+                                    </div>
                                 </div>
                                 <div className="text-right">
                                     <p className="font-heading font-bold text-lg text-primary">Team Volle Gym</p>
