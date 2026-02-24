@@ -43,6 +43,21 @@ const Hero = () => {
         return () => ctx.revert();
     }, []);
 
+    // Track A/B test exposure in Google Analytics via GTM dataLayer
+    useEffect(() => {
+        if (campaignKey === 'default') {
+            const headlineShown = activeCampaign.headlineStart;
+            const variationId = headlineShown.includes("Wil je") ? "B_Meer_Leden" : "A_Leeg_Of_Vol";
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'ab_test_exposure',
+                ab_test_name: 'hero_headline_copy',
+                ab_test_variation: variationId
+            });
+        }
+    }, [campaignKey, activeCampaign]);
+
     return (
         <section
             ref={containerRef}
