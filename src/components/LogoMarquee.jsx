@@ -66,7 +66,7 @@ const LogoMarquee = () => {
                         <img
                             src={logo.src}
                             alt={`Partner Logo ${logo.id}`}
-                            className="max-h-24 md:max-h-32 w-auto object-contain mix-blend-multiply"
+                            className="max-h-24 md:max-h-32 w-auto object-contain"
                             loading="lazy"
                         />
                     </div>
