@@ -1,4 +1,56 @@
 {
+  "redirects": [
+    {
+      "source": "/strategiegesprek",
+      "destination": "/intake",
+      "permanent": true
+    },
+    {
+      "source": "/gym-growth-blueprint",
+      "destination": "/methode",
+      "permanent": true
+    },
+    {
+      "source": "/screening-call-bart-van-daatselaar",
+      "destination": "/intake",
+      "permanent": true
+    },
+    {
+      "source": "/onboarding-call-bart-van-daatselaar",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/startnow",
+      "destination": "/intake",
+      "permanent": true
+    },
+    {
+      "source": "/startnow-uni",
+      "destination": "/intake",
+      "permanent": true
+    },
+    {
+      "source": "/tmp/workspace/production-frozen/leadgen/common/builder-preview/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/_preview/(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/forgot_password(.*)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/webhook/(.*)",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { Link } from 'react-router-dom';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const System = () => {
@@ -37,19 +39,19 @@ const System = () => {
         {
             num: "01",
             title: "Duurzame acquisitie",
-            desc: "Ons money-model verzekert dat iedere euro in marketing minimaal één euro aan nieuwe sales oplevert. Schaalbaar, overdraagbaar aan je team, en zonder dat jij de hele dag leads hoeft na te jagen.",
+            desc: <>Ons money-model verzekert dat iedere euro in <Link to="/sportschool-marketing" className="text-accent hover:underline underline-offset-4 decoration-accent/50 transition-all font-medium">marketing</Link> minimaal één euro aan nieuwe sales oplevert. Schaalbaar, overdraagbaar aan je team, en zonder dat jij de hele dag leads hoeft na te jagen.</>,
             icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
         },
         {
             num: "02",
             title: "Community & netwerk",
-            desc: "Samen doe je het langer en beter. Leer van andere succesvolle gym eigenaren, deel je overwinningen en bouw mee aan een gezonder Nederland. Dat is onze gedeelde missie.",
+            desc: <>Samen <Link to="/leden-werven-sportschool" className="text-accent hover:underline underline-offset-4 decoration-accent/50 transition-all font-medium">structureel leden werven</Link> doe je langer en beter. Leer van andere succesvolle gym eigenaren, deel je overwinningen en bouw mee aan een gezonder Nederland. Dat is onze gedeelde missie.</>,
             icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
         },
         {
             num: "03",
             title: "Stok achter de deur",
-            desc: "Jij bent de accountability partner voor je klanten. Wij zijn die van jou. In onze wekelijkse meetings bekijken we jouw cijfers. Blijf je achter? Dan bellen we je proactief op om je weer op de rit te krijgen.",
+            desc: <>Jij bent de accountability partner voor je klanten. Wij zijn dat voor jouw <Link to="/pt-studio-marketing" className="text-accent hover:underline underline-offset-4 decoration-accent/50 transition-all font-medium">PT studio</Link>. In onze wekelijkse meetings bekijken we jouw cijfers. Blijf je achter? Dan bellen we je op om je op de rit te krijgen.</>,
             icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
         }
     ];
