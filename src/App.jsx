@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Welcome from './pages/Welcome/Welcome';
 import ThankYou from './pages/ThankYou/ThankYou';
+import Onboarding from './pages/Onboarding/Onboarding';
+import MinimalLayout from './components/MinimalLayout';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -53,22 +55,26 @@ function App() {
     <Router>
       <ScrollToHash />
       <div className="noise-overlay"></div>
-      <Navbar />
+
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<><Navbar /><Home /><Footer /></>} />
         {/* Dynamische SEO Pagina's Route */}
-        <Route path="/:slug" element={<SeoPageTemplate />} />
-        <Route path="/intake/gekwalificeerd" element={<IntakeQualified />} />
-        <Route path="/intake" element={<Intake />} />
-        <Route path="/sorry" element={<Sorry />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/voorwaarden" element={<TermsOfService />} />
-        <Route path="/welkom" element={<Welcome />} />
-        <Route path="/bedankt" element={<ThankYou />} />
+        <Route path="/:slug" element={<><Navbar /><SeoPageTemplate /><Footer /></>} />
+
+        {/* Minimal Routes */}
+        <Route path="/intake/gekwalificeerd" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
+        <Route path="/onboarding" element={<MinimalLayout><Onboarding /></MinimalLayout>} />
+        <Route path="/bedankt" element={<MinimalLayout><ThankYou /></MinimalLayout>} />
+        <Route path="/welkom" element={<MinimalLayout><Welcome /></MinimalLayout>} />
+
+        <Route path="/intake" element={<><Navbar /><Intake /><Footer /></>} />
+        <Route path="/sorry" element={<><Navbar /><Sorry /><Footer /></>} />
+        <Route path="/privacy" element={<><Navbar /><PrivacyPolicy /><Footer /></>} />
+        <Route path="/voorwaarden" element={<><Navbar /><TermsOfService /><Footer /></>} />
+
         {/* Catch-all 404 */}
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<><Navbar /><NotFound /><Footer /></>} />
       </Routes>
-      <Footer />
       <SpeedInsights />
       <Analytics />
     </Router>
