@@ -3,16 +3,19 @@ import { Link, useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 import { campaigns } from '../data/campaigns';
 
-const Hero = () => {
+const Hero = ({ campaign }) => {
     const location = useLocation();
 
-    // Parse the campaign from URL search params
+    // Parse the campaign from prop or URL search params
     const campaignKey = useMemo(() => {
+        if (campaign && campaigns[campaign]) {
+            return campaign;
+        }
         const searchParams = new URLSearchParams(location.search);
         // We support both ?campaign=x and ?c=x for shorter URLs
         const c = searchParams.get('campaign') || searchParams.get('c');
         return c && campaigns[c] ? c : 'default';
-    }, [location.search]);
+    }, [campaign, location.search]);
 
     const activeCampaign = campaigns[campaignKey];
 

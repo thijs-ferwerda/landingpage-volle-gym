@@ -61,5 +61,44 @@ export const campaigns = {
         subtitle: "Bespaar duizenden euro's aan inefficiënte bureaus. Wij leveren een end-to-end systeem inclusief opvolging met een keiharde ROI-garantie: je betaalt voor commitment, maar krijgt je investering pro-rato terug voor elk lid dat we missen op de belofte.",
         ctaPrimary: "Onze Methode",
         ctaSecondary: "Boek Intake"
+    },
+
+    // 'uitgeputte-trainer' (Script 1)
+    'uitgeputte-trainer': {
+        badge: "Dit is vast herkenbaar voor je",
+        badgeLabel: "",
+        badgeLinkLabel: "Lees verder >",
+        headlineStart: "Je studio groeit niet. En jij bent",
+        headlineHighlight: "kapot",
+        headlineEnd: ".",
+        subtitle: "Jij bent trainer, geen marketeer. Stop met zelf advertenties draaien of bureaus betalen die je markt niet snappen. De beste trainers besteden de rest uit. Wij garanderen 45 nieuwe klanten in 90 dagen. Halen we dat niet? Dan betaal je alleen voor de leden die we wel hebben behaald.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // 'locatie-2' (Script 4A)
+    'locatie-2': {
+        badge: "Wauw, een tweede locatie! Maar...?",
+        badgeLabel: "",
+        badgeLinkLabel: "Zo doe je dat >",
+        headlineStart: "Je doet nog steeds",
+        headlineHighlight: "alles",
+        headlineEnd: " zelf.",
+        subtitle: "Die tweede locatie ligt al maanden te wachten, want je bent te druk met de eerste. Je komt pas verder als je nieuwe klanten uit handen geeft. Wat voor anderen werkte, garanderen wij voor jou: 45 nieuwe klanten in 90 dagen. Halen we dat niet? Dan betalen we je terug voor de leden die we hebben gemist.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // 'voorspelbaar' (Script 2)
+    'voorspelbaar': {
+        badge: "STOP DE ACHTBAAN",
+        badgeLabel: "",
+        badgeLinkLabel: "De Oplossing >",
+        headlineStart: "De groei van je studio is",
+        headlineHighlight: "onvoorspelbaar",
+        headlineEnd: ".",
+        subtitle: "Zonder zekerheid kun je niks plannen. Geen tweede locatie. Geen uitbreiding. Ga je zelf het wiel uitvinden, of neem je over wat al werkt voor 40+ studio's? Wij garanderen 45 nieuwe klanten in 90 dagen. Lukt dat niet? Dan betaal je alleen voor de leden die je krijgt.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
     }
 };

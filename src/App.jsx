@@ -58,6 +58,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<><Navbar /><Home /><Footer /></>} />
+        {/* Nieuwe Landingspagina Routes */}
+        <Route path="/uitgeputte-trainer" element={<><Navbar /><Home campaign="uitgeputte-trainer" /><Footer /></>} />
+        <Route path="/tweede-locatie" element={<><Navbar /><Home campaign="locatie-2" /><Footer /></>} />
+        <Route path="/voorspelbare-groei" element={<><Navbar /><Home campaign="voorspelbaar" /><Footer /></>} />
+
         {/* Dynamische SEO Pagina's Route */}
         <Route path="/:slug" element={<><Navbar /><SeoPageTemplate /><Footer /></>} />
 

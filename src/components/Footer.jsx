@@ -4,11 +4,13 @@ import { Link, useLocation } from 'react-router-dom';
 const Footer = () => {
     const location = useLocation();
     const isIntakePage = location.pathname.startsWith('/intake');
+    const isSalesPage = ['/uitgeputte-trainer', '/tweede-locatie', '/voorspelbare-groei'].includes(location.pathname);
+    const isMinimalFooter = isIntakePage || isSalesPage;
 
     return (
-        <footer className={`bg-dark text-primary px-6 md:px-12 relative z-20 ${isIntakePage ? 'pt-8 pb-8' : 'pt-24 pb-8 rounded-t-[4rem] mt-[-4rem]'}`}>
+        <footer className={`bg-dark text-primary px-6 md:px-12 relative z-20 ${isMinimalFooter ? 'pt-8 pb-8' : 'pt-24 pb-8 rounded-t-[4rem] mt-[-4rem]'}`}>
 
-            {!isIntakePage && (
+            {!isMinimalFooter && (
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-6 md:grid-cols-3 gap-12 mb-20 border-b border-primary/10 pb-20">
                     <div className="lg:col-span-2 md:col-span-3">
                         <div className="flex items-center gap-3 mb-6">
@@ -65,7 +67,7 @@ const Footer = () => {
                 </div>
             )}
 
-            <div className={`max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-data text-primary/40 ${isIntakePage ? 'border-t border-primary/10 pt-4' : ''}`}>
+            <div className={`max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-data text-primary/40 ${isMinimalFooter ? 'border-t border-primary/10 pt-4' : ''}`}>
                 <p>&copy; {new Date().getFullYear()} Volle Gym Consulting B.V. All systems go.</p>
                 <div className="flex gap-6">
                     <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>

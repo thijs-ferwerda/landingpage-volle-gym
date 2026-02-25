@@ -11,11 +11,11 @@ import GoogleReviews from '../../components/GoogleReviews';
 import CTA from '../../components/CTA';
 import Impact from '../../components/Impact';
 
-const Home = () => {
+const Home = ({ campaign }) => {
     return (
         <main>
             <SEO />
-            <Hero />
+            <Hero campaign={campaign} />
             <VolleGymBar />
             <LogoMarquee />
             <Impact />
