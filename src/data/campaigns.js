@@ -65,7 +65,7 @@ export const campaigns = {
 
     // 'uitgeputte-trainer' (Script 1)
     'uitgeputte-trainer': {
-        badge: "JE BENT KAPOT, EN DE STUDIO GROEIT NIET",
+        badge: "DIT IS VAST HERKENBAAR VOOR JE",
         badgeLabel: "",
         badgeLinkLabel: "Lees verder >",
         headlineStart: "Je studio groeit niet. En jij bent",
