@@ -22,7 +22,7 @@ const Home = ({ campaign }) => {
             <SocialProof />
             <GoogleReviews />
             <Story />
-            <System />
+            <System campaign={campaign} />
             <VSL />
             <CTA />
         </main>

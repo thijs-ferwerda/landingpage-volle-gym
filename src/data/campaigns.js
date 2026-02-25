@@ -65,7 +65,7 @@ export const campaigns = {
 
     // 'uitgeputte-trainer' (Script 1)
     'uitgeputte-trainer': {
-        badge: "Dit is vast herkenbaar voor je",
+        badge: "JE BENT KAPOT, EN DE STUDIO GROEIT NIET",
         badgeLabel: "",
         badgeLinkLabel: "Lees verder >",
         headlineStart: "Je studio groeit niet. En jij bent",
@@ -78,7 +78,7 @@ export const campaigns = {
 
     // 'locatie-2' (Script 4A)
     'locatie-2': {
-        badge: "Wauw, een tweede locatie! Maar...?",
+        badge: "WAUW, EEN TWEEDE LOCATIE! MAAR...?",
         badgeLabel: "",
         badgeLinkLabel: "Zo doe je dat >",
         headlineStart: "Je doet nog steeds",
