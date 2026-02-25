@@ -91,7 +91,7 @@ export const campaigns = {
 
     // 'voorspelbaar' (Script 2)
     'voorspelbaar': {
-        badge: "STOP DE ACHTBAAN",
+        badge: "HET VOELT ALS EEN ACHTBAAN, WANT ...",
         badgeLabel: "",
         badgeLinkLabel: "De Oplossing >",
         headlineStart: "De groei van je studio is",
