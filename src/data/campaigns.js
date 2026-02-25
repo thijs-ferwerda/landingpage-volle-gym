@@ -69,6 +69,7 @@ export const campaigns = {
         badgeLabel: "",
         badgeLinkLabel: "Lees verder >",
         headlineStart: "Je studio groeit niet. En jij bent",
+        hideBr: true,
         headlineHighlight: "kapot",
         headlineEnd: ".",
         subtitle: "Jij bent trainer, geen marketeer. Stop met zelf advertenties draaien of bureaus betalen die je markt niet snappen. De beste trainers besteden de rest uit. Wij garanderen 45 nieuwe klanten in 90 dagen. Halen we dat niet? Dan betaal je alleen voor de leden die we wel hebben behaald.",
