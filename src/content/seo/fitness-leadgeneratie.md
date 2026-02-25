@@ -5,7 +5,7 @@ heroTitleLine1: "Slim werken"
 heroTitleLine2: "aan vaste"
 heroTitleLine3: " online aanvragen"
 heroTitleLine4: "zonder spam."
-heroSubtitle: "De tijd van koopjesjagers is voorbij. Wij bouwen een proces waardoor alleen de beste aanvragen bij je binnenkomen."
+heroSubtitle: "Wij bouwen een bewezen systeem dat de juiste mensen naar jouw gym trekt. Aanvragen die kloppen, van mensen die écht willen investeren in zichzelf."
 contentSectionTitle: "Wat betekent goede aanvragen verzamelen?"
 slug: "fitness-leadgeneratie"
 ---

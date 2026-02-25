@@ -5,7 +5,7 @@ heroTitleLine1: "Slimme"
 heroTitleLine2: "personal trainer"
 heroTitleLine3: " online leads"
 heroTitleLine4: "genereren."
-heroSubtitle: "We bouwen een eerlijk systeem waardoor je agenda alleen gevuld wordt met leads die de waarde inzien van jouw inzet."
+heroSubtitle: "Wij bouwen een systeem dat jouw agenda vult met leads die klaar zijn om te investeren in zichzelf. Zo besteed jij je tijd aan wat je het beste doet: mensen begeleiden naar hun resultaten."
 contentSectionTitle: "Het eerlijke geheim van sterke aanvragen"
 slug: "personal-trainer-leads"
 ---

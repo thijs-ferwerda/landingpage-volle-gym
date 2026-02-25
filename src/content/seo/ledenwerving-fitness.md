@@ -5,7 +5,7 @@ heroTitleLine1: "Een relaxte"
 heroTitleLine2: "structuur voor"
 heroTitleLine3: " ledenwerving in"
 heroTitleLine4: "de fitness."
-heroSubtitle: "Zonder extra uren op zaterdag of zondag, veranderen we de taak van het vinden van nieuwe mensen in iets makkelijks en voorspelbaars."
+heroSubtitle: "Wij bouwen voor jouw sportschool een ledenwerving die soepel loopt en elke maand nieuwe mensen aantrekt. Zo groeit jouw bedrijf op een manier die voorspelbaar en beheersbaar is."
 contentSectionTitle: "Opnieuw rust vinden als ondernemer"
 slug: "ledenwerving-fitness"
 ---

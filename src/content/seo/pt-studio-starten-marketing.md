@@ -5,7 +5,7 @@ heroTitleLine1: "Een vliegende"
 heroTitleLine2: "start voor"
 heroTitleLine3: " jouw nieuwe"
 heroTitleLine4: "PT studio."
-heroSubtitle: "Aan de slag met je eigen zaal of studio is spannend. Wij zorgen voor warme marketing ruim voor de openingsdag."
+heroSubtitle: "Wij begeleiden je PT studio vanaf dag één met een marketingaanpak die klanten aantrekt nog vóór je deuren opengaan. Zo bouw je direct een sterke basis en loop je vol op je openingsdag."
 contentSectionTitle: "Risicovrij starten met de juiste leads"
 slug: "pt-studio-starten-marketing"
 ---

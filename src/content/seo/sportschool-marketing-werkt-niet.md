@@ -5,7 +5,7 @@ heroTitleLine1: "Wanneer je"
 heroTitleLine2: "sportschool"
 heroTitleLine3: " marketing niet"
 heroTitleLine4: "meer resoneert."
-heroSubtitle: "We openen een eerlijk boek en leggen rustig bloot waarom reguliere nieuwe leads massaal wegblijven na een kennismaking."
+heroSubtitle: "Wij zien dagelijks wat sportschooleigenaren écht nodig hebben om structureel nieuwe leden aan te trekken. Op deze pagina delen we de inzichten en strategieën die wij gebruiken om jouw marketing om te zetten in voorspelbare groei."
 contentSectionTitle: "In de valkuilen stappen van goedkope proefweken"
 slug: "sportschool-marketing-werkt-niet"
 ---

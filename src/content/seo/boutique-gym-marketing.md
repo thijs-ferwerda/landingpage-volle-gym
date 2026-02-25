@@ -5,7 +5,7 @@ heroTitleLine1: "Sterk werken"
 heroTitleLine2: "aan trouwe"
 heroTitleLine3: " boutique"
 heroTitleLine4: "gym leden."
-heroSubtitle: "Jouw club leunt op de fijne kleinschalige groepslessen. Binnen de werving trekken we diezelfde intieme lijn volledig door."
+heroSubtitle: "Jouw boutique gym draait op verbinding en de kracht van kleine groepen. Wij bouwen marketingstrategieën die precies dat gevoel uitstralen en de juiste leden naar jouw club trekken."
 contentSectionTitle: "De juiste beleving in je gym marketing"
 slug: "boutique-gym-marketing"
 ---

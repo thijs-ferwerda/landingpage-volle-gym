@@ -5,7 +5,7 @@ heroTitleLine1: "Slimme en"
 heroTitleLine2: "juiste mensen"
 heroTitleLine3: " werven als PT"
 heroTitleLine4: "klant op termijn."
-heroSubtitle: "Moeite met je uurtarief verkopen ten aanzien van kortingsprijzen? Bij Volle Gym sluiten de kennismaking en de sales simpelweg aan op jouw wensen."
+heroSubtitle: "Wij bouwen voor jou een kennismakingstraject dat aansluit op jouw tarief en jouw ideale klant. Zo stromen er structureel nieuwe personal training klanten binnen in jouw buurt."
 contentSectionTitle: "Waar zoek ik exact de serieuzer betalende leden voor mij?"
 slug: "personal-training-klanten-werven"
 ---

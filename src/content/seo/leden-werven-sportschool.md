@@ -5,7 +5,7 @@ heroTitleLine1: "Structureel"
 heroTitleLine2: "nieuwe leden"
 heroTitleLine3: " succesvol"
 heroTitleLine4: "werven."
-heroSubtitle: "We helpen je met een slim systeem dat zonder pushen elke week verse aanvragen voor je club genereert."
+heroSubtitle: "Wij bouwen voor jouw sportschool een bewezen ledenwerving systeem dat elke week verse aanvragen oplevert. Zo houd jij de focus op wat je het liefste doet: je leden begeleiden naar hun resultaten."
 contentSectionTitle: "Altijd genoeg sportende leden in jouw zaal"
 slug: "leden-werven-sportschool"
 ---

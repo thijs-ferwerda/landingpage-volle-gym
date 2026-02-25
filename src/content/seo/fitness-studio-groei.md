@@ -5,7 +5,7 @@ heroTitleLine1: "Stille inzet"
 heroTitleLine2: "voor stroom"
 heroTitleLine3: " aan stevige "
 heroTitleLine4: "studio sporters."
-heroSubtitle: "De grens van honderd klanten passeren vormt de mooiste en zwaarste halte voor ondernemers. Wij regelen de sprong zonder haast."
+heroSubtitle: "Wij zien elke dag hoe sportscholen en PT studio's groeien naar een volgende fase. Met Volle Gym bouw je stap voor stap aan een stabiele ledengroei die jouw studio klaarstoomt voor de volgende honderd klanten."
 contentSectionTitle: "Zonder kortingen veilig doorschalen met je marges"
 slug: "fitness-studio-groei"
 ---

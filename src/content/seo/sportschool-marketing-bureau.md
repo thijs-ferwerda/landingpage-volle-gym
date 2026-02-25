@@ -5,7 +5,7 @@ heroTitleLine1: "De duidelijkste"
 heroTitleLine2: "sportschool"
 heroTitleLine3: " partner online"
 heroTitleLine4: "die jou helpt."
-heroSubtitle: "Wij werken samen met de eigenaars: ontzettend transparant en altijd sturen op resultaat dat blijft."
+heroSubtitle: "Wij werken rechtstreeks samen met de eigenaar en bouwen aan marketing die maand na maand meetbaar resultaat oplevert. Volledig transparant, altijd gericht op groei die beklijft."
 contentSectionTitle: "Het eerlijke verhaal over marketingbureaus"
 slug: "sportschool-marketing-bureau"
 ---

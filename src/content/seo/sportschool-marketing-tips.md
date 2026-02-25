@@ -5,7 +5,7 @@ heroTitleLine1: "Handige"
 heroTitleLine2: "en makkelijke"
 heroTitleLine3: " marketing"
 heroTitleLine4: "tips."
-heroSubtitle: "Je hoeft geen computernerd te zijn om je sportschool vol te krijgen. We raden een paar simpele stappen aan om direct meer aanmeldingen te verzamelen."
+heroSubtitle: "Wij zien elke dag hoe sportschooleigenaren met een paar gerichte stappen structureel meer aanmeldingen binnenhalen. Ontdek de marketingaanpak die wij adviseren voor een volle sportschool."
 contentSectionTitle: "Begin met deze simpele en effectieve tips"
 slug: "sportschool-marketing-tips"
 ---

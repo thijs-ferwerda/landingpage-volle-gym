@@ -5,7 +5,7 @@ heroTitleLine1: "In kleine stappen"
 heroTitleLine2: "meer leden"
 heroTitleLine3: " toevoegen op"
 heroTitleLine4: "jouw tempo."
-heroSubtitle: "Je wilt je omzet verhogen, maar wel op een manier die de gezellige sfeer in de sportzaal helemaal behoudt."
+heroSubtitle: "Wij helpen sportschooleigenaren stap voor stap groeien, met behoud van de sfeer die jouw gym uniek maakt. Meer leden, meer omzet en een community waar iedereen zich thuis voelt."
 contentSectionTitle: "Groeien en toch de controle houden over je kassa"
 slug: "meer-leden-sportschool"
 ---

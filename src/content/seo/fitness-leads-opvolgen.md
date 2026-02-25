@@ -5,7 +5,7 @@ heroTitleLine1: "Perfectie in"
 heroTitleLine2: "het adequaat"
 heroTitleLine3: " fitness leads"
 heroTitleLine4: "online opvolgen."
-heroSubtitle: "Geen voicemails of onbereikbare nummers meer. Maak het proces super strak door automatisch berichtjes te de sturen."
+heroSubtitle: "Wij bouwen geautomatiseerde opvolgstrategieën die jouw leads op het juiste moment bereiken. Zo blijft elk contact warm en loopt jouw agenda vol met gekwalificeerde afspraken."
 contentSectionTitle: "De belangrijkste minuten regel in actie"
 slug: "fitness-leads-opvolgen"
 ---

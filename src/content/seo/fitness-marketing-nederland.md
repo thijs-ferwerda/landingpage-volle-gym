@@ -5,7 +5,7 @@ heroTitleLine1: "Nuchtere"
 heroTitleLine2: "fitness"
 heroTitleLine3: " marketing uit"
 heroTitleLine4: "Nederland."
-heroSubtitle: "We zetten Amerikaanse en overdreven reclametrucjes netjes opzij en focussen enkel op wat werkt in de lokale dorpen en steden in Nederland."
+heroSubtitle: "Wij bouwen marketingstrategieën die aansluiten op de Nederlandse markt, afgestemd op jouw lokale doelgroep. Bewezen aanpakken die sportscholen en PT studio's in dorpen en steden écht laten groeien."
 contentSectionTitle: "Een eerlijk verhaal werkt gewoon beter"
 slug: "fitness-marketing-nederland"
 ---

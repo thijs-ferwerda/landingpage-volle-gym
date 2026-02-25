@@ -5,7 +5,7 @@ heroTitleLine1: "Je sportschool"
 heroTitleLine2: "succesvol en"
 heroTitleLine3: " zonder stress"
 heroTitleLine4: "promoten."
-heroSubtitle: "Geen lastige vaktermen of eindeloze theorie. Wij koppelen een begrijpelijk systeem aan je website waardoor aanvragen netjes in je agenda vallen."
+heroSubtitle: "Wij bouwen een helder marketingsysteem dat naadloos aansluit op jouw website. Zo stromen kwalitatieve aanvragen automatisch je agenda in, terwijl jij je focust op je klanten."
 contentSectionTitle: "Gestructureerd nieuwe sporters verwelkomen"
 slug: "sportschool-marketing"
 ---

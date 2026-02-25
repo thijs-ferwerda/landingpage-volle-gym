@@ -5,7 +5,7 @@ heroTitleLine1: "Slimme en"
 heroTitleLine2: "makkelijke PT"
 heroTitleLine3: " studio advertentie"
 heroTitleLine4: "en werving."
-heroSubtitle: "Bouw je personal training praktijk op als een echt en gewild merk. Altijd werken op basis van kwaliteit in plaats van kwantiteit."
+heroSubtitle: "Wij bouwen jouw PT studio uit tot een sterk en gewild merk, met een aanpak die rust en kwaliteit uitstraalt. Elke stap is gericht op duurzame groei die past bij wie jij bent als professional."
 contentSectionTitle: "Kwaliteit bewaren tijdens leuke reclames"
 slug: "pt-studio-marketing"
 ---

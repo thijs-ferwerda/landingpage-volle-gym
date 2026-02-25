@@ -5,7 +5,7 @@ heroTitleLine1: "Slimme en"
 heroTitleLine2: "simpele"
 heroTitleLine3: " marketing"
 heroTitleLine4: "voor gyms."
-heroSubtitle: "Vergeet de vage theorie. Wij zorgen dat jouw sportschool of PT studio wordt gezien door de juiste mensen en bouwen een systeem dat direct werkt."
+heroSubtitle: "Wij verbinden jouw sportschool of PT studio met de mensen die écht op zoek zijn naar wat jij biedt. Met een bewezen systeem dat consistente groei oplevert, elke maand opnieuw."
 contentSectionTitle: "Hoe ons bureau jou helpt groeien"
 slug: "fitness-marketing-bureau"
 ---

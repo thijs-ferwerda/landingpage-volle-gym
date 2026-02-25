@@ -5,7 +5,7 @@ heroTitleLine1: "Slim small"
 heroTitleLine2: "group nieuwe"
 heroTitleLine3: " vaste leden"
 heroTitleLine4: "online werven."
-heroSubtitle: "Minder uren op de vloer voor veel beter resultaat in kleine vertrouwde sessies. We vullen wekelijks de open gaten in je agenda."
+heroSubtitle: "Wij vullen wekelijks de open plekken in jouw small group agenda met gemotiveerde nieuwe leden. Zo bouw je structureel aan een volle, vertrouwde groep en houd jij tijd over voor wat je het liefste doet: coachen."
 contentSectionTitle: "Behoud de club dynamiek prachtig"
 slug: "small-group-leden-werven"
 ---

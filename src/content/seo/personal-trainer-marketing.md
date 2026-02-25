@@ -5,7 +5,7 @@ heroTitleLine1: "Persoonlijke"
 heroTitleLine2: "marketing"
 heroTitleLine3: " voor de"
 heroTitleLine4: "moderne trainer."
-heroSubtitle: "Geen saaie uurtje-factuurtje reclames. Wij laten zien hoe je jouw PT studio op de kaart zet en meer respect voor je vakkennis krijgt."
+heroSubtitle: "Wij helpen PT studio eigenaren hun vakkennis zichtbaar te maken en een sterk merk te bouwen dat klanten aantrekt. Met bewezen marketingstrategieën zetten we jouw studio op de kaart en creëren we de vrijheid die je verdient."
 contentSectionTitle: "Trek sporters aan die jouw inzet waarderen"
 slug: "personal-trainer-marketing"
 ---

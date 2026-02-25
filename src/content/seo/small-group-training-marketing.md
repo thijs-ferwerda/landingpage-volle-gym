@@ -5,7 +5,7 @@ heroTitleLine1: "Snellere"
 heroTitleLine2: "groei dankzij "
 heroTitleLine3: " small group"
 heroTitleLine4: "reclame."
-heroSubtitle: "Kleine groepjes trainen is qua winst perfect. We hebben de tools paraat om de klassen helemaal overzichtelijk telkens vol te houden."
+heroSubtitle: "Wij zien dagelijks hoe small group training de winstgevendste dienst is die een sportschool kan aanbieden. Met onze tools vul je elke klas structureel en houd je het overzicht compleet."
 contentSectionTitle: "Samen sporten voor een gezonde sportschool"
 slug: "small-group-training-marketing"
 ---

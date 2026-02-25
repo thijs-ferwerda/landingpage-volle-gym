@@ -5,7 +5,7 @@ heroTitleLine1: "Online"
 heroTitleLine2: "gym marketing"
 heroTitleLine3: " makkelijk"
 heroTitleLine4: "inzetten."
-heroSubtitle: "Tussen de oprechte begeleiding van je sporters door, voelt marketing vaak als een vervelende en zware taak. Wij nemen dit van je over."
+heroSubtitle: "Wij zien dagelijks hoe sportschooleigenaren groeien wanneer marketing echt voor hen werkt. Daarom bouwen wij heldere strategieën die jouw gym vullen, terwijl jij je richt op waar je goed in bent."
 contentSectionTitle: "Een kalme strategie in de buurt"
 slug: "gym-marketing"
 ---

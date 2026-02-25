@@ -5,7 +5,7 @@ heroTitleLine1: "Geklaard en"
 heroTitleLine2: "klaar voor"
 heroTitleLine3: " high ticket PT"
 heroTitleLine4: "warme sales."
-heroSubtitle: "De grotere programma's online verkopen draait om heel gerichte focus in advertenties. We bouwen vertrouwen met elke stap."
+heroSubtitle: "Wij richten advertenties gericht op de juiste mensen, op het juiste moment. Zo bouwen we stap voor stap vertrouwen en vullen we jouw agenda met serieuze klanten."
 contentSectionTitle: "De overstap naar echt een lang programma"
 slug: "high-ticket-pt-sales"
 ---
