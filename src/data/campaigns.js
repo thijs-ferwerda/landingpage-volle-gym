@@ -18,7 +18,7 @@ export const campaigns = {
         badgeLinkLabel: "",
         headlineStart: isVariationB ? "Wil je structureel meer" : "Is jouw gym momenteel",
         headlineHighlight: isVariationB ? "leden" : "leeg",
-        headlineEnd: isVariationB ? " voor je gym?" : ", of vol?",
+        headlineEnd: isVariationB ? " voor je gym?" : ", of vol? 😉",
         subtitle: "Zonder een voorspelbaar systeem blijf je afhankelijk van hoop en mond-tot-mondreclame. Wij vullen jouw PT-studio of Small Group gym systematisch met ideale leden. Gegarandeerd.",
         ctaPrimary: "Doe de intake",
         ctaSecondary: "Bekijk de methode"
