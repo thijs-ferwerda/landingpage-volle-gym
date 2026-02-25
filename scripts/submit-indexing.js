@@ -7,7 +7,7 @@ import { google } from 'googleapis';
 // als 'Eigenaar' (verplicht voor de Indexing API).
 
 const SERVICE_ACCOUNT_KEY_PATH = path.resolve('service-account.json');
-const SEO_PAGES_PATH = path.resolve('src/data/seo-pages.json');
+const SEO_DIR = path.resolve('src/content/seo');
 
 const HOSTNAME = 'https://www.vollegym.nl';
 
@@ -37,11 +37,11 @@ async function main() {
         process.exit(1);
     }
 
-    // Lees de pagina's
-    const seoPagesRaw = fs.readFileSync(SEO_PAGES_PATH, 'utf8');
-    const seoPages = JSON.parse(seoPagesRaw);
+    // Lees de pagina's uit de markdown map
+    const mdFiles = fs.existsSync(SEO_DIR) ? fs.readdirSync(SEO_DIR).filter(f => f.endsWith('.md')) : [];
+    const seoSlugs = mdFiles.map(file => file.replace('.md', ''));
 
-    const urlsToIndex = seoPages.map(page => `${HOSTNAME}/${page.slug}`);
+    const urlsToIndex = seoSlugs.map(slug => `${HOSTNAME}/${slug}`);
 
     // Voeg home en intake ook toe indien gewenst
     urlsToIndex.push(`${HOSTNAME}/`);

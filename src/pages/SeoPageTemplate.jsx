@@ -1,16 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
-import seoPages from '../data/seo-pages.json';
+import frontMatter from 'front-matter';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 import NotFound from './NotFound/NotFound';
+
+// Laad alle markdown bestanden in via Vite's import.meta.glob (als ruwe text string)
+const mdFiles = import.meta.glob('../content/seo/*.md', { query: '?raw', import: 'default', eager: true });
 
 const SeoPageTemplate = () => {
     const { slug } = useParams();
 
-    // Zoek de juiste pagina configuratie op basis van de URL slug
-    const pageData = seoPages.find(page => page.slug === slug);
+    // Zoek en parse de juiste markdown pagina op basis van de URL slug
+    const pageData = useMemo(() => {
+        const filePath = Object.keys(mdFiles).find(path => path.endsWith(`/${slug}.md`));
+        if (!filePath) return null;
+
+        const rawContent = mdFiles[filePath];
+        try {
+            const { attributes: frontmatter, body } = frontMatter(rawContent);
+            return {
+                ...frontmatter,
+                contentBody: body
+            };
+        } catch (e) {
+            console.error("Fout bij parsen van markdown:", e);
+            return null;
+        }
+    }, [slug]);
 
     // Animatie effecten instellen
     const containerRef = React.useRef(null);
@@ -101,15 +121,17 @@ const SeoPageTemplate = () => {
                             {pageData.contentSectionTitle}
                         </h2>
 
-                        {/* We renderen hier de HTML string uit de JSON. Let er op dit is veilig 
-                            omdat wij (developers/marketeers) 100% de controle hebben over de JSON file. */}
+                        {/* We renderen hier de Markdown string, we gebruiken rehypeRaw zodat HTML tags in de markdown behouden blijven */}
                         <div
                             className="text-lg max-w-none 
                                      [&>h3]:font-heading [&>h3]:font-bold [&>h3]:tracking-tight [&>h3]:text-2xl [&>h3]:mt-10 [&>h3]:mb-5 [&>h3]:text-primary
                                      [&>p]:text-primary/80 [&>p]:leading-relaxed [&>p]:mb-8
                                      [&>strong]:text-primary [&>strong]:font-bold"
-                            dangerouslySetInnerHTML={{ __html: pageData.contentBody }}
-                        />
+                        >
+                            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                                {pageData.contentBody}
+                            </ReactMarkdown>
+                        </div>
 
                         {/* Author Section */}
                         <div className="mt-16 pt-10 border-t border-primary/10 flex flex-col md:flex-row gap-8 items-center md:items-start bg-primary/5 rounded-2xl p-6 md:p-8">

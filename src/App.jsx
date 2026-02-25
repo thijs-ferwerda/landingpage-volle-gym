@@ -63,6 +63,7 @@ function App() {
 
         {/* Minimal Routes */}
         <Route path="/intake/gekwalificeerd" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
+        <Route path="/verdiepingsgesprek" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
         <Route path="/onboarding" element={<MinimalLayout><OnboardingTemplate packageName="het traject" /></MinimalLayout>} />
         <Route path="/onboarding/30-leden" element={<MinimalLayout><OnboardingTemplate packageName="30 leden in 90 dagen" /></MinimalLayout>} />
         <Route path="/onboarding/45-leden" element={<MinimalLayout><OnboardingTemplate packageName="45 leden in 90 dagen" /></MinimalLayout>} />

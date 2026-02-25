@@ -1,10 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-// Zorg er voor dat we JSON correct inladen afhankelijk van de Node versie, we gebruiken import assertions of fs.readFileSync
-const seoPagesPath = path.resolve('src/data/seo-pages.json');
-const seoPagesRaw = fs.readFileSync(seoPagesPath, 'utf8');
-const seoPages = JSON.parse(seoPagesRaw);
+const seoDir = path.resolve('src/content/seo');
+const mdFiles = fs.existsSync(seoDir) ? fs.readdirSync(seoDir).filter(f => f.endsWith('.md')) : [];
+const seoSlugs = mdFiles.map(file => file.replace('.md', ''));
 
 const hostname = 'https://www.vollegym.nl';
 
@@ -13,7 +12,7 @@ const staticRoutes = [
   '/intake'
 ];
 
-const dynamicRoutes = seoPages.map(page => `/${page.slug}`);
+const dynamicRoutes = seoSlugs.map(slug => `/${slug}`);
 const allRoutes = [...staticRoutes, ...dynamicRoutes];
 
 // Huidige datum voor <lastmod>
