@@ -124,11 +124,49 @@ const SeoPageTemplate = () => {
                         {/* We renderen hier de Markdown string, we gebruiken rehypeRaw zodat HTML tags in de markdown behouden blijven */}
                         <div
                             className="text-lg max-w-none 
+                                     [&>h2]:font-heading [&>h2]:font-bold [&>h2]:tracking-tight [&>h2]:text-3xl [&>h2]:mt-14 [&>h2]:mb-6 [&>h2]:text-primary
                                      [&>h3]:font-heading [&>h3]:font-bold [&>h3]:tracking-tight [&>h3]:text-2xl [&>h3]:mt-10 [&>h3]:mb-5 [&>h3]:text-primary
                                      [&>p]:text-primary/80 [&>p]:leading-relaxed [&>p]:mb-8
-                                     [&>strong]:text-primary [&>strong]:font-bold"
+                                     [&>strong]:text-primary [&>strong]:font-bold
+                                     [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-8 [&>ul>li]:mb-2 [&>ul>li]:text-primary/80
+                                     [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-8 [&>ol>li]:mb-2 [&>ol>li]:text-primary/80"
                         >
-                            <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                            <ReactMarkdown
+                                rehypePlugins={[rehypeRaw]}
+                                components={{
+                                    a: ({ node, ...props }) => {
+                                        // Maak een opvallende button van de /intake link
+                                        if (props.href === '/intake') {
+                                            return (
+                                                <span className="block mt-10 mb-4">
+                                                    <Link to="/intake" className="inline-flex items-center gap-3 bg-[#FF3500] text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:scale-[1.03] transition-all shadow-[0_10px_20px_rgba(255,53,0,0.2)]">
+                                                        {props.children}
+                                                        <svg className="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2.5" d="M5 12h14M12 5l7 7-7 7" />
+                                                        </svg>
+                                                    </Link>
+                                                </span>
+                                            );
+                                        }
+
+                                        // Reguliere in-text links opmaken zodat ze goed zichtbaar zijn
+                                        if (props.href && props.href.startsWith('/')) {
+                                            return (
+                                                <Link to={props.href} className="text-[#FF3500] font-semibold underline underline-offset-4 decoration-2 decoration-[#FF3500]/40 hover:decoration-[#FF3500] transition-colors">
+                                                    {props.children}
+                                                </Link>
+                                            );
+                                        }
+
+                                        // Externe links
+                                        return (
+                                            <a href={props.href} className="text-[#FF3500] font-semibold underline underline-offset-4 decoration-2 decoration-[#FF3500]/40 hover:decoration-[#FF3500] transition-colors" target="_blank" rel="noopener noreferrer">
+                                                {props.children}
+                                            </a>
+                                        );
+                                    }
+                                }}
+                            >
                                 {pageData.contentBody}
                             </ReactMarkdown>
                         </div>
