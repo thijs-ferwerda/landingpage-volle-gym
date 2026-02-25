@@ -10,140 +10,74 @@ contentSectionTitle: "De overstap naar echt een lang programma"
 slug: "high-ticket-pt-sales"
 ---
 
-## Waarom losse uurtjes verkopen je gym klein houdt
+# Volle Gym's rustige aanpak voor High Ticket PT Sales
 
-Je bent goed in je vak. Dat weten we. Maar ergens in de week zit je toch weer te rekenen: hoeveel sessies moet ik draaien om de huur te betalen? Hoeveel nieuwe klanten heb ik nodig als er drie opzeggen?
+Veel PT studio eigenaren zitten gevangen in hetzelfde patroon. Ze verkopen losse sessies, bouwen een volle agenda op, en merken ergens halverwege het jaar dat ze keihard werken voor een omzet die niet groeit. De kalender zit vol, maar de bankrekening vertelt een ander verhaal.
 
-Dat is het probleem met losse uurtjes. Je verkoopt tijd. En tijd is eindig.
+Dat patroon heeft een naam: het losse-uurtjes-model. En het is niet alleen vermoeiend, het is structureel gelimiteerd.
 
-High ticket PT sales is iets anders. Het gaat niet over meer uren draaien. Het gaat over programma's verkopen die écht resultaat leveren, voor een prijs die dat weerspiegelt. En het gaat over hoe je die programma's verkoopt, zonder te voelen alsof je aan het leuren bent.
+Wij zien bij de PT studio eigenaren waarmee we werken dat de overstap naar high ticket programma's niet primair een salesvraagstuk is. Het is een positioneringsvraagstuk. Want voordat iemand bereid is om €1.500, €2.000 of €3.000 te investeren in een traject bij jou, moet er iets heel specifiek zijn gebeurd in zijn of haar hoofd. Ze moeten jou zien als de enige logische keuze voor hun specifieke situatie. Niet als een van de tien personal trainers in de buurt met een vergelijkbaar aanbod.
 
----
+Dat vertrouwen bouw je niet op in één advertentie.
 
-## Wat is high ticket PT sales eigenlijk?
+## Warme sales begint ver voor het gesprek
 
-High ticket betekent simpelweg: een hoger geprijsd aanbod. Denk aan trajecten van 1.500 tot 5.000 euro of meer, in plaats van losse sessies van 60 of 75 euro per stuk.
+Wat wij bedoelen met een rustige aanpak voor high ticket PT sales, is precies dat: rust. Geen druk, geen agressieve follow-up reeksen, geen geforceerde urgentie. Wat wij in de praktijk zien werken, is een systeem dat de prospect zo goed informeert en zo sterk positioneert, dat het verkoopgesprek zelf eigenlijk een formaliteit wordt.
 
-Maar het gaat niet alleen om de prijs. Het gaat om wat je verkoopt:
+Dat vraagt om een andere manier van denken over je advertenties en je leadgeneratie. De meeste PT studio eigenaren adverteren op het aanbod. "10 sessies voor €X", "gratis proefles", "nu inschrijven." Dat trekt mensen aan die vergelijken op prijs. En mensen die vergelijken op prijs, zijn zelden de klanten die jouw high ticket programma kopen.
 
-- Een **transformatie**, geen training
-- Een **resultaat**, geen uren
-- Een **relatie**, geen transactie
+Wij bouwen campagnes die adverteren op het probleem en de transformatie. Niet op de sessie. Iemand koopt geen personal training. Ze kopen de versie van zichzelf die 15 kilo lichter is, pijnvrij beweegt, of voor het eerst in jaren energie heeft aan het einde van de dag. Als jouw advertentie dat verhaal vertelt, trek je een ander type lead aan. Eén die al begrijpt dat echte verandering een serieuze investering vraagt.
 
-Een klant die 3.000 euro betaalt voor een 12-weken programma is anders dan iemand die 10 losse sessies boekt. Die eerste is gecommitteerd. Die tweede haakt af zodra het leven druk wordt.
+Goede [fitness leadgeneratie](/fitness-leadgeneratie) is dus niet alleen een kwestie van volume. Het gaat om de kwaliteit van de intentie waarmee iemand binnenkomt.
 
----
+## De valkuil van het gratis weggeven
 
-## De grootste misvatting over dure programma's verkopen
+Er is een verleidelijke logica achter gratis proeftrajecten en kennismakingssessies. Je laat iemand ervaren hoe goed je bent, en dan kopen ze vanzelf door. Wij begrijpen waarom veel PT studio eigenaren dit doen. Het voelt veilig. Laagdrempelig.
 
-Veel trainers denken: "Mijn klanten kunnen dat niet betalen." Of: "Dat werkt alleen online voor grote namen."
+Maar wat wij uit ervaring met tientallen studio's weten, is dat gratis aanbod de verkeerde signalen afgeeft. Het positioneert jou als iemand die zijn waarde nog moet bewijzen. En het selecteert leads die op zoek zijn naar iets voor niets, niet naar een serieus traject.
 
-Beide zijn niet waar.
+Een high ticket aanbod werkt precies andersom. De investering die iemand vooraf maakt, is een filter. Het selecteert de mensen die écht gemotiveerd zijn, écht willen veranderen, en écht bereid zijn om daarvoor te betalen. Die mensen zijn ook de mensen die resultaten halen. En resultaten halen is wat zorgt voor mond-tot-mondreclame, reviews, en een studio die zichzelf vult.
 
-De echte reden waarom high ticket PT sales niet lukt, heeft niets met de prijs te maken. Het heeft te maken met **vertrouwen**. En met hoe je het gesprek voert.
+Wat wij in plaats van gratis weggeven, adviseren is een front-end aanbieding die al waarde levert én je acquisitiekosten dekt. Geen lokkertje, maar een echte eerste stap in de transformatie. Iets waarvoor betaald wordt, hoe klein ook. Dat verandert de dynamiek van het gesprek volledig.
 
-Als iemand jou nog niet kent, gaat diegene nooit 2.000 euro uitgeven. Logisch. Maar als iemand je al een tijdje volgt, je aanpak begrijpt, en het gevoel heeft dat jij de enige bent die zijn of haar probleem echt snapt? Dan is die prijs geen obstakel meer.
+## Wat er werkelijk gebeurt in het verkoopgesprek
 
-Dat is het principe achter warme sales.
+Als de leadgeneratie en de nurturing goed zijn ingericht, verandert het verkoopgesprek van karakter. Je bent niet meer aan het overtuigen. Je bent aan het kwalificeren.
 
----
+De vraag die je stelt is niet "hoe kan ik deze persoon overtuigen om te kopen?" De vraag is: "Past dit programma bij wat deze persoon nodig heeft, en is deze persoon klaar om serieus te starten?" Dat is een fundamenteel andere energie. En prospects voelen dat verschil.
 
-## Warme sales: wat het is en waarom het werkt
+Wij zien dat PT studio eigenaren die deze mindset adopteren, minder weerstand ervaren in gesprekken. Niet omdat ze betere verkooptechnieken hebben geleerd, maar omdat ze betere leads binnenkrijgen die al grotendeels overtuigd zijn voor het gesprek begint. De nurturing heeft het zware werk al gedaan.
 
-Koude sales is: een vreemde bellen en proberen iets te verkopen. Dat voelt vies, werkt slecht, en past niet bij een personal trainer of boutique gym.
+Daarvoor is het wel noodzakelijk dat je leadopvolging strak staat. Wat er tussen het eerste contact en het verkoopgesprek gebeurt, bepaalt voor een groot deel of iemand ja of nee zegt. Een goede structuur voor [fitness leads opvolgen](/fitness-leads-opvolgen) is daarin geen bijzaak. Het is het fundament.
 
-Warme sales is: iemand die al weet wie je bent, wat je doet, en waarom jij anders bent, uitnodigen voor een gesprek.
+## Prijzen verhogen zonder klanten te verliezen
 
-Het verschil zit in de **aanloop**. Voordat iemand bij jou in een salesgesprek zit, heeft diegene al meerdere keren contact gehad met jouw verhaal, jouw aanpak, jouw resultaten. Dat kan via advertenties, via content, via een gratis weggever, via een video.
+Een vraag die wij regelmatig krijgen van PT studio eigenaren die groeien: wanneer verhoog je je prijzen, en hoe doe je dat zonder bestaande klanten te verliezen?
 
-Elke stap bouwt vertrouwen. Tegen de tijd dat iemand een gesprek met je inplant, is de beslissing eigenlijk al half genomen.
+Het antwoord zit in capaciteit en positionering. Als je wachtlijst groeit, als je agenda vol zit, als je meer aanvragen krijgt dan je kunt bedienen, dan is dat het signaal. Niet eerder, maar ook zeker niet later. Een volle agenda bij lage prijzen is eigenlijk een verliespost. Je laat geld liggen en je hebt geen ruimte om te groeien.
 
----
+Wat wij adviseren is een geleidelijke verhoging voor nieuwe klanten, waarbij bestaande klanten een eerlijk transitiepad krijgen. Transparantie werkt hier beter dan verontschuldigingen. Leg uit dat je programma's intensiever zijn geworden, dat je begeleiding dieper gaat, dat de resultaten beter zijn. En dan koppel je daar een nieuwe prijs aan. Klanten die écht waarde halen uit je begeleiding, gaan niet weg vanwege een prijsverhoging van 20%.
 
-## De drie lagen van vertrouwen bij high ticket
+Klanten die wél weggaan, waren waarschijnlijk toch al op zoek naar de goedkoopste optie. En die wil je in een high ticket model niet.
 
-Er zijn drie dingen die iemand moet geloven voordat ze een hoog bedrag uitgeven:
+## Retentie als groeistrategie
 
-### 1. Ze geloven in het resultaat
+Nieuwe klanten werven is duur. Bestaande klanten behouden is het slimste wat je kunt doen voor je marge. Toch zien wij dat veel PT studio eigenaren hun energie en budget vrijwel volledig richten op acquisitie, terwijl de achterdeur wagenwijd openstaat.
 
-Ze moeten ervan overtuigd zijn dat het doel dat ze willen bereiken, haalbaar is. Niet voor iedereen, maar voor hen. Jij laat dat zien via verhalen van klanten, voor-en-na resultaten, en concrete uitleg van hoe jouw aanpak werkt.
+Churn, het vertrek van bestaande klanten, vreet je groei op. Je kunt elke maand tien nieuwe klanten binnenhalen, maar als er acht vertrekken, sta je stil. Retentie is daarmee geen operationeel detail. Het is een strategisch speerpunt.
 
-### 2. Ze geloven in jou als de juiste persoon
+Wat wij zien bij goed draaiende PT studio's is dat retentie begint op dag één van het traject. De onboarding, de eerste resultaten, de eerste check-in. Als iemand in de eerste vier weken het gevoel heeft dat ze de juiste keuze hebben gemaakt, is de kans op langdurige retentie exponentieel hoger. Dat gevoel creëer je niet met een welkomstmailtje. Dat creëer je met een gestructureerd proces dat iemand stap voor stap naar het eerste tastbare resultaat brengt.
 
-Er zijn genoeg trainers. Waarom jij? Dat is geen vraag over diploma's. Het is een vraag over of jij hun situatie begrijpt. Spreek je hun taal? Ken je hun excuses, hun angsten, hun leven? Als iemand denkt "hij snapt precies waar ik tegenaan loop," is de helft van het werk al gedaan.
+Voor PT studio eigenaren die hun [pt-studio marketing](/pt-studio-marketing) willen laten aansluiten op een high ticket model, is retentie dan ook altijd onderdeel van het gesprek. Marketing trekt mensen aan. Retentie bepaalt wat die acquisitie uiteindelijk waard is.
 
-### 3. Ze geloven dat ze het kunnen
+## Wat "rustig" echt betekent
 
-Dit is de meest onderschatte laag. Veel mensen willen wel veranderen, maar geloven diep van binnen niet dat zij het zijn die het gaan lukken. Jij moet ze helpen dat te overwinnen, nog vóór het salesgesprek. Dat doe je door te laten zien dat jouw aanpak ook werkt voor mensen die eerder gefaald hebben.
+Rustige sales is geen passieve sales. Het betekent dat je systeem het werk doet, niet jij persoonlijk. Dat je niet elke lead handmatig achterna zit. Dat je niet hoeft te pushen in gesprekken. Dat je niet elke maand opnieuw van nul begint.
 
----
+Rustige sales is het resultaat van een goed gebouwde funnel, een sterk aanbod, en een nurturing proces dat vertrouwen opbouwt voor het gesprek begint. Als die drie elementen kloppen, voelt het verkoopgesprek inderdaad rustig. Bijna vanzelfsprekend.
 
-## Waarom advertenties de sleutel zijn, maar niet op de manier die je denkt
+Wij bouwen precies dat soort systemen voor PT studio eigenaren die klaar zijn om te stoppen met losse uurtjes verkopen en te starten met het bouwen van een programma-gedreven studio. Niet als theoretisch model, maar als praktisch systeem dat draait terwijl jij je bezighoudt met je klanten.
 
-Veel trainers proberen direct te adverteren op hun aanbod. "12-weken programma, nu voor 1.995 euro." Dat werkt zelden voor high ticket.
+Als je wil weten wat dat voor jouw studio concreet betekent:
 
-Niet omdat advertenties niet werken. Maar omdat je de stappen overslaat.
-
-Goede advertenties voor high ticket PT sales doen één ding: ze brengen de juiste mensen in jouw wereld. Ze selecteren op probleem, niet op product. Ze spreken mensen aan die herkennen wat jij beschrijft, en die daardoor nieuwsgierig worden.
-
-Vanaf dat moment begint het opbouwen van vertrouwen. Stap voor stap. Met gerichte boodschappen die aansluiten op waar iemand zich bevindt in zijn of haar beslissingsproces.
-
-Iemand die net voor het eerst van jou hoort, heeft andere informatie nodig dan iemand die al drie weken jouw content volgt. Als je dat onderscheid maakt in je communicatie, stijgen je conversies vanzelf.
-
----
-
-## Het salesgesprek zelf: rustig en zonder druk
-
-Als iemand een gesprek met je inplant na een goede aanloop, hoef je niet te "verkopen" in de klassieke zin. Je voert gewoon een goed gesprek.
-
-Je stelt vragen. Je luistert. Je begrijpt wat iemand echt wil en wat er tot nu toe in de weg stond. En dan leg je uit hoe jouw programma daarin past.
-
-Geen trucjes. Geen kunstmatige schaarste. Geen "dit aanbod geldt alleen vandaag."
-
-Mensen die goed voorbereid binnenkomen, beslissen ook sneller. Ze hebben al nagedacht. Ze hebben al vertrouwen. Jij hoeft alleen maar te bevestigen dat jij de juiste keuze bent.
-
-Dat is wat we bedoelen met een rustige aanpak.
-
----
-
-## Wat je niet moet doen
-
-Een paar dingen die high ticket PT sales saboteren:
-
-**Korting geven als iemand twijfelt.** Twijfel zit bijna nooit in de prijs. Het zit in onzekerheid over het resultaat of in onzekerheid over zichzelf. Korting geven lost dat niet op. Het ondermijnt alleen de waarde van je aanbod.
-
-**Te snel pitchen.** Als je al in het eerste contact je programma en prijs noemt, verlies je mensen. Ze kennen je nog niet. Ze vertrouwen je nog niet. Geef ze eerst een reden om te blijven luisteren.
-
-**Iedereen proberen te overtuigen.** High ticket werkt niet voor iedereen. En dat is prima. Jij wilt klanten die gemotiveerd zijn, die geloven in het proces, en die bereid zijn te investeren. Selecteer op die mensen, en laat de rest gaan.
-
-**Geen opvolging doen.** De meeste mensen beslissen niet direct. Ze hebben tijd nodig. Als jij na een gesprek niets meer van je laat horen, verlies je deals die eigenlijk al binnen waren. Goede opvolging is geen agressieve sales. Het is gewoon laten zien dat je er bent.
-
----
-
-## Lokale gym of online: maakt het uit?
-
-Niet zoveel als je denkt.
-
-Of je nu een PT studio runt in Breda, een boutique gym in Amsterdam, of puur online werkt: de principes zijn hetzelfde. Vertrouwen opbouwen, de juiste mensen aantrekken, een goed gesprek voeren.
-
-Het enige verschil is de kanalen die je gebruikt en de manier waarop je je lokale aanwezigheid inzet. Een lokale gym heeft het voordeel van herkenbaarheid in de buurt. Mensen kennen je, zien je, horen over je via vrienden. Dat is een vertrouwensvoordeel dat je kunt uitbouwen.
-
-Maar ook lokaal geldt: zonder een duidelijke aanpak voor het aantrekken van de juiste klanten en het voeren van het juiste gesprek, blijf je hangen in losse uurtjes.
-
----
-
-## Wat dit voor jou betekent
-
-Als je nu voornamelijk losse sessies verkoopt, betekent dat niet dat je het fout doet. Het betekent dat er ruimte is om te groeien.
-
-Een goed high ticket programma geeft jou meer omzet per klant, meer commitment van die klant, en meer ruimte in je agenda. Minder rennen voor hetzelfde geld.
-
-Maar het vraagt wel om een andere aanpak. Een aanpak waarbij je nadenkt over hoe je mensen aantrekt, hoe je vertrouwen opbouwt vóór het gesprek, en hoe je dat gesprek voert op een manier die bij jou past.
-
-Dat is precies waar wij bij Volle Gym mee helpen.
-
----
-
-Wil je weten of jouw situatie geschikt is voor een high ticket aanpak, en hoe dat er voor jouw gym of studio concreet uit zou kunnen zien?
-
-[Plan een gratis verdiepingsgesprek](/intake)
+[Doe de intake](/intake)

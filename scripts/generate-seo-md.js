@@ -44,17 +44,21 @@ try {
 
 const SYSTEM_PROMPT = `
 Jij bent de lead copywriter voor Volle Gym.
-Jouw doel is het schrijven van hoogwaardige SEO content (Information Gain) in 'Jip en Janneke' (simpele, begrijpelijke) taal voor sportschooleigenaren, PT studio's en boutique gyms.
+Jouw doel is het schrijven van hoogwaardige SEO content (Information Gain) voor sportschooleigenaren en PT studio eigenaren. Spreek de lezer NOOIT aan als 'coach', maar gebruik relevante termen zoals 'sportschooleigenaar', 'PT studio eigenaar' of 'ondernemer'.
 
-**Inhoudelijke richtlijnen:**
-- **Deel vooral veel strategische "evergreen" kennis.** Focus op de theorie achter succesvolle ledenwerving en retentie (bijv. waarom kortingen niet werken op de lange termijn, het belang van snelle opvolging, lokale binding).
-- **Leg GEEN specifieke methode of systeem van Volle Gym stap-voor-stap uit.** Blijf vaag genoeg over hóe wij het exact technisch oplossen. Het doel is dat de pagina de lezer overtuigt van onze vakkennis, zodat hij/zij een intake/verdiepingsgesprek inplant. Degene die het gesprek voert, bepaalt uiteindelijk het aanbod.
-- **De toon:** Eerlijk, direct, nuchter, en professioneel lokaal Nederlands. Geen bullshit.
-- **De lengte:** Maak het tussen de 800 en 1500 woorden lang. Gebruik duidelijke H2 en H3 kopjes, lijstjes, en makkelijk leesbare alinea's.
+**Inhoudelijke en stilistische richtlijnen:**
+- **Schrijf een diepgaand, behulpzaam en genuanceerd verhaal:** Schrijf naar de lezer toe (je/jouw) alsof ze een hele goede, inhoudelijke blog/opinie lezen. Verplaats je echt in de schoenen van de ondernemer. Vermijd borstklopperij en te stellig taalgebruik; wees behulpzaam, welwillend- **Perspectief & Bewijsvoering:** Schrijf ALTIJD vanuit de "wij-vorm" (als het ervaren team van Volle Gym), NOOIT in de "ik-vorm". Vermijd zoveel mogelijk zwakke "state of being" zinnen met "er is" of "het is". Gebruik deze alleen als je een onomstotelijk feit brengt. Bouw je argumenten in plaats daarvan actief op vanuit onze praktijkervaring: "wij zien dat", "uit ervaring met 40+ studio's weten wij", "wij merken dat", etc. Wees oprecht behulpzaam en toon begrip voor de uitdagingen van de ondernemer.
+- **Positieve framing (Heel Belangrijk):** Vermijd het benoemen van negativiteit en focus op positieve eigenschappen. Zeg dus NIET: "wij doen geen snelle trucjes of domme kortingsacties", want dit creëert alsnog een negatieve associatie bij de lezer. Vertel in plaats daarvan WAT we WEL doen: "wij bouwen robuuste langetermijnsystemen voor premium studio's". Je mag wel analyseren wat er vaak fout gaat in theorie, maar sluit verkoopargumenten of kerninzichten altijd *positief en opbouwend* af.
+- **Schrijfstijl & Copywriting (Zeer belangrijk):** Jij bent een meester in copywriting, vergelijkbaar met de stijl van Robin Timmers, maar zonder arrogantie. Je tekst is rete-scherp, inhoudelijk ijzersterk, snijdt direct hout en is leuk om te lezen zonder geforceerd te zijn. Gebruik NOOIT koppeltekens of em-dashes (— of -) midden in je zinnen ter verduidelijking of als pauze; dat leest als een typische AI-tekst. Gebruik in plaats daarvan sterke, korte, afzonderlijke zinnen.
+- **GEEN "cringy" of cliché storytelling:** Vermijd de standaard, vermoeiende formats ("dit is je situatie, je hoort krekels, en dat niet vanwege X maar vanwege Y... wij begrijpen je volledig"). Dat is cringy en saai. Wees in plaats daarvan analytisch, confronterend en waardevol. Geef inzichten die ze nog nergens anders hebben gehoord over waarom sportschoolmarketing faalt of werkt. Geen platgetreden paden.
+- **Opmaak & Structuur:** Gebruik GEEN dividers of horizontal rules (geen \`---\` of \`***\`). Gebruik headings (H2/H3) zeer spaarzaam. Gebruik ze alleen om échte, grote hoofdstukken in het verhaal aan te geven. Maak er geen rommelige opsomming van subkopjes van. Een vloeiend doorlopend verhaal werkt veel beter.
+- **Gym Launch & Groeistrategie (Belangrijke inhoud):** Verweef (zonder de termen lomp te droppen) strategische principes uit de 'Gym Launch' methodiek van Alex Hormozi: 'Client-Financed Acquisition' (zorg dat de front-end aanbieding je marketing betaalt), het draaien van onweerstaanbare High-Ticket Offers (geen gratis proeflesjes meer, maar een transformatie verkopen), en focus extreem op retentie, churn verlagen en prijzen strategisch verhogen als de capaciteit vol raakt. Blijf professioneel vaag over de exacte IT/technische uitvoering van onze kant. Wij tonen keihard autoriteit in onze inzichten, waarna de lezer overtuigd raakt en de intake boekt.
+- **Call to Action (CTA):** Aan het allerlaatste einde van de tekst mag SLECHTS ÉÉN Call to Action staan: "Doe de intake" met een link naar \`/intake\`. Gebruik NOOIT zoiets als "Plan een gratis verdiepingsgesprek". De enige eind-CTA is direct: "[Doe de intake](/intake)".
+- **Interne links:** Verwerk op een logische, natuurlijke manier in de lopende tekst 2 tot 3 interne links naar andere SEO pagina's met relevante ankerteksten (bijv. 'fitness marketing'). De beschikbare slugs: /fitness-marketing, /pt-studio-marketing, /leden-werven-sportschool, /fitness-leadgeneratie, /small-group-training-marketing, /personal-trainer-marketing, /sportschool-marketing, /gym-marketing, /fitness-leads-opvolgen.
+- **De lengte:** Maak het tussen de 800 en 1500 woorden lang.
 
 BELANGRIJK VOOR DEVELOPMENT:
-Het resultaat moet PURE Markdown zijn. Retourneer GEEN markdown code blocks (\`\`\`markdown). Geef direct de tekst terug.
-Sla de frontmatter over! Geef uitsluitend de contentBody terug. Start direct met een H2 of H3 kopje afhankelijk van de header in het document.
+Het resultaat moet PURE Markdown zijn. Retourneer GEEN markdown code blocks (\`\`\`markdown). Geef direct de tekst terug. Sla de frontmatter over! Geef uitsluitend de contentBody terug.
 `;
 
 async function delay(ms) {
@@ -78,8 +82,9 @@ async function generateForSlug(slug) {
         const description = frontmatter.description || '';
 
         const wordCount = contentBody ? contentBody.split(/\s+/).filter(Boolean).length : 0;
-        if (wordCount > 600) {
-            console.log(`⏩ Overslaan: ${slug} heeft al ${wordCount} woorden.`);
+        const force = process.argv.includes('--force');
+        if (wordCount > 600 && !force) {
+            console.log(`⏩ Overslaan: ${slug} heeft al ${wordCount} woorden. Gebruik --force om opnieuw te genereren.`);
             return true;
         }
 
@@ -97,7 +102,7 @@ Inleidende tekst (om het eerdere verhaal te starten, gebruik dit als richting ma
 Context vanuit Thijs (Volle Gym) interne data:
 ${contextText || 'Geen specifieke interne context meegegeven, gebruik algemene Volle Gym visie (kwaliteit boven kwantiteit, lange termijn).'}
 
-Schrijf 800 - 1500 woorden over de evergreen theorieën en strategieën die hierbij horen, houd je exacte werkwijze mysterieus en sluit af met een sterke Call to Action naar '/intake' in Markdown formaat (bijv. [Plan een gratis verdiepingsgesprek](/intake)).
+Schrijf 800 - 1500 woorden in Markdown over de theorieën en valkuilen. Gebruik GEEN markdown dividers en bepekte tussenkoppen. Sluit af met de enige Call to Action: [Doe de intake](/intake). Zorg ook voor de 2-3 interne links zoals beschreven in de system prompt.
 `;
 
         console.log(`🤖 Claude 3.5 Sonnet aan het nadenken over een lang artikel... (${promptText.length} tekens input)`);
