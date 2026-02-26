@@ -133,7 +133,8 @@ const Hero = ({ campaign }) => {
                         className="text-primary font-heading font-bold text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.05]"
                     >
                         {activeCampaign.titleLine1 || activeCampaign.headlineStart}
-                        {activeCampaign.hideBr ? ' ' : <br className="hidden md:block" />}
+                        {' '}
+                        {activeCampaign.hideBr ? null : <br className="hidden md:block" />}
                         <span className="text-primary/30">{activeCampaign.titleLine2 || activeCampaign.headlineHighlight}</span>{activeCampaign.titleLine3 || activeCampaign.headlineEnd} <span className="font-drama italic text-primary">{activeCampaign.titleLine4 || ''}</span>
                     </span>
                 </h1>
