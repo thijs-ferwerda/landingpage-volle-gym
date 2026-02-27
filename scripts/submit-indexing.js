@@ -24,13 +24,11 @@ async function main() {
 
     const keyFile = JSON.parse(fs.readFileSync(SERVICE_ACCOUNT_KEY_PATH, 'utf8'));
 
-    const jwtClient = new google.auth.JWT(
-        keyFile.client_email,
-        null,
-        keyFile.private_key,
-        ['https://www.googleapis.com/auth/indexing'],
-        null
-    );
+    const jwtClient = new google.auth.JWT({
+        email: keyFile.client_email,
+        key: keyFile.private_key,
+        scopes: ['https://www.googleapis.com/auth/indexing']
+    });
 
     try {
         await jwtClient.authorize();
