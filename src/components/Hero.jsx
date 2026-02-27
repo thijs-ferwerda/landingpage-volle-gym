@@ -83,35 +83,14 @@ const Hero = ({ campaign }) => {
 
 
 
-                {/* Mobile Gym Partners (Top of Hero) - HIDE ON DESKTOP */}
-                <div ref={addToRefs} className="flex md:hidden flex-col items-center justify-center gap-4 mb-6 w-full mt-2">
-                    <a href="#resultaten" className="flex items-center justify-center gap-3 text-primary/70 text-sm font-sans cursor-pointer hover:opacity-80 transition-opacity">
-                        <div className="flex -space-x-3">
-                            {[
-                                'https://lh3.googleusercontent.com/a-/ALV-UjU2zXgmMVuNbQaNLlkGAqRqYM4rQeFsHsvqko3RXwM6O4CAB8GB=s128-c0x00000000-cc-rp-mo',
-                                'https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c0x00000000-cc-rp-mo',
-                                'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=128&h=128&fit=crop'
-                            ].map((photoUrl, i) => (
-                                <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-primary/5 overflow-hidden shrink-0 shadow-sm relative" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <img src={photoUrl} alt="Gym Eigenaar" className="w-full h-full object-cover scale-100 object-center" referrerPolicy="no-referrer" />
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex flex-col text-left">
-                            <span className="text-primary font-bold text-xs">40+ succesvolle gyms</span>
-                            <span className="text-[10px] font-medium text-primary/60">Bekijk resultaten</span>
-                        </div>
-                    </a>
-                </div>
-
                 {/* Intro Tag */}
-                <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8 text-primary">
+                <div ref={addToRefs} className="flex items-center justify-center gap-3 mb-6 md:mb-8 text-primary mt-4 md:mt-0">
                     {activeCampaign.badge ? (
                         <>
                             <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
                             </svg>
-                            <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
+                            <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold text-center leading-snug">
                                 {activeCampaign.badgeLabel && <span className="font-bold">{activeCampaign.badgeLabel} </span>}
                                 {activeCampaign.badge}
                             </p>
@@ -160,21 +139,54 @@ const Hero = ({ campaign }) => {
                     {activeCampaign.subtitle}
                 </p>
 
-                <div ref={addToRefs} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 md:mb-16">
-                    <Link to="/intake" className="magnetic-btn w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-full text-sm md:text-base font-bold tracking-wide uppercase group inline-flex items-center justify-center gap-3 shrink-0 shadow-[0_0_20px_rgba(255,53,0,0.3)] border border-accent/50 hover:border-accent">
-                        <span className="magnetic-btn-content">{activeCampaign.ctaText || activeCampaign.ctaPrimary || "Doe de intake"}</span>
-                        <svg
-                            className="w-5 h-5 magnetic-btn-content group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                        >
-                            <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </Link>
+                <div ref={addToRefs} className="flex flex-col items-center justify-center w-full mb-12 flex-1 md:mb-16">
 
-                    <a href="#vsl" className="flex items-center gap-3 text-primary/80 hover:text-accent transition-colors group">
-                        <div className="w-12 h-12 rounded-full border border-primary/20 bg-white flex items-center justify-center group-hover:border-accent/40 shadow-sm transition-colors">
+                    {/* Primary Row */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full mb-3 md:mb-0">
+                        <Link to="/intake" className="magnetic-btn w-full sm:w-auto bg-accent text-white px-8 py-4 rounded-full text-sm md:text-base font-bold tracking-wide uppercase group inline-flex items-center justify-center gap-3 shrink-0 shadow-[0_0_20px_rgba(255,53,0,0.3)] border border-accent/50 hover:border-accent">
+                            <span className="magnetic-btn-content">{activeCampaign.ctaText || activeCampaign.ctaPrimary || "Doe de intake"}</span>
+                            <svg
+                                className="w-5 h-5 magnetic-btn-content group-hover:translate-x-1 transition-transform"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </Link>
+
+                        {/* Desktop Secondary CTA (Hidden on mobile) */}
+                        <a href="#vsl" className="hidden sm:flex items-center gap-3 text-primary/80 hover:text-accent transition-colors group">
+                            <div className="w-12 h-12 rounded-full border border-primary/20 bg-white flex items-center justify-center group-hover:border-accent/40 shadow-sm transition-colors">
+                                <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
+                            </div>
+                            <span className="font-sans text-sm font-semibold uppercase tracking-wider">{activeCampaign.ctaSecondary || "Bekijk de methode"}</span>
+                        </a>
+                    </div>
+
+                    {/* Mobile Social Proof SUBTEXT */}
+                    <div className="flex sm:hidden w-full items-center justify-center mt-1 mb-8">
+                        <a href="#resultaten" className="flex items-center justify-center gap-3 text-primary/70 text-sm font-sans cursor-pointer hover:opacity-80 transition-opacity">
+                            <div className="flex -space-x-3">
+                                {[
+                                    'https://lh3.googleusercontent.com/a-/ALV-UjU2zXgmMVuNbQaNLlkGAqRqYM4rQeFsHsvqko3RXwM6O4CAB8GB=s128-c0x00000000-cc-rp-mo',
+                                    'https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c0x00000000-cc-rp-mo',
+                                    'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=128&h=128&fit=crop'
+                                ].map((photoUrl, i) => (
+                                    <div key={i} className="w-7 h-7 rounded-full border-2 border-background bg-primary/5 overflow-hidden shrink-0 shadow-sm relative object-cover" style={{ transitionDelay: `${i * 50}ms` }}>
+                                        <img src={photoUrl} alt="Gym Eigenaar" className="w-full h-full object-cover scale-100 object-[center_20%]" referrerPolicy="no-referrer" />
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex flex-col text-left">
+                                <span className="text-primary font-bold text-xs leading-none">40+ succesvolle gyms</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    {/* Mobile Secondary CTA (Pushed further down) */}
+                    <a href="#vsl" className="flex sm:hidden items-center gap-3 text-primary/80 hover:text-accent transition-colors group mt-2">
+                        <div className="w-12 h-12 rounded-full border border-primary/20 bg-white flex items-center justify-center shadow-sm">
                             <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                         </div>
                         <span className="font-sans text-sm font-semibold uppercase tracking-wider">{activeCampaign.ctaSecondary || "Bekijk de methode"}</span>
