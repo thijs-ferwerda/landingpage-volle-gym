@@ -64,7 +64,7 @@ const Hero = ({ campaign }) => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full flex flex-col items-center pt-24 md:pt-40 pb-8 bg-background overflow-hidden"
+            className="relative w-full flex flex-col items-center pt-20 md:pt-40 pb-8 bg-background overflow-hidden"
         >
             {/* Lighter, premium background image of people training/coaching */}
             <div
@@ -183,14 +183,6 @@ const Hero = ({ campaign }) => {
                             </div>
                         </a>
                     </div>
-
-                    {/* Mobile Secondary CTA (Pushed further down) */}
-                    <a href="#vsl" className="flex sm:hidden items-center gap-3 text-primary/80 hover:text-accent transition-colors group mt-2">
-                        <div className="w-12 h-12 rounded-full border border-primary/20 bg-white flex items-center justify-center shadow-sm">
-                            <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                        </div>
-                        <span className="font-sans text-sm font-semibold uppercase tracking-wider">{activeCampaign.ctaSecondary || "Bekijk de methode"}</span>
-                    </a>
                 </div>
             </div>
             {/* Trust Indicators (Google/Gyms) - Desktop Only, Pinned below content */}
