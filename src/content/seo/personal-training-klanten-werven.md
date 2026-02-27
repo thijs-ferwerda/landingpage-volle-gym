@@ -1,19 +1,17 @@
 ---
-title: "Goede en zekere personal training klanten werven in de buurt"
-description: "Bouw je PT status uit met de leukste stappen op de website van jouw leden. Op betrouwbare paden gericht nieuwe kandidaten vinden."
+title: "Personal Training Klanten Werven - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen personal training klanten werven strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "personal-training-klanten-werven"
+type: "service"
 heroTitleLine1: "Slimme en"
 heroTitleLine2: "juiste mensen"
 heroTitleLine3: " werven als PT"
 heroTitleLine4: "klant op termijn."
 heroSubtitle: "Wij bouwen voor jou een kennismakingstraject dat aansluit op jouw tarief en jouw ideale klant. Zo stromen er structureel nieuwe personal training klanten binnen in jouw buurt."
 contentSectionTitle: "Waar zoek ik exact de serieuzer betalende leden voor mij?"
-slug: "personal-training-klanten-werven"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 # Goede en zekere personal training klanten werven in de buurt
 
 De meeste PT studio eigenaren die bij ons aankloppen, hebben hetzelfde verhaal. Ze zijn goed in hun vak, ze leveren resultaten, en toch voelt het werven van nieuwe klanten als een constante strijd tegen de klok. Niet omdat ze het verkeerde doen, maar omdat ze werven op de verkeerde manier voor het verkeerde type klant.

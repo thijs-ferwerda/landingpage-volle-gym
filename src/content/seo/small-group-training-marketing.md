@@ -1,19 +1,17 @@
 ---
-title: "Verhoog je omzet veilig door small group training marketing"
-description: "Geef de leukste groepslessen een nieuw podium. Lees over super makkelijke en effectieve small group training marketing."
+title: "Small Group Training Marketing - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen small group training marketing strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "small-group-training-marketing"
+type: "service"
 heroTitleLine1: "Snellere"
 heroTitleLine2: "groei dankzij "
 heroTitleLine3: " small group"
 heroTitleLine4: "reclame."
 heroSubtitle: "Wij zien dagelijks hoe small group training de winstgevendste dienst is die een sportschool kan aanbieden. Met onze tools vul je elke klas structureel en houd je het overzicht compleet."
 contentSectionTitle: "Samen sporten voor een gezonde sportschool"
-slug: "small-group-training-marketing"
-type: "blog"
-relatedServices:
-  - "/sportschool-marketing"
-  - "/fitness-marketing-bureau"
+relatedServices: ["/sportschool-marketing","/fitness-marketing-bureau"]
+relatedBlogs: []
 ---
-
 # Verhoog je omzet veilig door small group training marketing
 
 Small group training zit structureel in de lift. Niet als hype, maar als businessmodel. En dat is geen toeval.

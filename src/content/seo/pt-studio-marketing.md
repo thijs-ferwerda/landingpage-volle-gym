@@ -1,19 +1,17 @@
 ---
-title: "Rustige en betrouwbare PT studio marketing op zijn best"
-description: "Exclusieve PT studio marketing voor coaches die willen groeien. Groei zonder het unieke karakter van de club kwijt te raken."
+title: "Pt Studio Marketing - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen pt studio marketing strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "pt-studio-marketing"
+type: "service"
 heroTitleLine1: "Slimme en"
 heroTitleLine2: "makkelijke PT"
 heroTitleLine3: " studio advertentie"
 heroTitleLine4: "en werving."
 heroSubtitle: "Wij bouwen jouw PT studio uit tot een sterk en gewild merk, met een aanpak die rust en kwaliteit uitstraalt. Elke stap is gericht op duurzame groei die past bij wie jij bent als professional."
 contentSectionTitle: "Kwaliteit bewaren tijdens leuke reclames"
-slug: "pt-studio-marketing"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 # Rustige en betrouwbare PT studio marketing op zijn best
 
 Een PT studio is geen sportschool. Dat klinkt als een open deur, maar in de praktijk zien wij dat de meeste PT studio eigenaren hun marketing precies zo inrichten alsof ze wél een sportschool runnen. Volume, volume, volume. Meer leads, meer proeftrainingen, meer mensen door de deur. En precies dáár gaat het mis.

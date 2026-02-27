@@ -1,19 +1,17 @@
 ---
-title: "Hoe simpele fitness leadgeneratie echt werkt"
-description: "Geen gedoe met slechte lijsten of mensen die niet reageren. Leer de basis over betrouwbare fitness leadgeneratie in jouw stad."
+title: "Fitness Leadgeneratie - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen fitness leadgeneratie strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "fitness-leadgeneratie"
+type: "service"
 heroTitleLine1: "Slim werken"
 heroTitleLine2: "aan vaste"
 heroTitleLine3: " online aanvragen"
 heroTitleLine4: "zonder spam."
 heroSubtitle: "Wij bouwen een bewezen systeem dat de juiste mensen naar jouw gym trekt. Aanvragen die kloppen, van mensen die écht willen investeren in zichzelf."
 contentSectionTitle: "Wat betekent goede aanvragen verzamelen?"
-slug: "fitness-leadgeneratie"
-type: "blog"
-relatedServices:
-  - "/sportschool-marketing"
-  - "/fitness-marketing-bureau"
+relatedServices: ["/sportschool-marketing","/fitness-marketing-bureau"]
+relatedBlogs: []
 ---
-
 # Hoe simpele fitness leadgeneratie echt werkt
 
 Veel sportschooleigenaren zitten in dezelfde situatie. Ze investeren in advertenties, bouwen een landingspagina, en wachten. De aanvragen komen wel binnen, maar de mensen die reageren zijn niet de mensen die je wilt. Ze vragen om de laagste prijs, ze verschijnen niet op afspraken, of ze melden zich aan voor een maand en verdwijnen daarna weer.

@@ -1,19 +1,17 @@
 ---
-title: "Sportschool marketing tips die iedereen snapt"
-description: "Ben je de moeilijke theorie zat? Lees deze begrijpelijke sportschool marketing tips en trek vandaag nog nieuwe sporters aan."
+title: "Sportschool Marketing Tips - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen sportschool marketing tips strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "sportschool-marketing-tips"
+type: "service"
 heroTitleLine1: "Handige"
 heroTitleLine2: "en makkelijke"
 heroTitleLine3: " marketing"
 heroTitleLine4: "tips."
 heroSubtitle: "Wij zien elke dag hoe sportschooleigenaren met een paar gerichte stappen structureel meer aanmeldingen binnenhalen. Ontdek de marketingaanpak die wij adviseren voor een volle sportschool."
 contentSectionTitle: "Begin met deze simpele en effectieve tips"
-slug: "sportschool-marketing-tips"
-type: "blog"
-relatedServices:
-  - "/sportschool-marketing"
-  - "/fitness-marketing-bureau"
+relatedServices: ["/sportschool-marketing","/fitness-marketing-bureau"]
+relatedBlogs: []
 ---
-
 # Sportschool marketing tips die iedereen snapt
 
 Je hoeft geen marketingexpert te zijn om je sportschool vol te krijgen. Wat je wél nodig hebt, zijn een paar heldere principes die je consequent toepast. Geen ingewikkeld jargon, geen eindeloze funnels die je een week kosten om te bouwen. Gewoon begrijpelijke stappen die werken voor sportschooleigenaren die liever bezig zijn met hun leden dan met hun laptop.

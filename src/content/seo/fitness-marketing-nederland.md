@@ -1,19 +1,17 @@
 ---
-title: "Doeltreffende fitness marketing in Nederland zonder blabla"
-description: "Wij werken nuchter en eerlijk aan de beste fitness marketing in Nederland. Bouw samen met ons een gezond bedrijf."
+title: "Fitness Marketing Nederland - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen fitness marketing nederland strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "fitness-marketing-nederland"
+type: "service"
 heroTitleLine1: "Nuchtere"
 heroTitleLine2: "fitness"
 heroTitleLine3: " marketing uit"
 heroTitleLine4: "Nederland."
 heroSubtitle: "Wij bouwen marketingstrategieën die aansluiten op de Nederlandse markt, afgestemd op jouw lokale doelgroep. Bewezen aanpakken die sportscholen en PT studio's in dorpen en steden écht laten groeien."
 contentSectionTitle: "Een eerlijk verhaal werkt gewoon beter"
-slug: "fitness-marketing-nederland"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 Nuchtere fitness marketing uit Nederland. Wij zetten overdreven reclameconcepten netjes opzij en focussen enkel op wat daadwerkelijk werkt in de lokale dorpen en steden van ons eigen land. Want de Nederlandse sportschoolmarkt vraagt om een andere aanpak dan wat je ziet in Amerikaanse YouTube-video's over gymgroei.
 
 Dat klinkt simpel. Toch zien wij keer op keer dat sportschooleigenaren en PT studio eigenaren precies de verkeerde kant op bewegen. Niet omdat ze dom zijn of niet hard werken. Maar omdat de marketinglogica die hen bereikt, gebouwd is voor een andere markt, een andere cultuur en een ander consumentengedrag.

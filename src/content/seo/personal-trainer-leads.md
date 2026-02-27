@@ -1,19 +1,17 @@
 ---
-title: "Verzamel alleen de beste personal trainer leads"
-description: "Stop met adverteren voor koopjesjagers. Ontdek hoe wij als expert wekelijks de perfecte personal trainer leads genereren voor jouw PT studio."
+title: "Personal Trainer Leads - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen personal trainer leads strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "personal-trainer-leads"
+type: "service"
 heroTitleLine1: "Slimme"
 heroTitleLine2: "personal trainer"
 heroTitleLine3: " online leads"
 heroTitleLine4: "genereren."
 heroSubtitle: "Wij bouwen een systeem dat jouw agenda vult met leads die klaar zijn om te investeren in zichzelf. Zo besteed jij je tijd aan wat je het beste doet: mensen begeleiden naar hun resultaten."
 contentSectionTitle: "Het eerlijke geheim van sterke aanvragen"
-slug: "personal-trainer-leads"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 # Verzamel alleen de beste personal trainer leads
 
 Slimme personal trainer leads genereren begint niet met meer adverteren. Het begint met een eerlijk systeem waarmee je agenda gevuld wordt door mensen die de waarde inzien van jouw inzet. Niet door koopjesjagers die op zoek zijn naar de goedkoopste optie in de buurt.

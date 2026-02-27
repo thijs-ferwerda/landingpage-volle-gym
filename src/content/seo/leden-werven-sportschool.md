@@ -1,19 +1,17 @@
 ---
-title: "Zorgeloos nieuwe leden werven voor je sportschool"
-description: "Nieuwe sporters aantrekken? Nieuwe leden werven voor de sportschool hoeft echt niet moeilijk te zijn. Ontdek onze simpele aanpak."
+title: "Leden Werven Sportschool - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen leden werven sportschool strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "leden-werven-sportschool"
+type: "service"
 heroTitleLine1: "Structureel"
 heroTitleLine2: "nieuwe leden"
 heroTitleLine3: " succesvol"
 heroTitleLine4: "werven."
 heroSubtitle: "Wij bouwen voor jouw sportschool een bewezen ledenwerving systeem dat elke week verse aanvragen oplevert. Zo houd jij de focus op wat je het liefste doet: je leden begeleiden naar hun resultaten."
 contentSectionTitle: "Altijd genoeg sportende leden in jouw zaal"
-slug: "leden-werven-sportschool"
-type: "blog"
-relatedServices:
-  - "/sportschool-marketing"
-  - "/fitness-marketing-bureau"
+relatedServices: ["/sportschool-marketing","/fitness-marketing-bureau"]
+relatedBlogs: []
 ---
-
 Structureel nieuwe leden werven zonder dat je er elke week je hoofd over hoeft te breken. Dat klinkt als iets wat de meeste sportschooleigenaren alleen kennen uit de periode vlak na hun opening, toen de aanmeldingen vanzelf binnenkwamen. Wij bouwen systemen die die instroom structureel en voorspelbaar maken, elke week opnieuw.
 
 Maar voordat we daar op ingaan, is het de moeite waard om even stil te staan bij waarom ledenwerving voor zoveel sportschooleigenaren voelt als een constante strijd.

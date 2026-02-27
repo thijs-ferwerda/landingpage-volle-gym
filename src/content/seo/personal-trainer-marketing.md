@@ -1,19 +1,17 @@
 ---
-title: "Begrijpelijke personal trainer marketing voor meer vrijheid"
-description: "Ben je coach? Verbeter dan je personal trainer marketing en vul je lessen met mensen die de waarde van jouw kennis inzien."
+title: "Personal Trainer Marketing - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen personal trainer marketing strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "personal-trainer-marketing"
+type: "service"
 heroTitleLine1: "Persoonlijke"
 heroTitleLine2: "marketing"
 heroTitleLine3: " voor de"
 heroTitleLine4: "moderne trainer."
 heroSubtitle: "Wij helpen PT studio eigenaren hun vakkennis zichtbaar te maken en een sterk merk te bouwen dat klanten aantrekt. Met bewezen marketingstrategieën zetten we jouw studio op de kaart en creëren we de vrijheid die je verdient."
 contentSectionTitle: "Trek sporters aan die jouw inzet waarderen"
-slug: "personal-trainer-marketing"
-type: "blog"
-relatedServices:
-  - "/sportschool-marketing"
-  - "/fitness-marketing-bureau"
+relatedServices: ["/sportschool-marketing","/fitness-marketing-bureau"]
+relatedBlogs: []
 ---
-
 # Begrijpelijke personal trainer marketing voor meer vrijheid
 
 Persoonlijke marketing voor de moderne trainer. Geen saaie uurtje-factuurtje reclames. Wij laten zien hoe je jouw PT studio op de kaart zet en meer respect voor je vakkennis krijgt.

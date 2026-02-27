@@ -1,19 +1,17 @@
 ---
-title: "Boutique gym marketing precies zoals het bedoeld is"
-description: "Zet je boutique gym slim  in het licht met onze ontspannen strategie. Haal klanten naar jouw sportplek die willen investeren."
+title: "Boutique Gym Marketing - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen boutique gym marketing strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "boutique-gym-marketing"
+type: "service"
 heroTitleLine1: "Sterk werken"
 heroTitleLine2: "aan trouwe"
 heroTitleLine3: " boutique"
 heroTitleLine4: "gym leden."
 heroSubtitle: "Jouw boutique gym draait op verbinding en de kracht van kleine groepen. Wij bouwen marketingstrategieën die precies dat gevoel uitstralen en de juiste leden naar jouw club trekken."
 contentSectionTitle: "De juiste beleving in je gym marketing"
-slug: "boutique-gym-marketing"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 # Boutique gym marketing precies zoals het bedoeld is
 
 Sterk werken aan trouwe boutique gym leden. Jouw club leunt op de fijne kleinschaligheid, de groepslessen waar iedereen elkaar kent, de trainer die jouw naam onthoudt en weet dat je linkerschouder altijd wat aandacht nodig heeft. Binnen de werving trekken wij diezelfde intieme lijn volledig door. Want juist daar gaat het bij de meeste boutique gyms mis.

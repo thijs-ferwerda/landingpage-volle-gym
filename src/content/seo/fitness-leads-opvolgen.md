@@ -1,19 +1,17 @@
 ---
-title: "Zo ontwijk je vergeten afspraken door fitness leads online op te volgen"
-description: "Het geheim van een volle agenda zit exact in het tijdig uw fitness leads opvolgen door slimme applicaties aan te sturen."
+title: "Fitness Leads Opvolgen - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen fitness leads opvolgen strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "fitness-leads-opvolgen"
+type: "service"
 heroTitleLine1: "Perfectie in"
 heroTitleLine2: "het adequaat"
 heroTitleLine3: " fitness leads"
 heroTitleLine4: "online opvolgen."
 heroSubtitle: "Wij bouwen geautomatiseerde opvolgstrategieën die jouw leads op het juiste moment bereiken. Zo blijft elk contact warm en loopt jouw agenda vol met gekwalificeerde afspraken."
 contentSectionTitle: "De belangrijkste minuten regel in actie"
-slug: "fitness-leads-opvolgen"
-type: "blog"
-relatedServices:
-  - "/sportschool-marketing"
-  - "/fitness-marketing-bureau"
+relatedServices: ["/sportschool-marketing","/fitness-marketing-bureau"]
+relatedBlogs: []
 ---
-
 # Zo ontwijk je vergeten afspraken door fitness leads online op te volgen
 
 Leads binnenhalen voelt als winnen. De advertentie werkt, het formulier wordt ingevuld, de interesse is er. Maar dan begint het echte spel. Want tussen het moment dat iemand zijn gegevens achterlaat en het moment dat hij daadwerkelijk op een afspraak verschijnt, ligt een kloof waar de meeste sportschooleigenaren structureel geld in verliezen.

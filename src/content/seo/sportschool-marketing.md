@@ -1,19 +1,17 @@
 ---
-title: "Eerlijke sportschool marketing voor drukke eigenaars"
-description: "Heb je weinig tijd? Ontdek de sportschool marketing die echt leden oplevert, zonder dat het je uren achter de laptop kost."
+title: "Sportschool Marketing - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen sportschool marketing strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "sportschool-marketing"
+type: "service"
 heroTitleLine1: "Je sportschool"
 heroTitleLine2: "succesvol en"
 heroTitleLine3: " zonder stress"
 heroTitleLine4: "promoten."
 heroSubtitle: "Wij bouwen een helder marketingsysteem dat naadloos aansluit op jouw website. Zo stromen kwalitatieve aanvragen automatisch je agenda in, terwijl jij je focust op je klanten."
 contentSectionTitle: "Gestructureerd nieuwe sporters verwelkomen"
-slug: "sportschool-marketing"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 Je sportschool succesvol en zonder stress promoten. Geen lastige vaktermen of eindeloze theorie. Wij koppelen een begrijpelijk systeem aan je website waardoor aanvragen netjes in je agenda vallen.
 
 Dat klinkt bijna te simpel. En toch zien wij bij Volle Gym dat de meeste sportschooleigenaren vastlopen op precies dit punt: niet omdat ze slecht zijn in wat ze doen, maar omdat marketing voor hen aanvoelt als een tweede fulltime baan. Eén die ze nooit gevraagd hebben.

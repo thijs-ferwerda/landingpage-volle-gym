@@ -1,19 +1,17 @@
 ---
-title: "Marketing voor je nieuwe PT Studio succesvol lanceren"
-description: "Ga je een nieuwe PT studio starten? Verspil geen budget. Lanceer je studio direct vol members met onze bewezen route."
+title: "Pt Studio Starten Marketing - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen pt studio starten marketing strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "pt-studio-starten-marketing"
+type: "service"
 heroTitleLine1: "Een vliegende"
 heroTitleLine2: "start voor"
 heroTitleLine3: " jouw nieuwe"
 heroTitleLine4: "PT studio."
 heroSubtitle: "Wij begeleiden je PT studio vanaf dag één met een marketingaanpak die klanten aantrekt nog vóór je deuren opengaan. Zo bouw je direct een sterke basis en loop je vol op je openingsdag."
 contentSectionTitle: "Risicovrij starten met de juiste leads"
-slug: "pt-studio-starten-marketing"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 Een vliegende start voor jouw nieuwe PT studio. Aan de slag met je eigen zaal of studio is spannend. Wij zorgen voor warme marketing ruim voor de openingsdag.
 
 Maar laten we eerlijk zijn over wat er bij de meeste lanceringen misgaat. Niet omdat de eigenaar geen talent heeft, niet omdat de locatie verkeerd is, en zeker niet omdat er geen vraag naar personal training bestaat. Wij zien keer op keer dat nieuwe PT studio's struikelen op exact hetzelfde moment: de dag dat ze de deuren openen zonder dat er al iemand op ze wacht.

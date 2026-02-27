@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound/NotFound';
 import Welcome from './pages/Welcome/Welcome';
 import ThankYou from './pages/ThankYou/ThankYou';
 import Results from './pages/Results/Results';
+import Sitemap from './pages/Sitemap/Sitemap';
 import OnboardingTemplate from './pages/Onboarding/OnboardingTemplate';
 import MinimalLayout from './components/MinimalLayout';
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -83,6 +84,7 @@ function App() {
         <Route path="/sorry" element={<><Navbar /><Sorry /><Footer /></>} />
         <Route path="/privacy" element={<><Navbar /><PrivacyPolicy /><Footer /></>} />
         <Route path="/voorwaarden" element={<><Navbar /><TermsOfService /><Footer /></>} />
+        <Route path="/sitemap" element={<><Navbar /><Sitemap /><Footer /></>} />
 
         {/* Catch-all 404 */}
         <Route path="*" element={<><Navbar /><NotFound /><Footer /></>} />

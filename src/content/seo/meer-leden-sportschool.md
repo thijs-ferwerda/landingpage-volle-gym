@@ -1,19 +1,17 @@
 ---
-title: "Stapsgewijs en rustig meer leden voor je sportschool"
-description: "Breng je club weer op adem. Wij laten je in kleine stappen zien hoe we zonder haast structureel meer leden voor de sportschool aantrekken."
+title: "Meer Leden Sportschool - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen meer leden sportschool strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "meer-leden-sportschool"
+type: "service"
 heroTitleLine1: "In kleine stappen"
 heroTitleLine2: "meer leden"
 heroTitleLine3: " toevoegen op"
 heroTitleLine4: "jouw tempo."
 heroSubtitle: "Wij helpen sportschooleigenaren stap voor stap groeien, met behoud van de sfeer die jouw gym uniek maakt. Meer leden, meer omzet en een community waar iedereen zich thuis voelt."
 contentSectionTitle: "Groeien en toch de controle houden over je kassa"
-slug: "meer-leden-sportschool"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 In kleine stappen meer leden toevoegen, op jouw tempo. Je wilt je omzet verhogen, maar wel op een manier die de gezellige sfeer in de sportzaal helemaal behoudt. Geen plotselinge invasie van nieuwe gezichten die de vaste kern verdringt. Geen marketingcampagnes die je dwingt tot kortingen waar je later spijt van krijgt. Gewoon: gecontroleerde, gezonde groei die past bij wat jij hebt opgebouwd.
 
 Dat klinkt logisch. En toch zien wij bij sportschooleigenaren keer op keer hetzelfde patroon: de wens voor rustige groei botst frontaal op de manier waarop ze proberen die groei te realiseren.

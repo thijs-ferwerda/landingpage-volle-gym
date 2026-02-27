@@ -1,19 +1,17 @@
 ---
-title: "Volle Gym's rustige aanpak voor High Ticket PT Sales"
-description: "Blijf je hangen in losse uurtjes verkopen? Leer hoe onze werving zorgt voor verkopen via zachte high ticket PT sales theorie."
+title: "High Ticket Pt Sales - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen high ticket pt sales strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "high-ticket-pt-sales"
+type: "service"
 heroTitleLine1: "Geklaard en"
 heroTitleLine2: "klaar voor"
 heroTitleLine3: " high ticket PT"
 heroTitleLine4: "warme sales."
 heroSubtitle: "Wij richten advertenties gericht op de juiste mensen, op het juiste moment. Zo bouwen we stap voor stap vertrouwen en vullen we jouw agenda met serieuze klanten."
 contentSectionTitle: "De overstap naar echt een lang programma"
-slug: "high-ticket-pt-sales"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 # Volle Gym's rustige aanpak voor High Ticket PT Sales
 
 Veel PT studio eigenaren zitten gevangen in hetzelfde patroon. Ze verkopen losse sessies, bouwen een volle agenda op, en merken ergens halverwege het jaar dat ze keihard werken voor een omzet die niet groeit. De kalender zit vol, maar de bankrekening vertelt een ander verhaal.

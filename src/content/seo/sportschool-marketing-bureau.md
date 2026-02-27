@@ -1,19 +1,17 @@
 ---
-title: "Een sportschool marketing bureau met gewoon nuchter advies"
-description: "Ben jij dure abonnementen van snelle verkopers zat? Ontdek ons no-nonsense sportschool marketing bureau boordevol sportverstand."
+title: "Sportschool Marketing Bureau - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen sportschool marketing bureau strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "sportschool-marketing-bureau"
+type: "service"
 heroTitleLine1: "De duidelijkste"
 heroTitleLine2: "sportschool"
 heroTitleLine3: " partner online"
 heroTitleLine4: "die jou helpt."
 heroSubtitle: "Wij werken rechtstreeks samen met de eigenaar en bouwen aan marketing die maand na maand meetbaar resultaat oplevert. Volledig transparant, altijd gericht op groei die beklijft."
 contentSectionTitle: "Het eerlijke verhaal over marketingbureaus"
-slug: "sportschool-marketing-bureau"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 De duidelijkste sportschool partner online die jou helpt. Wij werken samen met eigenaren: ontzettend transparant en altijd sturend op resultaat dat blijft.
 
 Dat klinkt simpel. En dat is het ook. Maar de weg ernaartoe is dat zelden.

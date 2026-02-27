@@ -1,19 +1,17 @@
 ---
-title: "Verleng het abonnement voor veilige fitness studio groei"
-description: "Zet je studio of gym in de juiste groeistand op de achtergrond. Zie de toename voor exact waar je lokaal goed in bent."
+title: "Fitness Studio Groei - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen fitness studio groei strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "fitness-studio-groei"
+type: "service"
 heroTitleLine1: "Stille inzet"
 heroTitleLine2: "voor stroom"
 heroTitleLine3: " aan stevige "
 heroTitleLine4: "studio sporters."
 heroSubtitle: "Wij zien elke dag hoe sportscholen en PT studio's groeien naar een volgende fase. Met Volle Gym bouw je stap voor stap aan een stabiele ledengroei die jouw studio klaarstoomt voor de volgende honderd klanten."
 contentSectionTitle: "Zonder kortingen veilig doorschalen met je marges"
-slug: "fitness-studio-groei"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 Stille inzet voor een stroom aan stevige studio-sporters. De grens van honderd klanten passeren vormt de mooiste en zwaarste halte voor ondernemers. Wij regelen de sprong zonder haast.
 
 Dat klinkt misschien tegenstrijdig in een branche die obsessief is met snelle groei. Maar wij zien bij de studio's waarmee wij werken keer op keer hetzelfde patroon: de eigenaar die het hardst trekt aan zijn eigen groei, rekt uiteindelijk het snelst. Niet omdat hij niet goed genoeg is. Maar omdat hij groeit op een fundament dat de druk niet aankan.

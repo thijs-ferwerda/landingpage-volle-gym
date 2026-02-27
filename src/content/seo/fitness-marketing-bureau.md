@@ -1,19 +1,17 @@
 ---
-title: "Een fitness marketing bureau voor jouw groei"
-description: "Kies voor een fitness marketing bureau dat jouw sportschool snapt. Ontdek hoe wij helpen aan een vaste stroom van nieuwe leden."
+title: "Fitness Marketing Bureau - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen fitness marketing bureau strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "fitness-marketing-bureau"
+type: "service"
 heroTitleLine1: "Slimme en"
 heroTitleLine2: "simpele"
 heroTitleLine3: " marketing"
 heroTitleLine4: "voor gyms."
 heroSubtitle: "Wij verbinden jouw sportschool of PT studio met de mensen die écht op zoek zijn naar wat jij biedt. Met een bewezen systeem dat consistente groei oplevert, elke maand opnieuw."
 contentSectionTitle: "Hoe ons bureau jou helpt groeien"
-slug: "fitness-marketing-bureau"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 Slimme en simpele marketing voor gyms. Vergeet de vage theorie. Wij zorgen dat jouw sportschool of PT studio wordt gezien door de juiste mensen en bouwen een systeem dat direct werkt.
 
 Dat klinkt eenvoudig. En dat is het ook, als je weet wat je doet. Maar de meeste sportschooleigenaren die bij ons aankloppen, hebben al een paar rondes gemaakt langs bureaus die mooie dashboards toonden, wekelijkse rapportages stuurden en ondertussen nauwelijks resultaat leverden. Niet omdat die bureaus lui waren. Maar omdat ze fitness niet begrijpen.

@@ -1,19 +1,17 @@
 ---
-title: "Gym marketing in begrijpelijke taal zonder kopzorgen"
-description: "Geef je zorgen over online reclame uit handen. Ontdek fijne gym marketing door het eerlijke Volle Gym team."
+title: "Gym Marketing - De #1 Groeistrategie | Volle Gym"
+description: "Ontdek de bewezen gym marketing strategie voor jouw studio. Wij helpen je aan een constante, structurele stroom van high-end klanten. Geen loze beloftes."
+slug: "gym-marketing"
+type: "service"
 heroTitleLine1: "Online"
 heroTitleLine2: "gym marketing"
 heroTitleLine3: " makkelijk"
 heroTitleLine4: "inzetten."
 heroSubtitle: "Wij zien dagelijks hoe sportschooleigenaren groeien wanneer marketing echt voor hen werkt. Daarom bouwen wij heldere strategieën die jouw gym vullen, terwijl jij je richt op waar je goed in bent."
 contentSectionTitle: "Een kalme strategie in de buurt"
-slug: "gym-marketing"
-type: "service"
-relatedBlogs:
-  - "/kennisbank/fitness-leadgeneratie"
-  - "/kennisbank/leden-werven-sportschool"
+relatedServices: []
+relatedBlogs: ["/kennisbank/fitness-leadgeneratie","/kennisbank/leden-werven-sportschool"]
 ---
-
 Online gym marketing opzetten voelt voor veel sportschooleigenaren als een bijbaan die ze nooit hebben aangevraagd. Tussen het begeleiden van je sporters, het aansturen van je team en het draaiende houden van je studio, blijft marketing structureel liggen. Niet omdat je het niet belangrijk vindt, maar omdat het een ander vak is. Een vak met zijn eigen logica, zijn eigen valkuilen en zijn eigen tijdsinvestering.
 
 Wij begrijpen dat. En wij zien het elke week bij de studio's waarmee wij werken.
