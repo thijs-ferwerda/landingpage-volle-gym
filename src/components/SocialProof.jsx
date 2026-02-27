@@ -69,10 +69,10 @@ const SocialProof = () => {
                 {youtubeData.map((item, index) => (
                     <div
                         key={index}
-                        className="flex-shrink-0 w-[300px] md:w-[400px] bg-background rounded-2xl border border-primary/10 overflow-hidden snap-center shadow-lg group hover:border-primary/20 transition-colors duration-300"
+                        className="flex-shrink-0 w-[300px] md:w-[400px] bg-white rounded-[1.5rem] border border-primary/10 snap-center shadow-lg group hover:border-primary/20 transition-colors duration-300 p-2 md:p-3 flex flex-col"
                     >
                         {/* 16:9 Embedded YouTube Video */}
-                        <div className="relative w-full aspect-video bg-dark">
+                        <div className="relative shrink-0 w-full aspect-video bg-dark rounded-xl overflow-hidden">
                             <iframe
                                 className="absolute top-0 left-0 w-full h-full"
                                 src={`https://www.youtube.com/embed/${item.videoId}?rel=0&modestbranding=1`}
@@ -85,7 +85,7 @@ const SocialProof = () => {
                         </div>
 
                         {/* Content below video */}
-                        <div className="p-6 bg-white h-full">
+                        <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
                             <p className="font-heading font-semibold text-accent text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
                             <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest mb-3">{item.name}</p>
                             <div className="h-px w-full bg-primary/10 mb-3"></div>

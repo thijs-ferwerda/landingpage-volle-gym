@@ -6,7 +6,8 @@ import { google } from 'googleapis';
 // Zorg dat deze is aangemaakt in Google Cloud Console en is toegevoegd aan Google Search Console
 // als 'Eigenaar' (verplicht voor de Indexing API).
 
-const SERVICE_ACCOUNT_KEY_PATH = path.resolve('service-account.json');
+const SERVICE_ACCOUNT_KEY = 'ivory-amplifier-337717-d9f13e4949e6.json';
+const SERVICE_ACCOUNT_KEY_PATH = path.resolve(SERVICE_ACCOUNT_KEY);
 const SEO_DIR = path.resolve('src/content/seo');
 
 const HOSTNAME = 'https://www.vollegym.nl';
@@ -21,10 +22,12 @@ async function main() {
 
     console.log('✅ Service Account key gevonden.');
 
+    const keyFile = JSON.parse(fs.readFileSync(SERVICE_ACCOUNT_KEY_PATH, 'utf8'));
+
     const jwtClient = new google.auth.JWT(
-        require(SERVICE_ACCOUNT_KEY_PATH).client_email,
+        keyFile.client_email,
         null,
-        require(SERVICE_ACCOUNT_KEY_PATH).private_key,
+        keyFile.private_key,
         ['https://www.googleapis.com/auth/indexing'],
         null
     );

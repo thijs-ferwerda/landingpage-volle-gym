@@ -32,6 +32,7 @@ const Footer = () => {
                         <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Navigatie</h4>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
                             <li><Link to="/resultaten" className="hover:text-accent transition-colors">Resultaten</Link></li>
+                            <li><Link to="/kennisbank" className="hover:text-accent transition-colors">Kennisbank</Link></li>
                             <li><a href="/#visie" className="hover:text-accent transition-colors">Visie</a></li>
                             <li><a href="/#impact" className="hover:text-accent transition-colors">Over ons</a></li>
                             <li><a href="/#garantie" className="hover:text-accent transition-colors">Garantie</a></li>
@@ -42,7 +43,7 @@ const Footer = () => {
                     <div className="md:col-span-2 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
                         <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Connect</h4>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
-                            <li><a href="https://www.linkedin.com/in/basnagelnl/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>
+                            <li><a href="https://www.linkedin.com/company/volle-gym-consulting/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>
                             <li><a href="https://www.instagram.com/vollegym/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a></li>
                             <li><a href="https://www.youtube.com/@vollegym" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">YouTube</a></li>
                         </ul>
@@ -53,7 +54,6 @@ const Footer = () => {
             <div className={`max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-data text-primary/40 ${isMinimalFooter ? 'border-t border-primary/10 pt-4' : ''}`}>
                 <p>&copy; {new Date().getFullYear()} Volle Gym Consulting B.V. All systems go.</p>
                 <div className="flex gap-4 md:gap-6">
-                    <Link to="/sitemap" className="hover:text-primary transition-colors">Sitemap</Link>
                     <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
                     <Link to="/voorwaarden" className="hover:text-primary transition-colors">Voorwaarden</Link>
                 </div>

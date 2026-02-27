@@ -105,23 +105,25 @@ const Hero = ({ campaign }) => {
                 </div>
 
                 {/* Intro Tag */}
-                <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8">
-                    <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
-                    </svg>
-                    <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
-                        {activeCampaign.badge ? (
-                            <>
+                <div ref={addToRefs} className="hidden md:flex items-center justify-center gap-3 mb-8 text-primary">
+                    {activeCampaign.badge ? (
+                        <>
+                            <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
+                            </svg>
+                            <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
                                 {activeCampaign.badgeLabel && <span className="font-bold">{activeCampaign.badgeLabel} </span>}
                                 {activeCampaign.badge}
-                            </>
-                        ) : (
-                            activeCampaign.introTag || "De helpende hand van gezond Nederland"
-                        )}
-                    </p>
-                    <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
-                    </svg>
+                            </p>
+                            <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
+                            </svg>
+                        </>
+                    ) : (
+                        <span className="text-accent uppercase tracking-widest text-xs font-semibold px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 shadow-sm">
+                            Gym Eigenaren
+                        </span>
+                    )}
                 </div>
 
 
@@ -135,7 +137,18 @@ const Hero = ({ campaign }) => {
                         {activeCampaign.titleLine1 || activeCampaign.headlineStart}
                         {' '}
                         {activeCampaign.hideBr ? null : <br className="hidden md:block" />}
-                        <span className="text-primary/30">{activeCampaign.titleLine2 || activeCampaign.headlineHighlight}</span>{activeCampaign.titleLine3 || activeCampaign.headlineEnd} <span className="font-drama italic text-primary">{activeCampaign.titleLine4 || ''}</span>
+                        {campaignKey === 'default' ? (
+                            <>
+                                <span className="font-drama italic text-accent pr-3">{activeCampaign.titleLine2 || activeCampaign.headlineHighlight}</span>
+                                {activeCampaign.titleLine3 || activeCampaign.headlineEnd}
+                            </>
+                        ) : (
+                            <>
+                                <span className="text-primary/30">{activeCampaign.titleLine2 || activeCampaign.headlineHighlight}</span>
+                                {activeCampaign.titleLine3 || activeCampaign.headlineEnd}
+                            </>
+                        )}
+                        <span className="font-drama italic text-primary">{activeCampaign.titleLine4 || ''}</span>
                     </span>
                 </h1>
 

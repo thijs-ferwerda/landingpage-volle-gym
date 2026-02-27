@@ -11,14 +11,14 @@
 const isVariationB = Math.random() > 0.5;
 
 export const campaigns = {
-    // Standaard 'fallback' (organisch verkeer) met A/B split test op de Hero Header
+    // Standaard 'fallback' (organisch verkeer)
     default: {
         badge: "",
         badgeLabel: "",
         badgeLinkLabel: "",
-        headlineStart: isVariationB ? "Wil je structureel meer" : "Is jouw gym momenteel",
-        headlineHighlight: isVariationB ? "leden" : "leeg",
-        headlineEnd: isVariationB ? " voor je gym?" : ", of vol? 😉",
+        headlineStart: "Wil je structureel",
+        headlineHighlight: "meer leden",
+        headlineEnd: " voor jouw gym?",
         subtitle: "Zonder een voorspelbaar systeem blijf je afhankelijk van hoop en mond-tot-mondreclame. Wij vullen jouw PT-studio of Small Group gym systematisch met ideale leden. Gegarandeerd.",
         ctaPrimary: "Doe de intake",
         ctaSecondary: "Bekijk de methode"

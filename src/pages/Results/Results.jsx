@@ -61,26 +61,25 @@ const Results = () => {
                 <link rel="canonical" href="https://www.vollegym.nl/resultaten" />
             </Helmet>
 
-            <div ref={containerRef} className="bg-dark min-h-screen pt-32 font-sans text-primary relative overflow-hidden">
+            <div ref={containerRef} className="bg-background min-h-screen pt-32 font-sans text-primary relative overflow-hidden">
 
                 {/* Background glow using accent color */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
                 <section className="relative z-10 w-full px-6 md:px-12 flex flex-col items-center text-center mb-16 md:mb-24">
                     <div className="max-w-3xl mx-auto flex flex-col items-center">
-                        <div ref={addToRefs} className="flex items-center gap-3 mb-6">
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
-                            <p className="text-white/60 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
-                                Resultaat &gt; Meningen
-                            </p>
+                        <div ref={addToRefs} className="flex items-center justify-center gap-3 mb-6">
+                            <span className="text-accent uppercase tracking-widest text-xs font-semibold px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5">
+                                Resultaten
+                            </span>
                         </div>
-                        <h1 ref={addToRefs} className="font-heading font-bold text-4xl md:text-5xl lg:text-7xl tracking-tighter text-white leading-[1.1] mb-6">
-                            De impact van <br />
+                        <h1 ref={addToRefs} className="font-heading font-bold text-4xl md:text-5xl lg:text-7xl tracking-tighter text-primary leading-[1.1] mb-6">
+                            De woorden van <br />
                             <span className="font-drama italic text-accent pr-3">onze partners.</span>
                         </h1>
 
-                        <p ref={addToRefs} className="text-white/70 text-base md:text-xl max-w-2xl leading-relaxed mb-4">
-                            Ontdek hoe we landelijk PT-studio's en gyms structureel succesvol maken door robuuste voorspelbaarheid en ongekende resultaten.
+                        <p ref={addToRefs} className="text-primary/70 text-base md:text-xl max-w-2xl leading-relaxed mb-4">
+                            Zie wat gyms uit heel Nederland zeggen over het aantal leden en hun ervaringen met ons.
                         </p>
                     </div>
                 </section>
@@ -92,10 +91,10 @@ const Results = () => {
                             <div
                                 key={index}
                                 ref={addToRefs}
-                                className="bg-white rounded-2xl border border-primary/10 overflow-hidden shadow-lg group hover:border-primary/20 transition-colors duration-300 flex flex-col h-full"
+                                className="bg-white rounded-[1.5rem] border border-primary/10 shadow-lg group hover:border-primary/20 transition-colors duration-300 flex flex-col h-full p-2 md:p-3"
                             >
                                 {/* 16:9 Embedded YouTube Video */}
-                                <div className="relative w-full aspect-video bg-dark">
+                                <div className="relative shrink-0 w-full aspect-video bg-black rounded-xl overflow-hidden">
                                     <iframe
                                         className="absolute top-0 left-0 w-full h-full"
                                         src={`https://www.youtube.com/embed/${item.videoId}?rel=0&modestbranding=1`}
@@ -108,12 +107,12 @@ const Results = () => {
                                 </div>
 
                                 {/* Content below video */}
-                                <div className="p-6 bg-white h-full flex flex-col">
+                                <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
                                     <p className="font-heading font-semibold text-accent text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
                                     <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest mb-3">{item.name}</p>
                                     <div className="h-px w-full bg-primary/10 mb-3"></div>
                                     <p className="font-sans text-sm text-primary/70 italic leading-relaxed flex-1">
-                                        "{item.objection}"
+                                        {item.objection}
                                     </p>
                                 </div>
                             </div>
