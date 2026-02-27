@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const CTA = () => {
     return (
-        <section id="inzicht" className="relative overflow-hidden flex flex-col items-center justify-center">
+        <section id="garantie" className="relative overflow-hidden flex flex-col items-center justify-center">
 
             {/* Main CTA Content Area - Hard Cut, Increased padding for footer spacing */}
             <div className="w-full bg-black pt-32 pb-40 md:pb-56 px-6 md:px-12 relative flex items-center justify-center border-t-0">

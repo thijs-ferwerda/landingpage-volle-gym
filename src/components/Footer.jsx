@@ -28,35 +28,18 @@ const Footer = () => {
                             <span className="font-data text-xs tracking-widest text-primary/80">Systeem operationeel</span>
                         </div>
                     </div>
-                    <div className="md:col-span-1 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
+                    <div className="md:col-span-2 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
                         <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Navigatie</h4>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
-                            <li><a href="/#visie" className="hover:text-accent transition-colors">Visie & principes</a></li>
-                            <li><a href="/#systeem" className="hover:text-accent transition-colors">Onze systemen</a></li>
                             <li><a href="/#resultaten" className="hover:text-accent transition-colors">Resultaten</a></li>
+                            <li><a href="/#visie" className="hover:text-accent transition-colors">Visie</a></li>
+                            <li><a href="/#impact" className="hover:text-accent transition-colors">Over ons</a></li>
+                            <li><a href="/#garantie" className="hover:text-accent transition-colors">Garantie</a></li>
                             <li><Link to="/intake" className="hover:text-accent transition-colors font-bold text-primary">Intake plannen</Link></li>
                         </ul>
                     </div>
 
-                    <div className="md:col-span-1 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
-                        <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Expertise</h4>
-                        <ul className="space-y-4 font-sans text-primary/60 text-sm">
-                            <li><Link to="/sportschool-marketing" className="hover:text-accent transition-colors">Sportschool Marketing</Link></li>
-                            <li><Link to="/leden-werven-sportschool" className="hover:text-accent transition-colors">Leden werven</Link></li>
-                            <li><Link to="/fitness-leadgeneratie" className="hover:text-accent transition-colors">Leadgeneratie</Link></li>
-                        </ul>
-                    </div>
-
-                    <div className="md:col-span-1 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
-                        <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Voor wie</h4>
-                        <ul className="space-y-4 font-sans text-primary/60 text-sm">
-                            <li><Link to="/pt-studio-marketing" className="hover:text-accent transition-colors">PT Studio's</Link></li>
-                            <li><Link to="/personal-trainer-marketing" className="hover:text-accent transition-colors">Personal Trainers</Link></li>
-                            <li><Link to="/sportschool-marketing-bureau" className="hover:text-accent transition-colors">Groeipartner</Link></li>
-                        </ul>
-                    </div>
-
-                    <div className="md:col-span-1 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
+                    <div className="md:col-span-2 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
                         <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Connect</h4>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
                             <li><a href="https://www.linkedin.com/in/basnagelnl/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>

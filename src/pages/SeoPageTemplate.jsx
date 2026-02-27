@@ -11,7 +11,50 @@ import NotFound from './NotFound/NotFound';
 // Laad alle markdown bestanden in via Vite's import.meta.glob (als ruwe text string)
 const mdFiles = import.meta.glob('../content/seo/*.md', { query: '?raw', import: 'default', eager: true });
 
-const SeoPageTemplate = () => {
+const extractFaqFromContent = (contentBody) => {
+    // Simpele extractie: zoek naar h2/h3 (## of ###) die eindigen met een vraagteken, en de tekst eronder tot de volgende heading
+    if (!contentBody) return [];
+
+    const lines = contentBody.split('\n');
+    const faqs = [];
+    let currentQuestion = null;
+    let currentAnswer = [];
+
+    for (const line of lines) {
+        const headingMatch = line.match(/^(#{2,3})\s+(.*)$/);
+        if (headingMatch) {
+            // Als we al een vraag hadden, sla deze dan op
+            if (currentQuestion) {
+                if (currentAnswer.length > 0) {
+                    faqs.push({
+                        question: currentQuestion,
+                        answer: currentAnswer.join('\n').trim()
+                    });
+                }
+                currentQuestion = null;
+                currentAnswer = [];
+            }
+
+            // Is de nieuwe heading een vraag?
+            if (headingMatch[2].trim().endsWith('?')) {
+                currentQuestion = headingMatch[2].trim();
+            }
+        } else if (currentQuestion && line.trim() !== '') {
+            currentAnswer.push(line);
+        }
+    }
+
+    // Vergeet de laatste niet
+    if (currentQuestion && currentAnswer.length > 0) {
+        faqs.push({
+            question: currentQuestion,
+            answer: currentAnswer.join('\n').trim()
+        });
+    }
+    return faqs;
+};
+
+const SeoPageTemplate = ({ expectedType }) => {
     const { slug } = useParams();
 
     // Zoek en parse de juiste markdown pagina op basis van de URL slug
@@ -70,14 +113,74 @@ const SeoPageTemplate = () => {
         return <NotFound />;
     }
 
+    // Voorkom dat services te bereiken zijn via /kennisbank/ en vice versa (Redirect indien fout)
+    // Frontmatter 'type' moet "service" (default) of "blog" / "pillar" zijn. 
+    // We treat "pillar" as "blog" or "service" depending on how it's handled, let's treat it as "service" by default unless specified differently.
+    const actualType = pageData.type || 'service';
+
+    if (expectedType === 'blog' && actualType !== 'blog' && actualType !== 'pillar') {
+        return <Navigate to={`/${slug}`} replace />; // Foute basis, probeer platte structuur
+    }
+    if (expectedType === 'service' && actualType === 'blog') {
+        return <Navigate to={`/kennisbank/${slug}`} replace />; // Moet via kennisbank
+    }
+
+    // Genereer Schema.org JSON-LD
+    const schemas = [];
+    if (actualType === 'service' || actualType === 'pillar') {
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Volle Gym",
+            "url": "https://www.vollegym.nl",
+            "logo": "https://www.vollegym.nl/logo.png",
+            "description": "Wij vullen jouw PT-studio systematisch tot de nok toe vol met ideale leden.",
+            "areaServed": "NL"
+        });
+
+        schemas.push({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Sportschool Marketing",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "Volle Gym"
+            },
+            "areaServed": "NL",
+            "url": `https://www.vollegym.nl/${slug}`
+        });
+
+        const faqs = extractFaqFromContent(pageData.contentBody);
+        if (faqs.length > 0) {
+            schemas.push({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": faqs.map(faq => ({
+                    "@type": "Question",
+                    "name": faq.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": faq.answer
+                    }
+                }))
+            });
+        }
+    }
+
     return (
         <>
             {/* Dynamische SEO Meta Tags Injectie via React Helmet */}
             <Helmet>
                 <title>{pageData.title}</title>
                 <meta name="description" content={pageData.description} />
-                <link rel="canonical" href={`https://www.vollegym.nl/${pageData.slug}`} />
+                <link rel="canonical" href={`https://www.vollegym.nl${expectedType === 'blog' ? '/kennisbank' : ''}/${pageData.slug}`} />
                 {/* Voorkom duplicatie door canonical tags proper in te stellen */}
+
+                {schemas.map((schema, index) => (
+                    <script type="application/ld+json" key={index}>
+                        {JSON.stringify(schema)}
+                    </script>
+                ))}
             </Helmet>
 
             <div ref={containerRef} className="bg-background min-h-screen pt-32 pb-24 font-sans text-primary">
@@ -191,6 +294,47 @@ const SeoPageTemplate = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Internal Linking / Related Content */}
+                        {(pageData.relatedServices || pageData.relatedBlogs) && (
+                            <div className="mt-12 pt-8 border-t border-primary/10">
+                                <h3 className="font-heading font-bold text-2xl tracking-tight mb-6">Verder lezen</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {pageData.relatedServices && pageData.relatedServices.map((relatedPath, idx) => {
+                                        // Zoek slug (haal / weg)
+                                        const cleanSlug = relatedPath.replace(/^\//, '');
+                                        const relatedMatch = Object.keys(mdFiles).find(path => path.endsWith(`/${cleanSlug}.md`));
+
+                                        if (relatedMatch) {
+                                            const { attributes } = frontMatter(mdFiles[relatedMatch]);
+                                            return (
+                                                <Link key={`rs-${idx}`} to={`/${cleanSlug}`} className="block p-5 rounded-2xl border border-primary/10 bg-primary/5 hover:bg-primary/10 transition-colors">
+                                                    <div className="text-xs uppercase tracking-widest text-[#FF3500] font-semibold mb-2">Service</div>
+                                                    <div className="font-bold text-lg text-primary">{attributes.title || cleanSlug}</div>
+                                                </Link>
+                                            );
+                                        }
+                                        return null;
+                                    })}
+
+                                    {pageData.relatedBlogs && pageData.relatedBlogs.map((relatedPath, idx) => {
+                                        const cleanSlug = relatedPath.replace(/^\/kennisbank\//, '').replace(/^\//, '');
+                                        const relatedMatch = Object.keys(mdFiles).find(path => path.endsWith(`/${cleanSlug}.md`));
+
+                                        if (relatedMatch) {
+                                            const { attributes } = frontMatter(mdFiles[relatedMatch]);
+                                            return (
+                                                <Link key={`rb-${idx}`} to={`/kennisbank/${cleanSlug}`} className="block p-5 rounded-2xl border border-primary/10 bg-primary/5 hover:bg-primary/10 transition-colors">
+                                                    <div className="text-xs uppercase tracking-widest text-[#b02200] font-semibold mb-2">Kennisbank</div>
+                                                    <div className="font-bold text-lg text-primary">{attributes.title || cleanSlug}</div>
+                                                </Link>
+                                            );
+                                        }
+                                        return null;
+                                    })}
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </section>
 
