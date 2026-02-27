@@ -7,7 +7,7 @@
     },
     {
       "source": "/gym-growth-blueprint",
-      "destination": "/methode",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "source": "/onboarding-call-bart-van-daatselaar",
-      "destination": "/",
+      "destination": "/onboarding",
       "permanent": true
     },
     {
