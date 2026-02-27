@@ -121,7 +121,7 @@ const Hero = ({ campaign }) => {
                         </>
                     ) : (
                         <span className="text-accent uppercase tracking-widest text-xs font-semibold px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 shadow-sm">
-                            Gym Eigenaren
+                            Gym Eigenaar
                         </span>
                     )}
                 </div>
