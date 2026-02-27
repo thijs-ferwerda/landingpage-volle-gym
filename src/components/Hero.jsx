@@ -118,7 +118,7 @@ const Hero = ({ campaign }) => {
                         {activeCampaign.hideBr ? null : <br className="hidden md:block" />}
                         {campaignKey === 'default' ? (
                             <>
-                                <span className="font-drama italic text-accent pr-3">{activeCampaign.titleLine2 || activeCampaign.headlineHighlight}</span>
+                                <span className="font-drama italic text-accent pr-1 md:pr-2">{activeCampaign.titleLine2 || activeCampaign.headlineHighlight}</span>
                                 {activeCampaign.titleLine3 || activeCampaign.headlineEnd}
                             </>
                         ) : (
