@@ -8,6 +8,10 @@ heroTitleLine4: "de fitness."
 heroSubtitle: "Wij bouwen voor jouw sportschool een ledenwerving die soepel loopt en elke maand nieuwe mensen aantrekt. Zo groeit jouw bedrijf op een manier die voorspelbaar en beheersbaar is."
 contentSectionTitle: "Opnieuw rust vinden als ondernemer"
 slug: "ledenwerving-fitness"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 Een relaxte structuur voor ledenwerving in de fitness. Zonder extra uren op zaterdag of zondag verander je de taak van het vinden van nieuwe mensen in iets makkelijks en voorspelbaars. Dat klinkt misschien als een belofte die je al eerder hebt gehoord. Maar het verschil zit niet in de belofte. Het zit in wat er structureel ontbreekt bij de meeste studio's die wij voor het eerst spreken.

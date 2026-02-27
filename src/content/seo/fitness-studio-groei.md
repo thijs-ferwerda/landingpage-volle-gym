@@ -8,6 +8,10 @@ heroTitleLine4: "studio sporters."
 heroSubtitle: "Wij zien elke dag hoe sportscholen en PT studio's groeien naar een volgende fase. Met Volle Gym bouw je stap voor stap aan een stabiele ledengroei die jouw studio klaarstoomt voor de volgende honderd klanten."
 contentSectionTitle: "Zonder kortingen veilig doorschalen met je marges"
 slug: "fitness-studio-groei"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 Stille inzet voor een stroom aan stevige studio-sporters. De grens van honderd klanten passeren vormt de mooiste en zwaarste halte voor ondernemers. Wij regelen de sprong zonder haast.

@@ -8,6 +8,10 @@ heroTitleLine4: "tips."
 heroSubtitle: "Wij zien elke dag hoe sportschooleigenaren met een paar gerichte stappen structureel meer aanmeldingen binnenhalen. Ontdek de marketingaanpak die wij adviseren voor een volle sportschool."
 contentSectionTitle: "Begin met deze simpele en effectieve tips"
 slug: "sportschool-marketing-tips"
+type: "blog"
+relatedServices:
+  - "/sportschool-marketing"
+  - "/fitness-marketing-bureau"
 ---
 
 # Sportschool marketing tips die iedereen snapt

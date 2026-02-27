@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Welcome from './pages/Welcome/Welcome';
 import ThankYou from './pages/ThankYou/ThankYou';
+import Results from './pages/Results/Results';
 import OnboardingTemplate from './pages/Onboarding/OnboardingTemplate';
 import MinimalLayout from './components/MinimalLayout';
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -62,9 +63,12 @@ function App() {
         <Route path="/uitgeputte-trainer" element={<><Navbar /><Home campaign="uitgeputte-trainer" /><Footer /></>} />
         <Route path="/tweede-locatie" element={<><Navbar /><Home campaign="locatie-2" /><Footer /></>} />
         <Route path="/voorspelbare-groei" element={<><Navbar /><Home campaign="voorspelbaar" /><Footer /></>} />
+        {/* Resultaten Pagina */}
+        <Route path="/resultaten" element={<><Navbar /><Results /><Footer /></>} />
 
         {/* Dynamische SEO Pagina's Route */}
-        <Route path="/:slug" element={<><Navbar /><SeoPageTemplate /><Footer /></>} />
+        <Route path="/kennisbank/:slug" element={<><Navbar /><SeoPageTemplate expectedType="blog" /><Footer /></>} />
+        <Route path="/:slug" element={<><Navbar /><SeoPageTemplate expectedType="service" /><Footer /></>} />
 
         {/* Minimal Routes */}
         <Route path="/intake/gekwalificeerd" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />

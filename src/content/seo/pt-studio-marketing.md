@@ -8,6 +8,10 @@ heroTitleLine4: "en werving."
 heroSubtitle: "Wij bouwen jouw PT studio uit tot een sterk en gewild merk, met een aanpak die rust en kwaliteit uitstraalt. Elke stap is gericht op duurzame groei die past bij wie jij bent als professional."
 contentSectionTitle: "Kwaliteit bewaren tijdens leuke reclames"
 slug: "pt-studio-marketing"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 # Rustige en betrouwbare PT studio marketing op zijn best

@@ -8,6 +8,10 @@ heroTitleLine4: "meer resoneert."
 heroSubtitle: "Wij zien dagelijks wat sportschooleigenaren écht nodig hebben om structureel nieuwe leden aan te trekken. Op deze pagina delen we de inzichten en strategieën die wij gebruiken om jouw marketing om te zetten in voorspelbare groei."
 contentSectionTitle: "In de valkuilen stappen van goedkope proefweken"
 slug: "sportschool-marketing-werkt-niet"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 Wanneer je sportschool marketing niet meer resoneert, is de eerste reflex vaak hetzelfde: een ander bureau proberen. Een nieuw pakket. Een andere campagnestrategie. En toch stagneren de leden weer na een paar weken. Wij leggen rustig bloot waarom dat patroon blijft herhalen, en wat er structureel anders moet.

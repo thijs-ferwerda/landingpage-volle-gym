@@ -8,6 +8,10 @@ heroTitleLine4: "moderne trainer."
 heroSubtitle: "Wij helpen PT studio eigenaren hun vakkennis zichtbaar te maken en een sterk merk te bouwen dat klanten aantrekt. Met bewezen marketingstrategieën zetten we jouw studio op de kaart en creëren we de vrijheid die je verdient."
 contentSectionTitle: "Trek sporters aan die jouw inzet waarderen"
 slug: "personal-trainer-marketing"
+type: "blog"
+relatedServices:
+  - "/sportschool-marketing"
+  - "/fitness-marketing-bureau"
 ---
 
 # Begrijpelijke personal trainer marketing voor meer vrijheid

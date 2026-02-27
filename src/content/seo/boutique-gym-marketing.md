@@ -8,6 +8,10 @@ heroTitleLine4: "gym leden."
 heroSubtitle: "Jouw boutique gym draait op verbinding en de kracht van kleine groepen. Wij bouwen marketingstrategieën die precies dat gevoel uitstralen en de juiste leden naar jouw club trekken."
 contentSectionTitle: "De juiste beleving in je gym marketing"
 slug: "boutique-gym-marketing"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 # Boutique gym marketing precies zoals het bedoeld is

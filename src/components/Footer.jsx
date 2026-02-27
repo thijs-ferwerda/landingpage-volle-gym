@@ -31,7 +31,7 @@ const Footer = () => {
                     <div className="md:col-span-2 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
                         <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Navigatie</h4>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
-                            <li><a href="/#resultaten" className="hover:text-accent transition-colors">Resultaten</a></li>
+                            <li><Link to="/resultaten" className="hover:text-accent transition-colors">Resultaten</Link></li>
                             <li><a href="/#visie" className="hover:text-accent transition-colors">Visie</a></li>
                             <li><a href="/#impact" className="hover:text-accent transition-colors">Over ons</a></li>
                             <li><a href="/#garantie" className="hover:text-accent transition-colors">Garantie</a></li>

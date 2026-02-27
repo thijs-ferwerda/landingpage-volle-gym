@@ -38,7 +38,7 @@ const Navbar = () => {
                         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
                             <a href="/#visie" className="hover:-translate-y-[1px] transition-transform">Visie</a>
                             <a href="/#systeem" className="hover:-translate-y-[1px] transition-transform">Systeem</a>
-                            <a href="/#resultaten" className="hover:-translate-y-[1px] transition-transform">Resultaten</a>
+                            <Link to="/resultaten" className="hover:-translate-y-[1px] transition-transform">Resultaten</Link>
                         </div>
 
                         <Link to="/intake" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled ? 'inline-block' : 'hidden md:inline-block'}`}>

@@ -8,6 +8,10 @@ heroTitleLine4: "promoten."
 heroSubtitle: "Wij bouwen een helder marketingsysteem dat naadloos aansluit op jouw website. Zo stromen kwalitatieve aanvragen automatisch je agenda in, terwijl jij je focust op je klanten."
 contentSectionTitle: "Gestructureerd nieuwe sporters verwelkomen"
 slug: "sportschool-marketing"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 Je sportschool succesvol en zonder stress promoten. Geen lastige vaktermen of eindeloze theorie. Wij koppelen een begrijpelijk systeem aan je website waardoor aanvragen netjes in je agenda vallen.

@@ -8,6 +8,10 @@ heroTitleLine4: "werven."
 heroSubtitle: "Wij bouwen voor jouw sportschool een bewezen ledenwerving systeem dat elke week verse aanvragen oplevert. Zo houd jij de focus op wat je het liefste doet: je leden begeleiden naar hun resultaten."
 contentSectionTitle: "Altijd genoeg sportende leden in jouw zaal"
 slug: "leden-werven-sportschool"
+type: "blog"
+relatedServices:
+  - "/sportschool-marketing"
+  - "/fitness-marketing-bureau"
 ---
 
 Structureel nieuwe leden werven zonder dat je er elke week je hoofd over hoeft te breken. Dat klinkt als iets wat de meeste sportschooleigenaren alleen kennen uit de periode vlak na hun opening, toen de aanmeldingen vanzelf binnenkwamen. Wij bouwen systemen die die instroom structureel en voorspelbaar maken, elke week opnieuw.

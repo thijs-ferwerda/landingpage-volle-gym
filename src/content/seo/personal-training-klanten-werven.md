@@ -8,6 +8,10 @@ heroTitleLine4: "klant op termijn."
 heroSubtitle: "Wij bouwen voor jou een kennismakingstraject dat aansluit op jouw tarief en jouw ideale klant. Zo stromen er structureel nieuwe personal training klanten binnen in jouw buurt."
 contentSectionTitle: "Waar zoek ik exact de serieuzer betalende leden voor mij?"
 slug: "personal-training-klanten-werven"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 # Goede en zekere personal training klanten werven in de buurt

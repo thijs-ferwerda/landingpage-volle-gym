@@ -8,6 +8,10 @@ heroTitleLine4: "zonder spam."
 heroSubtitle: "Wij bouwen een bewezen systeem dat de juiste mensen naar jouw gym trekt. Aanvragen die kloppen, van mensen die écht willen investeren in zichzelf."
 contentSectionTitle: "Wat betekent goede aanvragen verzamelen?"
 slug: "fitness-leadgeneratie"
+type: "blog"
+relatedServices:
+  - "/sportschool-marketing"
+  - "/fitness-marketing-bureau"
 ---
 
 # Hoe simpele fitness leadgeneratie echt werkt

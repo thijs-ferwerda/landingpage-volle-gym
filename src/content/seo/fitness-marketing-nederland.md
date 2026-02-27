@@ -8,6 +8,10 @@ heroTitleLine4: "Nederland."
 heroSubtitle: "Wij bouwen marketingstrategieën die aansluiten op de Nederlandse markt, afgestemd op jouw lokale doelgroep. Bewezen aanpakken die sportscholen en PT studio's in dorpen en steden écht laten groeien."
 contentSectionTitle: "Een eerlijk verhaal werkt gewoon beter"
 slug: "fitness-marketing-nederland"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 Nuchtere fitness marketing uit Nederland. Wij zetten overdreven reclameconcepten netjes opzij en focussen enkel op wat daadwerkelijk werkt in de lokale dorpen en steden van ons eigen land. Want de Nederlandse sportschoolmarkt vraagt om een andere aanpak dan wat je ziet in Amerikaanse YouTube-video's over gymgroei.

@@ -8,6 +8,10 @@ heroTitleLine4: "warme sales."
 heroSubtitle: "Wij richten advertenties gericht op de juiste mensen, op het juiste moment. Zo bouwen we stap voor stap vertrouwen en vullen we jouw agenda met serieuze klanten."
 contentSectionTitle: "De overstap naar echt een lang programma"
 slug: "high-ticket-pt-sales"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 # Volle Gym's rustige aanpak voor High Ticket PT Sales

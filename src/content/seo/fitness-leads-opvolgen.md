@@ -8,6 +8,10 @@ heroTitleLine4: "online opvolgen."
 heroSubtitle: "Wij bouwen geautomatiseerde opvolgstrategieën die jouw leads op het juiste moment bereiken. Zo blijft elk contact warm en loopt jouw agenda vol met gekwalificeerde afspraken."
 contentSectionTitle: "De belangrijkste minuten regel in actie"
 slug: "fitness-leads-opvolgen"
+type: "blog"
+relatedServices:
+  - "/sportschool-marketing"
+  - "/fitness-marketing-bureau"
 ---
 
 # Zo ontwijk je vergeten afspraken door fitness leads online op te volgen

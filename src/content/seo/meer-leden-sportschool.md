@@ -8,6 +8,10 @@ heroTitleLine4: "jouw tempo."
 heroSubtitle: "Wij helpen sportschooleigenaren stap voor stap groeien, met behoud van de sfeer die jouw gym uniek maakt. Meer leden, meer omzet en een community waar iedereen zich thuis voelt."
 contentSectionTitle: "Groeien en toch de controle houden over je kassa"
 slug: "meer-leden-sportschool"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 In kleine stappen meer leden toevoegen, op jouw tempo. Je wilt je omzet verhogen, maar wel op een manier die de gezellige sfeer in de sportzaal helemaal behoudt. Geen plotselinge invasie van nieuwe gezichten die de vaste kern verdringt. Geen marketingcampagnes die je dwingt tot kortingen waar je later spijt van krijgt. Gewoon: gecontroleerde, gezonde groei die past bij wat jij hebt opgebouwd.

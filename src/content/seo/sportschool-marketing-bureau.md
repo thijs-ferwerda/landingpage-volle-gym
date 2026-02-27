@@ -8,6 +8,10 @@ heroTitleLine4: "die jou helpt."
 heroSubtitle: "Wij werken rechtstreeks samen met de eigenaar en bouwen aan marketing die maand na maand meetbaar resultaat oplevert. Volledig transparant, altijd gericht op groei die beklijft."
 contentSectionTitle: "Het eerlijke verhaal over marketingbureaus"
 slug: "sportschool-marketing-bureau"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 De duidelijkste sportschool partner online die jou helpt. Wij werken samen met eigenaren: ontzettend transparant en altijd sturend op resultaat dat blijft.

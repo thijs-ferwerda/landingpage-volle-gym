@@ -8,6 +8,10 @@ heroTitleLine4: "reclame."
 heroSubtitle: "Wij zien dagelijks hoe small group training de winstgevendste dienst is die een sportschool kan aanbieden. Met onze tools vul je elke klas structureel en houd je het overzicht compleet."
 contentSectionTitle: "Samen sporten voor een gezonde sportschool"
 slug: "small-group-training-marketing"
+type: "blog"
+relatedServices:
+  - "/sportschool-marketing"
+  - "/fitness-marketing-bureau"
 ---
 
 # Verhoog je omzet veilig door small group training marketing

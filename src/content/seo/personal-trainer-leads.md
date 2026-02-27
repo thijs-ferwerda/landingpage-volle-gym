@@ -8,6 +8,10 @@ heroTitleLine4: "genereren."
 heroSubtitle: "Wij bouwen een systeem dat jouw agenda vult met leads die klaar zijn om te investeren in zichzelf. Zo besteed jij je tijd aan wat je het beste doet: mensen begeleiden naar hun resultaten."
 contentSectionTitle: "Het eerlijke geheim van sterke aanvragen"
 slug: "personal-trainer-leads"
+type: "service"
+relatedBlogs:
+  - "/kennisbank/fitness-leadgeneratie"
+  - "/kennisbank/leden-werven-sportschool"
 ---
 
 # Verzamel alleen de beste personal trainer leads
