@@ -64,7 +64,7 @@ const Hero = ({ campaign }) => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full flex flex-col items-center pt-32 md:pt-40 pb-8 bg-background overflow-hidden"
+            className="relative w-full flex flex-col items-center pt-24 md:pt-40 pb-8 bg-background overflow-hidden"
         >
             {/* Lighter, premium background image of people training/coaching */}
             <div
@@ -79,7 +79,7 @@ const Hero = ({ campaign }) => {
             <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent opacity-60" />
 
             {/* Content Container - Centered */}
-            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center shrink-0 mt-8 md:mt-12">
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center shrink-0 mt-2 md:mt-12">
 
 
 
