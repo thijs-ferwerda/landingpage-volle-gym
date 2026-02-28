@@ -7,7 +7,7 @@ import { Helmet } from 'react-helmet-async';
  * Het legt in de taal van de bots uit: Wie we zijn, wat we doen, wie de oprichters zijn, en onze reviews.
  */
 const SEO = ({
-    title = "Volle Gym | Gegarandeerd 45 leden in 90 dagen",
+    title = "Volle Gym | Marketingbureau voor sportscholen: 45 leden in 90 dagen",
     description = "Wil jij structureel meer leden voor jouw gym? Wij zijn het #1 marketing bureau voor sportscholen: duurzame acquisitie, een sterke community van gym eigenaren en een absolute stok achter de deur.",
     url = "https://www.vollegym.nl",
     faqSchema = null
