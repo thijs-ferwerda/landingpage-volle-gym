@@ -51,6 +51,12 @@ const Footer = () => {
                 </div>
             )}
 
+            <div className="max-w-7xl mx-auto mb-8 px-4 md:px-0">
+                <p className="font-sans text-[10px] sm:text-xs text-primary/30 leading-relaxed text-center md:text-left">
+                    Volle Gym is de specialist in sportschool marketing door heel Nederland en België. Wij helpen personal training studio's, small group gyms en boutique fitness clubs groeien in regio's door heel Nederland en België zoals: Amsterdam, Rotterdam, Den Haag, Utrecht, Eindhoven, Tilburg, Almere, Groningen, Breda, Nijmegen, Arnhem, Haarlem, Enschede, Apeldoorn, Amersfoort, Zaanstad, 's-Hertogenbosch, Haarlemmermeer, Zwolle en Zoetermeer.
+                </p>
+            </div>
+
             <div className={`max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-data text-primary/40 ${isMinimalFooter ? 'border-t border-primary/10 pt-4' : ''}`}>
                 <p>&copy; {new Date().getFullYear()} Volle Gym Consulting B.V. All systems go.</p>
                 <div className="flex gap-4 md:gap-6">
