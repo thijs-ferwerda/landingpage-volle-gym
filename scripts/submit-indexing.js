@@ -8,9 +8,9 @@ import { google } from 'googleapis';
 
 const SERVICE_ACCOUNT_KEY = 'ivory-amplifier-337717-d9f13e4949e6.json';
 const SERVICE_ACCOUNT_KEY_PATH = path.resolve(SERVICE_ACCOUNT_KEY);
-const SEO_DIR = path.resolve('src/content/seo');
 
 const HOSTNAME = 'https://www.vollegym.nl';
+const SITEMAP_PATH = path.resolve('public/sitemap.xml');
 
 async function main() {
     if (!fs.existsSync(SERVICE_ACCOUNT_KEY_PATH)) {
@@ -38,15 +38,21 @@ async function main() {
         process.exit(1);
     }
 
-    // Lees de pagina's uit de markdown map
-    const mdFiles = fs.existsSync(SEO_DIR) ? fs.readdirSync(SEO_DIR).filter(f => f.endsWith('.md')) : [];
-    const seoSlugs = mdFiles.map(file => file.replace('.md', ''));
+    // Lees de pagina's direct uit de sitemap voor volledige dekking
+    if (!fs.existsSync(SITEMAP_PATH)) {
+        console.error('❌ Sitemap niet gevonden. Run "npm run build" of "node scripts/generate-sitemap.js" eerst.');
+        process.exit(1);
+    }
 
-    const urlsToIndex = seoSlugs.map(slug => `${HOSTNAME}/${slug}`);
-
-    // Voeg home en intake ook toe indien gewenst
-    urlsToIndex.push(`${HOSTNAME}/`);
-    urlsToIndex.push(`${HOSTNAME}/intake`);
+    const sitemapContent = fs.readFileSync(SITEMAP_PATH, 'utf8');
+    const urlsToIndex = [];
+    const regex = /<loc>(.*?)<\/loc>/g;
+    let match;
+    while ((match = regex.exec(sitemapContent)) !== null) {
+        if (match[1]) {
+            urlsToIndex.push(match[1]);
+        }
+    }
 
     console.log(`🚀 Starten met het indienen van ${urlsToIndex.length} URL's bij de Indexing API...`);
 

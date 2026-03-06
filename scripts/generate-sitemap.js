@@ -2,17 +2,25 @@ import fs from 'fs';
 import path from 'path';
 
 const seoDir = path.resolve('src/content/seo');
-const mdFiles = fs.existsSync(seoDir) ? fs.readdirSync(seoDir).filter(f => f.endsWith('.md')) : [];
-const seoSlugs = mdFiles.map(file => file.replace('.md', ''));
+const vacanciesDir = path.resolve('src/content/vacancies');
+
+const seoFiles = fs.existsSync(seoDir) ? fs.readdirSync(seoDir).filter(f => f.endsWith('.md')) : [];
+const seoSlugs = seoFiles.map(file => file.replace('.md', ''));
+
+const vacancyFiles = fs.existsSync(vacanciesDir) ? fs.readdirSync(vacanciesDir).filter(f => f.endsWith('.md')) : [];
+const vacancySlugs = vacancyFiles.map(file => `vacatures/${file.replace('.md', '')}`);
 
 const hostname = 'https://www.vollegym.nl';
 
 const staticRoutes = [
   '/',
-  '/intake'
+  '/intake',
+  '/werken-bij',
+  '/vacatures',
+  '/solliciteren'
 ];
 
-const dynamicRoutes = seoSlugs.map(slug => `/${slug}`);
+const dynamicRoutes = [...seoSlugs, ...vacancySlugs].map(slug => `/${slug}`);
 const allRoutes = [...staticRoutes, ...dynamicRoutes];
 
 // Huidige datum voor <lastmod>

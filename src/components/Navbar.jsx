@@ -4,7 +4,9 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
-    const isIntakePage = location.pathname.startsWith('/intake');
+    const isIntakePage = location.pathname.startsWith('/intake') || location.pathname.startsWith('/solliciteren');
+    const isVacancyRoute = location.pathname.startsWith('/vacatures') || location.pathname.startsWith('/werken-bij');
+    const isWerkenBijRoute = location.pathname === '/werken-bij' || location.pathname === '/werken-bij/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,7 +19,7 @@ const Navbar = () => {
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl">
             <div
-                className={`flex items-center justify-between px-6 py-4 rounded-[2rem] transition-all duration-500 ${scrolled
+                className={`flex items-center justify-between px-6 py-4 rounded-[2rem] transition-all duration-500 ${scrolled || isVacancyRoute
                     ? 'bg-white/90 backdrop-blur-xl border border-primary/10 shadow-lg text-primary'
                     : 'bg-transparent text-primary border border-transparent'
                     }`}
@@ -35,15 +37,29 @@ const Navbar = () => {
 
                 {!isIntakePage && (
                     <>
-                        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-                            <a href="/#visie" className="hover:-translate-y-[1px] transition-transform">Visie</a>
-                            <a href="/#systeem" className="hover:-translate-y-[1px] transition-transform">Systeem</a>
-                            <Link to="/resultaten" className="hover:-translate-y-[1px] transition-transform">Resultaten</Link>
-                        </div>
+                        {!isVacancyRoute && (
+                            <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+                                <a href="/#visie" className="hover:-translate-y-[1px] transition-transform">Visie</a>
+                                <a href="/#systeem" className="hover:-translate-y-[1px] transition-transform">Systeem</a>
+                                <Link to="/resultaten" className="hover:-translate-y-[1px] transition-transform">Resultaten</Link>
+                            </div>
+                        )}
+                        {isWerkenBijRoute && (
+                            <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+                                <a href="#volle-gym-hq" className="hover:-translate-y-[1px] transition-transform">Volle Gym HQ</a>
+                                <a href="#onze-partners" className="hover:-translate-y-[1px] transition-transform">Personal Trainer</a>
+                            </div>
+                        )}
 
-                        <Link to="/intake" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled ? 'inline-block' : 'hidden md:inline-block'}`}>
-                            <span className="magnetic-btn-content">Doe de intake</span>
-                        </Link>
+                        {isVacancyRoute ? (
+                            <Link to="/solliciteren" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled || isVacancyRoute ? 'inline-block' : 'hidden md:inline-block'}`}>
+                                <span className="magnetic-btn-content">Meld je aan</span>
+                            </Link>
+                        ) : (
+                            <Link to="/intake" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled ? 'inline-block' : 'hidden md:inline-block'}`}>
+                                <span className="magnetic-btn-content">Doe de intake</span>
+                            </Link>
+                        )}
                     </>
                 )}
             </div>

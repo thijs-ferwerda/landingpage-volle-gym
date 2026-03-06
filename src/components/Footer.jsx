@@ -6,6 +6,7 @@ const Footer = () => {
     const isIntakePage = location.pathname.startsWith('/intake');
     const isSalesPage = ['/uitgeputte-trainer', '/tweede-locatie', '/voorspelbare-groei'].includes(location.pathname);
     const isMinimalFooter = isIntakePage || isSalesPage;
+    const isVacancyRoute = location.pathname.startsWith('/vacatures') || location.pathname.startsWith('/werken-bij');
 
     return (
         <footer className={`bg-dark text-primary px-6 md:px-12 relative z-20 ${isMinimalFooter ? 'pt-8 pb-8' : 'pt-24 pb-8 rounded-t-[4rem] mt-[-4rem]'}`}>
@@ -20,24 +21,32 @@ const Footer = () => {
                             <span className="font-heading font-black text-2xl tracking-tighter uppercase text-primary">Volle Gym</span>
                         </div>
                         <p className="font-sans text-primary/60 max-w-sm leading-relaxed mb-8">
-                            De helpende hand van gezond Nederland. Wij bouwen voorspelbare systemen voor PT studio's en small group gyms. Resultaat &gt; Meningen.
+                            {isVacancyRoute
+                                ? "De brug tussen toptalent en de beste PT studio's van Nederland. Bouw aan je carrière bij Volle Gym of een van onze exclusieve partners."
+                                : "De helpende hand van gezond Nederland. Wij bouwen voorspelbare systemen voor PT studio's en small group gyms. Resultaat > Meningen."
+                            }
                         </p>
-
-                        <div className="inline-flex items-center gap-3 px-4 py-2 border border-primary/10 rounded-full bg-primary/5">
-                            <div className="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-pulse"></div>
-                            <span className="font-data text-xs tracking-widest text-primary/80">Systeem operationeel</span>
-                        </div>
                     </div>
                     <div className="md:col-span-2 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
                         <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Navigatie</h4>
-                        <ul className="space-y-4 font-sans text-primary/60 text-sm">
-                            <li><Link to="/resultaten" className="hover:text-accent transition-colors">Resultaten</Link></li>
-                            <li><Link to="/kennisbank" className="hover:text-accent transition-colors">Kennisbank</Link></li>
-                            <li><a href="/#visie" className="hover:text-accent transition-colors">Visie</a></li>
-                            <li><a href="/#impact" className="hover:text-accent transition-colors">Over ons</a></li>
-                            <li><a href="/#garantie" className="hover:text-accent transition-colors">Garantie</a></li>
-                            <li><Link to="/intake" className="hover:text-accent transition-colors font-bold text-primary">Intake plannen</Link></li>
-                        </ul>
+                        {isVacancyRoute ? (
+                            <ul className="space-y-4 font-sans text-primary/60 text-sm">
+                                <li><Link to="/vacatures" className="hover:text-accent transition-colors">Alle vacatures</Link></li>
+                                <li><Link to="/werken-bij" className="hover:text-accent transition-colors">Werken bij Volle Gym HQ</Link></li>
+                                <li><Link to="/solliciteren" className="hover:text-accent transition-colors">Start aanmelding</Link></li>
+                                <li><Link to="/" className="hover:text-accent transition-colors mt-4 block text-primary/40">Terug naar hoofdwebsite</Link></li>
+                            </ul>
+                        ) : (
+                            <ul className="space-y-4 font-sans text-primary/60 text-sm">
+                                <li><Link to="/resultaten" className="hover:text-accent transition-colors">Resultaten</Link></li>
+                                <li><Link to="/kennisbank" className="hover:text-accent transition-colors">Kennisbank</Link></li>
+                                <li><a href="/#visie" className="hover:text-accent transition-colors">Visie</a></li>
+                                <li><a href="/#impact" className="hover:text-accent transition-colors">Over ons</a></li>
+                                <li><a href="/#garantie" className="hover:text-accent transition-colors">Garantie</a></li>
+                                <li><Link to="/werken-bij" className="hover:text-accent transition-colors">Werken bij</Link></li>
+                                <li><Link to="/intake" className="hover:text-accent transition-colors font-bold text-primary">Intake plannen</Link></li>
+                            </ul>
+                        )}
                     </div>
 
                     <div className="md:col-span-2 border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
@@ -58,7 +67,7 @@ const Footer = () => {
             </div>
 
             <div className={`max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-data text-primary/40 ${isMinimalFooter ? 'border-t border-primary/10 pt-4' : ''}`}>
-                <p>&copy; {new Date().getFullYear()} Volle Gym Consulting B.V. All systems go.</p>
+                <p>&copy; {new Date().getFullYear()} Volle Gym Consulting B.V.</p>
                 <div className="flex gap-4 md:gap-6">
                     <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
                     <Link to="/voorwaarden" className="hover:text-primary transition-colors">Voorwaarden</Link>

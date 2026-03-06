@@ -8,14 +8,14 @@ const MinimalLayout = ({ children }) => {
 
             {/* Minimal Header (Logo only) */}
             <header className="absolute top-0 left-0 w-full z-50 p-6 md:p-8 flex justify-center items-center">
-                <div className="flex items-center gap-3 select-none pointer-events-none">
+                <Link to="/" className="flex items-center gap-3 select-none hover:opacity-80 transition-opacity">
                     <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
                     </svg>
                     <span className="text-xl font-bold tracking-tight uppercase flex items-center gap-2 text-primary">
                         Volle Gym
                     </span>
-                </div>
+                </Link>
             </header>
 
             {/* Main Content */}
