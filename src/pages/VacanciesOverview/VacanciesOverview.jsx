@@ -5,8 +5,8 @@ import gsap from 'gsap';
 import frontMatter from 'front-matter';
 import { MapPin, Clock, Search } from 'lucide-react';
 
-// Load markdown files from the vacancies folder
-const mdFiles = import.meta.glob('../../content/vacancies/*.md', { query: '?raw', import: 'default', eager: true });
+// Load markdown files from the vacancies/partners folder
+const mdFiles = import.meta.glob('../../content/vacancies/partners/*.md', { query: '?raw', import: 'default', eager: true });
 
 const VacanciesOverview = () => {
     const [vacancies, setVacancies] = useState([]);

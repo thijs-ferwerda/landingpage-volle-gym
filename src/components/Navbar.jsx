@@ -4,9 +4,10 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
-    const isIntakePage = location.pathname.startsWith('/intake') || location.pathname.startsWith('/solliciteren');
+    const isIntakePage = location.pathname.startsWith('/intake') || location.pathname.startsWith('/solliciteren') || location.pathname.startsWith('/voordat-je-solliciteert');
     const isVacancyRoute = location.pathname.startsWith('/vacatures') || location.pathname.startsWith('/werken-bij');
     const isWerkenBijRoute = location.pathname === '/werken-bij' || location.pathname === '/werken-bij/';
+    const isIndividualVacancyRoute = isVacancyRoute && !isWerkenBijRoute && location.pathname !== '/werken-bij/hq' && location.pathname !== '/werken-bij/hq/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,9 +53,11 @@ const Navbar = () => {
                         )}
 
                         {isVacancyRoute ? (
-                            <Link to="/solliciteren" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled || isVacancyRoute ? 'inline-block' : 'hidden md:inline-block'}`}>
-                                <span className="magnetic-btn-content">Meld je aan</span>
-                            </Link>
+                            !isIndividualVacancyRoute && (
+                                <Link to="/solliciteren" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled || isVacancyRoute ? 'inline-block' : 'hidden md:inline-block'}`}>
+                                    <span className="magnetic-btn-content">Meld je aan</span>
+                                </Link>
+                            )
                         ) : (
                             <Link to="/intake" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled ? 'inline-block' : 'hidden md:inline-block'}`}>
                                 <span className="magnetic-btn-content">Doe de intake</span>

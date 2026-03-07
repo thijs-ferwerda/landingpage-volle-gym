@@ -19,7 +19,10 @@ import VacancyTemplate from './pages/VacancyTemplate/VacancyTemplate';
 import VacancyPage from './pages/VacancyTemplate/VacancyPage';
 import Solliciteren from './pages/Solliciteren/Solliciteren';
 import VacanciesOverview from './pages/VacanciesOverview/VacanciesOverview';
+import VacanciesOverviewHQ from './pages/VacanciesOverviewHQ/VacanciesOverviewHQ';
 import WerkenBij from './pages/WerkenBij/WerkenBij';
+import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteertHQ';
+import SolliciterenHQ from './pages/SolliciterenHQ/SolliciterenHQ';
 import MinimalLayout from './components/MinimalLayout';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
@@ -74,9 +77,11 @@ function App() {
 
         {/* Vacature Template Pagina */}
         <Route path="/werken-bij" element={<><Navbar /><WerkenBij /><Footer /></>} />
+        <Route path="/werken-bij/hq" element={<><Navbar /><VacanciesOverviewHQ /><Footer /></>} />
         <Route path="/vacatures" element={<><Navbar /><VacanciesOverview /><Footer /></>} />
         <Route path="/vacature-template" element={<><Navbar /><VacancyTemplate /><Footer /></>} />
         <Route path="/vacatures/:slug" element={<><Navbar /><VacancyPage /><Footer /></>} />
+        <Route path="/voordat-je-solliciteert-hq" element={<><Navbar /><VoorJeSolliciteertHQ /><Footer /></>} />
 
         {/* Dynamische SEO Pagina's Route */}
         <Route path="/kennisbank" element={<><Navbar /><Kennisbank /><Footer /></>} />
@@ -85,6 +90,7 @@ function App() {
 
         {/* Minimal Routes */}
         <Route path="/solliciteren" element={<MinimalLayout><Solliciteren /></MinimalLayout>} />
+        <Route path="/solliciteren-hq" element={<MinimalLayout><SolliciterenHQ /></MinimalLayout>} />
         <Route path="/intake/gekwalificeerd" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
         <Route path="/verdiepingsgesprek" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
         <Route path="/onboarding" element={<MinimalLayout><OnboardingTemplate packageName="het traject" /></MinimalLayout>} />

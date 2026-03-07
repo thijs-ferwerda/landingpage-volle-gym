@@ -5,8 +5,8 @@ import { Helmet } from 'react-helmet-async';
 import VacancyTemplate from './VacancyTemplate';
 import NotFound from '../NotFound/NotFound';
 
-// Laad alle markdown bestanden in via Vite's import.meta.glob
-const mdFiles = import.meta.glob('../../content/vacancies/*.md', { query: '?raw', import: 'default', eager: true });
+// Laad alle markdown bestanden in via Vite's import.meta.glob, inclusief submappen
+const mdFiles = import.meta.glob('../../content/vacancies/**/*.md', { query: '?raw', import: 'default', eager: true });
 
 const VacancyPage = () => {
     const { slug } = useParams();
@@ -21,7 +21,8 @@ const VacancyPage = () => {
             const { attributes: frontmatter, body } = frontMatter(rawContent);
             return {
                 ...frontmatter,
-                contentBody: body
+                contentBody: body,
+                isHQ: filePath.includes('/hq/')
             };
         } catch (e) {
             console.error("Fout bij parsen van vacature markdown:", e);

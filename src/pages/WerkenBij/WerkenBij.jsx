@@ -93,9 +93,9 @@ const WerkenBij = () => {
                                 We zoeken regelmatig performance marketeers, funnel bouwers en strategen in Amsterdam/Groningen.
                             </p>
 
-                            <button onClick={() => setIsModalOpen(true)} className="magnetic-btn bg-white border-2 border-primary text-primary px-8 py-4 rounded-full text-sm font-bold tracking-wide uppercase hover:bg-primary hover:text-white transition-all duration-300 w-fit">
-                                <span className="magnetic-btn-content">Open sollicitatie</span>
-                            </button>
+                            <Link to="/werken-bij/hq" className="magnetic-btn bg-white border-2 border-primary text-primary px-8 py-4 rounded-full text-sm font-bold tracking-wide uppercase hover:bg-primary hover:text-white transition-all duration-300 w-fit">
+                                <span className="magnetic-btn-content">Bekijk HQ Vacatures</span>
+                            </Link>
                         </div>
                     </div>
 
