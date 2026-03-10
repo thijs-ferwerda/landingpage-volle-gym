@@ -24,6 +24,7 @@ import WerkenBij from './pages/WerkenBij/WerkenBij';
 import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteertHQ';
 import SolliciterenHQ from './pages/SolliciterenHQ/SolliciterenHQ';
 import MinimalLayout from './components/MinimalLayout';
+import MetaLanding from './pages/MetaLanding/MetaLanding';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -72,6 +73,9 @@ function App() {
         <Route path="/uitgeputte-trainer" element={<><Navbar /><Home campaign="uitgeputte-trainer" /><Footer /></>} />
         <Route path="/tweede-locatie" element={<><Navbar /><Home campaign="locatie-2" /><Footer /></>} />
         <Route path="/voorspelbare-groei" element={<><Navbar /><Home campaign="voorspelbaar" /><Footer /></>} />
+        {/* Meta Ads Landingspagina's (9 variaties) */}
+        <Route path="/lp/:slug" element={<MetaLanding />} />
+
         {/* Resultaten Pagina */}
         <Route path="/resultaten" element={<><Navbar /><Results /><Footer /></>} />
 
