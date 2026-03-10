@@ -101,5 +101,131 @@ export const campaigns = {
         subtitle: "Zonder zekerheid kun je niks plannen. Geen tweede locatie. Geen uitbreiding. Ga je zelf het wiel uitvinden, of neem je over wat al werkt voor 40+ studio's? Wij garanderen 45 nieuwe klanten in 90 dagen. Lukt dat niet? Dan betaal je alleen voor de leden die je krijgt.",
         ctaPrimary: "Doe de intake",
         ctaSecondary: "Bekijk de methode"
+    },
+
+    // ─── META ADS: PIJLER 1 – GROEISYSTEEM / KLANTGEFINANCIERDE ACQUISITIE ───
+
+    // Variatie A: Systeem dat structureel nieuwe leden aantrekt
+    'meta-groeisysteem-a': {
+        badge: "VOOR GYMONDERNEMERS DIE WILLEN GROEIEN",
+        badgeLabel: "",
+        badgeLinkLabel: "Bekijk het systeem >",
+        headlineStart: "Bouw een systeem dat",
+        headlineHighlight: "structureel",
+        headlineEnd: " nieuwe leden aantrekt.",
+        subtitle: "Wij bouwen met gymondernemers een groeiproces waarbij nieuwe leden je eigen marketing financieren. Een voorspelbaar systeem dat elke maand werkt. Wij garanderen 45 nieuwe leden in 90 dagen.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // Variatie B: Voorspelbaarheid in ledeninstroom
+    'meta-groeisysteem-b': {
+        badge: "VOORSPELBARE GROEI VOOR JOUW GYM",
+        badgeLabel: "",
+        badgeLinkLabel: "Zo werkt het >",
+        headlineStart: "Weet elke maand precies",
+        headlineHighlight: "wat er binnenkomt",
+        headlineEnd: ".",
+        subtitle: "Wij geven je een systeem waarmee je elke maand exact weet hoeveel leden er starten. Inzicht. Controle. Rust. Wij garanderen 45 nieuwe leden in 90 dagen.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // Variatie C: Klantgefinancierde acquisitie
+    'meta-groeisysteem-c': {
+        badge: "SLIMMER GROEIEN MET JOUW GYM",
+        badgeLabel: "",
+        badgeLinkLabel: "Ontdek de methode >",
+        headlineStart: "Van mond-tot-mond naar",
+        headlineHighlight: "klantgefinancierde",
+        headlineEnd: " acquisitie.",
+        subtitle: "Wij bouwen een systeem dat zichzelf terugbetaalt. Elke nieuwe inschrijving financiert de volgende. Zo groeit jouw gym voorspelbaar en structureel. Gegarandeerd 45 nieuwe leden in 90 dagen.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // ─── META ADS: PIJLER 2 – COMMUNITY / SAMEN VERDER DAN ALLEEN ───
+
+    // Variatie A: Community die je begrijpt
+    'meta-community-a': {
+        badge: "JE HOEFT HET NIET ALLEEN TE DOEN",
+        badgeLabel: "",
+        badgeLinkLabel: "Ontdek de community >",
+        headlineStart: "Omring je met gymondernemers die",
+        hideBr: true,
+        headlineHighlight: "precies",
+        headlineEnd: " snappen waar je doorheen gaat.",
+        subtitle: "Wij hebben een community gebouwd van gymondernemers met dezelfde missie. Mensen die eerlijk met je sparren en hun oplossingen delen. Zodat jij sneller groeit.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // Variatie B: Groei met de juiste mensen
+    'meta-community-b': {
+        badge: "SAMEN VERDER DAN ALLEEN",
+        badgeLabel: "",
+        badgeLinkLabel: "Bekijk hoe >",
+        headlineStart: "Groei sneller met de",
+        headlineHighlight: "juiste mensen",
+        headlineEnd: " om je heen.",
+        subtitle: "Wij omringen gymondernemers met mensen die op hetzelfde niveau spelen. Dezelfde ambitie. Dezelfde drive. Zodat jij nooit meer alleen hoeft te bouwen.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // Variatie C: Sla jaren over door te leren van anderen
+    'meta-community-c': {
+        badge: "LEER VAN DE BESTE GYMONDERNEMERS",
+        badgeLabel: "",
+        badgeLinkLabel: "Ontdek het netwerk >",
+        headlineStart: "Sla jaren over door te leren van",
+        hideBr: true,
+        headlineHighlight: "succesvolle",
+        headlineEnd: " gymondernemers.",
+        subtitle: "Anderen hebben al meegemaakt wat jij nu doormaakt. Wij geven je directe toegang tot wat zij hebben geleerd. Praktisch. Bewezen. Direct toepasbaar.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // ─── META ADS: PIJLER 3 – ACCOUNTABILITY & STRUCTUUR ───
+
+    // Variatie A: Wekelijkse monitoring
+    'meta-accountability-a': {
+        badge: "PROACTIEVE BEGELEIDING VOOR JOUW GYM",
+        badgeLabel: "",
+        badgeLinkLabel: "Zo werkt het >",
+        headlineStart: "Wij monitoren jouw groei",
+        headlineHighlight: "wekelijks",
+        headlineEnd: ".",
+        subtitle: "Wij bekijken elke week de resultaten van onze klanten. Als er iets achterblijft, pakken we de telefoon. Proactief. Zodat jij altijd op koers blijft richting je doelen.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // Variatie B: Structuur die doordraait
+    'meta-accountability-b': {
+        badge: "GROEI DIE DOORDRAAIT",
+        badgeLabel: "",
+        badgeLinkLabel: "Bekijk de structuur >",
+        headlineStart: "Een groeistructuur die draait",
+        hideBr: true,
+        headlineHighlight: "ook als jij",
+        headlineEnd: " even niet kunt.",
+        subtitle: "Wij bouwen een systeem met wekelijkse check-ins en proactieve begeleiding. Zodat de machine blijft draaien. Ook als jij even minder aanwezig bent. Gegarandeerd.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
+    },
+
+    // Variatie C: Strak wekelijks ritme
+    'meta-accountability-c': {
+        badge: "STRUCTUUR ACHTER JOUW GROEI",
+        badgeLabel: "",
+        badgeLinkLabel: "Ontdek het ritme >",
+        headlineStart: "Zet structuur achter je",
+        headlineHighlight: "groei",
+        headlineEnd: " met een strak wekelijks ritme.",
+        subtitle: "Onze klanten werken met vaste meetmomenten. Cijfers worden besproken. Acties worden gezet. Wij zijn er proactief als eerste bij als iets achterblijft.",
+        ctaPrimary: "Doe de intake",
+        ctaSecondary: "Bekijk de methode"
     }
 };

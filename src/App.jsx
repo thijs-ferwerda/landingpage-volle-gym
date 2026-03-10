@@ -24,7 +24,6 @@ import WerkenBij from './pages/WerkenBij/WerkenBij';
 import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteertHQ';
 import SolliciterenHQ from './pages/SolliciterenHQ/SolliciterenHQ';
 import MinimalLayout from './components/MinimalLayout';
-import MetaLanding from './pages/MetaLanding/MetaLanding';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -73,8 +72,18 @@ function App() {
         <Route path="/uitgeputte-trainer" element={<><Navbar /><Home campaign="uitgeputte-trainer" /><Footer /></>} />
         <Route path="/tweede-locatie" element={<><Navbar /><Home campaign="locatie-2" /><Footer /></>} />
         <Route path="/voorspelbare-groei" element={<><Navbar /><Home campaign="voorspelbaar" /><Footer /></>} />
-        {/* Meta Ads Landingspagina's (9 variaties) */}
-        <Route path="/lp/:slug" element={<MetaLanding />} />
+        {/* Meta Ads Landingspagina Routes (Pijler 1: Groeisysteem) */}
+        <Route path="/groeisysteem" element={<><Navbar /><Home campaign="meta-groeisysteem-a" /><Footer /></>} />
+        <Route path="/voorspelbare-leden" element={<><Navbar /><Home campaign="meta-groeisysteem-b" /><Footer /></>} />
+        <Route path="/acquisitiesysteem" element={<><Navbar /><Home campaign="meta-groeisysteem-c" /><Footer /></>} />
+        {/* Meta Ads Landingspagina Routes (Pijler 2: Community) */}
+        <Route path="/community" element={<><Navbar /><Home campaign="meta-community-a" /><Footer /></>} />
+        <Route path="/samen-groeien" element={<><Navbar /><Home campaign="meta-community-b" /><Footer /></>} />
+        <Route path="/gymnetwerk" element={<><Navbar /><Home campaign="meta-community-c" /><Footer /></>} />
+        {/* Meta Ads Landingspagina Routes (Pijler 3: Accountability) */}
+        <Route path="/monitoring" element={<><Navbar /><Home campaign="meta-accountability-a" /><Footer /></>} />
+        <Route path="/groeistructuur" element={<><Navbar /><Home campaign="meta-accountability-b" /><Footer /></>} />
+        <Route path="/wekelijks-ritme" element={<><Navbar /><Home campaign="meta-accountability-c" /><Footer /></>} />
 
         {/* Resultaten Pagina */}
         <Route path="/resultaten" element={<><Navbar /><Results /><Footer /></>} />
