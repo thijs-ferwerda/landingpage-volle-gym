@@ -395,22 +395,18 @@ const IntakeNative = () => {
             )}
           </div>
 
-          {/* Progress bar */}
-          <div className="w-full mt-4">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-xs font-data text-primary/40 uppercase tracking-wider">
-                Vraag {currentStepIndex + 1} / {totalSteps}
-              </span>
-              <span className="text-xs font-data text-primary/40">
-                {Math.round(progress)}%
-              </span>
-            </div>
-            <div className="h-1.5 w-full bg-primary/5 rounded-full overflow-hidden">
+          {/* Step dots */}
+          <div className="flex items-center justify-center gap-2 mt-5">
+            {steps.map((_, i) => (
               <div
-                className="h-full bg-accent rounded-full transition-all duration-500 ease-out"
-                style={{ width: `${Math.max(progress, 3)}%` }}
+                key={i}
+                className={`rounded-full transition-all duration-300 ${
+                  i <= currentStepIndex
+                    ? 'w-2 h-2 bg-accent'
+                    : 'w-1.5 h-1.5 bg-primary/10'
+                }`}
               />
-            </div>
+            ))}
           </div>
 
           {/* Social proof */}
