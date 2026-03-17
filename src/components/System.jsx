@@ -82,7 +82,7 @@ const System = ({ campaign }) => {
                         <span className="font-drama italic text-primary/60 font-medium">voor ongekende schaalbaarheid.</span>
                     </h2>
                     <p className="font-sans text-primary/70 text-lg md:text-xl leading-relaxed">
-                        Geen losse trucjes of tijdelijke hypes. Wij implementeren een fundament dat jouw bedrijf onafhankelijk maakt van jouw uren, en afhankelijk maakt van ijzersterke systemen.
+                        Wij implementeren een fundament dat jouw bedrijf onafhankelijk maakt van jouw uren, en afhankelijk maakt van ijzersterke systemen.
                     </p>
                 </div>
 

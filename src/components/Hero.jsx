@@ -155,13 +155,13 @@ const Hero = ({ campaign }) => {
                             </svg>
                         </Link>
 
-                        {/* Desktop Secondary CTA (Hidden on mobile) */}
-                        <a href="#vsl" className="hidden sm:flex items-center gap-3 text-primary/80 hover:text-accent transition-colors group">
+                        {/* Desktop Secondary CTA (Hidden until video is recorded) */}
+                        {/* <a href="#vsl" className="hidden sm:flex items-center gap-3 text-primary/80 hover:text-accent transition-colors group">
                             <div className="w-12 h-12 rounded-full border border-primary/20 bg-white flex items-center justify-center group-hover:border-accent/40 shadow-sm transition-colors">
                                 <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
                             </div>
                             <span className="font-sans text-sm font-semibold uppercase tracking-wider">{activeCampaign.ctaSecondary || "Bekijk de methode"}</span>
-                        </a>
+                        </a> */}
                     </div>
 
                     {/* Mobile Social Proof SUBTEXT */}

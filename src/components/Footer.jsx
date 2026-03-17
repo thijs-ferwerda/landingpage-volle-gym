@@ -61,6 +61,7 @@ const Footer = () => {
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
                             <li><a href="mailto:info@vollegym.nl" className="hover:text-accent transition-colors">info@vollegym.nl</a></li>
                             <li><a href="tel:+3197010256819" className="hover:text-accent transition-colors">+31 97010256819</a></li>
+                            <li className="pt-2">Keizersgracht 127<br />1015 CJ Amsterdam</li>
                         </ul>
                     </div>
                 </div>

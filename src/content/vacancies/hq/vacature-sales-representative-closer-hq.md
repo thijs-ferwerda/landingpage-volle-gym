@@ -52,7 +52,7 @@ Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar
 - **Bewezen sales framework** gebaseerd op 46+ geanalyseerde calls. Je bouwt voort op wat werkt.
 - **Warme leads.** Prospects die zelf een gesprek inplannen via onze marketing. Jij focust op het gesprek.
 - **Wekelijkse coaching.** Een op een met de oprichter. Call reviews, feedback, doorontwikkeling.
-- **Remote en flexibel.** Volledig op afstand. Jij bepaalt je dag, wij meten je resultaten.
+- **Grotendeels remote, deels op kantoor.** Je werkt voornamelijk op afstand, maar we verwachten dat je één à twee dagen per week op ons kantoor in Amsterdam bent. Sales gaat voor, maar samen zijn op kantoor is belangrijk voor de cultuur en je ontwikkeling.
 
 ## Wat we van jou verwachten
 
@@ -74,12 +74,12 @@ Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar
 
 ## Vergoeding
 
-Volledig prestatiegericht, zonder plafond. We werken met een getrapte commissiestructuur op basis van je totale gesloten omzet over een rollende periode van drie maanden. Dat betekent dat consistent presteren je niet alleen meer omzet oplevert, maar ook een hoger commissiepercentage over dat volledige bedrag.
+Volledig prestatiegericht, zonder plafond. We werken met een getrapte commissiestructuur waarbij je percentage stijgt naarmate je consistenter presteert. Bovenop je deal commissie bouw je een retention bonus op over klanten die na hun eerste traject doorlopen. Dat betekent dat je verdiensten over tijd groeien, ook als je hetzelfde aantal deals sluit.
 
-**Wat je kunt verwachten:**
+Onze producten starten bij €3.000 en lopen op. Wij leveren je een gevulde agenda met warme leads. Jij focust op het gesprek en de deal.
 
-- **Op niveau:** rond de €2.000 per maand aan commissie
-- **Boven niveau:** rond de €6.000 per maand aan commissie
-- **Uitmuntend:** €12.500+ per maand aan commissie
+**Wat je netto (op je rekening) kunt verwachten:**
 
-Onze producten starten bij €3.000 en lopen op. Hoe meer je sluit en hoe consistenter je presteert, hoe harder je commissie groeit.
+- **Eerste maanden:** minimaal minimumloon terwijl je onze markt en ons product leert kennen
+- **Op target:** €2.500 – €4.000 netto per maand
+- **Boven target:** €4.000 – €6.000+ netto per maand
