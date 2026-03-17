@@ -2,42 +2,16 @@ import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import GoogleReviews from '../../components/GoogleReviews';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const featuredVideos = [
-    { name: 'Radjin Pitai', result: '34 leden in 5 weken tijd', objection: 'Stond op 9 leden en dacht eraan te stoppen. Groeide met Volle Gym in 5 weken door naar 34 leden.', videoId: 'O_OFRYE3omQ' },
-    { name: 'Murat Son', result: '72 leden in 3 maanden tijd', objection: 'Liep compleet vast na drie falende eerdere trajecten. Kreeg zijn focus terug en groeide explosief.', videoId: 'KxT9StIlyeg' },
-    { name: 'Sanne Hendriks', result: '20 leden in 1 week tijd', objection: 'Ontving eerder alleen loze aanmeldingen. Bij Volle Gym stroomden direct 20 serieuze leden binnen.', videoId: '_ERwMRB4pgE' },
-    { name: 'Benjamin van Keulen', result: '28 leden in 1 maand tijd', objection: 'Had een diepe afkeer van bureaus. Gaf het nog één kans en haalde 28 leden binnen.', videoId: 'Qjc8I01bZE8' },
-    { name: 'Jan Donker', result: '30 leden in 2 maanden tijd', objection: 'Durfde uitsluitend te starten op de resultaatgarantie en haalde 10x zijn investering terug.', videoId: 'BbCw16hxhbo' },
-];
-
-const metrics = [
-    { id: 'intakes', label: 'Aangevraagde intakegesprekken', target: 8432 },
-    { id: 'trials', label: 'Gestarte trials', target: 5124 },
-    { id: 'clients', label: 'Nieuwe leden', target: 2840 },
-];
-
-const gesprekPillars = [
-    {
-        num: '01',
-        title: 'Analyse van jouw gym',
-        desc: 'Waar sta je nu? Hoeveel leden, welk aanbod, welke uitdagingen? We brengen je huidige situatie scherp in kaart.',
-        icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
-    },
-    {
-        num: '02',
-        title: 'Jouw groeiplan',
-        desc: 'Op basis van jouw cijfers bouwen we een concreet 90-dagen plan. Met duidelijke targets, een acquisitiesysteem en salescoaching.',
-        icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
-    },
-    {
-        num: '03',
-        title: 'Eerlijk advies',
-        desc: 'Geen verkooppraatje. Als we je niet kunnen helpen, zeggen we dat. Je loopt sowieso weg met bruikbare inzichten.',
-        icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
-    },
+    { name: 'Radjin Pitai', result: '34 leden in 5 weken', objection: 'Stond op 9 leden en dacht eraan te stoppen. Groeide met Volle Gym in 5 weken door naar 34 leden.', videoId: 'O_OFRYE3omQ' },
+    { name: 'Murat Son', result: '72 leden in 3 maanden', objection: 'Liep compleet vast na drie falende eerdere trajecten. Kreeg zijn focus terug en groeide explosief met 72 nieuwe inschrijvingen.', videoId: 'KxT9StIlyeg' },
+    { name: 'Sanne Hendriks', result: '20 leden in 1 week', objection: 'Ontving eerder alleen loze aanmeldingen waarmee ze haar business niet kon bouwen. Bij Volle Gym stroomden direct 20 serieuze, betalende leden binnen.', videoId: '_ERwMRB4pgE' },
+    { name: 'Benjamin van Keulen', result: '28 leden in 1 maand', objection: 'Had een diepe afkeer van bureaus wegens het gebrek aan rendement. Gaf het nog één kans en haalde 28 leden binnen.', videoId: 'Qjc8I01bZE8' },
+    { name: 'Jan Donker', result: '30 leden in 2 maanden', objection: 'Durfde uitsluitend te starten op de resultaatgarantie en haalde 10x zijn complete investering terug aan nieuwe leden.', videoId: 'BbCw16hxhbo' },
 ];
 
 const voorbereidingItems = [
@@ -64,134 +38,62 @@ const voorbereidingItems = [
 const Bedankvideo = () => {
     const heroRef = useRef(null);
     const heroTextRefs = useRef([]);
-    const systemRef = useRef(null);
-    const systemCardsRef = useRef([]);
-    const impactRef = useRef(null);
-    const impactNumbersRef = useRef([]);
-    const socialRef = useRef(null);
-    const philosophyRef = useRef(null);
-    const philText1Ref = useRef(null);
-    const philText2Ref = useRef(null);
+    const storyRef = useRef(null);
+    const storyTextRefs = useRef([]);
+    const videoGridRef = useRef(null);
+    const videoCardRefs = useRef([]);
     const prepRef = useRef(null);
     const prepCardsRef = useRef([]);
     const ctaRef = useRef(null);
-    const scrollContainerRef = useRef(null);
 
-    const addToHeroRefs = (el) => {
-        if (el && !heroTextRefs.current.includes(el)) heroTextRefs.current.push(el);
-    };
-    const addToSystemCards = (el) => {
-        if (el && !systemCardsRef.current.includes(el)) systemCardsRef.current.push(el);
-    };
-    const addToImpactNumbers = (el) => {
-        if (el && !impactNumbersRef.current.includes(el)) impactNumbersRef.current.push(el);
-    };
-    const addToPrepCards = (el) => {
-        if (el && !prepCardsRef.current.includes(el)) prepCardsRef.current.push(el);
-    };
-
-    const scroll = (direction) => {
-        if (scrollContainerRef.current) {
-            const scrollAmount = direction === 'left' ? -400 : 400;
-            scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        }
-    };
+    const addToHeroRefs = (el) => { if (el && !heroTextRefs.current.includes(el)) heroTextRefs.current.push(el); };
+    const addToStoryRefs = (el) => { if (el && !storyTextRefs.current.includes(el)) storyTextRefs.current.push(el); };
+    const addToVideoCards = (el) => { if (el && !videoCardRefs.current.includes(el)) videoCardRefs.current.push(el); };
+    const addToPrepCards = (el) => { if (el && !prepCardsRef.current.includes(el)) prepCardsRef.current.push(el); };
 
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        // Hero animations
         const heroCtx = gsap.context(() => {
-            gsap.fromTo(
-                heroTextRefs.current,
+            gsap.fromTo(heroTextRefs.current,
                 { y: 30, opacity: 0 },
                 { y: 0, opacity: 1, duration: 1.5, stagger: 0.15, ease: 'power3.out', delay: 0.2 }
             );
         }, heroRef);
 
-        // System cards stagger
-        const systemCtx = gsap.context(() => {
-            gsap.fromTo(
-                systemCardsRef.current,
-                { y: 60, opacity: 0 },
-                {
-                    y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: 'power3.out',
-                    scrollTrigger: { trigger: systemRef.current, start: 'top 75%' },
-                }
+        const storyCtx = gsap.context(() => {
+            gsap.fromTo(storyTextRefs.current,
+                { y: 40, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: 'power3.out',
+                    scrollTrigger: { trigger: storyRef.current, start: 'top 70%' } }
             );
-        }, systemRef);
+        }, storyRef);
 
-        // Impact counter animation
-        const impactCtx = gsap.context(() => {
-            impactNumbersRef.current.forEach((el, index) => {
-                const targetValue = metrics[index].target;
-                el.innerText = '0';
-                gsap.to(el, {
-                    innerText: targetValue,
-                    duration: 2.5,
-                    ease: 'power2.out',
-                    snap: { innerText: 1 },
-                    scrollTrigger: { trigger: impactRef.current, start: 'top 80%' },
-                    onUpdate: function () {
-                        el.innerText = Math.ceil(this.targets()[0].innerText).toLocaleString('nl-NL');
-                    },
-                });
-            });
-
-            gsap.fromTo(
-                '.bedankvideo-impact-fade',
+        const videoCtx = gsap.context(() => {
+            gsap.fromTo(videoCardRefs.current,
                 { y: 30, opacity: 0 },
-                {
-                    y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: 'power3.out',
-                    scrollTrigger: { trigger: impactRef.current, start: 'top 75%' },
-                }
+                { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: 'power3.out',
+                    scrollTrigger: { trigger: videoGridRef.current, start: 'top 80%' } }
             );
-        }, impactRef);
+        }, videoGridRef);
 
-        // Philosophy text reveal
-        const philCtx = gsap.context(() => {
-            gsap.fromTo(
-                [philText1Ref.current, philText2Ref.current],
-                { y: 50, opacity: 0 },
-                {
-                    y: 0, opacity: 1, duration: 1.5, stagger: 0.3, ease: 'power3.out',
-                    scrollTrigger: { trigger: philosophyRef.current, start: 'top 60%' },
-                }
-            );
-        }, philosophyRef);
-
-        // Preparation cards stagger
         const prepCtx = gsap.context(() => {
-            gsap.fromTo(
-                prepCardsRef.current,
+            gsap.fromTo(prepCardsRef.current,
                 { y: 60, opacity: 0 },
-                {
-                    y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: 'power3.out',
-                    scrollTrigger: { trigger: prepRef.current, start: 'top 75%' },
-                }
+                { y: 0, opacity: 1, duration: 1.2, stagger: 0.2, ease: 'power3.out',
+                    scrollTrigger: { trigger: prepRef.current, start: 'top 75%' } }
             );
         }, prepRef);
 
-        // CTA fade in
         const ctaCtx = gsap.context(() => {
-            gsap.fromTo(
-                '.bedankvideo-cta-fade',
+            gsap.fromTo('.bedankvideo-cta-fade',
                 { y: 40, opacity: 0 },
-                {
-                    y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: 'power3.out',
-                    scrollTrigger: { trigger: ctaRef.current, start: 'top 75%' },
-                }
+                { y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: 'power3.out',
+                    scrollTrigger: { trigger: ctaRef.current, start: 'top 75%' } }
             );
         }, ctaRef);
 
-        return () => {
-            heroCtx.revert();
-            systemCtx.revert();
-            impactCtx.revert();
-            philCtx.revert();
-            prepCtx.revert();
-            ctaCtx.revert();
-        };
+        return () => { heroCtx.revert(); storyCtx.revert(); videoCtx.revert(); prepCtx.revert(); ctaCtx.revert(); };
     }, []);
 
     return (
@@ -201,165 +103,165 @@ const Bedankvideo = () => {
                 <meta name="robots" content="noindex" />
             </Helmet>
 
-            {/* ═══════════════════════════════════════════════════════
-                1. HERO — Opening + Bevestiging
-            ═══════════════════════════════════════════════════════ */}
-            <section
-                ref={heroRef}
-                className="relative w-full flex flex-col items-center pt-20 md:pt-40 pb-8 bg-background overflow-hidden"
-            >
-                <div
-                    className="absolute inset-0 w-full h-full bg-cover bg-center md:bg-[center_top_-2rem] opacity-[0.25] mix-blend-multiply"
-                    style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=60&w=1200&auto=format&fit=crop")' }}
-                />
+            {/* ── 1. HERO ── */}
+            <section ref={heroRef} className="relative w-full flex flex-col items-center pt-20 md:pt-40 pb-16 bg-background overflow-hidden">
+                <div className="absolute inset-0 w-full h-full bg-cover bg-center opacity-[0.25] mix-blend-multiply"
+                    style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=60&w=1200&auto=format&fit=crop")' }} />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
                 <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent opacity-60" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
-                <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center shrink-0 mt-2 md:mt-12">
-                    <div ref={addToHeroRefs} className="flex items-center justify-center gap-3 mb-6 md:mb-8 text-primary mt-4 md:mt-0">
+                <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 flex flex-col items-center text-center mt-2 md:mt-12">
+                    <div ref={addToHeroRefs} className="flex items-center justify-center gap-3 mb-6 md:mb-8">
                         <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
                         </svg>
-                        <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">
-                            Gesprek ingepland
-                        </p>
+                        <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">Gesprek ingepland</p>
                         <svg className="w-4 h-4 text-accent" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
                         </svg>
                     </div>
 
-                    <h1 className="max-w-4xl flex flex-col gap-2 mb-8">
-                        <span ref={addToHeroRefs} className="text-primary font-heading font-bold text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.05]">
-                            Goed dat je een stap zet.
-                            <br className="hidden md:block" />
-                            <span className="font-drama italic text-accent pr-1 md:pr-2">Bereid je voor.</span>
-                        </span>
+                    <h1 ref={addToHeroRefs} className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl tracking-tighter leading-[1.05] text-primary mb-8 max-w-4xl">
+                        Goed dat je een stap zet.{' '}
+                        <br className="hidden md:block" />
+                        <span className="font-drama italic text-accent">Bereid je voor.</span>
                     </h1>
 
-                    <p ref={addToHeroRefs} className="text-primary/70 font-sans text-base sm:text-lg md:text-xl max-w-2xl mb-10 md:mb-12 leading-relaxed">
-                        Voordat we bellen, beantwoorden we de vragen die we het vaakst krijgen. Zodat jij goed voorbereid bent en we het meeste uit ons gesprek halen.
+                    <p ref={addToHeroRefs} className="text-primary/70 font-sans text-base sm:text-lg md:text-xl max-w-2xl mb-4 leading-relaxed">
+                        De meeste gym owners die een gesprek inplannen doen er uiteindelijk niks mee. Het feit dat jij wél een stap zet, zegt iets over waar jij staat als ondernemer.
                     </p>
                 </div>
+            </section>
 
-                <div className="relative z-10 w-full pb-8 md:pb-6 pt-10 md:pt-14 mt-8 md:mt-12 border-t border-primary/10 shrink-0">
-                    <div ref={addToHeroRefs} className="flex flex-row items-center justify-center gap-8 md:gap-16 max-w-4xl mx-auto w-full px-6">
-                        <div className="flex items-center justify-center gap-4 text-primary/70 text-sm font-sans">
-                            <div className="flex -space-x-3">
-                                {[
-                                    'https://lh3.googleusercontent.com/a-/ALV-UjU2zXgmMVuNbQaNLlkGAqRqYM4rQeFsHsvqko3RXwM6O4CAB8GB=s128-c0x00000000-cc-rp-mo',
-                                    'https://lh3.googleusercontent.com/a-/ALV-UjUsjZz5qLlZ-BVl6Ejao50MrnXY_01sr918jmoOECc_fFUunt9J=s128-c0x00000000-cc-rp-mo',
-                                    'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=128&h=128&fit=crop',
-                                ].map((photoUrl, i) => (
-                                    <div key={i} className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-background bg-white overflow-hidden shrink-0 shadow-sm">
-                                        <img src={photoUrl} alt="Gym Eigenaar" width="128" height="128" className="w-full h-full object-cover object-[center_20%]" referrerPolicy="no-referrer" loading="lazy" />
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="flex flex-col text-left">
-                                <span className="text-primary font-bold text-xs md:text-sm">50+ succesvolle gyms</span>
-                                <span className="text-xs font-medium text-primary/60 hidden md:block">In heel Nederland</span>
+            {/* ── 2. TRUST BAR ── */}
+            <div className="w-full bg-accent text-white py-4 px-6 relative z-30">
+                <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-12 text-center">
+                    <div className="flex items-center gap-3 font-data text-xs uppercase tracking-widest">
+                        <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                        50+ succesvolle gyms
+                    </div>
+                    <div className="hidden sm:block w-px h-6 bg-white/30"></div>
+                    <div className="flex items-center gap-2">
+                        <div className="flex gap-0.5">
+                            {[1,2,3,4,5].map(s => (
+                                <svg key={s} className="w-3.5 h-3.5 text-[#FABB05]" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            ))}
+                        </div>
+                        <span className="font-data text-xs uppercase tracking-widest">5.0 Google Reviews</span>
+                    </div>
+                    <div className="hidden sm:block w-px h-6 bg-white/30"></div>
+                    <span className="font-data text-xs uppercase tracking-widest">Gem. 30 nieuwe leden per partner</span>
+                </div>
+            </div>
+
+            {/* ── 3. STORY — Wat verwachten in het gesprek ── */}
+            <section ref={storyRef} className="py-24 md:py-32 px-6 md:px-12 bg-white relative z-10 border-b border-primary/5 overflow-hidden">
+                <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px] pointer-events-none" />
+                <div className="absolute bottom-1/4 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+                <div className="max-w-4xl mx-auto flex flex-col items-center relative z-20">
+                    <div ref={addToStoryRefs} className="flex items-center gap-3 mb-8">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        <p className="text-primary/70 font-data uppercase tracking-widest text-xs md:text-sm font-semibold">Dit kun je verwachten</p>
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                    </div>
+
+                    <h2 ref={addToStoryRefs} className="font-heading font-bold text-3xl md:text-5xl text-primary leading-tight tracking-tight mb-16 text-center">
+                        Geen standaard verkoopgesprek. <br className="hidden md:block" />
+                        <span className="font-drama italic text-primary/60">Een eerlijke analyse van jouw gym.</span>
+                    </h2>
+
+                    <div ref={addToStoryRefs} className="group relative mt-4 cursor-default w-full max-w-3xl">
+                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-10 bg-white/30 backdrop-blur-sm border-t border-b border-white/40 shadow-sm rotate-[-3deg] z-30" style={{
+                            clipPath: 'polygon(0% 10%, 5% 0%, 15% 15%, 25% 0%, 35% 15%, 45% 0%, 55% 15%, 65% 0%, 75% 15%, 85% 0%, 95% 15%, 100% 5%, 100% 90%, 95% 100%, 85% 85%, 75% 100%, 65% 85%, 55% 100%, 45% 85%, 35% 100%, 25% 85%, 15% 100%, 5% 85%, 0% 95%)'
+                        }}>
+                            <div className="w-full h-full opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIi8+CjxwYXRoIGQ9Ik0wIDRMMCAwTDAgNEwiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjMiLz4KPC9zdmc+')]"></div>
+                        </div>
+                        <div className="absolute top-6 -right-6 w-20 h-8 bg-white/30 backdrop-blur-sm border-t border-b border-white/40 shadow-sm rotate-[45deg] z-30 hidden md:block" style={{
+                            clipPath: 'polygon(0% 10%, 10% 0%, 20% 15%, 30% 0%, 40% 15%, 50% 0%, 60% 15%, 70% 0%, 80% 15%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 80% 85%, 70% 100%, 60% 85%, 50% 100%, 40% 85%, 30% 100%, 20% 85%, 10% 100%, 0% 90%)'
+                        }}></div>
+
+                        <div className="bg-[#fdfbf7] rounded-sm p-8 md:p-14 shadow-[2px_15px_40px_rgba(0,0,0,0.08)] border border-[#e8E5df] relative overflow-hidden transform rotate-[1.5deg] transition-all hover:rotate-[0.5deg] duration-500 ease-out z-20">
+                            <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '12px 12px' }}></div>
+
+                            <div className="relative z-10 text-[#1e293b]" style={{ fontFamily: "'Caveat', cursive", fontSize: '110%' }}>
+                                <p className="leading-relaxed text-2xl md:text-3xl mb-8 transform rotate-[-1deg] opacity-90">
+                                    In ons gesprek gaan we samen kijken naar jouw gym. Waar je nu staat, waar je naartoe wilt, en wat er tussen zit. Ik ga je eerlijke vragen stellen over je business, je salesproces, je aanbod.
+                                </p>
+
+                                <ul className="space-y-6 text-2xl md:text-3xl mb-12 ml-2 transform rotate-[-0.5deg] opacity-90">
+                                    <li className="flex items-start gap-4">
+                                        <span className="text-green-700 font-bold leading-none mt-1">&#10003;</span>
+                                        <span>In het beste geval loop je weg met een concreet plan om de komende 90 dagen structureel te groeien.</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <span className="text-green-700 font-bold leading-none mt-1">&#10003;</span>
+                                        <span>In het slechtste geval heb je een uur gesproken met iemand die je gym door en door snapt.</span>
+                                    </li>
+                                    <li className="flex items-start gap-4">
+                                        <span className="text-green-700 font-bold leading-none mt-1">&#10003;</span>
+                                        <span>Sowieso ga je weg met inzichten waar je direct iets mee kunt.</span>
+                                    </li>
+                                </ul>
+
+                                <div className="mt-8 pt-4 relative transform rotate-[1deg]">
+                                    <h3 className="font-bold text-3xl md:text-4xl mb-4 tracking-wide mt-2">Geen verkooppraatje.</h3>
+                                    <p className="leading-relaxed text-2xl md:text-3xl opacity-90">
+                                        Wij werken niet met iedereen. Als het geen match is, zeggen we dat. De gym owners waar we de beste resultaten mee behalen zijn ondernemers die zelf eigenaarschap nemen en het systeem volgen.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-
-                        <div className="hidden md:block w-px h-12 bg-primary/10"></div>
-
-                        <div className="flex items-center justify-center gap-3 shrink-0">
-                            <div className="flex gap-1 bg-white px-4 py-2 rounded-full border border-primary/10 shadow-sm">
-                                {[1, 2, 3, 4, 5].map((star) => (
-                                    <svg key={star} className="w-4 h-4 text-[#FABB05]" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                    </svg>
-                                ))}
-                            </div>
-                            <span className="text-primary/70 text-sm font-sans font-bold hidden md:block">5.0 Google Reviews</span>
-                        </div>
+                        <div className="absolute inset-0 bg-black/10 rounded-sm transform rotate-[-1.5deg] translate-y-3 translate-x-2 z-10 blur-[4px]"></div>
                     </div>
                 </div>
             </section>
 
-            {/* ═══════════════════════════════════════════════════════
-                2. SYSTEEM CARDS — Wat verwachten in het gesprek
-            ═══════════════════════════════════════════════════════ */}
-            <section ref={systemRef} className="py-32 px-6 md:px-12 bg-background relative z-10 overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/[0.03] via-transparent to-transparent pointer-events-none" />
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
-                <div className="absolute top-1/2 -left-32 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+            {/* ── 4. VIDEO TESTIMONIALS ── */}
+            <section ref={videoGridRef} className="relative z-10 bg-background py-24">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none z-0" />
 
-                <div className="max-w-7xl mx-auto relative z-20">
-                    <div className="mb-20 max-w-3xl">
-                        <p className="font-data text-[#C02800] text-sm uppercase tracking-widest mb-4 flex items-center gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                            Wat verwachten in het gesprek
-                        </p>
-                        <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-primary leading-tight tracking-tight mb-6">
-                            Geen verkooppraatje. <br className="hidden md:block" />
-                            <span className="font-drama italic text-primary/60 font-medium">Wel een concreet plan.</span>
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12">
+                    <div className="text-center mb-16">
+                        <div className="flex items-center justify-center gap-3 mb-6">
+                            <span className="text-accent uppercase tracking-widest text-xs font-semibold px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5">
+                                Resultaten
+                            </span>
+                        </div>
+                        <h2 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl tracking-tighter text-primary leading-[1.1] mb-4">
+                            Zij gingen je <span className="font-drama italic text-accent">voor.</span>
                         </h2>
-                        <p className="font-sans text-primary/70 text-lg md:text-xl leading-relaxed">
-                            In ons gesprek analyseren we jouw gym, identificeren we groeikansen en bouwen we een plan waarmee je de komende 90 dagen structureel kunt groeien.
+                        <p className="text-primary/70 font-sans text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+                            Bekijk hoe andere gym owners het gesprek aangingen en wat er daarna gebeurde.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {gesprekPillars.map((pillar, idx) => (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {featuredVideos.map((item, index) => (
                             <div
-                                key={idx}
-                                ref={addToSystemCards}
-                                className="bg-white border border-primary/5 rounded-2xl md:rounded-3xl p-10 lg:p-12 hover:shadow-xl hover:-translate-y-1 hover:border-accent/20 transition-all duration-500 group flex flex-col h-full shadow-sm relative overflow-hidden"
+                                key={index}
+                                ref={addToVideoCards}
+                                className="bg-white rounded-[1.5rem] border border-primary/10 shadow-lg group hover:border-primary/20 transition-colors duration-300 flex flex-col h-full p-2 md:p-3"
                             >
-                                <div className="absolute -top-24 -right-24 w-48 h-48 bg-accent/5 rounded-full blur-[50px] group-hover:bg-accent/10 transition-colors" />
-                                <div className="flex justify-between items-start mb-16 relative z-10">
-                                    <div className="w-14 h-14 rounded-full bg-background flex items-center justify-center border border-primary/10 text-accent group-hover:scale-110 transition-transform duration-500 shadow-sm relative z-20">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d={pillar.icon} />
-                                        </svg>
-                                    </div>
-                                    <span className="font-heading text-accent/40 text-6xl md:text-8xl font-black absolute top-[-10px] right-[-10px] group-hover:text-accent/60 group-hover:scale-125 transition-all duration-500 ease-out origin-top-right select-none">{pillar.num}</span>
+                                <div className="relative shrink-0 w-full aspect-video bg-black rounded-xl overflow-hidden">
+                                    <iframe
+                                        className="absolute top-0 left-0 w-full h-full"
+                                        src={`https://www.youtube.com/embed/${item.videoId}?rel=0&modestbranding=1`}
+                                        title={`Interview met ${item.name}`}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        loading="lazy"
+                                    ></iframe>
                                 </div>
-                                <div className="mt-auto relative z-10 border-t border-primary/10 pt-8">
-                                    <h3 className="font-heading font-bold text-2xl text-primary mb-4 leading-snug">{pillar.title}</h3>
-                                    <p className="font-sans text-primary/70 leading-relaxed text-sm md:text-base">{pillar.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ═══════════════════════════════════════════════════════
-                3. IMPACT — Resultaten in cijfers
-            ═══════════════════════════════════════════════════════ */}
-            <section ref={impactRef} className="py-24 md:py-32 bg-primary text-white relative overflow-hidden border-y border-white/10">
-                <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/5 to-transparent pointer-events-none" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/10 via-primary to-primary opacity-50 pointer-events-none" />
-
-                <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex flex-col md:flex-row items-center md:items-start gap-16 lg:gap-24">
-                    <div className="w-full md:w-5/12 text-center md:text-left">
-                        <div className="bedankvideo-impact-fade flex items-center justify-center md:justify-start gap-2 mb-4">
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
-                            <span className="font-data text-white/60 text-xs uppercase tracking-widest">Bewezen resultaten</span>
-                        </div>
-                        <h2 className="bedankvideo-impact-fade font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.1] tracking-tight text-white">
-                            Wij vullen studio's <br className="hidden md:block" />
-                            <span className="font-drama italic text-accent pr-2">tot de nok toe vol.</span>
-                        </h2>
-                        <p className="bedankvideo-impact-fade font-sans text-white/70 text-lg md:text-xl leading-relaxed">
-                            Gemiddeld 30 nieuwe leden per klant. Sommige gyms zitten na 6 weken al vol. Het systeem werkt, zolang jij de opvolging doet.
-                        </p>
-                    </div>
-
-                    <div className="w-full md:w-5/12 flex flex-col gap-10 md:gap-14 pt-8 md:pt-0">
-                        {metrics.map((metric, i) => (
-                            <div key={metric.id} className="bedankvideo-impact-fade flex flex-col md:flex-row items-center md:items-center justify-between gap-4 md:gap-4 relative group border-t border-white/10 pt-8 first:border-0 first:pt-0 text-center md:text-left">
-                                <div className="flex flex-col items-center md:items-start w-full md:w-auto">
-                                    <span className="font-data text-accent text-sm md:text-xs mb-1 uppercase tracking-wide opacity-80 group-hover:opacity-100 transition-opacity">
-                                        // 0{i + 1}
-                                    </span>
-                                    <p className="font-sans font-medium text-white/80 text-lg md:text-xl">{metric.label}</p>
-                                </div>
-                                <div className="font-heading font-bold text-5xl md:text-6xl tracking-tighter text-white flex items-baseline justify-center md:justify-end gap-1 w-full md:w-auto mt-2 md:mt-0">
-                                    <span ref={addToImpactNumbers}>0</span>
-                                    <span className="text-accent text-3xl md:text-4xl">+</span>
+                                <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
+                                    <p className="font-heading font-semibold text-[#E03000] text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
+                                    <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest mb-3">{item.name}</p>
+                                    <div className="h-px w-full bg-primary/10 mb-3"></div>
+                                    <p className="font-sans text-sm text-primary/70 italic leading-relaxed flex-1">{item.objection}</p>
                                 </div>
                             </div>
                         ))}
@@ -367,90 +269,14 @@ const Bedankvideo = () => {
                 </div>
             </section>
 
-            {/* ═══════════════════════════════════════════════════════
-                4. SOCIAL PROOF — Video testimonials
-            ═══════════════════════════════════════════════════════ */}
-            <section ref={socialRef} className="py-24 bg-dark overflow-hidden relative border-y border-primary/10">
-                <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-dark to-transparent z-10 pointer-events-none hidden md:block" />
-                <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-dark to-transparent z-10 pointer-events-none hidden md:block" />
+            {/* ── 5. GOOGLE REVIEWS (hergebruikt component) ── */}
+            <GoogleReviews />
 
-                <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-20">
-                    <div>
-                        <h2 className="font-heading font-bold text-3xl md:text-5xl text-primary mb-4 tracking-tight">Echte resultaten.</h2>
-                        <div className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent inline-block"></span>
-                            <span className="font-data text-primary/60 text-xs uppercase tracking-widest">Bekijk de interviews</span>
-                        </div>
-                    </div>
-                    <div className="flex gap-4">
-                        <button onClick={() => scroll('left')} aria-label="Vorige resultaten" className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/5 hover:border-accent transition-colors">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
-                        </button>
-                        <button onClick={() => scroll('right')} aria-label="Volgende resultaten" className="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/5 hover:border-accent transition-colors">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                        </button>
-                    </div>
-                </div>
-
-                <div
-                    ref={scrollContainerRef}
-                    className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-6 md:px-12 pb-8 hide-scrollbar relative z-20"
-                    style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                >
-                    <style dangerouslySetInnerHTML={{ __html: `.hide-scrollbar::-webkit-scrollbar { display: none; }` }} />
-
-                    {featuredVideos.map((item, index) => (
-                        <div
-                            key={index}
-                            className="flex-shrink-0 w-[300px] md:w-[400px] bg-white rounded-[1.5rem] border border-primary/10 snap-center shadow-lg group hover:border-primary/20 transition-colors duration-300 p-2 md:p-3 flex flex-col"
-                        >
-                            <div className="relative shrink-0 w-full aspect-video bg-dark rounded-xl overflow-hidden">
-                                <iframe
-                                    className="absolute top-0 left-0 w-full h-full"
-                                    src={`https://www.youtube.com/embed/${item.videoId}?rel=0&modestbranding=1`}
-                                    title={`Interview met ${item.name}`}
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                    loading="lazy"
-                                ></iframe>
-                            </div>
-                            <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
-                                <p className="font-heading font-semibold text-[#E03000] text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
-                                <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest mb-3">{item.name}</p>
-                                <div className="h-px w-full bg-primary/10 mb-3"></div>
-                                <p className="font-sans text-sm text-primary/70 italic leading-relaxed">{item.objection}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* ═══════════════════════════════════════════════════════
-                5. PHILOSOPHY — Selectiecriteria
-            ═══════════════════════════════════════════════════════ */}
-            <section
-                ref={philosophyRef}
-                className="relative w-full min-h-[80vh] bg-dark flex items-center justify-center overflow-hidden py-32 border-y border-dark/20"
-            >
-                <div className="relative z-10 w-full max-w-5xl px-6 md:px-12 mx-auto flex flex-col gap-12">
-                    <div ref={philText1Ref} className="text-primary/60 font-heading text-xl md:text-2xl md:pl-12 border-l border-primary/20">
-                        Wij werken niet met iedereen. <br />
-                        <span className="text-primary font-bold">Als het geen match is, zeggen we dat.</span>
-                    </div>
-                    <div ref={philText2Ref} className="text-primary font-heading text-4xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight text-right md:pr-12">
-                        De beste resultaten? <br />
-                        <span className="font-drama italic text-accent text-5xl md:text-7xl lg:text-8xl pr-2">eigenaarschap.</span>
-                    </div>
-                </div>
-            </section>
-
-            {/* ═══════════════════════════════════════════════════════
-                6. VOORBEREIDING CARDS — 3 dingen om over na te denken
-            ═══════════════════════════════════════════════════════ */}
+            {/* ── 6. VOORBEREIDING ── */}
             <section ref={prepRef} className="py-32 px-6 md:px-12 bg-background relative z-10 overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/[0.03] via-transparent to-transparent pointer-events-none" />
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
+                <div className="absolute top-1/2 -left-32 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto relative z-20">
                     <div className="mb-20 max-w-3xl">
@@ -493,9 +319,7 @@ const Bedankvideo = () => {
                 </div>
             </section>
 
-            {/* ═══════════════════════════════════════════════════════
-                7. CTA — Afsluiting
-            ═══════════════════════════════════════════════════════ */}
+            {/* ── 7. CTA ── */}
             <section ref={ctaRef} className="relative overflow-hidden flex flex-col items-center justify-center">
                 <div className="w-full bg-black pt-32 pb-40 md:pb-56 px-6 md:px-12 relative flex items-center justify-center border-t-0">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-accent/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
@@ -510,25 +334,9 @@ const Bedankvideo = () => {
                             Wij spreken je <span className="font-drama italic text-accent font-medium">snel.</span>
                         </h2>
 
-                        <p className="bedankvideo-cta-fade font-sans text-white/90 mb-14 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
+                        <p className="bedankvideo-cta-fade font-sans text-white/90 mb-6 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
                             Als je open en eerlijk het gesprek ingaat, dan ga je er sowieso waarde uithalen. Of we nu gaan samenwerken of niet.
                         </p>
-
-                        <div className="bedankvideo-cta-fade relative inline-flex items-center justify-center mt-4 w-full md:w-auto">
-                            <div className="absolute top-1/2 -translate-y-1/2 -left-20 md:-left-64 transform rotate-[-8deg] text-white/70 text-2xl md:text-3xl pointer-events-none hidden md:block w-56 text-right z-20" style={{ fontFamily: "'Caveat', cursive" }}>
-                                Klaar om te groeien?
-                                <svg className="absolute top-[65%] -translate-y-1/2 -right-10 md:-right-14 w-8 h-8 md:w-10 md:h-10 text-white/50 transform rotate-[15deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12c4-2 8-2 13 0M12 6c2 1.5 4 4 4 6-2 2-4 4-5 5" />
-                                </svg>
-                            </div>
-
-                            <a href="/" className="magnetic-btn bg-accent text-white px-12 py-6 rounded-full text-lg md:text-xl font-bold tracking-widest uppercase group inline-flex items-center gap-4 hover:scale-105 transition-all duration-300 shadow-[0_20px_40px_rgba(255,53,0,0.25)] hover:shadow-[0_20px_60px_rgba(255,53,0,0.5)] z-10 relative">
-                                <span className="magnetic-btn-content">Terug naar home</span>
-                                <svg className="w-8 h-8 magnetic-btn-content group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2.5" d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>
