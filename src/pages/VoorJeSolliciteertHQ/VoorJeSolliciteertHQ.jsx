@@ -86,7 +86,7 @@ const VoorJeSolliciteertHQ = () => {
                         </ul>
 
                         <p className="text-lg leading-relaxed mb-12">
-                            Om onze doelen te behalen, zijn we op zoek naar de meest getalenteerde mensen van Nederland die zich volledig willen inzetten voor kwalitatieve fitness. Ben jij dit? En heb je alles gelezen? Solliciteer dan.
+                            Om onze doelen te behalen, zijn we op zoek naar de meest getalenteerde mensen van Nederland die zich volledig willen inzetten om Nederland gezonder te maken buiten ons reactieve en traditionele zorgstelsel om. Ben jij dit? En heb je alles gelezen? Solliciteer dan.
                         </p>
                     </div>
 
