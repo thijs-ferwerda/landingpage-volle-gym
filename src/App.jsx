@@ -115,7 +115,7 @@ function App() {
         <Route path="/onboarding/30-leden" element={<MinimalLayout><OnboardingTemplate packageName="30 leden in 90 dagen" /></MinimalLayout>} />
         <Route path="/onboarding/45-leden" element={<MinimalLayout><OnboardingTemplate packageName="45 leden in 90 dagen" /></MinimalLayout>} />
         <Route path="/bedankt" element={<MinimalLayout><ThankYou /></MinimalLayout>} />
-        <Route path="/bedankvideo" element={<MinimalLayout><Bedankvideo /></MinimalLayout>} />
+        <Route path="/bedankvideo" element={<><Navbar /><Bedankvideo /><Footer /></>} />
         <Route path="/welkom" element={<MinimalLayout><Welcome /></MinimalLayout>} />
 
         <Route path="/aanmelding" element={<MinimalLayout><IntakeNative /></MinimalLayout>} />
