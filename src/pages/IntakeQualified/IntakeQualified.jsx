@@ -44,6 +44,13 @@ const IntakeQualified = () => {
                 </p>
             </div>
 
+            <div className="md:hidden inline-flex items-center gap-3 px-5 py-2.5 border border-primary/10 rounded-full bg-white shadow-sm mb-6 relative z-20">
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <p className="font-data text-primary text-xs uppercase tracking-widest font-bold">
+                    Stap 2 van 2: Plan je gesprek
+                </p>
+            </div>
+
             {/* Embedded Calendar Container */}
             <div className="w-full max-w-6xl -mx-6 px-2 md:mx-auto md:px-20 pb-0 md:pb-10 pt-0 bg-transparent md:bg-white rounded-none md:rounded-3xl shadow-none md:shadow-xl border-0 md:border md:border-primary/10 relative z-20">
                 <iframe
