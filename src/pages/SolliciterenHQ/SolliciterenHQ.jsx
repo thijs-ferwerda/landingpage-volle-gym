@@ -6,6 +6,12 @@ const SolliciterenHQ = () => {
     const [searchParams] = useSearchParams();
     const roleId = searchParams.get('role');
 
+    const availableRoles = [
+        { id: 'sales-representative-closer', label: 'Sales Representative (Closer)' },
+        { id: 'videograaf-fotograaf', label: 'Videograaf / Fotograaf' },
+        { id: 'open-sollicitatie', label: 'Open Sollicitatie' },
+    ];
+
     // Format the role for display from url param (e.g. videograaf-fotograaf-hq -> Videograaf Fotograaf HQ)
     const displayRole = roleId
         ? roleId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
@@ -15,6 +21,7 @@ const SolliciterenHQ = () => {
         name: '',
         email: '',
         phone: '',
+        role: roleId || '',
         portfolioInfo: '',
         motivation: ''
     });
@@ -37,7 +44,9 @@ const SolliciterenHQ = () => {
                     phone: formData.phone,
                     portfolio: formData.portfolioInfo,
                     motivation: formData.motivation,
-                    role: displayRole,
+                    role: formData.role
+                        ? availableRoles.find(r => r.id === formData.role)?.label || formData.role
+                        : displayRole,
                     form_type: "hq_sollicitatie"
                 })
             });
@@ -138,16 +147,31 @@ const SolliciterenHQ = () => {
                                 />
                             </div>
                             <div>
-                                <label className="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Link naar Portfolio of CV</label>
-                                <input
-                                    type="text"
+                                <label className="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Rol</label>
+                                <select
                                     required
-                                    value={formData.portfolioInfo}
-                                    onChange={(e) => setFormData({ ...formData, portfolioInfo: e.target.value })}
-                                    className="w-full bg-primary/5 border border-primary/10 rounded-xl px-4 py-3 text-primary outline-none focus:border-accent/50 transition-colors"
-                                    placeholder="Linksbios, Instagram, LinkedIn, etc."
-                                />
+                                    value={formData.role}
+                                    onChange={(e) => setFormData({ ...formData, role: e.target.value })}
+                                    className="w-full bg-primary/5 border border-primary/10 rounded-xl px-4 py-3 text-primary outline-none focus:border-accent/50 transition-colors appearance-none"
+                                >
+                                    <option value="">Selecteer een rol...</option>
+                                    {availableRoles.map((role) => (
+                                        <option key={role.id} value={role.id}>{role.label}</option>
+                                    ))}
+                                </select>
                             </div>
+                        </div>
+
+                        <div>
+                            <label className="block text-xs font-bold text-primary/70 uppercase tracking-wider mb-2">Link naar Portfolio of CV</label>
+                            <input
+                                type="text"
+                                required
+                                value={formData.portfolioInfo}
+                                onChange={(e) => setFormData({ ...formData, portfolioInfo: e.target.value })}
+                                className="w-full bg-primary/5 border border-primary/10 rounded-xl px-4 py-3 text-primary outline-none focus:border-accent/50 transition-colors"
+                                placeholder="Linksbios, Instagram, LinkedIn, etc."
+                            />
                         </div>
 
                         <div>
