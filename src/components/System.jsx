@@ -73,7 +73,7 @@ const System = ({ campaign }) => {
 
             <div className="max-w-7xl mx-auto relative z-20">
                 <div className="mb-20 max-w-3xl">
-                    <p className="font-data text-accent text-sm uppercase tracking-widest mb-4 flex items-center gap-3">
+                    <p className="font-data text-[#C02800] text-sm uppercase tracking-widest mb-4 flex items-center gap-3">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
                         Het Volle Gym Systeem
                     </p>
