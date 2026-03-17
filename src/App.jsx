@@ -21,6 +21,7 @@ import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteer
 import SolliciterenHQ from './pages/SolliciterenHQ/SolliciterenHQ';
 import IntakeNative from './pages/IntakeNative/IntakeNative';
 import MinimalLayout from './components/MinimalLayout';
+import CookieConsent from './components/CookieConsent';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -124,6 +125,7 @@ function App() {
         {/* Catch-all 404 */}
         <Route path="*" element={<><Navbar /><NotFound /><Footer /></>} />
       </Routes>
+      <CookieConsent />
       <SpeedInsights />
       <Analytics />
     </Router>
