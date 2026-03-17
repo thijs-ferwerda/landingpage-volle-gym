@@ -59,7 +59,7 @@ const IntakeQualified = () => {
                     scrolling="no"
                     id="VJNpnvcHICgLsY8NxG8r_1771696118701"
                     title="booking"
-                    className="w-full min-h-[500px] md:min-h-[700px]"
+                    className="w-full min-h-[300px] md:min-h-[700px]"
                 ></iframe>
             </div>
 
@@ -71,7 +71,7 @@ const IntakeQualified = () => {
                 <div className="text-left">
                     <p className="font-heading font-semibold text-primary text-base">Bas Nagel</p>
                     <p className="font-sans text-primary/50 text-sm">Oprichter, Volle Gym</p>
-                    <p className="font-sans text-primary/40 text-xs mt-1 italic">Ik kijk ernaar uit je te spreken.</p>
+                    <p className="font-sans text-primary/60 text-sm mt-1 italic">Ik kijk ernaar uit je te spreken.</p>
                 </div>
             </div>
         </section>
