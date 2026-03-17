@@ -64,15 +64,17 @@ const IntakeQualified = () => {
             </div>
 
             {/* Speaker profile */}
-            <div className="-mt-12 md:mt-3 flex flex-col items-center gap-3 relative z-20">
-                <p className="font-drama text-primary/70 text-base italic">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
-                <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
-                        <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="text-left">
-                        <p className="font-heading font-semibold text-primary text-base">Bas Nagel</p>
-                        <p className="font-sans text-primary/50 text-sm">Oprichter, Volle Gym</p>
+            <div className="-mt-12 md:mt-3 w-full max-w-6xl -mx-6 px-2 md:mx-auto md:px-20 relative z-20">
+                <div className="w-full border-t border-primary/10 pt-4 flex flex-col items-center gap-3">
+                    <p className="font-drama text-primary/70 text-base italic">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
+                    <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
+                            <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="text-left">
+                            <p className="font-heading font-semibold text-primary text-base">Bas Nagel</p>
+                            <p className="font-sans text-primary/50 text-sm">Oprichter, Volle Gym</p>
+                        </div>
                     </div>
                 </div>
             </div>
