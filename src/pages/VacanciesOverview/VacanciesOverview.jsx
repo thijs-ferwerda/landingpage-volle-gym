@@ -73,6 +73,7 @@ const VacanciesOverview = () => {
             <Helmet>
                 <title>Vacaturebank | Werken bij Volle Gym Partners</title>
                 <meta name="description" content="Bekijk alle actuele PT en clubmanager vacatures bij onze high-end partners door heel Nederland." />
+                <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vollegym.nl"},{"@type":"ListItem","position":2,"name":"Vacatures"}]})}</script>
             </Helmet>
 
             <div ref={containerRef} className="bg-background min-h-screen pt-32 pb-24 font-sans text-primary">

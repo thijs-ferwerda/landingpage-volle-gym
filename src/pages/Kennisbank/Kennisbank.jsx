@@ -67,6 +67,7 @@ const Kennisbank = () => {
             <Helmet>
                 <title>Onze beste inzichten en tips. | Volle Gym</title>
                 <meta name="description" content="Praktische deep-dives, marketing theorieën en strategieën direct uit het krachthonk van Volle Gym. Speciaal voor de ambitieuze gymeigenaar." />
+                <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vollegym.nl"},{"@type":"ListItem","position":2,"name":"Kennisbank"}]})}</script>
             </Helmet>
 
             <div ref={containerRef} className="bg-background min-h-screen pt-32 pb-24 font-sans text-primary">

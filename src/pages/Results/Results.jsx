@@ -59,6 +59,7 @@ const Results = () => {
                 <title>Onze Resultaten | Volle Gym</title>
                 <meta name="description" content="Ontdek hoe we de afgelopen maanden landelijk al succesvolle gyms wisten te transformeren. Bekijk de ervaringen van onze partners." />
                 <link rel="canonical" href="https://www.vollegym.nl/resultaten" />
+                <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vollegym.nl"},{"@type":"ListItem","position":2,"name":"Resultaten"}]})}</script>
             </Helmet>
 
             <div ref={containerRef} className="bg-background min-h-screen pt-32 font-sans text-primary relative overflow-hidden">

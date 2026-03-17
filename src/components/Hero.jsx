@@ -70,7 +70,7 @@ const Hero = ({ campaign }) => {
             <div
                 className="absolute inset-0 w-full h-full bg-cover bg-center md:bg-[center_top_-2rem] opacity-[0.25] mix-blend-multiply"
                 style={{
-                    backgroundImage: 'url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2940&auto=format&fit=crop")',
+                    backgroundImage: 'url("https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=60&w=1200&auto=format&fit=crop")',
                 }}
             />
 
@@ -174,7 +174,7 @@ const Hero = ({ campaign }) => {
                                     'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=128&h=128&fit=crop'
                                 ].map((photoUrl, i) => (
                                     <div key={i} className="w-7 h-7 rounded-full border-2 border-background bg-primary/5 overflow-hidden shrink-0 shadow-sm relative object-cover" style={{ transitionDelay: `${i * 50}ms` }}>
-                                        <img src={photoUrl} alt="Gym Eigenaar" className="w-full h-full object-cover scale-100 object-[center_20%]" referrerPolicy="no-referrer" />
+                                        <img src={photoUrl} alt="Gym Eigenaar" width="128" height="128" className="w-full h-full object-cover scale-100 object-[center_20%]" referrerPolicy="no-referrer" loading="lazy" />
                                     </div>
                                 ))}
                             </div>
@@ -196,7 +196,7 @@ const Hero = ({ campaign }) => {
                                 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=128&h=128&fit=crop'
                             ].map((photoUrl, i) => (
                                 <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-white overflow-hidden shrink-0 shadow-sm relative group-hover:-translate-y-1 transition-transform" style={{ transitionDelay: `${i * 50}ms` }}>
-                                    <img src={photoUrl} alt="Succesverhaal" className="w-full h-full object-cover scale-100 object-[center_20%]" referrerPolicy="no-referrer" />
+                                    <img src={photoUrl} alt="Succesverhaal" width="128" height="128" className="w-full h-full object-cover scale-100 object-[center_20%]" referrerPolicy="no-referrer" loading="lazy" />
                                 </div>
                             ))}
                         </div>

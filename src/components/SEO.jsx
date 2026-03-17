@@ -10,7 +10,8 @@ const SEO = ({
     title = "Volle Gym | Marketingbureau voor sportscholen: 45 leden in 90 dagen",
     description = "Wil jij structureel meer leden voor jouw gym? Wij zijn het #1 marketing bureau voor sportscholen: duurzame acquisitie, een sterke community van gym eigenaren en een absolute stok achter de deur.",
     url = "https://www.vollegym.nl",
-    faqSchema = null
+    faqSchema = null,
+    breadcrumbs = null
 }) => {
 
     // Exacte gestructureerde data (Schema.org) die AI LLM's foutloos begrijpen
@@ -55,6 +56,20 @@ const SEO = ({
         "description": "Compleet marketing systeem voor sportscholen: leads genereren, systemiseren en ledenwerving met resultaatgarantie."
     };
 
+    // Breadcrumb Schema (alleen voor geïndexeerde pagina's)
+    const breadcrumbSchema = breadcrumbs ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbs.map((item, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name,
+            ...(item.url ? { "item": item.url } : {})
+        }))
+    } : null;
+
+    const schemas = [structuredData, serviceSchema, ...(faqSchema ? [faqSchema] : []), ...(breadcrumbSchema ? [breadcrumbSchema] : [])];
+
     return (
         <Helmet>
             {/* Standaard HTML tags */}
@@ -64,7 +79,7 @@ const SEO = ({
 
             {/* AIO / SEO JSON-LD Injectie */}
             <script type="application/ld+json">
-                {JSON.stringify([structuredData, serviceSchema, ...(faqSchema ? [faqSchema] : [])])}
+                {JSON.stringify(schemas)}
             </script>
         </Helmet>
     );

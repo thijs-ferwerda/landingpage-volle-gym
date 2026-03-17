@@ -66,6 +66,8 @@ const LogoMarquee = () => {
                         <img
                             src={logo.src}
                             alt={`Partner Logo ${logo.id}`}
+                            width="256"
+                            height="128"
                             className="max-h-24 md:max-h-32 w-auto object-contain"
                             loading="lazy"
                         />

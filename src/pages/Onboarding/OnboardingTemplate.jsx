@@ -226,8 +226,11 @@ const OnboardingTemplate = ({ packageName }) => {
                         {/* Image Header */}
                         <div className="w-full h-64 md:h-80 relative overflow-hidden bg-dark">
                             <img
-                                src="/teamfoto.jpeg"
+                                src="/teamfoto.webp"
                                 alt="Het Volle Gym Team"
+                                width="1080"
+                                height="1620"
+                                loading="lazy"
                                 className="w-full h-full object-cover object-[center_30%] group-hover:scale-105 transition-transform duration-700"
                             />
                             {/* Gradient Overlay */}
@@ -251,16 +254,16 @@ const OnboardingTemplate = ({ packageName }) => {
                             <div className="mt-8 flex items-center justify-between border-t border-primary/10 pt-6">
                                 <div className="flex -space-x-3">
                                     <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-40">
-                                        <img src="/thijs-ferwerda.png" alt="Thijs" className="w-full h-full object-cover object-top" />
+                                        <img src="/thijs-ferwerda-400.webp" alt="Thijs" width="400" height="390" loading="lazy" className="w-full h-full object-cover object-top" />
                                     </div>
                                     <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-30">
-                                        <img src="/bas-nagel.jpeg" alt="Bas" className="w-full h-full object-cover object-top" />
+                                        <img src="/bas-nagel-400.webp" alt="Bas" width="400" height="400" loading="lazy" className="w-full h-full object-cover object-top" />
                                     </div>
                                     <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-20">
-                                        <img src="/Michelle-de-bruijn.png" alt="Michelle" className="w-full h-full object-cover object-top" />
+                                        <img src="/Michelle-de-bruijn-400.webp" alt="Michelle" width="400" height="307" loading="lazy" className="w-full h-full object-cover object-top" />
                                     </div>
                                     <div className="w-12 h-12 rounded-full border-2 border-white bg-background overflow-hidden shadow-sm relative z-10">
-                                        <img src="/Stevan-terzic.png" alt="Stevan" className="w-full h-full object-cover object-top" />
+                                        <img src="/Stevan-terzic-400.webp" alt="Stevan" width="400" height="389" loading="lazy" className="w-full h-full object-cover object-top" />
                                     </div>
                                 </div>
                                 <div className="text-right">

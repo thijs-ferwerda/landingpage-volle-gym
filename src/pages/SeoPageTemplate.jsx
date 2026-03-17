@@ -125,8 +125,23 @@ const SeoPageTemplate = ({ expectedType }) => {
         return <Navigate to={`/kennisbank/${slug}`} replace />; // Moet via kennisbank
     }
 
+    // BreadcrumbList Schema (voor geïndexeerde pagina's)
+    const breadcrumbItems = [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.vollegym.nl" }
+    ];
+    if (expectedType === 'blog') {
+        breadcrumbItems.push({ "@type": "ListItem", "position": 2, "name": "Kennisbank", "item": "https://www.vollegym.nl/kennisbank" });
+        breadcrumbItems.push({ "@type": "ListItem", "position": 3, "name": pageData.title });
+    } else {
+        breadcrumbItems.push({ "@type": "ListItem", "position": 2, "name": pageData.title });
+    }
+
     // Genereer Schema.org JSON-LD
-    const schemas = [];
+    const schemas = [{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbItems
+    }];
     if (actualType === 'service' || actualType === 'pillar') {
         schemas.push({
             "@context": "https://schema.org",
@@ -278,8 +293,11 @@ const SeoPageTemplate = ({ expectedType }) => {
                         <div className="mt-16 pt-10 border-t border-primary/10 flex flex-col md:flex-row gap-8 items-center md:items-start bg-primary/5 rounded-2xl p-6 md:p-8">
                             <div className="w-32 h-32 md:w-40 md:h-40 shrink-0 rounded-full overflow-hidden border-4 border-background shadow-md">
                                 <img
-                                    src="/team-vollegym-new-v2.jpg"
+                                    src="/team-vollegym-new-v2.webp"
                                     alt="Team Volle Gym"
+                                    width="682"
+                                    height="1024"
+                                    loading="lazy"
                                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                                     onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&h=400&fit=crop'; }}
                                 />

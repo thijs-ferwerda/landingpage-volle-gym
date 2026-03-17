@@ -61,6 +61,7 @@ const WerkenBij = () => {
             <Helmet>
                 <title>Werken bij | Volle Gym</title>
                 <meta name="description" content="Kom werken bij Volle Gym intern of ontdek vacatures bij één van onze high-end partner studio's." />
+                <script type="application/ld+json">{JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.vollegym.nl"},{"@type":"ListItem","position":2,"name":"Werken bij"}]})}</script>
             </Helmet>
 
             <section className="relative w-full pt-40 pb-20 md:pt-48 md:pb-32 px-6 flex flex-col items-center overflow-hidden animate-section">

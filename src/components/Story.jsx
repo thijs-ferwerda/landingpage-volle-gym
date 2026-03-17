@@ -79,13 +79,6 @@ const Story = () => {
                             {/* Subtle Paper Texture Overlay using a CSS radial gradient pattern */}
                             <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '12px 12px' }}></div>
 
-                            {/* Inject Authentic Fineliner Pen Font (Caveat is very realistic for notes) */}
-                            <style>
-                                {`
-                                    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap');
-                                `}
-                            </style>
-
                             {/* Content wrapper with actual fineliner font and dark blue grey 'ink' color */}
                             <div className="relative z-10 text-[#1e293b]" style={{ fontFamily: "'Caveat', cursive", fontSize: '110%' }}>
 

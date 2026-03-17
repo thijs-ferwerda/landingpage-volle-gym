@@ -84,8 +84,11 @@ const VSL = () => {
                         className="relative w-full aspect-video rounded-[2rem] overflow-hidden shadow-2xl border border-dark/10"
                     >
                         <img
-                            src="/team-vollegym-new-v2.jpg"
+                            src="/team-vollegym-new-v2.webp"
                             alt="Het Volle Gym Team"
+                            width="682"
+                            height="1024"
+                            loading="lazy"
                             className="w-full h-full object-cover"
                         />
                     </div>
