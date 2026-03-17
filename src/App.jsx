@@ -23,6 +23,7 @@ import VacanciesOverviewHQ from './pages/VacanciesOverviewHQ/VacanciesOverviewHQ
 import WerkenBij from './pages/WerkenBij/WerkenBij';
 import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteertHQ';
 import SolliciterenHQ from './pages/SolliciterenHQ/SolliciterenHQ';
+import IntakeNative from './pages/IntakeNative/IntakeNative';
 import MinimalLayout from './components/MinimalLayout';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
@@ -112,6 +113,7 @@ function App() {
         <Route path="/bedankt" element={<MinimalLayout><ThankYou /></MinimalLayout>} />
         <Route path="/welkom" element={<MinimalLayout><Welcome /></MinimalLayout>} />
 
+        <Route path="/aanmelding" element={<MinimalLayout><IntakeNative /></MinimalLayout>} />
         <Route path="/intake" element={<><Navbar /><Intake /><Footer /></>} />
         <Route path="/sorry" element={<><Navbar /><Sorry /><Footer /></>} />
         <Route path="/privacy" element={<><Navbar /><PrivacyPolicy /><Footer /></>} />
