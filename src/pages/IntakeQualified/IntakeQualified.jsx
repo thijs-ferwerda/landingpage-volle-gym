@@ -52,7 +52,7 @@ const IntakeQualified = () => {
                     scrolling="no"
                     id="VJNpnvcHICgLsY8NxG8r_1771696118701"
                     title="booking"
-                    className="w-full min-h-[900px] md:min-h-[700px]"
+                    className="w-full min-h-[500px] md:min-h-[700px]"
                 ></iframe>
             </div>
 
