@@ -82,7 +82,6 @@ const VoorJeSolliciteertHQ = () => {
                         <h2 className="font-heading font-bold text-2xl mt-12 mb-4">Waar we geen waarde aan hechten</h2>
                         <ul className="list-none text-lg leading-relaxed space-y-4">
                             <li><strong>Formele communicatie.</strong> Communicatie intern is vaak spontaan, en soms ook een beetje ongestructureerd. En dat is prima. Liever dat, dan dat mensen gaan letten op hun woorden. Mensen zijn van nature niet formeel of professioneel. En goede ideeën ontstaan vaak niet zonder dat mensen zeggen wat ze echt denken of openlijk met hun gedachten durven te spelen.</li>
-                            <li><strong>Agenda's.</strong> We hebben relatief weinig vaste vergaderingen, en veel mensen hebben lucht in hun agenda's. Ik heb zelf als regel dat ik het niet inplan als ik het niet kan onthouden. Wil je met iemand overleggen? Loop naar diegene toe en loop samen een rondje. Niet alles hoeft een officiële uitnodiging te zijn en je hebt hier niet zomaar recht op andermans tijd omdat je het "inschiet".</li>
                             <li><strong>Je hand vasthouden.</strong> Als je begint bij Volle Gym kun je weinig sturing verwachten vanuit ons. Je krijgt je verantwoordelijkheden en maandoelen. Haal je die? Dan kunnen we door. Gooi je er met de pet naar? Dan niet. We merken dat de beste mensen zonder uitzondering altijd hun eigen weg vinden of tijdig aangeven dat ze er niet uit komen.</li>
                         </ul>
 
