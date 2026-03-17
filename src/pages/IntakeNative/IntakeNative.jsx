@@ -409,8 +409,8 @@ const IntakeNative = () => {
             ))}
           </div>
 
-          {/* Social proof */}
-          <div className="mt-8 flex flex-col items-center gap-4">
+          {/* Social proof & guarantee */}
+          <div className="mt-8 flex flex-col items-center gap-5 w-full max-w-sm">
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
                 {[
@@ -422,11 +422,16 @@ const IntakeNative = () => {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-primary/50 font-sans">
-                <span className="font-semibold text-primary/70">40+ sportscholen</span> gingen je voor
+              <p className="text-sm text-primary/70 font-sans">
+                <span className="font-semibold text-primary">40+ sportscholen</span> gingen je voor
               </p>
             </div>
 
+            <div className="flex items-center justify-center gap-4 text-sm font-sans text-primary/60">
+              <span>100% vrijblijvend</span>
+              <span className="w-1 h-1 rounded-full bg-primary/20"></span>
+              <span>Geen verplichtingen</span>
+            </div>
           </div>
         </div>
       </section>
