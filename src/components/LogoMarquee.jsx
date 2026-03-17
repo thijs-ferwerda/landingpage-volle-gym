@@ -50,7 +50,7 @@ const LogoMarquee = () => {
             <div className="absolute top-0 right-0 w-24 md:w-48 h-full bg-gradient-to-l from-background via-background/90 to-transparent z-10 pointer-events-none" />
 
             <div className="text-center mb-10 relative z-20">
-                <p className="font-sans text-primary/50 text-sm font-semibold tracking-wide uppercase">
+                <p className="font-sans text-primary/60 text-sm font-semibold tracking-wide uppercase">
                     Reeds 40+ succesvolle trajecten bij o.a.
                 </p>
             </div>

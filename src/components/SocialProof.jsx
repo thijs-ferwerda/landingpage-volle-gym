@@ -86,7 +86,7 @@ const SocialProof = () => {
 
                         {/* Content below video */}
                         <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
-                            <p className="font-heading font-semibold text-accent text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
+                            <p className="font-heading font-semibold text-[#E03000] text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
                             <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest mb-3">{item.name}</p>
                             <div className="h-px w-full bg-primary/10 mb-3"></div>
                             <p className="font-sans text-sm text-primary/70 italic leading-relaxed">
