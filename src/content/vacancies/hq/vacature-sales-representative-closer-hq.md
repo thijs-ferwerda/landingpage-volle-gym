@@ -13,6 +13,8 @@ Er zijn mensen die niet fit zijn en er wél iets aan willen doen. Ze melden zich
 
 Op dit moment werken we met meer dan 50 sportscholen door heel Nederland, hebben we een 5.0 op Google Reviews (21+ reviews), en starten er elke week gemiddeld twee nieuwe gyms met ons systeem. Maar om onze missie naar elke uithoek van Nederland te brengen, moet dat aantal verdrievoudigen. We zijn op zoek naar een commercieel talent dat elke call omzet in een sportschool die voller wordt.
 
+## Jouw rol
+
 Jij wordt de drijvende kracht achter de commerciële groei van de snelst groeiende gym-partner van Nederland. Je komt terecht in een team dat marketing, sales en klantsucces onder één dak heeft, waarbij jij de focus legt op het binnenhalen van sportschooleigenaren die klaar zijn om te groeien. Dit ga je doen:
 
 - Sales calls voeren: Je voert dagelijks gesprekken met sportschooleigenaren die via onze marketing een gesprek hebben ingepland. Discovery, pitch, close.
@@ -21,9 +23,11 @@ Jij wordt de drijvende kracht achter de commerciële groei van de snelst groeien
 - Dagelijks trainen en verbeteren: Je luistert je eigen gesprekken analytisch terug, werkt wekelijks samen met je coach, en zorgt dat er te allen tijde groei zit in je vaardigheden of in je resultaten.
 - Teamspeler zijn: Je deelt learnings, geeft feedback, en draagt bij aan een cultuur waarin iedereen beter wordt.
 
-Wie jij bent: Jij bent iemand die keihard werkt en altijd zijn verantwoordelijkheid neemt. Als iets niet goed gaat, kijk je eerst naar jezelf. Je rekent jezelf af op resultaten en je houdt jezelf in check door naar de data te kijken, niet naar je gevoel. Je bent een soort wandelende gedragsdeskundige; je ziet patronen waar anderen dat niet doen. Mensen herkennen je als iemand met buitengewoon veel energie. Ze worden er zelf beter van om in jouw buurt te zijn. Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar je niet achter staat. Je vraagt door totdat je bij de kern komt en je weet de emotionele triggers bij mensen te vinden en te raken. Tegelijkertijd voelen mensen zich veilig bij je. Ze vertrouwen je omdat je oprecht bent. Als je een kamer binnenloopt, merken mensen dat. En als je weggaat, willen ze dat je terugkomt.
+## Wie jij bent
 
-Resultaten na je eerste 6 maanden:
+Jij bent iemand die keihard werkt en altijd zijn verantwoordelijkheid neemt. Als iets niet goed gaat, kijk je eerst naar jezelf. Je rekent jezelf af op resultaten en je houdt jezelf in check door naar de data te kijken, niet naar je gevoel. Je bent een soort wandelende gedragsdeskundige; je ziet patronen waar anderen dat niet doen. Mensen herkennen je als iemand met buitengewoon veel energie. Ze worden er zelf beter van om in jouw buurt te zijn. Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar je niet achter staat. Je vraagt door totdat je bij de kern komt en je weet de emotionele triggers bij mensen te vinden en te raken. Tegelijkertijd voelen mensen zich veilig bij je. Ze vertrouwen je omdat je oprecht bent. Als je een kamer binnenloopt, merken mensen dat. En als je weggaat, willen ze dat je terugkomt.
+
+## Resultaten na je eerste 6 maanden
 
 - Je voert 20 tot 30 calls per week en haalt consistent minimaal 20% van je gesprekken binnen, oplopend tot 40%.
 - Je hebt je eigen pipeline opgebouwd en weet precies welke leads op welk moment de meeste aandacht nodig hebben.
@@ -31,7 +35,7 @@ Resultaten na je eerste 6 maanden:
 
 Kortom: jij zorgt dat elke sportschool die klaar is om te groeien, ook daadwerkelijk de stap zet. Elke klant die jij binnenhaalt is een ondernemer die weer kan ademen, een gym die voller wordt, en een community die sterker wordt.
 
-Ter informatie:
+## Ter informatie
 
 - Volledig prestatiegericht, zonder plafond. We werken met een getrapte commissiestructuur waarbij je percentage stijgt naarmate je consistenter presteert. Bovenop je deal commissie bouw je een retention bonus op over klanten die doorlopen. Onze producten starten bij €3.000 en lopen op. Wij leveren je een gevulde agenda met warme leads. Eerste maanden: minimumloon tot €4.000 per maand. Op target: €5.000 tot €8.000 per maand. Boven target: €8.000 tot €15.000 per maand.
 - Onze selectie is streng, met meerdere rondes en cases. We toetsen of jij scherp bent, of je kunt luisteren, of je durft door te vragen, en of je de discipline hebt om elke dag beter te worden. We zoeken geen cv's, we zoeken bewijs dat je resultaat kunt leveren.
