@@ -61,7 +61,7 @@ Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar
 - Je eigen pipeline beheren in GoHighLevel
 - Opvolging van prospects tot er een beslissing ligt
 - Gekwalificeerde leads die wel een intake invullen maar nog geen call hebben ingepland alsnog op je agenda krijgen
-- Dagelijks trainen en verbeteren met je coach
+- Dagelijks trainen en verbeteren met je coach. Je luistert ook zelfstandig je gesprekken analytisch terug en zorgt dat er te allen tijde groei in de beweging zit, in je vaardigheden of in je resultaten
 - Teamspeler zijn
 
 **Resultaten:**
