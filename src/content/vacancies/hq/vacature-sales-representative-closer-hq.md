@@ -80,6 +80,6 @@ Onze producten starten bij €3.000 en lopen op. Wij leveren je een gevulde agen
 
 **Wat je kunt verwachten:**
 
-- **Eerste maanden** (terwijl je onze markt en ons product leert kennen): minimumloon – €4.000 commissie per maand (netto op je rekening: ~€1.800 – €2.000)
-- **Op target** (na drie maanden consistent presteren): €5.000 – €8.000 commissie per maand (netto: ~€2.500 – €4.000)
-- **Boven target** (consistent bovengemiddeld presteren): €8.000 – €15.000 commissie per maand (netto: ~€4.000 – €7.500)
+- **Eerste maanden** (terwijl je onze markt en ons product leert kennen): minimumloon – €4.000 commissie per maand
+- **Op target** (na drie maanden consistent presteren): €5.000 – €8.000 commissie per maand
+- **Boven target** (consistent bovengemiddeld presteren): €8.000 – €15.000 commissie per maand
