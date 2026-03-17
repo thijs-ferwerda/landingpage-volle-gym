@@ -57,7 +57,7 @@ const IntakeQualified = () => {
             </div>
 
             {/* Speaker profile */}
-            <div className="mt-10 flex items-center gap-4 relative z-20">
+            <div className="mt-3 flex items-center gap-4 relative z-20">
                 <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
                     <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
                 </div>
