@@ -48,11 +48,11 @@ const VoorJeSolliciteertHQ = () => {
 
                         <h2 className="font-heading font-bold text-2xl mt-12 mb-4">Wat we bieden</h2>
                         <p className="text-lg leading-relaxed">
-                            Bij Volle Gym investeren we veel in het team. Vooral in de vorm van werkomgeving. Werkomgeving is alles, en hét verschil tussen geluk en ongeluk. We bieden je een werkplek met veel licht, ruimte, en focus. Verder bieden we nog:
+                            Bij Volle Gym investeren we veel in het team. Vooral in de vorm van werkomgeving. Werkomgeving is alles, en hét verschil tussen geluk en ongeluk. We werken vanuit ons kantoor in hartje Amsterdam, op de Keizersgracht, inclusief een eigen kleine sportschool. Een aantal dagen per week komen we hier samen om ervoor te zorgen dat we de omgeving creëren waarin getalenteerde mensen ook daadwerkelijk floreren. Die omgeving bouwen we heel bewust, zodat alles optimaal werkt voor resultaten. Verder bieden we nog:
                         </p>
                         <ul className="list-disc pl-6 text-lg leading-relaxed space-y-2">
                             <li>Een goed salaris (staat per vacature aangegeven);</li>
-                            <li>Gym, sportfaciliteiten en een energieke cultuur op kantoor;</li>
+                            <li>Kantoor op de Keizersgracht in Amsterdam met eigen gym en sportfaciliteiten;</li>
                             <li>We starten altijd met een contract van 7 maanden, inclusief 1 maand proeftijd. Daarna evalueren we prestaties en potentie. Bij Volle Gym kan je snel stappen maken, mits je verantwoordelijkheid neemt, resultaat levert en blijft leren. Groei is hier geen belofte, maar een mogelijkheid die je zelf waarmaakt.</li>
                         </ul>
                         <p className="text-lg leading-relaxed mt-4">
