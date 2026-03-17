@@ -82,7 +82,7 @@ export default async function handler(req, res) {
       phone,
       companyName: gymName,
       locationId: GHL_LOCATION_ID,
-      source: 'Website Intake Native',
+      source: 'survey | intake homepage',
       tags,
       customFields,
     };
