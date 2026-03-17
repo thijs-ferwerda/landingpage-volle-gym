@@ -64,7 +64,7 @@ const IntakeQualified = () => {
             </div>
 
             {/* Speaker profile */}
-            <div className="mt-3 flex flex-col items-center gap-3 relative z-20">
+            <div className="-mt-12 md:mt-3 flex flex-col items-center gap-3 relative z-20">
                 <p className="font-sans text-primary/60 text-sm italic">Ik kijk ernaar uit je te spreken.</p>
                 <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
