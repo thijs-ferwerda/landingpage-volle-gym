@@ -28,7 +28,7 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
-                        <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Navigatie</h4>
+                        <h3 className="font-heading font-bold mb-6 text-primary tracking-wide text-base">Navigatie</h3>
                         {isVacancyRoute ? (
                             <ul className="space-y-4 font-sans text-primary/60 text-sm">
                                 <li><Link to="/vacatures" className="hover:text-accent transition-colors">Alle vacatures</Link></li>
@@ -50,14 +50,14 @@ const Footer = () => {
                     </div>
 
                     <div className="border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
-                        <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Connect</h4>
+                        <h3 className="font-heading font-bold mb-6 text-primary tracking-wide text-base">Connect</h3>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm mb-10">
                             <li><a href="https://www.linkedin.com/company/volle-gym-consulting/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>
                             <li><a href="https://www.instagram.com/vollegym/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a></li>
                             <li><a href="https://www.youtube.com/@vollegym" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">YouTube</a></li>
                         </ul>
 
-                        <h4 className="font-heading font-bold mb-6 text-primary tracking-wide">Contact</h4>
+                        <h3 className="font-heading font-bold mb-6 text-primary tracking-wide text-base">Contact</h3>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
                             <li><a href="mailto:info@vollegym.nl" className="hover:text-accent transition-colors">info@vollegym.nl</a></li>
                             <li><a href="tel:+3197010256819" className="hover:text-accent transition-colors">+31 97010256819</a></li>

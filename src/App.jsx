@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
@@ -7,16 +7,12 @@ import IntakeQualified from './pages/IntakeQualified/IntakeQualified';
 import Sorry from './pages/Sorry/Sorry';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService/TermsOfService';
-import SeoPageTemplate from './pages/SeoPageTemplate';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound/NotFound';
 import Welcome from './pages/Welcome/Welcome';
 import ThankYou from './pages/ThankYou/ThankYou';
 import Results from './pages/Results/Results';
-import Kennisbank from './pages/Kennisbank/Kennisbank';
 import OnboardingTemplate from './pages/Onboarding/OnboardingTemplate';
-import VacancyTemplate from './pages/VacancyTemplate/VacancyTemplate';
-import VacancyPage from './pages/VacancyTemplate/VacancyPage';
 import Solliciteren from './pages/Solliciteren/Solliciteren';
 import VacanciesOverview from './pages/VacanciesOverview/VacanciesOverview';
 import VacanciesOverviewHQ from './pages/VacanciesOverviewHQ/VacanciesOverviewHQ';
@@ -27,6 +23,12 @@ import IntakeNative from './pages/IntakeNative/IntakeNative';
 import MinimalLayout from './components/MinimalLayout';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
+
+// Lazy-load pages that use react-markdown (keeps vendor-markdown chunk off homepage)
+const SeoPageTemplate = lazy(() => import('./pages/SeoPageTemplate'));
+const Kennisbank = lazy(() => import('./pages/Kennisbank/Kennisbank'));
+const VacancyTemplate = lazy(() => import('./pages/VacancyTemplate/VacancyTemplate'));
+const VacancyPage = lazy(() => import('./pages/VacancyTemplate/VacancyPage'));
 
 // Use a smooth scrolling setup for lenis-like feel or just native CSS scroll.
 // Global noise overlay is handled in index.css
@@ -93,14 +95,14 @@ function App() {
         <Route path="/werken-bij" element={<><Navbar /><WerkenBij /><Footer /></>} />
         <Route path="/werken-bij/hq" element={<><Navbar /><VacanciesOverviewHQ /><Footer /></>} />
         <Route path="/vacatures" element={<><Navbar /><VacanciesOverview /><Footer /></>} />
-        <Route path="/vacature-template" element={<><Navbar /><VacancyTemplate /><Footer /></>} />
-        <Route path="/vacatures/:slug" element={<><Navbar /><VacancyPage /><Footer /></>} />
+        <Route path="/vacature-template" element={<><Navbar /><Suspense fallback={null}><VacancyTemplate /></Suspense><Footer /></>} />
+        <Route path="/vacatures/:slug" element={<><Navbar /><Suspense fallback={null}><VacancyPage /></Suspense><Footer /></>} />
         <Route path="/voordat-je-solliciteert-hq" element={<><Navbar /><VoorJeSolliciteertHQ /><Footer /></>} />
 
         {/* Dynamische SEO Pagina's Route */}
-        <Route path="/kennisbank" element={<><Navbar /><Kennisbank /><Footer /></>} />
-        <Route path="/kennisbank/:slug" element={<><Navbar /><SeoPageTemplate expectedType="blog" /><Footer /></>} />
-        <Route path="/:slug" element={<><Navbar /><SeoPageTemplate expectedType="service" /><Footer /></>} />
+        <Route path="/kennisbank" element={<><Navbar /><Suspense fallback={null}><Kennisbank /></Suspense><Footer /></>} />
+        <Route path="/kennisbank/:slug" element={<><Navbar /><Suspense fallback={null}><SeoPageTemplate expectedType="blog" /></Suspense><Footer /></>} />
+        <Route path="/:slug" element={<><Navbar /><Suspense fallback={null}><SeoPageTemplate expectedType="service" /></Suspense><Footer /></>} />
 
         {/* Minimal Routes */}
         <Route path="/solliciteren" element={<MinimalLayout><Solliciteren /></MinimalLayout>} />
