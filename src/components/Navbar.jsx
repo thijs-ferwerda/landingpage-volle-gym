@@ -7,7 +7,9 @@ const Navbar = () => {
     const isIntakePage = location.pathname.startsWith('/intake') || location.pathname.startsWith('/solliciteren') || location.pathname.startsWith('/voordat-je-solliciteert');
     const isVacancyRoute = location.pathname.startsWith('/vacatures') || location.pathname.startsWith('/werken-bij');
     const isWerkenBijRoute = location.pathname === '/werken-bij' || location.pathname === '/werken-bij/';
-    const isIndividualVacancyRoute = isVacancyRoute && !isWerkenBijRoute && location.pathname !== '/werken-bij/hq' && location.pathname !== '/werken-bij/hq/';
+    const isHQOverviewRoute = location.pathname === '/werken-bij/hq' || location.pathname === '/werken-bij/hq/';
+    const isIndividualVacancyRoute = isVacancyRoute && !isWerkenBijRoute && !isHQOverviewRoute;
+    const shouldCenterLogo = isIntakePage || isHQOverviewRoute || isIndividualVacancyRoute;
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,7 +30,7 @@ const Navbar = () => {
                 <Link
                     to="/"
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                    className={`text-xl font-bold tracking-tight uppercase flex items-center gap-2 ${scrolled ? '' : 'mx-auto md:mx-0'}`}
+                    className={`text-xl font-bold tracking-tight uppercase flex items-center gap-2 ${shouldCenterLogo ? 'mx-auto' : scrolled ? '' : 'mx-auto md:mx-0'}`}
                 >
                     <svg className={`w-6 h-6 ${scrolled ? 'text-accent' : 'text-primary'} transition-colors duration-300`} viewBox="0 0 24 24" fill="currentColor">
                         <path d="M4 6h2v12H4zm14 0h2v12h-2zM1 9h2v6H1zm20 0h2v6h-2zM7 11h10v2H7z" />
@@ -53,7 +55,7 @@ const Navbar = () => {
                         )}
 
                         {isVacancyRoute ? (
-                            !isIndividualVacancyRoute && (
+                            !isIndividualVacancyRoute && !isHQOverviewRoute && (
                                 <Link to="/solliciteren" className={`magnetic-btn bg-accent text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide uppercase group ${scrolled || isVacancyRoute ? 'inline-block' : 'hidden md:inline-block'}`}>
                                     <span className="magnetic-btn-content">Meld je aan</span>
                                 </Link>

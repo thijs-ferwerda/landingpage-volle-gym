@@ -25,7 +25,7 @@ const VoorJeSolliciteertHQ = () => {
                     {/* Header */}
                     <div className="mb-10">
                         <h1 className="font-heading font-bold text-4xl md:text-5xl text-primary tracking-tighter leading-[1.1] mb-4">
-                            Neem deze pagina door voordat je solliciteert, alsjeblieft.
+                            Neem deze pagina door voordat je solliciteert.
                         </h1>
                         <p className="font-sans font-medium text-lg md:text-xl text-neutral-400">
                             Bas, Founder van Volle Gym

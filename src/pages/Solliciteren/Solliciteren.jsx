@@ -22,20 +22,18 @@ const Solliciteren = () => {
         setIsSubmitting(true);
 
         try {
-            await fetch("https://formsubmit.co/ajax/bas@vollegym.nl", {
+            await fetch("https://services.leadconnectorhq.com/hooks/0ybaSuLNKF7ssKOjBqwH/webhook-trigger/48120e14-7b1b-435c-866e-c09b486373a2", {
                 method: "POST",
                 headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    Name: formData.name,
-                    Email: formData.email,
-                    Phone: formData.phone,
-                    Location: formData.location,
-                    Motivation: formData.motivation,
-                    _subject: `Nieuwe sollicitatie website: ${formData.name}`,
-                    _template: "table"
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    location: formData.location,
+                    motivation: formData.motivation,
+                    form_type: "partner_sollicitatie"
                 })
             });
             setIsSubmitted(true);

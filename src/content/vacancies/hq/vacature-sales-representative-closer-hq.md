@@ -74,17 +74,12 @@ Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar
 
 ## Vergoeding
 
-Puur commissie op alle nieuwe omzet die jij binnenhaalt. Geen vast salaris, geen plafond. Hoe consistenter je presteert, hoe hoger je percentage. We werken met een getrapte commissiestructuur op basis van je totale gesloten omzet over een rollende periode van drie maanden.
+Volledig prestatiegericht, zonder plafond. We werken met een getrapte commissiestructuur op basis van je totale gesloten omzet over een rollende periode van drie maanden. Dat betekent dat consistent presteren je niet alleen meer omzet oplevert, maar ook een hoger commissiepercentage over dat volledige bedrag.
 
-| Kwartaalomzet (3 maanden) | Commissiepercentage |
-|---|---|
-| €0 tot €50.000 | 8% |
-| €50.000 tot €100.000 | 12% |
-| €100.000 tot €150.000 | 18% |
-| €150.000+ | 25% |
+**Wat je kunt verwachten:**
 
-Het percentage geldt over je volledige kwartaalomzet, niet alleen het deel boven de grens. Dat betekent dat elke stap omhoog een flinke sprong is in wat je verdient.
+- **Op niveau:** rond de €2.000 per maand aan commissie
+- **Boven niveau:** rond de €6.000 per maand aan commissie
+- **Uitmuntend:** €12.500+ per maand aan commissie
 
-**Wat dat in de praktijk betekent:** een closer die consistent €50.000 per kwartaal draait verdient €4.000 per drie maanden. Kom je net over die grens heen naar €55.000, dan spring je naar 12% en verdien je €6.600 over hetzelfde kwartaal. Wie doorpakt richting €150.000+ per kwartaal zit op 25% en verdient €37.500+ per drie maanden.
-
-Onze producten starten bij €3.000 en lopen op. De incentive is simpel: wees consistent, pak door, en je commissie groeit harder dan je omzet.
+Onze producten starten bij €3.000 en lopen op. Hoe meer je sluit en hoe consistenter je presteert, hoe harder je commissie groeit.
