@@ -106,12 +106,10 @@ const VacancyTemplate = ({ job }) => {
         />
 
         <div className="relative z-20 container mx-auto px-6 text-center text-white mt-12 pb-16">
-          {!dJob.isHQ && (
-            <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-accent text-white shadow-lg shadow-accent/20 mb-8 font-data text-sm tracking-widest uppercase border border-white/10">
-              <MapPin size={16} />
-              <span className="font-bold">{dJob.location}</span>
-            </div>
-          )}
+          <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-accent text-white shadow-lg shadow-accent/20 mb-8 font-data text-sm tracking-widest uppercase border border-white/10">
+            <MapPin size={16} />
+            <span className="font-bold">{dJob.location}</span>
+          </div>
           <h1 className="text-6xl md:text-8xl font-bold font-heading mb-8 tracking-tighter leading-[1.1]">
             {dJob.title}
           </h1>
