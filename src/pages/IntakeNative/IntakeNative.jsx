@@ -427,11 +427,7 @@ const IntakeNative = () => {
               </p>
             </div>
 
-            <div className="flex items-center justify-center gap-4 text-sm font-sans text-primary/60">
-              <span>100% vrijblijvend</span>
-              <span className="w-1 h-1 rounded-full bg-primary/20"></span>
-              <span>Geen verplichtingen</span>
-            </div>
+            <p className="text-sm font-sans text-primary/50">100% vrijblijvend</p>
           </div>
         </div>
       </section>
