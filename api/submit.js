@@ -42,7 +42,7 @@ export default async function handler(req, res) {
     } = req.body;
 
     // Build tags array
-    const tags = ['intake-native', `variant-${variant || 'unknown'}`];
+    const tags = ['[trigger] intake homepage ingevuld', `variant-${variant || 'unknown'}`];
     if (gymType) tags.push(`gymtype-${gymType}`);
 
     // Value mappings: our form values → GHL option labels
