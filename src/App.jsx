@@ -20,6 +20,7 @@ import WerkenBij from './pages/WerkenBij/WerkenBij';
 import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteertHQ';
 import SolliciterenHQ from './pages/SolliciterenHQ/SolliciterenHQ';
 import IntakeNative from './pages/IntakeNative/IntakeNative';
+import Bedankvideo from './pages/Bedankvideo/Bedankvideo';
 import MinimalLayout from './components/MinimalLayout';
 import CookieConsent from './components/CookieConsent';
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -114,6 +115,7 @@ function App() {
         <Route path="/onboarding/30-leden" element={<MinimalLayout><OnboardingTemplate packageName="30 leden in 90 dagen" /></MinimalLayout>} />
         <Route path="/onboarding/45-leden" element={<MinimalLayout><OnboardingTemplate packageName="45 leden in 90 dagen" /></MinimalLayout>} />
         <Route path="/bedankt" element={<MinimalLayout><ThankYou /></MinimalLayout>} />
+        <Route path="/bedankvideo" element={<MinimalLayout><Bedankvideo /></MinimalLayout>} />
         <Route path="/welkom" element={<MinimalLayout><Welcome /></MinimalLayout>} />
 
         <Route path="/aanmelding" element={<MinimalLayout><IntakeNative /></MinimalLayout>} />
