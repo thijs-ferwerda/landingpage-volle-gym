@@ -171,6 +171,7 @@ const WerkenBij = () => {
                                         <input
                                             type="text"
                                             required
+                                            autoComplete="name"
                                             value={formData.name}
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             className="w-full bg-primary/5 border border-primary/10 rounded-xl px-4 py-3 text-primary outline-none focus:border-accent/50 transition-colors"
@@ -182,6 +183,7 @@ const WerkenBij = () => {
                                         <input
                                             type="email"
                                             required
+                                            autoComplete="email"
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             className="w-full bg-primary/5 border border-primary/10 rounded-xl px-4 py-3 text-primary outline-none focus:border-accent/50 transition-colors"
