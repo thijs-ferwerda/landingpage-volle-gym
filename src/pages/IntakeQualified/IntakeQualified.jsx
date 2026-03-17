@@ -56,6 +56,17 @@ const IntakeQualified = () => {
                 ></iframe>
             </div>
 
+            {/* Speaker profile */}
+            <div className="mt-10 flex items-center gap-4 relative z-20">
+                <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
+                    <img src="/assets/bas.jpg" alt="Bas Nagel" className="w-full h-full object-cover" />
+                </div>
+                <div className="text-left">
+                    <p className="font-heading font-semibold text-primary text-base">Bas Nagel</p>
+                    <p className="font-sans text-primary/50 text-sm">Oprichter, Volle Gym</p>
+                </div>
+            </div>
+
             {/* Security/Trust Indicators below the form */}
             <div className="mt-8 flex items-center justify-center gap-6 opacity-60">
                 <div className="flex items-center gap-2 font-sans text-sm text-primary font-medium">
