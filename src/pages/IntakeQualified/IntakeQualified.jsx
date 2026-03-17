@@ -27,19 +27,17 @@ const IntakeQualified = () => {
             <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
             <div className="max-w-4xl w-full mx-auto text-center mb-12 relative z-20 flex flex-col items-center">
-                <div className="inline-flex items-center gap-3 px-5 py-2.5 border border-primary/10 rounded-full bg-white shadow-sm mb-8">
-                    <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                    <p className="font-data text-primary text-xs md:text-sm uppercase tracking-widest font-bold">
-                        Stap 2 van 2: Plan je gesprek
-                    </p>
-                </div>
+                <p className="font-data text-accent text-sm uppercase tracking-widest mb-4 flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                    Stap 2 van 2: Plan je gesprek
+                </p>
 
-                <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-primary tracking-tighter leading-[1.1] mb-6">
+                <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-primary tracking-tight leading-tight mb-6">
                     Kies een moment voor je <br className="hidden md:block" />
-                    <span className="font-drama italic text-primary/70">verdiepingsgesprek.</span>
+                    <span className="font-drama italic text-primary/60 font-medium">verdiepingsgesprek.</span>
                 </h1>
 
-                <p className="font-sans text-primary/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
+                <p className="font-sans text-primary/70 text-base md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
                     Gefeliciteerd, je club is gekwalificeerd. Selecteer hieronder een datum en tijd voor een vrijblijvende, strategische sessie met ons.
                 </p>
             </div>
