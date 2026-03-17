@@ -39,8 +39,6 @@ Jij wordt het eerste contactpunt met gym-eigenaren die klaar zijn om te groeien.
 
 Je bent iemand die keihard werkt en altijd zijn verantwoordelijkheid neemt. Als iets niet goed gaat, kijk je eerst naar jezelf. Je rekent jezelf af op resultaten en je houdt jezelf in check met de realiteit door naar de data te kijken, niet naar je gevoel.
 
-Je leeft op van chaos. Waar anderen overweldigd raken, zie jij structuur en kansen. Mensen herkennen je als iemand met buitengewoon veel energie. Ze worden er zelf beter van om in jouw buurt te zijn.
-
 Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar je niet achter staat. Je vraagt door totdat je bij de kern komt en je weet de emotionele triggers bij mensen te vinden en te raken. Tegelijkertijd voelen mensen zich veilig bij je. Ze vertrouwen je omdat je oprecht bent, niet omdat je een trucje toepast.
 
 Mensen zijn over het algemeen positief over jou. Je hebt een natuurlijk vermogen om verbinding te maken. Als je een kamer binnenloopt, merken mensen dat. En als je weggaat, willen ze dat je terugkomt.
