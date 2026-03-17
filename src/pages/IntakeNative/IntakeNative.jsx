@@ -240,15 +240,17 @@ const IntakeNative = () => {
 
     // Allow forcing variant via ?variant=b (for testing)
     const forcedVariant = searchParams.get('variant');
+    let v;
     if (forcedVariant && intakeVariants[forcedVariant]) {
       localStorage.setItem('vg_intake_variant', forcedVariant);
-      setVariant(forcedVariant);
+      v = forcedVariant;
     } else {
-      const v = assignVariant(intakeVariants);
-      setVariant(v);
+      v = assignVariant(intakeVariants);
     }
+    setVariant(v);
 
     trackEvent('FormView');
+    trackEvent('StepView', { step: intakeVariants[v].steps[0], stepIndex: 0 });
   }, []);
 
   const animateTransition = useCallback((forward, callback) => {
@@ -308,6 +310,8 @@ const IntakeNative = () => {
     setFormData(updatedData);
 
     if (currentStepIndex < totalSteps - 1) {
+      const nextIndex = currentStepIndex + 1;
+      trackEvent('StepView', { step: steps[nextIndex], stepIndex: nextIndex });
       animateTransition(true, () => setCurrentStepIndex(prev => prev + 1));
     } else {
       handleSubmit(updatedData);
@@ -316,6 +320,8 @@ const IntakeNative = () => {
 
   const goBack = () => {
     if (currentStepIndex > 0) {
+      const prevIndex = currentStepIndex - 1;
+      trackEvent('StepView', { step: steps[prevIndex], stepIndex: prevIndex });
       animateTransition(false, () => setCurrentStepIndex(prev => prev - 1));
     }
   };
@@ -355,44 +361,6 @@ const IntakeNative = () => {
 
         <div className="max-w-lg w-full mx-auto relative z-20 flex flex-col items-center">
 
-          {/* Header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 border border-primary/10 rounded-full bg-white shadow-sm mb-6">
-              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <p className="font-data text-primary text-xs uppercase tracking-widest font-bold">
-                Stap 1 van 2: Doe de intake
-              </p>
-            </div>
-
-            <h1 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-primary tracking-tighter leading-[1.1] mb-4">
-              Ontdek of jouw gym{' '}
-              <br className="hidden md:block" />
-              <span className="font-drama italic text-primary/70">in aanmerking komt.</span>
-            </h1>
-
-            <p className="font-sans text-primary/60 text-base md:text-lg max-w-md mx-auto leading-relaxed">
-              {activeVariant.subheadline}
-            </p>
-          </div>
-
-          {/* Progress bar */}
-          <div className="w-full mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-xs font-data text-primary/40 uppercase tracking-wider">
-                Vraag {currentStepIndex + 1} / {totalSteps}
-              </span>
-              <span className="text-xs font-data text-primary/40">
-                {Math.round(progress)}%
-              </span>
-            </div>
-            <div className="h-1.5 w-full bg-primary/5 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-accent rounded-full transition-all duration-500 ease-out"
-                style={{ width: `${Math.max(progress, 3)}%` }}
-              />
-            </div>
-          </div>
-
           {/* Form Card */}
           <div className="w-full bg-white rounded-2xl shadow-xl border border-primary/10 p-6 md:p-8">
             <div ref={stepRef}>
@@ -425,6 +393,24 @@ const IntakeNative = () => {
                 Vorige
               </button>
             )}
+          </div>
+
+          {/* Progress bar */}
+          <div className="w-full mt-4">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-xs font-data text-primary/40 uppercase tracking-wider">
+                Vraag {currentStepIndex + 1} / {totalSteps}
+              </span>
+              <span className="text-xs font-data text-primary/40">
+                {Math.round(progress)}%
+              </span>
+            </div>
+            <div className="h-1.5 w-full bg-primary/5 rounded-full overflow-hidden">
+              <div
+                className="h-full bg-accent rounded-full transition-all duration-500 ease-out"
+                style={{ width: `${Math.max(progress, 3)}%` }}
+              />
+            </div>
           </div>
 
           {/* Social proof */}
