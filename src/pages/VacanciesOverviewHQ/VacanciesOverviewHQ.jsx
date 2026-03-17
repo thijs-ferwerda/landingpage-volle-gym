@@ -34,7 +34,7 @@ const VacanciesOverviewHQ = () => {
                 parsedVacancies.push({
                     slug: `/vacatures/${slug}`,
                     title: attributes.title || 'Vacature HQ',
-                    location: attributes.location || 'Leeuwarden (HQ)',
+                    location: attributes.location || 'Amsterdam (HQ)',
                     hours: attributes.hours || 'In overleg',
                     type: attributes.type || 'Functie HQ',
                     description: attributes.description || 'Bekijk deze openstaande interne vacature bij Volle Gym HQ.'
@@ -69,7 +69,7 @@ const VacanciesOverviewHQ = () => {
         <>
             <Helmet>
                 <title>Werken bij Volle Gym HQ | Openstaande Interne Vacatures</title>
-                <meta name="description" content="Klaar voor impact? Bekijk alle openstaande vacatures bij Volle Gym HQ in Leeuwarden." />
+                <meta name="description" content="Klaar voor impact? Bekijk alle openstaande vacatures bij Volle Gym HQ in Amsterdam." />
             </Helmet>
 
             <div ref={containerRef} className="bg-background min-h-screen pt-32 pb-24 font-sans text-primary relative overflow-hidden">
@@ -89,7 +89,7 @@ const VacanciesOverviewHQ = () => {
                             <span className="font-drama italic text-primary/60 pr-3">vanuit headquarters.</span>
                         </h1>
                         <p ref={addToRefs} className="text-primary/70 text-base md:text-lg max-w-2xl leading-relaxed mb-10">
-                            Geen gelul, hard werken, extreme ownership en de top van de fitnessbranche ondersteunen. Bekijk hieronder de vacatures voor ons interne team in Leeuwarden.
+                            Geen gelul, hard werken, extreme ownership en de top van de fitnessbranche ondersteunen. Bekijk hieronder de vacatures voor ons interne team in Amsterdam.
                         </p>
                     </div>
                 </section>

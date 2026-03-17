@@ -90,7 +90,7 @@ const WerkenBij = () => {
                             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-6">Werken bij Volle Gym</h2>
                             <p className="font-sans text-primary/70 leading-relaxed mb-12 flex-grow text-lg">
                                 Word onderdeel van het team achter het succes van meer dan 60+ Nederlandse boutiek gyms.
-                                We zoeken regelmatig performance marketeers, funnel bouwers en strategen in Amsterdam/Groningen.
+                                We zoeken regelmatig performance marketeers, funnel bouwers en strategen in Amsterdam.
                             </p>
 
                             <Link to="/werken-bij/hq" className="magnetic-btn bg-white border-2 border-primary text-primary px-8 py-4 rounded-full text-sm font-bold tracking-wide uppercase hover:bg-primary hover:text-white transition-all duration-300 w-fit">

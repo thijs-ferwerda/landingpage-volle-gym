@@ -160,7 +160,7 @@ const Solliciteren = () => {
                                     value={formData.location}
                                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                                     className="w-full bg-primary/5 border border-primary/10 rounded-xl px-4 py-3 text-primary outline-none focus:border-accent/50 transition-colors"
-                                    placeholder="Bijv. Leeuwarden of HQ"
+                                    placeholder="Bijv. Amsterdam of HQ"
                                 />
                             </div>
                         </div>

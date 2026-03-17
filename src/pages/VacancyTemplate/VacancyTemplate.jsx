@@ -12,7 +12,7 @@ const VacancyTemplate = ({ job }) => {
   // Fallback data if needed
   const dJob = job || {
     title: "Vacature Personal Trainer",
-    location: "Leeuwarden",
+    location: "Amsterdam",
     type: "Personal Training",
     hours: "16 - 40 uur",
     heroImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",

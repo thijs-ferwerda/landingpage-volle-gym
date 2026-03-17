@@ -1,6 +1,6 @@
 ---
 title: "Videograaf / Fotograaf (HQ)"
-location: "Leeuwarden (HQ)"
+location: "Amsterdam (HQ)"
 type: "Content Creatie"
 hours: "32 - 40 uur"
 description: "Word de visuele storyteller van Volle Gym HQ en de personal brands van de oprichters. Inspireer Nederland naar een gezonder leven door de focus op de mens."
@@ -27,4 +27,4 @@ Beelden spreken harder dan woorden, maar verhalen creëren impact. De lange term
 - Een ijzersterk portfolio waarin jouw vermogen om verhalen te vertellen en emotie vast te leggen naar voren komt.
 - Affiniteit met de fitness- en gezondheidsbranche is een harde eis.
 - Je hebt een scherp oog voor detail, werkt autonoom en hebt een no-nonsense werkethiek.
-- Woonachtig in (of bereid om te reizen naar) regio Leeuwarden, en in het bezit van een rijbewijs.
+- Woonachtig in (of bereid om te reizen naar) regio Amsterdam, en in het bezit van een rijbewijs.
