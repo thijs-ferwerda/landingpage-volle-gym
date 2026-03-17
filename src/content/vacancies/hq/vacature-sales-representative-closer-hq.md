@@ -41,8 +41,6 @@ Je bent iemand die keihard werkt en altijd zijn verantwoordelijkheid neemt. Als 
 
 Je bent extreem overtuigend, maar op een integere manier. Je verkoopt niets waar je niet achter staat. Je vraagt door totdat je bij de kern komt en je weet de emotionele triggers bij mensen te vinden en te raken. Tegelijkertijd voelen mensen zich veilig bij je. Ze vertrouwen je omdat je oprecht bent, niet omdat je een trucje toepast.
 
-Mensen zijn over het algemeen positief over jou. Je hebt een natuurlijk vermogen om verbinding te maken. Als je een kamer binnenloopt, merken mensen dat. En als je weggaat, willen ze dat je terugkomt.
-
 - Je bent de beste verkoper in je huidige team, of je weet dat je dat kunt zijn
 - Je hebt ervaring met het sluiten van deals boven de €3.000, of je hebt zelf ondernomen en weet hoe het voelt om iemand te overtuigen van iets dat hun business verandert
 - Je werkt harder dan iedereen om je heen en je vindt dat normaal
