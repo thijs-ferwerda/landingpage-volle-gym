@@ -74,7 +74,6 @@ const VoorJeSolliciteertHQ = () => {
                         <h2 className="font-heading font-bold text-2xl mt-12 mb-4">Waar we waarde aan hechten</h2>
                         <ul className="list-none text-lg leading-relaxed space-y-4">
                             <li><strong>Nadenken.</strong> We nemen niet zomaar andermans overtuiging aan of idee over. Door zelf vanuit logica te redeneren kom je verder.</li>
-                            <li><strong>Vergaderen.</strong> Bij Volle Gym vergaderen we veel, en vaak fysiek op locatie. Ik zie snel en direct menselijk overleg als belangrijk onderdeel van ons succes.</li>
                             <li><strong>Nee.</strong> Bij Volle Gym zeggen we vaak nee. Het bedrijf kan alle kanten op, iedereen wil wat van ons. Het is dus essentieel om vaak en luid “nee” te verkondigen. “Nee, dat doen we niet”, heerlijk!</li>
                             <li><strong>Individualiteit.</strong> Bij Volle Gym vormen we geen groepjes. Je wordt hier niet afgerekend op hoe sociaal vaardig je bent. Roddelen wordt de kop ingedrukt. We zijn hier om samen te presteren, en jij bent hier om je beste werk te doen. Zorg voor jezelf, zodat niemand anders dat hoeft te doen.</li>
                             <li><strong>Waarheid.</strong> De objectieve waarheid, wat echt is, daar kan niemand omheen.</li>
