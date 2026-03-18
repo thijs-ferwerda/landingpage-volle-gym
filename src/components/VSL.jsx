@@ -89,7 +89,7 @@ const VSL = () => {
                             width="682"
                             height="1024"
                             loading="lazy"
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover object-[55%_55%]"
                         />
                     </div>
                 </div>

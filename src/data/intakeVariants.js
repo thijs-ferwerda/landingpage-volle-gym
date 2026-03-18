@@ -24,10 +24,10 @@ export const intakeVariants = {
   b: {
     id: 'b',
     name: 'Test: Contact First',
-    weight: 1,
+    weight: 0,
     headline: 'Meld je aan voor een Volle Gym.',
     subheadline: 'Vul het korte formulier hieronder in om te kijken of jouw club in aanmerking komt.',
-    steps: ['eigenaar', 'contact', 'gymnaam', 'knelpunt', 'openheid', 'doel', 'gymtype'],
+    steps: ['eigenaar', 'gymnaam', 'knelpunt', 'openheid', 'doel', 'gymtype', 'contact'],
     ctaText: 'Verstuur mijn aanmelding',
   },
 };

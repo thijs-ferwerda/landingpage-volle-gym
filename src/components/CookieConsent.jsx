@@ -69,11 +69,11 @@ export default function CookieConsent() {
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <h3 className="font-heading font-bold text-lg text-primary">
-                Cookie-instellingen
+                Even stretchen voor we beginnen
               </h3>
             </div>
             <p className="text-sm text-primary/60 leading-relaxed">
-              We gebruiken cookies om onze website te verbeteren en om je relevante advertenties te tonen. Je kunt per categorie kiezen welke cookies je toestaat.
+              Net als een goede warming-up zorgen cookies ervoor dat alles soepeler loopt. We gebruiken ze om te meten wat werkt en om je de juiste info te tonen. Alles accepteren? Beste ervaring. Gegarandeerd.
             </p>
           </div>
 
@@ -94,19 +94,19 @@ export default function CookieConsent() {
               {/* Necessary — always on */}
               <CategoryRow
                 label="Noodzakelijk"
-                description="Essentieel voor het functioneren van de website."
+                description="De basisoefeningen. Zonder deze werkt er niks."
                 checked={true}
                 disabled={true}
               />
               <CategoryRow
                 label="Statistieken"
-                description="Helpen ons begrijpen hoe bezoekers de website gebruiken."
+                description="Progress tracking. Helpen ons zien wat werkt en wat beter kan."
                 checked={preferences.analytics}
                 onChange={() => toggleCategory('analytics')}
               />
               <CategoryRow
                 label="Marketing"
-                description="Worden gebruikt om relevante advertenties te tonen en campagnes te meten."
+                description="Zorgen dat je de juiste content ziet op het juiste moment."
                 checked={preferences.marketing}
                 onChange={() => toggleCategory('marketing')}
               />

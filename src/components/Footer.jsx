@@ -12,7 +12,7 @@ const Footer = () => {
         <footer className={`bg-dark text-primary px-6 md:px-12 relative z-20 ${isMinimalFooter ? 'pt-8 pb-8' : 'pt-24 pb-8 rounded-t-[4rem] mt-[-4rem]'}`}>
 
             {!isMinimalFooter && (
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20 border-b border-primary/10 pb-20">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 mb-20 border-b border-primary/10 pb-20">
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
                             <svg className="w-8 h-8 text-primary" viewBox="0 0 24 24" fill="currentColor">
@@ -51,12 +51,14 @@ const Footer = () => {
 
                     <div className="border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
                         <h3 className="font-heading font-bold mb-6 text-primary tracking-wide text-base">Connect</h3>
-                        <ul className="space-y-4 font-sans text-primary/60 text-sm mb-10">
+                        <ul className="space-y-4 font-sans text-primary/60 text-sm">
                             <li><a href="https://www.linkedin.com/company/volle-gym-consulting/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a></li>
                             <li><a href="https://www.instagram.com/vollegym/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">Instagram</a></li>
                             <li><a href="https://www.youtube.com/@vollegym" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">YouTube</a></li>
                         </ul>
+                    </div>
 
+                    <div className="border-t border-primary/10 pt-6 md:border-t-0 md:pt-0">
                         <h3 className="font-heading font-bold mb-6 text-primary tracking-wide text-base">Contact</h3>
                         <ul className="space-y-4 font-sans text-primary/60 text-sm">
                             <li><a href="mailto:info@vollegym.nl" className="hover:text-accent transition-colors">info@vollegym.nl</a></li>
