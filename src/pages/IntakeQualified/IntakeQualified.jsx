@@ -51,6 +51,20 @@ const IntakeQualified = () => {
                 </p>
             </div>
 
+            {/* Speaker profile — desktop: above calendar */}
+            <div className="hidden md:flex w-full max-w-6xl mx-auto px-20 mb-8 relative z-20 flex-col items-center gap-3">
+                <p className="font-drama text-primary/70 text-base italic">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
+                <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
+                        <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="text-left">
+                        <p className="font-heading font-semibold text-primary text-base">Bas Nagel</p>
+                        <p className="font-sans text-primary/50 text-sm">Oprichter, Volle Gym</p>
+                    </div>
+                </div>
+            </div>
+
             {/* Embedded Calendar Container */}
             <div className="w-full max-w-6xl -mx-6 px-2 md:mx-auto md:px-20 pb-0 md:pb-10 pt-0 bg-transparent md:bg-white rounded-none md:rounded-3xl shadow-none md:shadow-xl border-0 md:border md:border-primary/10 relative z-20">
                 <iframe
@@ -63,10 +77,10 @@ const IntakeQualified = () => {
                 ></iframe>
             </div>
 
-            {/* Speaker profile */}
-            <div className="-mt-12 md:mt-3 w-full max-w-6xl -mx-6 px-2 md:mx-auto md:px-20 relative z-20">
-                <div className="w-full md:border-t md:border-primary/10 pt-4 flex flex-col items-center gap-3">
-                    <p className="font-drama text-primary/70 text-base italic w-full text-center md:w-auto">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
+            {/* Speaker profile — mobile: below calendar */}
+            <div className="md:hidden -mt-12 w-full -mx-6 px-2 relative z-20">
+                <div className="w-full pt-4 flex flex-col items-center gap-3">
+                    <p className="font-drama text-primary/70 text-base italic w-full text-center">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
                     <div className="flex items-center gap-4">
                         <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
                             <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
