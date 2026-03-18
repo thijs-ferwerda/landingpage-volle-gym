@@ -53,7 +53,6 @@ const IntakeQualified = () => {
 
             {/* Speaker profile — desktop: above calendar */}
             <div className="hidden md:flex w-full max-w-6xl mx-auto px-20 mb-6 relative z-20 flex-col items-center gap-3">
-                <p className="font-drama text-primary/70 text-base italic">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
                 <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
                         <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
