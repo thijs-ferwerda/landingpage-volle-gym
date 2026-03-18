@@ -87,26 +87,49 @@ export default async function handler(req, res) {
       customFields,
     };
 
+    const ghlHeaders = {
+      'Authorization': `Bearer ${GHL_API_KEY}`,
+      'Content-Type': 'application/json',
+      'Version': '2021-07-28',
+    };
+
+    let contactId;
     const response = await fetch('https://services.leadconnectorhq.com/contacts/', {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GHL_API_KEY}`,
-        'Content-Type': 'application/json',
-        'Version': '2021-07-28',
-      },
+      headers: ghlHeaders,
       body: JSON.stringify(ghlPayload),
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('GHL API error:', response.status, errorText);
-      // Still return 200 so frontend flow continues
+    if (response.ok) {
+      const data = await response.json();
+      contactId = data.contact?.id;
+    } else if (response.status === 400) {
+      // Duplicate contact — update existing
+      const errorData = await response.json();
+      const existingId = errorData.meta?.contactId;
+      if (existingId) {
+        const updateRes = await fetch(`https://services.leadconnectorhq.com/contacts/${existingId}`, {
+          method: 'PUT',
+          headers: ghlHeaders,
+          body: JSON.stringify(ghlPayload),
+        });
+        if (updateRes.ok) {
+          contactId = existingId;
+        } else {
+          console.error('GHL update error:', updateRes.status, await updateRes.text());
+          res.status(200).json({ ok: false, error: 'GHL update failed' });
+          return;
+        }
+      } else {
+        console.error('GHL duplicate but no contactId in response');
+        res.status(200).json({ ok: false, error: 'GHL submission failed' });
+        return;
+      }
+    } else {
+      console.error('GHL API error:', response.status, await response.text());
       res.status(200).json({ ok: false, error: 'GHL submission failed' });
       return;
     }
-
-    const data = await response.json();
-    const contactId = data.contact?.id;
 
     // Log successful submission
     console.log(JSON.stringify({
