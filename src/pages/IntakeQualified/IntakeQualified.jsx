@@ -26,7 +26,7 @@ const IntakeQualified = () => {
             {/* Soft decorative background gradients */}
             <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
-            <div className="hidden md:flex max-w-4xl w-full mx-auto text-center mb-12 relative z-20 flex-col items-center">
+            <div className="hidden md:flex max-w-4xl w-full mx-auto text-center mb-6 relative z-20 flex-col items-center">
                 <div className="inline-flex items-center gap-3 px-5 py-2.5 border border-primary/10 rounded-full bg-white shadow-sm mb-8">
                     <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
                     <p className="font-data text-primary text-xs md:text-sm uppercase tracking-widest font-bold">
@@ -39,7 +39,7 @@ const IntakeQualified = () => {
                     <span className="font-drama italic text-primary/70">verdiepingsgesprek.</span>
                 </h1>
 
-                <p className="font-sans text-primary/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
+                <p className="font-sans text-primary/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-0">
                     Gefeliciteerd, je club is gekwalificeerd. Selecteer hieronder een datum en tijd voor een vrijblijvende, strategische sessie met ons.
                 </p>
             </div>
@@ -52,7 +52,7 @@ const IntakeQualified = () => {
             </div>
 
             {/* Speaker profile — desktop: above calendar */}
-            <div className="hidden md:flex w-full max-w-6xl mx-auto px-20 mb-8 relative z-20 flex-col items-center gap-3">
+            <div className="hidden md:flex w-full max-w-6xl mx-auto px-20 mb-6 relative z-20 flex-col items-center gap-3">
                 <p className="font-drama text-primary/70 text-base italic">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
                 <div className="flex items-center gap-4">
                     <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
