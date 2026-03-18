@@ -119,7 +119,7 @@ function App() {
         <Route path="/welkom" element={<MinimalLayout><Welcome /></MinimalLayout>} />
 
         <Route path="/aanmelding" element={<MinimalLayout><IntakeNative /></MinimalLayout>} />
-        <Route path="/intake" element={<><Navbar /><Intake /><Footer /></>} />
+        <Route path="/intake" element={<MinimalLayout><IntakeNative /></MinimalLayout>} />
         <Route path="/sorry" element={<><Navbar /><Sorry /><Footer /></>} />
         <Route path="/privacy" element={<><Navbar /><PrivacyPolicy /><Footer /></>} />
         <Route path="/voorwaarden" element={<><Navbar /><TermsOfService /><Footer /></>} />
