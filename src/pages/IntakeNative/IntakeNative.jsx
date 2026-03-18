@@ -37,6 +37,7 @@ const STEPS = {
       { value: 'ja', label: 'Ja, absoluut' },
       { value: 'nee', label: 'Nee, liever niet' },
     ],
+    disqualifyOn: 'nee',
   },
   doel: {
     question: 'Wat is je concrete doel voor 2026?',
@@ -60,6 +61,7 @@ const STEPS = {
       { value: 'vechtsport', label: 'Vechtsportschool (judo, karate, boksen, MMA)' },
       { value: 'pilates-yoga', label: 'Pilates of yoga studio' },
     ],
+    qualifyOnly: 'pt-studio',
   },
   gymnaam: {
     question: 'Wat is de naam van jouw sportschool?',
@@ -298,7 +300,10 @@ const IntakeNative = () => {
       value: typeof value === 'object' ? 'contact_info' : value,
     });
 
-    if (currentStep.disqualifyOn && value === currentStep.disqualifyOn) {
+    const shouldDisqualify =
+      (currentStep.disqualifyOn && value === currentStep.disqualifyOn) ||
+      (currentStep.qualifyOnly && value !== currentStep.qualifyOnly);
+    if (shouldDisqualify) {
       trackEvent('Disqualified', { step: currentStepKey });
       navigate('/sorry');
       return;

@@ -65,8 +65,8 @@ const IntakeQualified = () => {
 
             {/* Speaker profile */}
             <div className="-mt-12 md:mt-3 w-full max-w-6xl -mx-6 px-2 md:mx-auto md:px-20 relative z-20">
-                <div className="w-full border-t border-primary/10 pt-4 flex flex-col items-center gap-3">
-                    <p className="font-drama text-primary/70 text-base italic">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
+                <div className="w-full md:border-t md:border-primary/10 pt-4 flex flex-col items-center gap-3">
+                    <p className="font-drama text-primary/70 text-base italic w-full text-center md:w-auto">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
                     <div className="flex items-center gap-4">
                         <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
                             <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
