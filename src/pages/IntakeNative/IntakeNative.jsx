@@ -163,6 +163,9 @@ const validateField = (name, value) => {
   if (name === 'phone') {
     const digits = value.replace(/\D/g, '');
     if (digits.length < 10) return 'Vul een geldig telefoonnummer in (minimaal 10 cijfers)';
+    const last8 = digits.slice(-8);
+    if (/^(.)\1{7}$/.test(last8)) return 'Vul een echt telefoonnummer in';
+    if (last8 === '12345678' || last8 === '87654321') return 'Vul een echt telefoonnummer in';
   }
   if (name === 'email') {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) return 'Vul een geldig e-mailadres in';
