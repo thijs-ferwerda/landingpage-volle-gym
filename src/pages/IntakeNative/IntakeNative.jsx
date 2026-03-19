@@ -271,7 +271,7 @@ const IntakeNative = () => {
           if (stepRef.current) {
             gsap.fromTo(stepRef.current,
               { opacity: 0, x: 30 * dir },
-              { opacity: 1, x: 0, duration: 0.25, ease: 'power2.out' }
+              { opacity: 1, x: 0, duration: 0.25, ease: 'power2.out', clearProps: 'transform' }
             );
           }
         });
