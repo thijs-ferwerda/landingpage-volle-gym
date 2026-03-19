@@ -232,6 +232,7 @@ const IntakeNative = () => {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [formData, setFormData] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const stepRef = useRef(null);
 
@@ -341,13 +342,21 @@ const IntakeNative = () => {
     });
 
     try {
-      await fetch('/api/submit', {
+      const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...finalData, variant }),
       });
+      const data = await res.json();
+      if (!data.ok) {
+        setSubmitError(true);
+        setIsSubmitting(false);
+        return;
+      }
     } catch {
-      // Continue even if API call fails
+      setSubmitError(true);
+      setIsSubmitting(false);
+      return;
     }
 
     navigate('/intake/gekwalificeerd');
@@ -386,6 +395,18 @@ const IntakeNative = () => {
                 <ContactStep step={currentStep} formData={formData} onSubmit={goToNext} isSubmitting={isSubmitting} ctaText={activeVariant.ctaText} />
               )}
             </div>
+
+            {submitError && (
+              <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-xl">
+                <p className="font-sans text-sm text-red-800 font-medium">Er ging iets mis bij het versturen. Probeer het opnieuw of neem contact op via telefoon.</p>
+                <button
+                  onClick={() => { setSubmitError(false); setIsSubmitting(false); }}
+                  className="mt-2 text-sm font-sans font-medium text-red-600 hover:text-red-800 underline"
+                >
+                  Opnieuw proberen
+                </button>
+              </div>
+            )}
 
             {currentStepIndex > 0 && (
               <button
