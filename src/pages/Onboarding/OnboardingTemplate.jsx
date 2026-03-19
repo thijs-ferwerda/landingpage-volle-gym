@@ -167,18 +167,17 @@ const OnboardingTemplate = ({ packageName }) => {
 
                 {/* Onboarding Formulier Sectie */}
                 <section className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 mb-16 md:mb-24">
-                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-3xl p-4 md:p-8 pt-12 md:pt-16 overflow-hidden relative">
-                        {/* Subtiel decoratief achtergrond element */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
+                    <div ref={addToRefs} className="mb-6 text-center max-w-2xl mx-auto">
+                        <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-3">
+                            Stap 1: <span className="text-accent">Het onboardingsformulier</span>
+                        </h2>
+                        <p className="text-primary/70 text-sm md:text-base leading-relaxed">
+                            Tijd voor actie. Vul het formulier (ca. 5 minuten) in. Zodra we jouw gegevens hebben, beginnen wij direct op de achtergrond met het inrichten van je systemen.
+                        </p>
+                    </div>
 
-                        <div className="mb-4 text-center max-w-2xl mx-auto">
-                            <h2 className="font-heading font-bold text-2xl md:text-3xl tracking-tight mb-3">
-                                Stap 1: <span className="text-accent">Het onboardingsformulier</span>
-                            </h2>
-                            <p className="text-primary/70 text-sm leading-relaxed">
-                                Tijd voor actie. Vul het formulier (ca. 5 minuten) in. Zodra we jouw gegevens hebben, beginnen wij direct op de achtergrond met het inrichten van je systemen.
-                            </p>
-                        </div>
+                    <div ref={addToRefs} className="bg-white border border-primary/10 shadow-2xl rounded-2xl md:rounded-3xl overflow-hidden relative">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-[80px] pointer-events-none" />
 
                         <div className="relative w-full z-10 min-h-[500px]">
                             <iframe
