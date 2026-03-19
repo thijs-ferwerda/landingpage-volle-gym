@@ -181,7 +181,10 @@ const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
     email: formData.email || '',
   });
   const [errors, setErrors] = useState({});
+  const dataRef = useRef(data);
   const firstRef = useRef(null);
+
+  useEffect(() => { dataRef.current = data; }, [data]);
 
   useEffect(() => {
     const timer = setTimeout(() => firstRef.current?.focus(), 350);
@@ -192,17 +195,18 @@ const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
     && !Object.values(errors).some(Boolean);
 
   const handleBlur = (name) => {
-    const err = validateField(name, data[name]);
+    const err = validateField(name, dataRef.current[name]);
     setErrors(prev => ({ ...prev, [name]: err }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const current = dataRef.current;
     const newErrors = {};
-    step.fields.forEach(f => { newErrors[f.name] = validateField(f.name, data[f.name]); });
+    step.fields.forEach(f => { newErrors[f.name] = validateField(f.name, current[f.name]); });
     setErrors(newErrors);
     if (Object.values(newErrors).some(Boolean)) return;
-    if (!isSubmitting) onSubmit(data);
+    if (!isSubmitting) onSubmit(current);
   };
 
   return (
@@ -214,10 +218,16 @@ const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
           </label>
           <input
             ref={i === 0 ? firstRef : undefined}
+            name={field.name}
             type={field.type}
             value={data[field.name]}
             onChange={(e) => {
-              setData(prev => ({ ...prev, [field.name]: e.target.value }));
+              const val = e.target.value;
+              setData(prev => {
+                const next = { ...prev, [field.name]: val };
+                dataRef.current = next;
+                return next;
+              });
               if (errors[field.name]) setErrors(prev => ({ ...prev, [field.name]: null }));
             }}
             onBlur={() => handleBlur(field.name)}
