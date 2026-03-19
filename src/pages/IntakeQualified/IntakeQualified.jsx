@@ -77,7 +77,7 @@ const IntakeQualified = () => {
             </div>
 
             {/* Speaker profile — mobile: below calendar */}
-            <div className="md:hidden -mt-12 w-full -mx-6 px-2 relative z-20">
+            <div className="md:hidden mt-6 w-full -mx-6 px-2 relative z-20">
                 <div className="w-full pt-4 flex flex-col items-center gap-3">
                     <p className="font-drama text-primary/70 text-base italic w-full text-center">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
                     <div className="flex items-center gap-4">
