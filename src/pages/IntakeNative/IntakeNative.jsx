@@ -158,6 +158,18 @@ const TextStep = ({ step, formData, onSubmit, isLast, ctaText }) => {
   );
 };
 
+const validateField = (name, value) => {
+  if (!value.trim()) return null;
+  if (name === 'phone') {
+    const digits = value.replace(/\D/g, '');
+    if (digits.length < 10) return 'Vul een geldig telefoonnummer in (minimaal 10 cijfers)';
+  }
+  if (name === 'email') {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim())) return 'Vul een geldig e-mailadres in';
+  }
+  return null;
+};
+
 const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
   const [data, setData] = useState({
     firstName: formData.firstName || '',
@@ -165,6 +177,7 @@ const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
     phone: formData.phone || '',
     email: formData.email || '',
   });
+  const [errors, setErrors] = useState({});
   const firstRef = useRef(null);
 
   useEffect(() => {
@@ -172,11 +185,21 @@ const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  const isValid = step.fields.every(f => !f.required || data[f.name]?.trim());
+  const isValid = step.fields.every(f => !f.required || data[f.name]?.trim())
+    && !Object.values(errors).some(Boolean);
+
+  const handleBlur = (name) => {
+    const err = validateField(name, data[name]);
+    setErrors(prev => ({ ...prev, [name]: err }));
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (isValid && !isSubmitting) onSubmit(data);
+    const newErrors = {};
+    step.fields.forEach(f => { newErrors[f.name] = validateField(f.name, data[f.name]); });
+    setErrors(newErrors);
+    if (Object.values(newErrors).some(Boolean)) return;
+    if (!isSubmitting) onSubmit(data);
   };
 
   return (
@@ -190,11 +213,22 @@ const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
             ref={i === 0 ? firstRef : undefined}
             type={field.type}
             value={data[field.name]}
-            onChange={(e) => setData(prev => ({ ...prev, [field.name]: e.target.value }))}
+            onChange={(e) => {
+              setData(prev => ({ ...prev, [field.name]: e.target.value }));
+              if (errors[field.name]) setErrors(prev => ({ ...prev, [field.name]: null }));
+            }}
+            onBlur={() => handleBlur(field.name)}
             autoComplete={field.autoComplete}
             required={field.required}
-            className="w-full px-5 py-3.5 rounded-xl border-2 border-primary/10 bg-white text-primary font-sans text-base placeholder:text-primary/30 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/10 transition-all"
+            className={`w-full px-5 py-3.5 rounded-xl border-2 bg-white text-primary font-sans text-base placeholder:text-primary/30 focus:outline-none focus:ring-2 transition-all ${
+              errors[field.name]
+                ? 'border-red-400 focus:border-red-400 focus:ring-red-100'
+                : 'border-primary/10 focus:border-accent focus:ring-accent/10'
+            }`}
           />
+          {errors[field.name] && (
+            <p className="text-xs text-red-500 mt-1 ml-1">{errors[field.name]}</p>
+          )}
         </div>
       ))}
       <button
