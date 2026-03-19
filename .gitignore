@@ -30,3 +30,4 @@ dist-ssr
 __pycache__/
 ivory-amplifier-337717-d9f13e4949e6.json
 .vercel
+.env*.local
