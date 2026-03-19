@@ -369,7 +369,7 @@ const IntakeNative = () => {
         <meta name="robots" content="noindex" />
       </Helmet>
 
-      <section className="min-h-screen pt-28 md:pt-32 pb-20 px-4 md:px-6 bg-background flex flex-col items-center relative z-10 w-full overflow-hidden">
+      <section className="min-h-screen pt-28 md:pt-32 pb-20 px-4 md:px-6 bg-background flex flex-col items-center relative z-10 w-full overflow-x-hidden">
         {/* Background gradient */}
         <div className="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
 
