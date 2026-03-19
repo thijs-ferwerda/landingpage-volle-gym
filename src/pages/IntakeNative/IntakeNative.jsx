@@ -201,12 +201,14 @@ const ContactStep = ({ step, formData, onSubmit, isSubmitting, ctaText }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const current = dataRef.current;
+    const fd = new FormData(e.target);
+    const values = {};
+    step.fields.forEach(f => { values[f.name] = fd.get(f.name) || ''; });
     const newErrors = {};
-    step.fields.forEach(f => { newErrors[f.name] = validateField(f.name, current[f.name]); });
+    step.fields.forEach(f => { newErrors[f.name] = validateField(f.name, values[f.name]); });
     setErrors(newErrors);
     if (Object.values(newErrors).some(Boolean)) return;
-    if (!isSubmitting) onSubmit(current);
+    if (!isSubmitting) onSubmit(values);
   };
 
   return (
