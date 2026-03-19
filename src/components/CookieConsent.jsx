@@ -69,11 +69,11 @@ export default function CookieConsent() {
                 <Shield className="w-5 h-5 text-white" />
               </div>
               <h3 className="font-heading font-bold text-lg text-primary">
-                Even stretchen voor we beginnen
+                Even opwarmen voor we beginnen
               </h3>
             </div>
             <p className="text-sm text-primary/60 leading-relaxed">
-              Net als een goede warming-up zorgen cookies ervoor dat alles soepeler loopt. We gebruiken ze om te meten wat werkt en om je de juiste info te tonen. Alles accepteren? Beste ervaring. Gegarandeerd.
+              Net als een goede warming-up zorgen cookies ervoor dat alles soepeler loopt. We gebruiken ze om te meten wat werkt zodat we onze missie om Nederland gezonder te maken kunnen waarmaken. Help je ons daarbij door alles te accepteren?
             </p>
           </div>
 
@@ -94,19 +94,19 @@ export default function CookieConsent() {
               {/* Necessary — always on */}
               <CategoryRow
                 label="Noodzakelijk"
-                description="De basisoefeningen. Zonder deze werkt er niks."
+                description="De compound oefeningen. Het fundament. Als je die niet doet kun je net zo goed naar huis gaan."
                 checked={true}
                 disabled={true}
               />
               <CategoryRow
                 label="Statistieken"
-                description="Progress tracking. Helpen ons zien wat werkt en wat beter kan."
+                description="Progress tracking. Helpt ons zien wat werkt en wat beter kan."
                 checked={preferences.analytics}
                 onChange={() => toggleCategory('analytics')}
               />
               <CategoryRow
                 label="Marketing"
-                description="Zorgen dat je de juiste content ziet op het juiste moment."
+                description="Content zie je toch wel. Deze zorgen ervoor dat je nuttige content ziet dat past bij jou."
                 checked={preferences.marketing}
                 onChange={() => toggleCategory('marketing')}
               />
