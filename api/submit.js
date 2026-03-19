@@ -10,7 +10,23 @@
  *
  * Optional:
  *   TRACKING_WEBHOOK_URL — Also receives submission events
+ *   TELEGRAM_BOT_TOKEN   — For error alerts
+ *   TELEGRAM_ALERT_CHAT_ID — Chat ID for error alerts
  */
+
+async function sendAlert(message) {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_ALERT_CHAT_ID;
+  if (!token || !chatId) return;
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
+    });
+  } catch { /* don't let alert failures break the flow */ }
+}
+
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     res.status(200).end();
@@ -27,7 +43,7 @@ export default async function handler(req, res) {
 
   if (!GHL_API_KEY || !GHL_LOCATION_ID) {
     console.error('Missing GHL_API_KEY or GHL_LOCATION_ID env vars');
-    // Return 200 anyway so the frontend flow isn't blocked during setup
+    await sendAlert('🚨 <b>Intake API fout</b>\nGHL_API_KEY of GHL_LOCATION_ID ontbreekt in Vercel env vars.');
     res.status(200).json({ ok: false, error: 'GHL not configured' });
     return;
   }
@@ -40,10 +56,6 @@ export default async function handler(req, res) {
       utm_source, utm_medium, utm_campaign, utm_content, utm_term,
       fbclid, gclid,
     } = req.body;
-
-    // Build tags array
-    const tags = ['[trigger] intake homepage ingevuld', `variant-${variant || 'unknown'}`];
-    if (gymType) tags.push(`gymtype-${gymType}`);
 
     // Value mappings: our form values → GHL option labels
     const KNELPUNT_MAP = {
@@ -82,8 +94,6 @@ export default async function handler(req, res) {
       phone,
       companyName: gymName,
       locationId: GHL_LOCATION_ID,
-      source: 'survey | intake homepage',
-      tags,
       customFields,
     };
 
@@ -117,17 +127,22 @@ export default async function handler(req, res) {
         if (updateRes.ok) {
           contactId = existingId;
         } else {
-          console.error('GHL update error:', updateRes.status, await updateRes.text());
+          const errText = await updateRes.text();
+          console.error('GHL update error:', updateRes.status, errText);
+          await sendAlert(`🚨 <b>Intake API fout</b>\nGHL contact update mislukt (${updateRes.status})\n\nLead: ${firstName} ${lastName} (${email})\nError: ${errText}`);
           res.status(200).json({ ok: false, error: 'GHL update failed' });
           return;
         }
       } else {
         console.error('GHL duplicate but no contactId in response');
+        await sendAlert(`🚨 <b>Intake API fout</b>\nDuplicate contact maar geen contactId in GHL response\n\nLead: ${firstName} ${lastName} (${email})`);
         res.status(200).json({ ok: false, error: 'GHL submission failed' });
         return;
       }
     } else {
-      console.error('GHL API error:', response.status, await response.text());
+      const errText = await response.text();
+      console.error('GHL API error:', response.status, errText);
+      await sendAlert(`🚨 <b>Intake API fout</b>\nGHL contact aanmaken mislukt (${response.status})\n\nLead: ${firstName} ${lastName} (${email})\nError: ${errText}`);
       res.status(200).json({ ok: false, error: 'GHL submission failed' });
       return;
     }
@@ -161,7 +176,7 @@ export default async function handler(req, res) {
     res.status(200).json({ ok: true, contactId });
   } catch (err) {
     console.error('Submit error:', err.message);
-    // Return 200 so frontend flow continues
+    await sendAlert(`🚨 <b>Intake API crash</b>\n${err.message}`);
     res.status(200).json({ ok: false, error: 'Internal error' });
   }
 }
