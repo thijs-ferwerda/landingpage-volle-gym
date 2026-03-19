@@ -1,10 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
+
+const LOOM_VIDEO_ID = 'cf85cbcc4c5848b99ee830d375217a47';
+const LOOM_THUMBNAIL = `https://cdn.loom.com/sessions/thumbnails/${LOOM_VIDEO_ID}-e11c1f741f070fff.gif`;
 
 const OnboardingTemplate = ({ packageName }) => {
     const containerRef = useRef(null);
     const contentRefs = useRef([]);
+    const playButtonRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     const addToRefs = (el) => {
         if (el && !contentRefs.current.includes(el)) {
@@ -13,7 +18,6 @@ const OnboardingTemplate = ({ packageName }) => {
     };
 
     useEffect(() => {
-        // Scroll to top
         window.scrollTo(0, 0);
 
         const ctx = gsap.context(() => {
@@ -33,6 +37,20 @@ const OnboardingTemplate = ({ packageName }) => {
 
         return () => ctx.revert();
     }, []);
+
+    // Magnetic hover effect for play button
+    const handleMouseMove = (e) => {
+        if (!playButtonRef.current) return;
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        const x = (e.clientX - left - width / 2) * 0.4;
+        const y = (e.clientY - top - height / 2) * 0.4;
+        gsap.to(playButtonRef.current, { x, y, duration: 0.3, ease: 'power2.out' });
+    };
+
+    const handleMouseLeave = () => {
+        if (!playButtonRef.current) return;
+        gsap.to(playButtonRef.current, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.3)' });
+    };
 
     // Load Leadconnector iframe script
     useEffect(() => {
@@ -71,7 +89,7 @@ const OnboardingTemplate = ({ packageName }) => {
                             <span className="font-drama italic text-primary/70">bij Volle Gym!</span>
                         </h1>
 
-                        <div ref={addToRefs} className="text-primary/70 text-base md:text-lg max-w-3xl leading-relaxed space-y-4 mb-4">
+                        <div ref={addToRefs} className="text-primary/70 text-base md:text-lg max-w-3xl leading-relaxed space-y-4 mb-8">
                             <p>
                                 {packageName !== 'het traject' ? (
                                     <>We waarderen je vertrouwen enorm en kijken ernaar uit om jouw gym samen te vullen met <strong>{packageName}</strong>.</>
@@ -80,8 +98,60 @@ const OnboardingTemplate = ({ packageName }) => {
                                 )}
                             </p>
                             <p>
-                                Om je goed op weg te helpen hebben we je direct een bevestigingsmail gestuurd waarin alle vervolgstappen overzichtelijk staan uitgelegd. Je vindt ze ook op deze pagina, dus neem ze direct even door.
+                                Bekijk eerst deze korte video en doorloop daarna de vervolgstappen op deze pagina.
                             </p>
+                        </div>
+
+                        {/* Video Player — Inline */}
+                        <div ref={addToRefs} className="w-full max-w-3xl mb-4">
+                            <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden bg-dark shadow-2xl border border-dark/10">
+                                {isPlaying ? (
+                                    <iframe
+                                        className="absolute inset-0 w-full h-full"
+                                        src={`https://www.loom.com/embed/${LOOM_VIDEO_ID}?autoplay=1&hide_owner=true&hide_title=true&hide_share=true`}
+                                        frameBorder="0"
+                                        allow="autoplay; fullscreen; picture-in-picture"
+                                        allowFullScreen
+                                        title="Welkom bij Volle Gym"
+                                    ></iframe>
+                                ) : (
+                                    <div
+                                        onClick={() => setIsPlaying(true)}
+                                        onMouseMove={handleMouseMove}
+                                        onMouseLeave={handleMouseLeave}
+                                        className="absolute inset-0 cursor-pointer group"
+                                    >
+                                        {/* Cinematic Overlay */}
+                                        <div className="absolute inset-0 bg-dark/20 group-hover:bg-dark/40 transition-colors duration-500 z-10" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent z-10" />
+
+                                        {/* Loom Thumbnail */}
+                                        <img
+                                            src={LOOM_THUMBNAIL}
+                                            alt="Bekijk de welkomstvideo"
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s] ease-out"
+                                        />
+
+                                        {/* Play Button — exact homepage VSL pattern */}
+                                        <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+                                            <div
+                                                ref={playButtonRef}
+                                                className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-accent border border-accent flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300"
+                                            >
+                                                <svg className="w-6 h-6 md:w-7 md:h-7 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        {/* Video Label */}
+                                        <div className="absolute bottom-6 left-8 z-20 font-data text-xs text-primary/80 tracking-widest uppercase">
+                                            <span className="w-2 h-2 rounded-full bg-accent inline-block mr-2 animate-pulse"></span>
+                                            Bekijk video (2:41)
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
                         </div>
 
                         {/* Animated Scroll Indicator */}
@@ -282,6 +352,7 @@ const OnboardingTemplate = ({ packageName }) => {
                     </p>
                 </section>
             </div>
+
         </>
     );
 };
