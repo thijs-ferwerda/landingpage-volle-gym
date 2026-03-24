@@ -46,7 +46,7 @@ const Intake = () => {
             <div className="w-full max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-primary/10 overflow-hidden relative z-20 flex justify-center items-center">
                 {/* We use a CSS filter (grayscale) to turn the buggy blue GHL footer into dark gray/black */}
                 <iframe
-                    src={`https://api.leadconnectorhq.com/widget/survey/yi2HMgCtZdzbGPakU69e?cb=${timestamp}&notrack=true`}
+                    src={`https://api.leadconnectorhq.com/widget/survey/yi2HMgCtZdzbGPakU69e?cb=${timestamp}`}
                     style={{ border: 'none', width: '100%', height: '100%', maxWidth: '800px', margin: '0 auto' }}
                     scrolling="no"
                     id="yi2HMgCtZdzbGPakU69e"
