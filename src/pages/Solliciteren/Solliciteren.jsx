@@ -21,25 +21,31 @@ const Solliciteren = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
+        const payload = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            location: formData.location,
+            motivation: formData.motivation,
+            form_type: "partner_sollicitatie"
+        };
+
         try {
-            await fetch("https://services.leadconnectorhq.com/hooks/0ybaSuLNKF7ssKOjBqwH/webhook-trigger/48120e14-7b1b-435c-866e-c09b486373a2", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone,
-                    location: formData.location,
-                    motivation: formData.motivation,
-                    form_type: "partner_sollicitatie"
+            await Promise.allSettled([
+                fetch("https://services.leadconnectorhq.com/hooks/0ybaSuLNKF7ssKOjBqwH/webhook-trigger/48120e14-7b1b-435c-866e-c09b486373a2", {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                }),
+                fetch("https://n8n.vollegym.nl/webhook/recruitment-website-notify", {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
                 })
-            });
+            ]);
             setIsSubmitted(true);
         } catch (error) {
             console.error("Fout bij het versturen van formulier:", error);
-            // Zelfs bij een error tonen we succes of je kan een error state maken
             setIsSubmitted(true);
         } finally {
             setIsSubmitting(false);
