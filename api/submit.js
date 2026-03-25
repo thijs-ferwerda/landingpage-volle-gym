@@ -9,7 +9,7 @@
  *   GHL_LOCATION_ID   — GoHighLevel Location ID
  *
  * Optional:
- *   TRACKING_WEBHOOK_URL — Also receives submission events
+ *   INTAKE_WEBHOOK_URL   — GHL webhook to trigger tracking workflow
  *   TELEGRAM_BOT_TOKEN   — For error alerts
  *   TELEGRAM_ALERT_CHAT_ID — Chat ID for error alerts
  */
@@ -87,6 +87,21 @@ export default async function handler(req, res) {
       { id: '9xZwPiX6GZrLYVsiHKBx', value: GYMTYPE_MAP[gymType] || gymType },
     ].filter(f => f.value);
 
+    // Build attributionSource from UTM parameters
+    const attributionSource = {};
+    if (utm_source) {
+      attributionSource.utmSource = utm_source;
+      attributionSource.adSource = utm_source;
+      attributionSource.sessionSource = utm_source === 'facebook' || utm_source === 'ig' ? 'Paid Social' : 'Direct traffic';
+    }
+    if (utm_campaign) attributionSource.utmCampaign = utm_campaign;
+    if (utm_medium) attributionSource.utmMedium = utm_medium;
+    if (utm_content) attributionSource.utmContent = utm_content;
+    if (utm_term) attributionSource.utmTerm = utm_term;
+    if (fbclid) attributionSource.fbclid = fbclid;
+    if (gclid) attributionSource.gclid = gclid;
+    attributionSource.referrer = 'https://www.vollegym.nl/intake';
+
     const ghlPayload = {
       firstName,
       lastName,
@@ -94,7 +109,9 @@ export default async function handler(req, res) {
       phone,
       companyName: gymName,
       locationId: GHL_LOCATION_ID,
+      source: utm_source === 'facebook' || utm_source === 'ig' ? 'Facebook' : utm_source || 'Website',
       customFields,
+      ...(Object.keys(attributionSource).length > 1 && { attributionSource }),
     };
 
     const ghlHeaders = {
@@ -159,8 +176,8 @@ export default async function handler(req, res) {
       utm_campaign,
     }));
 
-    // Forward to webhook if configured
-    const webhookUrl = process.env.TRACKING_WEBHOOK_URL;
+    // Forward to GHL webhook to trigger tracking workflow (tags + n8n)
+    const webhookUrl = process.env.INTAKE_WEBHOOK_URL;
     if (webhookUrl) {
       fetch(webhookUrl, {
         method: 'POST',
