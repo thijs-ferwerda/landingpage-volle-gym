@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import { intakeVariants } from '../../data/intakeVariants';
-import { captureUTMs, assignVariant, trackEvent } from '../../utils/tracking';
+import { captureUTMs, getUTMs, getLandingContext, assignVariant, trackEvent } from '../../utils/tracking';
 
 // ─── Step Definitions ───
 
@@ -394,7 +394,7 @@ const IntakeNative = () => {
       const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...finalData, variant }),
+        body: JSON.stringify({ ...finalData, ...getUTMs(), ...getLandingContext(), variant }),
       });
       const data = await res.json();
       if (!data.ok) {

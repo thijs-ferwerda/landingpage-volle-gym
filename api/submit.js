@@ -54,7 +54,9 @@ export default async function handler(req, res) {
       isOwner, knelpunt, openForChange, goal, gymType,
       variant,
       utm_source, utm_medium, utm_campaign, utm_content, utm_term,
-      fbclid, gclid,
+      fbclid, gclid, gbraid, wbraid,
+      landingUrl, referrer, userAgent,
+      fbc, fbp, gaClientId, gaSessionId,
     } = req.body;
 
     // Value mappings: our form values → GHL option labels
@@ -87,12 +89,23 @@ export default async function handler(req, res) {
       { id: '9xZwPiX6GZrLYVsiHKBx', value: GYMTYPE_MAP[gymType] || gymType },
     ].filter(f => f.value);
 
-    // Build attributionSource from UTM parameters
-    const attributionSource = {};
+    // Build attributionSource with full context for GHL attribution tracking
+    const clientIp = (req.headers['x-forwarded-for'] || req.headers['x-real-ip'] || '').split(',')[0].trim();
+    const clientUA = userAgent || req.headers['user-agent'] || '';
+
+    const attributionSource = {
+      url: landingUrl || 'https://www.vollegym.nl/intake',
+      referrer: referrer || '',
+      userAgent: clientUA,
+      ip: clientIp,
+      medium: 'form',
+    };
     if (utm_source) {
       attributionSource.utmSource = utm_source;
       attributionSource.adSource = utm_source;
       attributionSource.sessionSource = utm_source === 'facebook' || utm_source === 'ig' ? 'Paid Social' : 'Direct traffic';
+    } else {
+      attributionSource.sessionSource = referrer ? 'Referral' : 'Direct traffic';
     }
     if (utm_campaign) attributionSource.utmCampaign = utm_campaign;
     if (utm_medium) attributionSource.utmMedium = utm_medium;
@@ -100,7 +113,13 @@ export default async function handler(req, res) {
     if (utm_term) attributionSource.utmTerm = utm_term;
     if (fbclid) attributionSource.fbclid = fbclid;
     if (gclid) attributionSource.gclid = gclid;
-    attributionSource.referrer = 'https://www.vollegym.nl/intake';
+    if (gbraid) attributionSource.gbraid = gbraid;
+    if (wbraid) attributionSource.wbraid = wbraid;
+    if (fbc) attributionSource.fbc = fbc;
+    if (fbp) attributionSource.fbp = fbp;
+    if (gaClientId) attributionSource.gaClientId = gaClientId;
+    if (gaSessionId) attributionSource.gaSessionId = gaSessionId;
+    if (utm_campaign) attributionSource.campaign = utm_campaign;
 
     const ghlPayload = {
       firstName,
@@ -111,7 +130,7 @@ export default async function handler(req, res) {
       locationId: GHL_LOCATION_ID,
       source: utm_source === 'facebook' || utm_source === 'ig' ? 'Facebook' : utm_source || 'Website',
       customFields,
-      ...(Object.keys(attributionSource).length > 1 && { attributionSource }),
+      attributionSource,
     };
 
     const ghlHeaders = {

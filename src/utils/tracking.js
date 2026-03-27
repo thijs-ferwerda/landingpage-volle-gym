@@ -3,9 +3,9 @@
  * Handles UTM capture, A/B variant assignment, and event tracking.
  */
 
-const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid', 'gbraid', 'wbraid'];
 
-/** Capture UTM parameters from the current URL and persist in sessionStorage */
+/** Capture UTM parameters + landing context from the current URL and persist in sessionStorage */
 export const captureUTMs = () => {
   const params = new URLSearchParams(window.location.search);
   const utms = {};
@@ -19,10 +19,34 @@ export const captureUTMs = () => {
     sessionStorage.setItem('vg_utms', JSON.stringify(utms));
   }
 
+  // Store landing page URL + referrer + cookies on first visit only
+  if (!sessionStorage.getItem('vg_landing')) {
+    const cookies = document.cookie.split(';').reduce((acc, c) => {
+      const [k, ...v] = c.trim().split('=');
+      acc[k] = v.join('=');
+      return acc;
+    }, {});
+    // Extract GA session ID from _ga_* cookie
+    const gaSessionCookie = Object.entries(cookies).find(([k]) => k.startsWith('_ga_') && !k.startsWith('_gac_'));
+    const gaSessionId = gaSessionCookie ? gaSessionCookie[1].split('.')[2] : '';
+
+    sessionStorage.setItem('vg_landing', JSON.stringify({
+      landingUrl: window.location.href,
+      referrer: document.referrer,
+      userAgent: navigator.userAgent,
+      fbc: cookies._fbc || '',
+      fbp: cookies._fbp || '',
+      gaClientId: cookies._ga ? cookies._ga.split('.').slice(2).join('.') : '',
+      gaSessionId,
+    }));
+  }
+
   return JSON.parse(sessionStorage.getItem('vg_utms') || '{}');
 };
 
 export const getUTMs = () => JSON.parse(sessionStorage.getItem('vg_utms') || '{}');
+
+export const getLandingContext = () => JSON.parse(sessionStorage.getItem('vg_landing') || '{}');
 
 /** Assign an A/B test variant using weighted random selection, persisted in localStorage */
 export const assignVariant = (variants) => {

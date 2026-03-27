@@ -24,6 +24,7 @@ import MinimalLayout from './components/MinimalLayout';
 import CookieConsent from './components/CookieConsent';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
+import { captureUTMs } from './utils/tracking';
 
 // Lazy-load pages that use react-markdown (keeps vendor-markdown chunk off homepage)
 const SeoPageTemplate = lazy(() => import('./pages/SeoPageTemplate'));
@@ -36,6 +37,11 @@ const VacancyPage = lazy(() => import('./pages/VacancyTemplate/VacancyPage'));
 
 const ScrollToHash = () => {
   const { hash, pathname } = useLocation();
+
+  // Capture UTM parameters on every page load/navigation
+  useEffect(() => {
+    captureUTMs();
+  }, [pathname]);
 
   // Scroll to top on route change
   useEffect(() => {
