@@ -93,7 +93,7 @@ const VoorJeSolliciteertHQ = () => {
                     {/* CTA */}
                     <div className="text-left md:text-center pb-12 border-t border-neutral-200 pt-16">
                         <Link
-                            to={`/solliciteren-hq`}
+                            to={`/solliciteren?type=hq`}
                             className="bg-black text-white px-12 py-5 text-xl font-medium hover:bg-black/80 transition-colors inline-block"
                         >
                             Solliciteer nu

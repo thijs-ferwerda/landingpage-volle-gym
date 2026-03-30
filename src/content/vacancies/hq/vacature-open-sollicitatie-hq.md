@@ -6,7 +6,7 @@ hours: "Nader te bepalen"
 description: "Geen passende vacature gevonden, maar wel overtuigd dat je waarde kunt toevoegen? Laat van je horen."
 slug: "vacature-open-sollicitatie-hq"
 heroImage: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop"
-applyUrl: "/solliciteren-hq?role=open-sollicitatie"
+applyUrl: "/solliciteren?type=hq&role=open-sollicitatie"
 ---
 
 # Open Sollicitatie

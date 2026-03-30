@@ -6,7 +6,7 @@ hours: "Fulltime"
 description: "Word de drijvende kracht achter de commerciële groei van de snelst groeiende gym-partner van Nederland."
 slug: "vacature-sales-representative-closer-hq"
 heroImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2000&auto=format&fit=crop"
-applyUrl: "/solliciteren-hq?role=sales-representative-closer"
+applyUrl: "/solliciteren?type=hq&role=sales-representative-closer"
 ---
 
 Er zijn mensen die niet fit zijn en er wél iets aan willen doen. Ze melden zich aan bij een sportschool, maar die sportschool draait op chaos. De eigenaar is te druk met overleven om echt te begeleiden. De klant haakt af, wordt teleurgesteld, en faalt opnieuw. De gym verliest een lid. De persoon verliest vertrouwen. Beiden verliezen. Dit is een systeemprobleem en wij gaan dat oplossen. Onze missie: Nederland gezonder maken. We maken sportschooleigenaren zo sterk dat ze hun leden de begeleiding kunnen geven die ze verdienen. Sterke gyms betekent betere coaching. Betere coaching betekent gezondere mensen. Dat is de keten die we in beweging zetten.

@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, useSearchParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
 import Intake from './pages/Intake/Intake';
@@ -17,7 +17,6 @@ import VacanciesOverview from './pages/VacanciesOverview/VacanciesOverview';
 import VacanciesOverviewHQ from './pages/VacanciesOverviewHQ/VacanciesOverviewHQ';
 import WerkenBij from './pages/WerkenBij/WerkenBij';
 import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteertHQ';
-import SolliciterenHQ from './pages/SolliciterenHQ/SolliciterenHQ';
 import IntakeNative from './pages/IntakeNative/IntakeNative';
 import Bedankvideo from './pages/Bedankvideo/Bedankvideo';
 import MinimalLayout from './components/MinimalLayout';
@@ -70,6 +69,13 @@ const ScrollToHash = () => {
   return null;
 };
 
+const RedirectToSolliciteren = () => {
+  const [searchParams] = useSearchParams();
+  const role = searchParams.get('role');
+  const target = role ? `/solliciteren?type=hq&role=${role}` : '/solliciteren?type=hq';
+  return <Navigate to={target} replace />;
+};
+
 function App() {
   return (
     <Router>
@@ -113,7 +119,7 @@ function App() {
 
         {/* Minimal Routes */}
         <Route path="/solliciteren" element={<MinimalLayout><Solliciteren /></MinimalLayout>} />
-        <Route path="/solliciteren-hq" element={<MinimalLayout><SolliciterenHQ /></MinimalLayout>} />
+        <Route path="/solliciteren-hq" element={<RedirectToSolliciteren />} />
         <Route path="/intake/gekwalificeerd" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
         <Route path="/verdiepingsgesprek" element={<MinimalLayout><IntakeQualified /></MinimalLayout>} />
         <Route path="/onboarding" element={<MinimalLayout><OnboardingTemplate packageName="het traject" /></MinimalLayout>} />

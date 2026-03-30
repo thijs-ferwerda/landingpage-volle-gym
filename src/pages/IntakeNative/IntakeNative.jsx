@@ -390,22 +390,36 @@ const IntakeNative = () => {
       goal: finalData.goal,
     });
 
+    const fullPayload = { ...finalData, ...getUTMs(), ...getLandingContext(), variant };
+    let apiSucceeded = false;
+
+    // Laag 1: API route (volledige GHL attribution + custom fields)
     try {
       const res = await fetch('/api/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...finalData, ...getUTMs(), ...getLandingContext(), variant }),
+        body: JSON.stringify(fullPayload),
       });
       const data = await res.json();
-      if (!data.ok) {
+      if (data.ok) apiSucceeded = true;
+    } catch {
+      // API faalde, fallback hieronder vangt het op
+    }
+
+    // Laag 2: Als API faalde, direct naar N8N webhook als fallback
+    if (!apiSucceeded) {
+      try {
+        await fetch("https://n8n.vollegym.nl/webhook/intake-website-fallback", {
+          method: "POST",
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...fullPayload, _fallback: true }),
+        });
+      } catch {
+        // Fallback faalde ook
         setSubmitError(true);
         setIsSubmitting(false);
         return;
       }
-    } catch {
-      setSubmitError(true);
-      setIsSubmitting(false);
-      return;
     }
 
     navigate('/intake/gekwalificeerd');

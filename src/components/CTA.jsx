@@ -25,7 +25,7 @@ const CTA = () => {
 
                     {/* Fixed Text Visibility: Ensuring it's bright enough against the dark background */}
                     <p className="font-sans text-white/90 mb-14 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed">
-                        Plan direct je intake in. Geen softe beloftes of vage overtuigingstactieken. Gewoon ontdekken of we jou <strong className="text-white font-bold">binnen 90 dagen aan 45 nieuwe, ideale PT-leden</strong> kunnen helpen.
+                        Plan direct je intake in en ontdek of we jou <strong className="text-white font-bold">binnen 90 dagen aan 45 nieuwe, ideale PT-leden</strong> kunnen helpen.
                     </p>
 
                     <div className="relative inline-flex items-center justify-center mt-4 w-full md:w-auto">

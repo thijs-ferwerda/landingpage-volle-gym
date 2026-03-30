@@ -6,7 +6,7 @@ hours: "32 - 40 uur"
 description: "Word de visuele storyteller van Volle Gym HQ en de personal brands van de oprichters. Inspireer Nederland naar een gezonder leven door de focus op de mens."
 slug: "vacature-videograaf-fotograaf-hq"
 heroImage: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=2000&auto=format&fit=crop"
-applyUrl: "/solliciteren-hq?role=videograaf-fotograaf-hq"
+applyUrl: "/solliciteren?type=hq&role=videograaf-fotograaf"
 ---
 
 # Videograaf / Fotograaf bij Volle Gym HQ
