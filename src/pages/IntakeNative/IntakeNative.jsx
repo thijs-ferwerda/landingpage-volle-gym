@@ -16,7 +16,6 @@ const STEPS = {
       { value: 'ja', label: 'Ja, ik ben (mede-)eigenaar' },
       { value: 'nee', label: 'Nee' },
     ],
-    disqualifyOn: 'nee',
   },
   knelpunt: {
     question: 'Wat is op dit moment je grootste knelpunt in groei?',
@@ -37,7 +36,6 @@ const STEPS = {
       { value: 'ja', label: 'Ja, absoluut' },
       { value: 'nee', label: 'Nee, liever niet' },
     ],
-    disqualifyOn: 'nee',
   },
   doel: {
     question: 'Wat is je concrete doel voor 2026?',
@@ -48,6 +46,16 @@ const STEPS = {
       { value: 'rust', label: 'Meer rust & voorspelbaarheid in de business' },
       { value: 'opschalen', label: 'Opschalen met team en processen' },
       { value: 'weet-niet', label: 'Ik weet het nog niet' },
+    ],
+  },
+  smallgroup: {
+    question: 'Bied je small group training aan, of heb je de ambitie om dit te gaan doen?',
+    type: 'choice',
+    field: 'smallGroup',
+    options: [
+      { value: 'ja-actief', label: 'Ja, ik geef al small group training' },
+      { value: 'ja-ambitie', label: 'Ja, dat wil ik gaan opzetten' },
+      { value: 'nee', label: 'Nee, en dat is ook niet mijn plan' },
     ],
   },
   gymtype: {
@@ -61,7 +69,6 @@ const STEPS = {
       { value: 'vechtsport', label: 'Vechtsportschool (judo, karate, boksen, MMA)' },
       { value: 'pilates-yoga', label: 'Pilates of yoga studio' },
     ],
-    qualifyOnly: 'pt-studio',
   },
   gymnaam: {
     question: 'Wat is de naam van jouw sportschool?',
@@ -350,15 +357,6 @@ const IntakeNative = () => {
       value: typeof value === 'object' ? 'contact_info' : value,
     });
 
-    const shouldDisqualify =
-      (currentStep.disqualifyOn && value === currentStep.disqualifyOn) ||
-      (currentStep.qualifyOnly && value !== currentStep.qualifyOnly);
-    if (shouldDisqualify) {
-      trackEvent('Disqualified', { step: currentStepKey });
-      navigate('/sorry');
-      return;
-    }
-
     const updatedData = currentStep.type === 'contact'
       ? { ...formData, ...value }
       : { ...formData, [currentStep.field]: value };
@@ -383,14 +381,22 @@ const IntakeNative = () => {
 
   const handleSubmit = async (finalData) => {
     setIsSubmitting(true);
+
+    const qualified =
+      finalData.isOwner === 'ja' &&
+      finalData.openForChange === 'ja' &&
+      finalData.smallGroup !== 'nee';
+
     trackEvent('FormSubmit', {
       gymName: finalData.gymName,
       gymType: finalData.gymType,
+      smallGroup: finalData.smallGroup,
       knelpunt: finalData.knelpunt,
       goal: finalData.goal,
+      qualified,
     });
 
-    const fullPayload = { ...finalData, ...getUTMs(), ...getLandingContext(), variant };
+    const fullPayload = { ...finalData, ...getUTMs(), ...getLandingContext(), variant, qualified };
     let apiSucceeded = false;
 
     // Laag 1: API route (volledige GHL attribution + custom fields)
@@ -422,7 +428,12 @@ const IntakeNative = () => {
       }
     }
 
-    navigate('/intake/gekwalificeerd');
+    if (qualified) {
+      navigate('/intake/gekwalificeerd');
+    } else {
+      trackEvent('Disqualified', { isOwner: finalData.isOwner, openForChange: finalData.openForChange, smallGroup: finalData.smallGroup });
+      navigate('/sorry');
+    }
   };
 
   return (

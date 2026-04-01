@@ -46,13 +46,15 @@ export default async function handler(req, res) {
   try {
     const {
       firstName, lastName, email, phone, gymName,
-      isOwner, knelpunt, openForChange, goal, gymType,
+      isOwner, knelpunt, openForChange, goal, smallGroup, gymType,
       variant,
       utm_source, utm_medium, utm_campaign, utm_content, utm_term,
       fbclid, gclid, gbraid, wbraid,
       landingUrl, referrer, userAgent,
       fbc, fbp, gaClientId, gaSessionId,
     } = req.body;
+
+    const qualified = isOwner === 'ja' && openForChange === 'ja' && smallGroup !== 'nee';
 
     // Value mappings: our form values → GHL option labels
     const KNELPUNT_MAP = {
@@ -66,6 +68,11 @@ export default async function handler(req, res) {
       'rust': 'Meer rust & voorspelbaarheid in de business',
       'opschalen': 'Opschalen met team en processen',
       'weet-niet': 'Ik weet het nog niet',
+    };
+    const SMALLGROUP_MAP = {
+      'ja-actief': 'Ja, ik geef al small group training',
+      'ja-ambitie': 'Ja, dat wil ik gaan opzetten',
+      'nee': 'Nee, en dat is ook niet mijn plan',
     };
     const GYMTYPE_MAP = {
       'pt-studio': '(Small group) personal training studio',
@@ -81,7 +88,9 @@ export default async function handler(req, res) {
       { id: '1ghoojx7IDESNTIVmb33', value: KNELPUNT_MAP[knelpunt] || knelpunt },
       { id: 'Bsa6XDV0stf7cwh3z0Gr', value: openForChange === 'ja' ? 'Ja' : 'Nee' },
       { id: 'HrjK1x9DQnWvUfhEfbCF', value: GOAL_MAP[goal] || goal },
+      { id: 'oGcL56tAGOhnTvyMlZ8l', value: SMALLGROUP_MAP[smallGroup] || smallGroup },
       { id: '9xZwPiX6GZrLYVsiHKBx', value: GYMTYPE_MAP[gymType] || gymType },
+      { id: 'SEIxXstAyZsoVVRCxAwz', value: qualified ? 'Ja' : 'Nee' },
     ].filter(f => f.value);
 
     // Build attributionSource with full context for GHL attribution tracking
@@ -183,6 +192,8 @@ export default async function handler(req, res) {
       _type: 'intake_submission',
       contactId,
       variant,
+      qualified,
+      smallGroup,
       gymType,
       knelpunt,
       goal,
@@ -199,6 +210,7 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           _type: 'intake_submission',
           contactId,
+          qualified,
           ...req.body,
         }),
       }).catch(() => {});

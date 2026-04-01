@@ -14,7 +14,7 @@ export const intakeVariants = {
     weight: 1,
     headline: 'Meld je aan voor een Volle Gym.',
     subheadline: 'Vul het korte formulier hieronder in om te kijken of jouw club in aanmerking komt.',
-    steps: ['eigenaar', 'knelpunt', 'openheid', 'doel', 'gymtype', 'gymnaam', 'contact'],
+    steps: ['eigenaar', 'knelpunt', 'openheid', 'doel', 'smallgroup', 'gymtype', 'gymnaam', 'contact'],
     ctaText: 'Verstuur mijn aanmelding',
   },
 };
