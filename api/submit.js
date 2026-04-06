@@ -54,7 +54,7 @@ export default async function handler(req, res) {
       fbc, fbp, gaClientId, gaSessionId,
     } = req.body;
 
-    const qualified = isOwner === 'ja' && openForChange === 'ja' && smallGroup !== 'nee';
+    const qualified = isOwner === 'ja' && openForChange === 'ja' && smallGroup !== 'nee' && gymType !== 'pilates-yoga';
 
     // Value mappings: our form values → GHL option labels
     const KNELPUNT_MAP = {

@@ -385,7 +385,8 @@ const IntakeNative = () => {
     const qualified =
       finalData.isOwner === 'ja' &&
       finalData.openForChange === 'ja' &&
-      finalData.smallGroup !== 'nee';
+      finalData.smallGroup !== 'nee' &&
+      finalData.gymType !== 'pilates-yoga';
 
     trackEvent('FormSubmit', {
       gymName: finalData.gymName,
