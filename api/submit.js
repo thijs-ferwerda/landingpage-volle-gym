@@ -158,7 +158,7 @@ export default async function handler(req, res) {
       const errorData = await response.json();
       const existingId = errorData.meta?.contactId;
       if (existingId) {
-        const { locationId: _lid, ...updatePayload } = ghlPayload;
+        const { locationId: _lid, attributionSource: _attr, ...updatePayload } = ghlPayload;
         const updateRes = await fetch(`https://services.leadconnectorhq.com/contacts/${existingId}`, {
           method: 'PUT',
           headers: ghlHeaders,
@@ -167,11 +167,23 @@ export default async function handler(req, res) {
         if (updateRes.ok) {
           contactId = existingId;
         } else {
-          const errText = await updateRes.text();
-          console.error('GHL update error:', updateRes.status, errText);
-          await sendAlert(`🚨 **Intake API fout**\nGHL contact update mislukt (${updateRes.status})\n\nLead: ${firstName} ${lastName} (${email})\nError: ${errText}`);
-          res.status(200).json({ ok: false, error: 'GHL update failed' });
-          return;
+          // Full update failed (e.g. duplicate constraint on phone) — try custom fields only
+          console.warn('GHL full update failed, trying custom fields only for', existingId);
+          const patchRes = await fetch(`https://services.leadconnectorhq.com/contacts/${existingId}`, {
+            method: 'PUT',
+            headers: ghlHeaders,
+            body: JSON.stringify({ customFields }),
+          });
+          if (patchRes.ok) {
+            contactId = existingId;
+          } else {
+            // Custom fields update also failed — still proceed with contactId so webhook can handle it
+            const errText = await patchRes.text();
+            console.error('GHL custom fields update also failed:', patchRes.status, errText);
+            await sendAlert(`🚨 **Intake API fout**\nGHL contact update mislukt (custom fields fallback ook gefaald)\n\nLead: ${firstName} ${lastName} (${email})\nContact ID: ${existingId}\nError: ${errText}`);
+            // Don't return — proceed with existingId so the webhook still fires
+            contactId = existingId;
+          }
         }
       } else {
         console.error('GHL duplicate but no contactId in response');
