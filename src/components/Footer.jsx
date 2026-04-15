@@ -80,7 +80,6 @@ const Footer = () => {
                 <div className="flex gap-4 md:gap-6">
                     <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
                     <Link to="/voorwaarden" className="hover:text-primary transition-colors">Voorwaarden</Link>
-                    <button onClick={() => window.__openCookieSettings?.()} className="hover:text-primary transition-colors cursor-pointer">Cookies</button>
                 </div>
             </div>
         </footer>

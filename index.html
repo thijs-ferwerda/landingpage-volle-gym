@@ -58,27 +58,19 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
   <link rel="preconnect" href="https://lh3.googleusercontent.com" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-  <!-- Google Consent Mode v2 — set defaults BEFORE GTM loads -->
+  <!-- Google Consent Mode v2 — all granted (no cookie banner) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    // Read stored consent (if any) to set correct defaults on return visits
-    (function(){
-      var stored = null;
-      try { var raw = localStorage.getItem('vg_cookie_consent'); if(raw) stored = JSON.parse(raw); } catch(e){}
-      var a = stored && stored.analytics ? 'granted' : 'denied';
-      var m = stored && stored.marketing ? 'granted' : 'denied';
-      gtag('consent','default',{
-        analytics_storage: a,
-        ad_storage: m,
-        ad_user_data: m,
-        ad_personalization: m,
-        functionality_storage: 'granted',
-        personalization_storage: 'granted',
-        security_storage: 'granted',
-        wait_for_update: 500
-      });
-    })();
+    gtag('consent','default',{
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      functionality_storage: 'granted',
+      personalization_storage: 'granted',
+      security_storage: 'granted'
+    });
   </script>
 
   <!-- Google Tag Manager -->

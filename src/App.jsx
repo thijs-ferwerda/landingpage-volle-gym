@@ -19,8 +19,9 @@ import WerkenBij from './pages/WerkenBij/WerkenBij';
 import VoorJeSolliciteertHQ from './pages/VoorJeSolliciteertHQ/VoorJeSolliciteertHQ';
 import IntakeNative from './pages/IntakeNative/IntakeNative';
 import Bedankvideo from './pages/Bedankvideo/Bedankvideo';
+import TestimonialPage from './pages/Testimonial/TestimonialPage';
 import MinimalLayout from './components/MinimalLayout';
-import CookieConsent from './components/CookieConsent';
+
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 import { captureUTMs } from './utils/tracking';
@@ -103,6 +104,7 @@ function App() {
 
         {/* Resultaten Pagina */}
         <Route path="/resultaten" element={<><Navbar /><Results /><Footer /></>} />
+        <Route path="/resultaten/:slug" element={<><Navbar /><TestimonialPage /><Footer /></>} />
 
         {/* Vacature Template Pagina */}
         <Route path="/werken-bij" element={<><Navbar /><WerkenBij /><Footer /></>} />
@@ -137,7 +139,7 @@ function App() {
         {/* Catch-all 404 */}
         <Route path="*" element={<><Navbar /><NotFound /><Footer /></>} />
       </Routes>
-      <CookieConsent />
+
       <SpeedInsights />
       <Analytics />
     </Router>
