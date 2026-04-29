@@ -3,6 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import GoogleReviews from '../../components/GoogleReviews';
 
+const WISTIA_MEDIA_ID = '88t7hg03ke';
+
 // Reusing all 14 youtube data entries exactly as they are in SocialProof.jsx
 const youtubeData = [
     { name: 'Melissa Pach', result: '18 leden in 1 maand tijd', objection: 'Draaide verlies en vocht puur om te overleven met haar vaste ledenbestand. Startte de samenwerking en verkocht vrijwel direct 18 nieuwe trajecten vol energie.', videoId: 'QIEOwUDPo5E' },
@@ -52,11 +54,31 @@ const ThankYou = () => {
         return () => ctx.revert();
     }, []);
 
+    // Load Wistia player scripts
+    useEffect(() => {
+        const playerScript = document.createElement('script');
+        playerScript.src = 'https://fast.wistia.com/player.js';
+        playerScript.async = true;
+        document.body.appendChild(playerScript);
+
+        const embedScript = document.createElement('script');
+        embedScript.src = `https://fast.wistia.com/embed/${WISTIA_MEDIA_ID}.js`;
+        embedScript.async = true;
+        embedScript.type = 'module';
+        document.body.appendChild(embedScript);
+
+        return () => {
+            document.body.removeChild(playerScript);
+            document.body.removeChild(embedScript);
+        };
+    }, []);
+
     return (
         <>
             <Helmet>
                 <title>Bedankt! Je gesprek staat ingepland | Volle Gym</title>
                 <meta name="robots" content="noindex" />
+                <style>{`wistia-player[media-id='${WISTIA_MEDIA_ID}']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${WISTIA_MEDIA_ID}/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }`}</style>
             </Helmet>
 
             <div ref={containerRef} className="bg-dark min-h-screen pt-32 pb-24 font-sans text-primary relative overflow-hidden">
@@ -72,8 +94,15 @@ const ThankYou = () => {
                         </h1>
 
                         <p ref={addToRefs} className="text-primary/70 text-base md:text-xl max-w-2xl leading-relaxed mb-12">
-                            Terwijl je wacht op ons gesprek... Ontdek hier hoe we de afgelopen maanden landelijk al succesvolle gyms wisten te transformeren. We hebben alvast een paar ervaringen voor je op een rijtje gezet.
+                            Terwijl je wacht op ons gesprek... Je bent druk en gaat 45 min investeren in ons gesprek, dus bekijk deze video even tot het einde af (5 min) zodat we ons gesprek zo nuttig mogelijk kunnen insteken. Daar zijn namelijk een aantal dingen voor nodig:
                         </p>
+
+                        {/* Video Player — Wistia */}
+                        <div ref={addToRefs} className="w-full max-w-3xl mb-12">
+                            <div className="relative w-full rounded-[2rem] overflow-hidden bg-dark shadow-2xl border border-primary/10">
+                                <wistia-player media-id={WISTIA_MEDIA_ID} aspect="1.7777777777777777"></wistia-player>
+                            </div>
+                        </div>
 
                         <div ref={addToRefs} className="inline-flex items-center gap-3 px-6 py-3 border border-primary/10 rounded-full bg-white/5 shadow-sm backdrop-blur-sm">
                             <span className="font-data text-primary text-xs md:text-sm uppercase tracking-widest font-bold">
@@ -121,7 +150,7 @@ const ThankYou = () => {
 
                 {/* Google Reviews Sectie (Re-using Existing Component) */}
                 <div className="mt-20">
-                    <GoogleReviews />
+                    <GoogleReviews expandAll />
                 </div>
             </div>
         </>

@@ -134,7 +134,7 @@ export default async function handler(req, res) {
       const errorData = await response.json();
       const existingId = errorData.meta?.contactId;
       if (existingId) {
-        const { locationId: _lid, ...updatePayload } = ghlPayload;
+        const { locationId: _lid, attributionSource: _attr, ...updatePayload } = ghlPayload;
         const updateRes = await fetch(`https://services.leadconnectorhq.com/contacts/${existingId}`, {
           method: 'PUT',
           headers: ghlHeaders,

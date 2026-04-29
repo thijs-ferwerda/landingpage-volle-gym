@@ -7,8 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
 const reviews = [
     // --- TOP 6 HANDPICKED ---
     {
+        "author": "Joeri Zwart",
+        "date": "een maand geleden",
+        "text": "We werken nu een tijdje samen met VolleGym voor onze Meta ads en dat bevalt goed. Communicatie is snel en duidelijk, je hoeft nergens achteraan. Wat voor ons vooral telt: de resultaten. Die zijn gewoon sterk en stabiel, en je merkt dat ze weten waar ze mee bezig zijn. Ze doen niet zomaar wat, maar werken vanuit een duidelijke, bewezen methode.",
+        "profile_photo": "https://lh3.googleusercontent.com/a-/ALV-UjVhejs196WEJvdUt9phsmkfTh79jvCRMDGtHexbfEmXGNf8hc7kig=s128-c0x00000000-cc-rp-mo"
+    },
+    {
         "author": "Dominique van Do's Gym",
-        "date": "3 weken geleden",
+        "date": "3 maanden geleden",
         "text": "VolleGym is een top partij. Het 3 maanden Gym Leaders Programma was helder opgebouwd, met goede tools en begeleiding die je direct kunt toepassen in je gym. Communicatie was snel en prettig. Wij zijn zeer tevreden."
     },
     {
@@ -40,6 +46,11 @@ const reviews = [
     },
     // --- CHRONOLOGICAL REST ---
     {
+        "author": "Yvonne Medendorp - van Hoepen",
+        "date": "2 maanden geleden",
+        "text": "Zo blij met jullie!"
+    },
+    {
         "author": "Hugo Le Jollec",
         "date": "2 maanden geleden",
         "text": "Ik werk inmiddels iets meer dan twee maanden samen met de mannen van Volle Gym, en ik kan oprecht zeggen dat dit één van de beste beslissingen is geweest voor mijn bedrijf. Na meerdere slechte ervaringen met marketingbureaus was ik eerlijk gezegd sceptisch. Mooie beloftes, weinig resultaat – ik had het allemaal al eens meegemaakt. Maar Bas en Bart van Volle Gym laten vanaf dag één zien dat zij het anders aanpakken. Ze leveren niet alleen leads, maar geven je ook de tools en het systeem om daar echt klanten van te maken. Ze leren je precies hoe je leads moet opvolgen, zodat je het maximale uit elke kans haalt."
@@ -58,7 +69,7 @@ const reviews = [
     },
     {
         "author": "Tommy Eichelsheim",
-        "date": "1 dag geleden",
+        "date": "2 maanden geleden",
         "text": "Top begeleiding en resultaten behaald. De heren van Volle Gym hebben mij goed geholpen."
     },
     {
@@ -68,8 +79,8 @@ const reviews = [
     },
     {
         "author": "S Nicolas",
-        "date": "een maand geleden",
-        "text": "Ze gaan een stapje verder"
+        "date": "3 maanden geleden",
+        "text": "Ze doen net dat beetje extra."
     },
     {
         "author": "Kevin Visser",
@@ -119,12 +130,12 @@ const reviews = [
     }
 ];
 
-const GoogleReviews = () => {
+const GoogleReviews = ({ expandAll = false }) => {
     const containerRef = useRef(null);
     const reviewsRef = useRef([]);
-    const [visibleCount, setVisibleCount] = useState(6);
+    const [visibleCount, setVisibleCount] = useState(expandAll ? reviews.length : 6);
     const [displayReviews, setDisplayReviews] = useState(reviews);
-    const [stats, setStats] = useState({ rating: 5.0, count: 21 });
+    const [stats, setStats] = useState({ rating: 5.0, count: 22 });
 
     useEffect(() => {
         const fetchLiveReviews = async () => {
@@ -135,7 +146,7 @@ const GoogleReviews = () => {
                     if (data && data.result) {
                         setStats({
                             rating: data.result.rating || 5.0,
-                            count: data.result.user_ratings_total || 21
+                            count: data.result.user_ratings_total || 22
                         });
 
                         if (data.result.reviews && data.result.reviews.length > 0) {
@@ -173,6 +184,9 @@ const GoogleReviews = () => {
                             });
 
                             setDisplayReviews(combined);
+                            if (expandAll) {
+                                setVisibleCount(combined.length);
+                            }
                         }
                     }
                 }
@@ -181,7 +195,7 @@ const GoogleReviews = () => {
             }
         };
         fetchLiveReviews();
-    }, []);
+    }, [expandAll]);
 
     const addToRefs = (el) => {
         if (el && !reviewsRef.current.includes(el)) {

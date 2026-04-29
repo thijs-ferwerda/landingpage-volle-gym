@@ -19,7 +19,7 @@ export const campaigns = {
         headlineStart: "Wil je structureel",
         headlineHighlight: "meer leden",
         headlineEnd: " voor jouw gym?",
-        subtitle: "Zonder een voorspelbaar systeem blijf je afhankelijk van hoop en mond-tot-mondreclame. Wij vullen jouw PT-studio of Small Group gym systematisch met ideale leden. Gegarandeerd.",
+        subtitle: "Wij vullen jouw PT-studio of Small Group gym met 45 goed betalende leden in 90 dagen met een zwart-op-wit garantie. Lukt dat ons niet? Dan ontvang je je geld terug voor de leden die we niet behaald hebben. Wil je weten of jouw gym in aanmerking komt?",
         ctaPrimary: "Doe de intake",
         ctaSecondary: "Bekijk de methode"
     },

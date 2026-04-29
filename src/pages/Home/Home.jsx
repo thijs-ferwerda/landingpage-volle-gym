@@ -20,7 +20,7 @@ const Home = ({ campaign }) => {
             <LogoMarquee />
             <Impact />
             <SocialProof />
-            <GoogleReviews />
+            <GoogleReviews expandAll />
             <Story />
             <System campaign={campaign} />
             <VSL />
