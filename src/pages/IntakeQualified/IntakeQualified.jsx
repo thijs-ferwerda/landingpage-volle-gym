@@ -1,8 +1,61 @@
 /* eslint-disable react-hooks/purity */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { testimonials } from '../../data/testimonials';
+
+const FEATURED_SLUGS = ['murat-son', 'danielle-sabajo', 'hugo-le-jollec'];
+const featuredTestimonials = FEATURED_SLUGS
+    .map(slug => testimonials.find(t => t.slug === slug))
+    .filter(Boolean);
+
+const VideoTestimonial = ({ item }) => {
+    const [playing, setPlaying] = useState(false);
+    return (
+        <div className="bg-white rounded-[1.5rem] border border-primary/10 shadow-lg flex flex-col h-full p-2 md:p-3">
+            <div className="relative shrink-0 w-full aspect-video bg-black rounded-xl overflow-hidden">
+                {playing ? (
+                    <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src={`https://www.youtube-nocookie.com/embed/${item.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=1`}
+                        title={`Interview met ${item.name}`}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                ) : (
+                    <button
+                        type="button"
+                        onClick={() => setPlaying(true)}
+                        className="absolute inset-0 group cursor-pointer"
+                        aria-label={`Speel video met ${item.name} af`}
+                    >
+                        <img
+                            src={`https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`}
+                            alt={`Thumbnail van interview met ${item.name}`}
+                            className="absolute inset-0 w-full h-full object-cover"
+                            loading="lazy"
+                        />
+                        <span className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+                            <span className="w-16 h-16 md:w-20 md:h-20 bg-accent rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                                <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" aria-hidden="true">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                )}
+            </div>
+            <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
+                <p className="font-heading font-semibold text-accent text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
+                <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest">{item.name}</p>
+            </div>
+        </div>
+    );
+};
 
 const IntakeQualified = () => {
     const [timestamp] = useState(Date.now());
+    const [interacted, setInteracted] = useState(false);
+    const iframeRef = useRef(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -13,8 +66,19 @@ const IntakeQualified = () => {
         script.async = true;
         document.body.appendChild(script);
 
+        // Detect when user interacts with the booking iframe so we can expand
+        // the wrapper from "calendar-only" view to full booking flow (form fields)
+        const handleBlur = () => {
+            setTimeout(() => {
+                if (document.activeElement === iframeRef.current) {
+                    setInteracted(true);
+                }
+            }, 0);
+        };
+        window.addEventListener('blur', handleBlur);
+
         return () => {
-            // Clean up if needed
+            window.removeEventListener('blur', handleBlur);
             if (document.body.contains(script)) {
                 document.body.removeChild(script);
             }
@@ -66,7 +130,17 @@ const IntakeQualified = () => {
 
             {/* Embedded Calendar Container */}
             <div className="w-full max-w-6xl -mx-6 px-2 md:mx-auto md:px-20 pb-0 md:pb-10 pt-0 bg-transparent md:bg-white rounded-none md:rounded-3xl shadow-none md:shadow-xl border-0 md:border md:border-primary/10 relative z-20">
+                {!interacted && (
+                    <style>{`
+                        @media (max-width: 767px) {
+                            #VJNpnvcHICgLsY8NxG8r_1771696118701 {
+                                max-height: 680px !important;
+                            }
+                        }
+                    `}</style>
+                )}
                 <iframe
+                    ref={iframeRef}
                     src={`https://api.leadconnectorhq.com/widget/booking/VJNpnvcHICgLsY8NxG8r?cb=${timestamp}`}
                     style={{ width: '100%', border: 'none', overflow: 'hidden' }}
                     scrolling="no"
@@ -76,10 +150,20 @@ const IntakeQualified = () => {
                 ></iframe>
             </div>
 
+            {/* Fallback contact — mobile only (HighLevel widget verbergt dit op kleine schermen) */}
+            <div className="md:hidden mt-4 w-full px-4 relative z-20">
+                <p className="font-sans text-sm text-primary/70 text-center leading-snug">
+                    Kun je geen passend moment vinden, stuur een mailtje naar{' '}
+                    <a href="mailto:info@vollegym.nl" className="text-accent underline font-medium">info@vollegym.nl</a>
+                    {' '}of WhatsApp naar{' '}
+                    <a href="https://wa.me/3197010256819" className="text-accent underline font-medium whitespace-nowrap">+31 970 102 56819</a>.
+                </p>
+            </div>
+
             {/* Speaker profile — mobile: below calendar */}
-            <div className="md:hidden mt-6 w-full -mx-6 px-2 relative z-20">
-                <div className="w-full pt-4 flex flex-col items-center gap-3">
-                    <p className="font-drama text-primary/70 text-base italic w-full text-center">&#8220;Ik kijk ernaar uit je te spreken.&#8221;</p>
+            <div className="md:hidden mt-4 w-full -mx-6 px-2 relative z-20">
+                <div className="w-full flex flex-col items-center gap-4">
+                    <p className="font-sans text-sm text-primary/70 text-center leading-snug w-full">Ik kijk ernaar uit je te spreken.</p>
                     <div className="flex items-center gap-4">
                         <div className="w-14 h-14 rounded-full ring-2 ring-accent/30 ring-offset-2 overflow-hidden flex-shrink-0">
                             <img src="/bas-nagel.jpeg" alt="Bas Nagel" className="w-full h-full object-cover" />
@@ -89,6 +173,21 @@ const IntakeQualified = () => {
                             <p className="font-sans text-primary/50 text-sm">Oprichter, Volle Gym</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            {/* Video testimonials below calendar */}
+            <div className="w-full max-w-6xl mx-auto px-2 md:px-20 mt-10 md:mt-24 relative z-20">
+                <div className="text-center mb-6 md:mb-12">
+                    <h2 className="font-heading font-bold text-2xl md:text-4xl text-primary tracking-tighter leading-[1.1]">
+                        Resultaten uit de praktijk:
+                    </h2>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                    {featuredTestimonials.map((item) => (
+                        <VideoTestimonial key={item.slug} item={item} />
+                    ))}
                 </div>
             </div>
         </section>
