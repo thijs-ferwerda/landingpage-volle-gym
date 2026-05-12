@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const MinimalLayout = ({ children }) => {
     return (
         <div className="min-h-screen bg-background flex flex-col font-sans">
-            <div className="noise-overlay"></div>
 
             {/* Minimal Header (Logo only) */}
             <header className="absolute top-0 left-0 w-full z-50 p-6 md:p-8 flex justify-center items-center">

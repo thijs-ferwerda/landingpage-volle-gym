@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import GoogleReviews from '../../components/GoogleReviews';
 import CTA from '../../components/CTA';
+import VideoLightbox from '../../components/VideoLightbox';
 import { testimonials } from '../../data/testimonials';
 
 const Results = () => {
@@ -77,17 +78,9 @@ const Results = () => {
                                 ref={addToRefs}
                                 className="bg-white rounded-[1.5rem] border border-primary/10 shadow-lg group hover:border-primary/20 transition-colors duration-300 flex flex-col h-full p-2 md:p-3"
                             >
-                                {/* 16:9 Embedded YouTube Video */}
+                                {/* 16:9 Embedded YouTube Video — opens in lightbox modal */}
                                 <div className="relative shrink-0 w-full aspect-video bg-black rounded-xl overflow-hidden">
-                                    <iframe
-                                        className="absolute top-0 left-0 w-full h-full"
-                                        src={`https://www.youtube.com/embed/${item.videoId}?rel=0&modestbranding=1`}
-                                        title={`Interview met ${item.name}`}
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        loading="lazy"
-                                    ></iframe>
+                                    <VideoLightbox videoId={item.videoId} name={item.name} />
                                 </div>
 
                                 {/* Content below video */}

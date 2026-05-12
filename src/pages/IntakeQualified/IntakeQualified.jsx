@@ -1,56 +1,24 @@
 /* eslint-disable react-hooks/purity */
 import React, { useEffect, useRef, useState } from 'react';
 import { testimonials } from '../../data/testimonials';
+import VideoLightbox from '../../components/VideoLightbox';
 
 const FEATURED_SLUGS = ['murat-son', 'danielle-sabajo', 'hugo-le-jollec'];
 const featuredTestimonials = FEATURED_SLUGS
     .map(slug => testimonials.find(t => t.slug === slug))
     .filter(Boolean);
 
-const VideoTestimonial = ({ item }) => {
-    const [playing, setPlaying] = useState(false);
-    return (
-        <div className="bg-white rounded-[1.5rem] border border-primary/10 shadow-lg flex flex-col h-full p-2 md:p-3">
-            <div className="relative shrink-0 w-full aspect-video bg-black rounded-xl overflow-hidden">
-                {playing ? (
-                    <iframe
-                        className="absolute top-0 left-0 w-full h-full"
-                        src={`https://www.youtube-nocookie.com/embed/${item.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=1`}
-                        title={`Interview met ${item.name}`}
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    ></iframe>
-                ) : (
-                    <button
-                        type="button"
-                        onClick={() => setPlaying(true)}
-                        className="absolute inset-0 group cursor-pointer"
-                        aria-label={`Speel video met ${item.name} af`}
-                    >
-                        <img
-                            src={`https://i.ytimg.com/vi/${item.videoId}/hqdefault.jpg`}
-                            alt={`Thumbnail van interview met ${item.name}`}
-                            className="absolute inset-0 w-full h-full object-cover"
-                            loading="lazy"
-                        />
-                        <span className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                            <span className="w-16 h-16 md:w-20 md:h-20 bg-accent rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                                <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-9 md:h-9 text-white ml-1" fill="currentColor" aria-hidden="true">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
-                            </span>
-                        </span>
-                    </button>
-                )}
-            </div>
-            <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
-                <p className="font-heading font-semibold text-accent text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
-                <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest">{item.name}</p>
-            </div>
+const VideoTestimonial = ({ item }) => (
+    <div className="bg-white rounded-[1.5rem] border border-primary/10 shadow-lg flex flex-col h-full p-2 md:p-3">
+        <div className="relative shrink-0 w-full aspect-video bg-black rounded-xl overflow-hidden">
+            <VideoLightbox videoId={item.videoId} name={item.name} />
         </div>
-    );
-};
+        <div className="p-4 pt-5 bg-white flex-1 flex flex-col">
+            <p className="font-heading font-semibold text-accent text-lg md:text-xl mb-1 tracking-wide">{item.result}</p>
+            <p className="font-sans font-medium text-sm text-primary/70 uppercase tracking-widest">{item.name}</p>
+        </div>
+    </div>
+);
 
 const IntakeQualified = () => {
     const [timestamp] = useState(Date.now());

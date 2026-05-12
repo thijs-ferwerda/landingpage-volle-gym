@@ -81,7 +81,6 @@ function App() {
   return (
     <Router>
       <ScrollToHash />
-      <div className="noise-overlay"></div>
 
       <Routes>
         <Route path="/" element={<><Navbar /><Home /><Footer /></>} />

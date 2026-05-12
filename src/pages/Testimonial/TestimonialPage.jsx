@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { testimonials, getTestimonialBySlug } from '../../data/testimonials';
 import SEO from '../../components/SEO';
+import VideoLightbox from '../../components/VideoLightbox';
 
 const TestimonialPage = () => {
     const { slug } = useParams();
@@ -43,16 +44,9 @@ const TestimonialPage = () => {
                             {testimonial.name}
                         </p>
 
-                        {/* Video Embed - Large */}
+                        {/* Video Embed - Large — opens in lightbox modal */}
                         <div className="relative w-full aspect-video bg-dark rounded-2xl overflow-hidden shadow-2xl border border-primary/10 mb-10">
-                            <iframe
-                                className="absolute top-0 left-0 w-full h-full"
-                                src={`https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&autoplay=1`}
-                                title={`Interview met ${testimonial.name}`}
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            ></iframe>
+                            <VideoLightbox videoId={testimonial.videoId} name={testimonial.name} />
                         </div>
 
                         {/* Story */}

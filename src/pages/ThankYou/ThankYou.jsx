@@ -2,8 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import gsap from 'gsap';
 import GoogleReviews from '../../components/GoogleReviews';
+import VideoLightbox from '../../components/VideoLightbox';
 
-const WISTIA_MEDIA_ID = '88t7hg03ke';
+const WISTIA_MEDIA_ID = 'qpv0s3qiv6';
+const DEFAULT_PLAYBACK_RATE = 1.2;
 
 // Reusing all 14 youtube data entries exactly as they are in SocialProof.jsx
 const youtubeData = [
@@ -54,22 +56,48 @@ const ThankYou = () => {
         return () => ctx.revert();
     }, []);
 
-    // Load Wistia player scripts
+    // Load the media-specific embed script (provides data for this particular Wistia video).
+    // The base player.js is loaded site-wide in index.html so the <wistia-player> custom element
+    // is already defined by the time React renders the element here — avoids iOS Safari race
+    // conditions where the element exists in DOM before its definition arrives.
+    //
+    // Set default playback rate to 1.2x. We use the web component property setter only — do NOT
+    // touch shadow DOM internals (the native <video>), since that interferes with Wistia's own
+    // touch handlers on mobile and breaks the play button. Re-apply on first `play` because
+    // Wistia may reset the native rate during playback init.
     useEffect(() => {
-        const playerScript = document.createElement('script');
-        playerScript.src = 'https://fast.wistia.com/player.js';
-        playerScript.async = true;
-        document.body.appendChild(playerScript);
-
         const embedScript = document.createElement('script');
         embedScript.src = `https://fast.wistia.com/embed/${WISTIA_MEDIA_ID}.js`;
         embedScript.async = true;
         embedScript.type = 'module';
         document.body.appendChild(embedScript);
 
+        let attempts = 0;
+        const maxAttempts = 60; // ~12s window at 200ms interval
+        let attachedPlayer = null;
+        let playListener = null;
+
+        const intervalId = setInterval(() => {
+            attempts += 1;
+            const player = document.querySelector(`wistia-player[media-id="${WISTIA_MEDIA_ID}"]`);
+            if (player && !attachedPlayer) {
+                try { player.playbackRate = DEFAULT_PLAYBACK_RATE; } catch (e) { /* no-op */ }
+                playListener = () => {
+                    try { player.playbackRate = DEFAULT_PLAYBACK_RATE; } catch (e) { /* no-op */ }
+                };
+                player.addEventListener('play', playListener);
+                attachedPlayer = player;
+                clearInterval(intervalId);
+            }
+            if (attempts >= maxAttempts) clearInterval(intervalId);
+        }, 200);
+
         return () => {
-            document.body.removeChild(playerScript);
-            document.body.removeChild(embedScript);
+            clearInterval(intervalId);
+            if (attachedPlayer && playListener) {
+                attachedPlayer.removeEventListener('play', playListener);
+            }
+            if (document.body.contains(embedScript)) document.body.removeChild(embedScript);
         };
     }, []);
 
@@ -81,7 +109,7 @@ const ThankYou = () => {
                 <style>{`wistia-player[media-id='${WISTIA_MEDIA_ID}']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/${WISTIA_MEDIA_ID}/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }`}</style>
             </Helmet>
 
-            <div ref={containerRef} className="bg-dark min-h-screen pt-32 pb-24 font-sans text-primary relative overflow-hidden">
+            <div ref={containerRef} className="bg-background w-full min-h-screen pt-32 pb-24 font-sans text-primary relative overflow-hidden">
 
                 {/* Background glow using accent color */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[500px] bg-accent/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
@@ -94,12 +122,12 @@ const ThankYou = () => {
                         </h1>
 
                         <p ref={addToRefs} className="text-primary/70 text-base md:text-xl max-w-2xl leading-relaxed mb-12">
-                            Terwijl je wacht op ons gesprek... Je bent druk en gaat 45 min investeren in ons gesprek, dus bekijk deze video even tot het einde af (5 min) zodat we ons gesprek zo nuttig mogelijk kunnen insteken. Daar zijn namelijk een aantal dingen voor nodig:
+                            Terwijl je wacht op ons gesprek... Je bent druk en gaat 45 min investeren in ons gesprek, dus bekijk deze video even tot het einde af (10 min op 1,2x snelheid) zodat we ons gesprek zo nuttig mogelijk kunnen insteken. Daar zijn namelijk een aantal dingen voor nodig:
                         </p>
 
                         {/* Video Player — Wistia */}
                         <div ref={addToRefs} className="w-full max-w-3xl mb-12">
-                            <div className="relative w-full rounded-[2rem] overflow-hidden bg-dark shadow-2xl border border-primary/10">
+                            <div className="relative w-full rounded-[2rem] overflow-hidden bg-black shadow-2xl border border-primary/10">
                                 <wistia-player media-id={WISTIA_MEDIA_ID} aspect="1.7777777777777777"></wistia-player>
                             </div>
                         </div>
@@ -121,17 +149,9 @@ const ThankYou = () => {
                                 ref={addToRefs}
                                 className="bg-white rounded-[1.5rem] border border-primary/10 shadow-lg group hover:border-primary/20 transition-colors duration-300 flex flex-col h-full p-2 md:p-3"
                             >
-                                {/* 16:9 Embedded YouTube Video */}
+                                {/* 16:9 Embedded YouTube Video — opens in lightbox modal */}
                                 <div className="relative shrink-0 w-full aspect-video bg-dark rounded-xl overflow-hidden">
-                                    <iframe
-                                        className="absolute top-0 left-0 w-full h-full"
-                                        src={`https://www.youtube.com/embed/${item.videoId}?rel=0&modestbranding=1`}
-                                        title={`Interview met ${item.name}`}
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        loading="lazy"
-                                    ></iframe>
+                                    <VideoLightbox videoId={item.videoId} name={item.name} />
                                 </div>
 
                                 {/* Content below video - matching SocialProof.jsx exactly */}
